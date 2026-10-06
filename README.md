@@ -4,7 +4,7 @@ Public project overviews and synthetic demonstrations.
 
 | Project | Overview |
 | --- | --- |
-| [Pitwall](https://echoz.github.io/side-projects/pitwall/) | Self-hosted workout telemetry, a Garmin data field, and a terminal interface. Includes a browser-only synthetic demo. |
+| [Pitwall](https://echoz.github.io/side-projects/pitwall/) | Self-hosted workout telemetry, a Garmin data field, and a terminal interface. Includes a capture of the actual Chio TUI using synthetic telemetry. |
 
 The [project index](https://echoz.github.io/side-projects/) links to each page.
 This repository contains public presentation assets and publishing configuration;
@@ -24,3 +24,23 @@ can also be run manually. Keep Pages configured to use GitHub Actions.
 When adding a project, add its directory, index link, README entry, and reviewed
 assets to `.github/workflows/pages.yml`. Existing synthetic demos must stay
 independent of live devices, services, clocks, and browser storage.
+
+## Pitwall terminal capture
+
+`pitwall/tui-capture.svg` is a faithful terminal-cell rendering of the actual
+running Chio TUI, captured at 90 columns by 28 rows on October 6, 2026. Its plain
+text equivalent is `pitwall/tui-capture.txt`. The real local daemon received a
+synthetic sample with heart rate 145 bpm and speed 3.0 m/s; the TUI read it through
+the normal client path. The visible device/session/epoch identities are synthetic.
+
+The SVG preserves the captured ANSI colors, cell positions, borders, and visible
+text. It embeds glyph outlines and has no external resources. It is a fixed
+recording, not an interactive web terminal. Refresh captures from the running
+client; do not invent output or substitute real workout data. Never publish raw
+capture logs, provisioning state, credentials, or private source files.
+
+Pitwall's intended physical path requires a paired phone as the Internet bridge;
+Garmin describes that mechanism in its [Communications API documentation](https://developer.garmin.com/connect-iq/api-docs/Toybox/Communications.html).
+The current project targets a Forerunner 970 and iPhone, with only the simulator
+path verified. The page must keep the phone requirement, possible delays, and
+physical-delivery/HTTPS limitations prominent.

@@ -29,7 +29,8 @@ jobs:
           import shutil
 
           assets = ("index.html", "pitwall/index.html", "pitwall/styles.css",
-                    "pitwall/demo.js", "pitwall/favicon.svg")
+                    "pitwall/favicon.svg", "pitwall/tui-capture.svg",
+                    "pitwall/tui-capture.txt")
           for name in assets:
               source = Path(name)
               if not source.is_file() or source.is_symlink() or any(
@@ -43,7 +44,6 @@ jobs:
               target.parent.mkdir(parents=True, exist_ok=True)
               shutil.copyfile(name, target)
           PY
-          node --check _site/pitwall/demo.js
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: _site

@@ -1,0 +1,27 @@
+
+ PITWALL — heart rate & speed
+
+ SIMULATOR — synthetic measurements
+
+ ╭ Measurements ────────────────────────────────────────────────────────────────────────╮
+ │ Heart rate: 145 bpm                                                                  │
+ │ Speed: 3.0 m/s                                                                       │
+ ╰──────────────────────────────────────────────────────────────────────────────────────╯
+
+ Successful snapshot read
+
+ ╭ Snapshot details ────────────────────────────────────────────────────────────────────╮
+ │ Device: simulator-device                                                           ▐ │
+ │ Session: demo-session                                                              ▐ │
+ │ Producer epoch: demo-epoch                                                         ▐ │
+ │ Last check: 2026-10-06T16:49:40Z                                                   ▐ │
+ │ Last sample read: 2026-10-06T16:49:40Z                                             ▐ │
+ │ Reported age: 1 s at last check; source clock unverified                           ▐ │
+ │ Source sequence: 1                                                                   │
+ ╰──────────────────────────────────────────────────────────────────────────────────────╯
+
+ Source clock unverified. Watch contact and activity state: unknown.
+
+ ────────────────────────────────────────────────────────────────────────────────────────
+
+ auto snapshot refresh q quit Ctrl-C quit
