@@ -28,10 +28,11 @@ independent of live devices, services, clocks, and browser storage.
 ## Pitwall terminal capture
 
 `pitwall/tui-capture.svg` is a faithful terminal-cell rendering of the actual
-running Chio TUI, captured at 90 columns by 28 rows on October 6, 2026. Its plain
+running Chio TUI, captured at 90 columns by 30 rows on October 6, 2026. Its plain
 text equivalent is `pitwall/tui-capture.txt`. The real local daemon received a
 synthetic sample with heart rate 145 bpm and speed 3.0 m/s; the TUI read it through
-the normal client path. The visible device/session/epoch identities are synthetic.
+the authenticated server-pushed client path using `tui --live`. The visible
+device/session/epoch identities are synthetic.
 
 The SVG preserves the captured ANSI colors, cell positions, borders, and visible
 text. It embeds glyph outlines and has no external resources. It is a fixed
