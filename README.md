@@ -60,12 +60,19 @@ acknowledgment was replaced with HTTP 503; these screen captures show the runnin
 renderer and are not separate transport tests. Phone delivery and physical-watch
 behavior remain unverified.
 
-The large field shows heart rate and speed with units and upload diagnostics.
-Half and compact fields show only upload/acknowledgment status and queue/loss
-indicators. The simulator repeats Transponder in every native field slot; visible
-duplicates and cyan layout dividers belong to that simulator page. Last ACK refers
-to an earlier accepted upload, not current connectivity. Its age differs between
-captures because the screens were saved sequentially.
+The large field uses a red heart for heart rate and blue speedometer for speed,
+with units and upload diagnostics. Smaller fields use symbols, numeric counts
+and ages; `SIM` is their only word. A blue arrow means sending, amber circular
+arrow means retry, red octagon means stopped, and green check plus age means an
+earlier accepted upload. A neutral circle means idle; a clock plus `--` means no
+ACK. The tray counts queued/in-flight samples. Crossed downward arrow and circled
+cross mark dropped and rejected samples. A square/minus marks a collection limit,
+barred upward arrow a delivery limit, and warning triangle a setup/reload notice.
+
+The simulator repeats Transponder in every native field slot; visible duplicates
+and cyan layout dividers belong to that simulator page. ACK age is historical,
+not current connectivity. It differs between captures because the screens were
+saved sequentially.
 
 Refresh these PNGs from the actual Garmin simulator during a production run using
 synthetic telemetry, preserving the native square screens. Do not redraw the

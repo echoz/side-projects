@@ -51,24 +51,30 @@
           <a href="./transponder-large.png" aria-label="Open the large field simulator capture at full size">
             <img src="./transponder-large.png" alt="Actual Transponder large-field render in the Forerunner 970 simulator, displaying synthetic heart rate and speed with units and upload diagnostics." width="454" height="454" loading="lazy" decoding="async">
           </a>
-          <figcaption><h3>One large field.</h3><p>Heart rate and speed lead, with units, upload status and queue diagnostics.</p></figcaption>
+          <figcaption><h3>One large field.</h3><p>Red heart: heart rate. Blue dial: speed. Upload status sits below.</p></figcaption>
         </figure>
         <figure class="transponder-capture">
           <div class="capture-label"><span>STATUS / HALF FIELD</span><span>SIMULATOR</span></div>
           <a href="./transponder-half.png" aria-label="Open the half field simulator capture at full size">
             <img src="./transponder-half.png" alt="Actual Transponder half-field render in the Forerunner 970 simulator, showing synthetic upload status, historical last acknowledgment and queue diagnostics without heart rate or speed." width="454" height="454" loading="lazy" decoding="async">
           </a>
-          <figcaption><h3>Half-field status.</h3><p>Upload state, the last acknowledged upload and queue diagnostics. No measurement values.</p></figcaption>
+          <figcaption><h3>Half-field status.</h3><p>Upload symbols, acknowledgment age and queued samples.</p></figcaption>
         </figure>
         <figure class="transponder-capture">
           <div class="capture-label"><span>STATUS / COMPACT FIELD</span><span>SIMULATOR</span></div>
           <a href="./transponder-compact.png" aria-label="Open the compact field simulator capture at full size">
             <img src="./transponder-compact.png" alt="Actual Transponder compact-field render in the Forerunner 970 simulator, showing synthetic upload and historical acknowledgment status with queue and loss indicators, without heart rate or speed." width="454" height="454" loading="lazy" decoding="async">
           </a>
-          <figcaption><h3>Compact status.</h3><p>Upload and historical ACK status, with queue and loss indicators in smaller slots.</p></figcaption>
+          <figcaption><h3>Compact status.</h3><p>The same status symbols in smaller slots. No measurement values.</p></figcaption>
         </figure>
       </div>
-      <div class="capture-provenance"><p>Actual simulator captures · synthetic telemetry · Garmin SDK 9.2 · October 6, 2026. Captured directly during the production verification run, with a final sample of 145 bpm / 3.0 m/s. Phone delivery and physical-watch behavior remain unverified.</p><p>The simulator repeats Transponder in each native field slot; cyan lines mark its layout dividers. Last ACK describes an earlier accepted upload. Its age differs between captures because the screens were saved in sequence. Select a capture to view it at full size.</p></div>
+      <div class="field-key" aria-label="Watch status symbols">
+        <span class="upload"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V3m-7 7 7-7 7 7"/></svg>Uploading</span>
+        <span class="retry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 7a8 8 0 1 0 1 9M19 2v6h-6"/></svg>Retry</span>
+        <span class="stopped"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 2 8 0 6 6v8l-6 6H8l-6-6V8Zm0 6 8 8m0-8-8 8"/></svg>Stopped</span>
+        <span class="ack"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 12 6 7L21 5"/></svg>Earlier upload accepted</span>
+      </div>
+      <div class="capture-provenance"><p>Actual simulator captures · synthetic telemetry · Garmin SDK 9.2 · October 6, 2026. Captured directly during the production verification run, with a final sample of 145 bpm / 3.0 m/s. Phone delivery and physical-watch behavior remain unverified.</p><p>The simulator repeats Transponder in each native field slot; cyan lines mark its layout dividers. A green check and age describe an earlier accepted upload, not current connectivity. Ages differ because the screens were saved in sequence. Select a capture to view it at full size.</p></div>
     </section>
     <section class="terminal-section" id="terminal" aria-labelledby="terminal-title">
       <div class="section-heading"><div><p class="eyebrow">02 / The view from the wall</p><h2 id="terminal-title">The actual terminal interface.</h2></div><p>This is the running Chio TUI, captured from the project itself using synthetic workout telemetry.</p></div>

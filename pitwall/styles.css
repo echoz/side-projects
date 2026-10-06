@@ -474,6 +474,35 @@ a:hover {
   font: 12px/1.75 var(--sans);
 }
 
+.field-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+.field-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.field-key svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.field-key .upload { color: #6cbfff; }
+.field-key .retry { color: #ffbe57; }
+.field-key .stopped { color: #ff7974; }
+.field-key .ack { color: #8dddab; }
+
 .capture-provenance {
   max-width: 920px;
   margin-top: 22px;
