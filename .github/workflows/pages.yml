@@ -30,7 +30,8 @@ jobs:
 
           assets = ("index.html", "pitwall/index.html", "pitwall/styles.css",
                     "pitwall/favicon.svg", "pitwall/tui-capture.svg",
-                    "pitwall/tui-capture.txt")
+                    "pitwall/tui-capture.txt", "pitwall/transponder-large.png",
+                    "pitwall/transponder-half.png", "pitwall/transponder-compact.png")
           for name in assets:
               source = Path(name)
               if not source.is_file() or source.is_symlink() or any(
