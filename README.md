@@ -32,10 +32,14 @@ running Chio TUI, captured at 110 columns by 38 rows on October 7, 2026. Its pla
 text equivalent is `pitwall/tui-capture.txt`. The real local daemon received a
 synthetic sample with heart rate 145 bpm, speed 3.0 m/s and rich activity context,
 including cadence, power, distance, timer, last observed callbacks and source
-diagnostics. The TUI read it through
+diagnostics. The measurement overview is preserved alongside six additional
+context views: activity summary/profile, navigation, pressure, effort, swimming
+and cycling. The TUI read it through
 the authenticated server-pushed client path using `tui --live`. The visible
 device/session/epoch identities and GPS coordinates are synthetic. This capture
-demonstrates the server and client; it bypasses the Garmin simulator.
+demonstrates the server and client; it bypasses the Garmin simulator. In the
+interactive TUI, `n`/`p` changes context, `j`/`k` changes field page, and `o`
+returns to the overview.
 
 The SVG preserves the captured ANSI colors, cell positions, borders, and visible
 text. It embeds glyph outlines and has no external resources. It is a fixed
@@ -45,9 +49,20 @@ capture logs, provisioning state, credentials, or private source files.
 
 Pitwall's intended physical path requires a paired phone as the Internet bridge;
 Garmin describes that mechanism in its [Communications API documentation](https://developer.garmin.com/connect-iq/api-docs/Toybox/Communications.html).
-The current project targets a Forerunner 970 and iPhone, with only the simulator
-path verified. The page must keep the phone requirement, possible delays, and
+The current project targets a Forerunner 970 and iPhone. HR/speed has simulator
+evidence; the richer watch code compiles, but its Garmin runtime checks remain
+pending. The page must keep the phone requirement, possible delays, and
 physical-delivery/HTTPS limitations prominent.
+
+The added contexts preserve the source observations: summary averages/maxima,
+calories, start time/location and a losslessly represented activity profile
+identifier; navigation bearings, course deviation and destinations; distinct
+ambient/raw/sea-level pressure; oxygen saturation, estimated energy expenditure
+and aerobic Training Effect; previous swimming interval/length; and observed
+front/rear cycling gears. Readings depend on the activity, navigation, device and
+sensors. A gear observation does not prove sensor connectivity, and a previous
+swimming length does not describe the current stroke. These are sampled facts,
+not a complete event history or native workout-plan alignment.
 
 ## Pitwall Garmin data-field captures
 
