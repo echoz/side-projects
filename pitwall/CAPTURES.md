@@ -27,11 +27,18 @@ capture logs, provisioning state, credentials, or private source files.
 
 Pitwall's intended physical path requires a paired phone as the Internet bridge;
 Garmin describes that mechanism in its [Communications API documentation](https://developer.garmin.com/connect-iq/api-docs/Toybox/Communications.html).
-The current project targets a Forerunner 970 and iPhone. HR/speed has simulator
-evidence; the richer watch code compiles, but its production simulator run
-exhausts the data field's memory. Rich continuous uploads remain unverified
-until that defect is fixed. The page must keep the phone requirement, possible delays, and
-physical-delivery/HTTPS limitations prominent.
+The current project targets a Forerunner 970 and iPhone. The rich synthetic
+Garmin path passed a five-minute polling run with 276 accepted samples,
+22 exactly reported overwrites and 21,280 sampled free bytes at its minimum.
+An adversarial pushed-client run also passed: 278 samples, 22 overwrites, a
+6,703-byte largest body and 17,488 sampled free bytes.
+The immutable ring retains four waiting observations and two frozen for retry;
+full batches upload early without reducing collection cadence. This is sampled
+production-simulator memory evidence, not a measurement of native encoder peak
+allocation or physical-watch memory/battery. SDK 9.2 simulator encoding rounds
+the extreme floating-point fixture and needs a string-escaping adapter; physical
+phone encoding is unverified. The page must keep the phone requirement, possible
+delays, and physical-delivery/HTTPS limitations prominent.
 
 The added contexts preserve the source observations: summary averages/maxima,
 calories, start time/location and a losslessly represented activity profile
