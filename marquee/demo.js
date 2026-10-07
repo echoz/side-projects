@@ -41,7 +41,7 @@
     circle.setAttribute('cx', String((index % 32) * 12 + 6));
     circle.setAttribute('cy', String(Math.floor(index / 32) * 12 + 6));
     circle.setAttribute('r', '4');
-    circle.setAttribute('fill', '#142224');
+    circle.setAttribute('fill', '#211b31');
     circle.setAttribute('aria-hidden', 'true');
     svg.append(circle);
     return circle;
@@ -66,8 +66,8 @@
       for (let x = 0; x < Math.round(amount * 32 / 100); x++) active.add(7 * 32 + x);
     }
     if (view === 'fallback') [30, 31, 62, 63].forEach(index => active.add(index));
-    const color = view === 'fallback' ? '#edf3ef' : '#69e5dc';
-    pixels.forEach((pixel, index) => pixel.setAttribute('fill', active.has(index) ? color : '#142224'));
+    const color = view === 'fallback' ? '#fff9ee' : view === 'workout' ? '#ffa7d5' : view === 'manual' ? '#eaff85' : '#79f7f2';
+    pixels.forEach((pixel, index) => pixel.setAttribute('fill', active.has(index) ? color : '#211b31'));
     progress.disabled = !hasProgress;
     progress.value = String(amount);
     progressLabel.textContent = view === 'workout' ? 'Workout goal progress' :

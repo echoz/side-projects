@@ -29,6 +29,12 @@ independent of live devices, services, clocks, and browser storage.
 
 ## Marquee and Blackbox illustrations
 
+The pages have separate visual identities: Marquee is a playful pixel display with
+luminous type and colorful controls; Blackbox takes cues from a flight recorder,
+with industrial orange and an archival logbook. These user-selected themes guide
+future layout and typography as well as color. The index carries a small expression
+of each theme; Pitwall retains its existing motorsport presentation.
+
 Both application repositories remain private. These pages summarize their purpose,
 current capabilities and limitations, with original browser illustrations made for
 this public site. They contain no application source or internal documents, make

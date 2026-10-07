@@ -14,6 +14,14 @@ Each project owns one shallow directory. `index.html` is the project index;
 Keep links relative to support
 GitHub Pages' project path. Avoid external assets, analytics, and live telemetry.
 
+Preserve each project's distinct visual identity. Pitwall uses motorsport telemetry;
+Marquee uses a playful pixel-display theme with luminous LED type, small-screen
+compositions and lively color; Blackbox uses a flight-recorder theme with industrial
+orange, precise labels, records and provenance. The user chose these directions.
+Let the subject shape composition, typography and interaction; do not reuse one
+landing-page template with different accent colors. Keep readability and factual
+status more important than decorative instrument labels or effects.
+
 `.github/workflows/pages.yml` explicitly lists the files allowed into the public
 website artifact. Update that list deliberately when adding a public asset.
 Verify links, JavaScript syntax, responsive layout, and any changed demo behavior.
