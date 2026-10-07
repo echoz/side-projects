@@ -28,8 +28,9 @@ capture logs, provisioning state, credentials, or private source files.
 Pitwall's intended physical path requires a paired phone as the Internet bridge;
 Garmin describes that mechanism in its [Communications API documentation](https://developer.garmin.com/connect-iq/api-docs/Toybox/Communications.html).
 The current project targets a Forerunner 970 and iPhone. HR/speed has simulator
-evidence; the richer watch code compiles, but its Garmin runtime checks remain
-pending. The page must keep the phone requirement, possible delays, and
+evidence; the richer watch code compiles, but its production simulator run
+exhausts the data field's memory. Rich continuous uploads remain unverified
+until that defect is fixed. The page must keep the phone requirement, possible delays, and
 physical-delivery/HTTPS limitations prominent.
 
 The added contexts preserve the source observations: summary averages/maxima,
