@@ -31,7 +31,8 @@ and a mint cursor.
 Keep the diagonal index-card ribbons current with each project's release status;
 show only the version for a release, and repeating yellow-and-black construction
 stripes for ongoing work. Give construction ribbons an accessible status label
-without visible text.
+without visible text. Refresh the index stylesheet's version query when its CSS
+changes so returning visitors receive the matching styles.
 Let the subject shape composition, typography and interaction; do not reuse one
 landing-page template with different accent colors. Keep readability and factual
 status more important than decorative instrument labels or effects.
