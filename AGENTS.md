@@ -18,7 +18,7 @@ Verify links, JavaScript syntax, responsive layout, and any changed demo behavio
 Keep synthetic values visibly labeled and distinguish verified behavior from
 planned features. Project application code belongs in its own repository.
 
-Pitwall's page must state its purpose plainly: near-live heart rate and speed
+Pitwall's page must state its purpose plainly: near-live activity measurements and workout context
 during Garmin workouts/races, through a paired phone to a self-hosted server and
 CLI/TUI. Put the phone requirement, possible delivery delay, and current
 simulator-only verification near the top. Preserve the difference between the
