@@ -15,7 +15,7 @@ h1 { margin-top: 22px; font-size: clamp(58px, 7vw, 94px); line-height: .97; lett
 h1 em { color: var(--red); }
 .intro-copy { max-width: 435px; color: #d4d4d9; font-size: 20px; line-height: 1.6; padding-bottom: 4px; }
 .intro-copy .quiet { color: var(--muted); font-size: 14px; line-height: 1.7; margin-top: 24px; }
-.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; padding-bottom: 72px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding-bottom: 72px; }
 .project-card { --accent: var(--red); display: flex; flex-direction: column; padding: 26px; background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--accent); }
 .marquee { --accent: #e8fc6c; background: #2b1750; border: 1px solid #754da2; border-radius: 26px; }
 .blackbox { --accent: #171716; background: #ff6b24; color: #171716; border: 1px solid #ff8e58; }
@@ -52,6 +52,16 @@ h1 em { color: var(--red); }
 .blackbox .archive span { border-color: #6d5948; }
 .blackbox .button { color: #fff1dd; font-family: var(--mono); text-transform: uppercase; letter-spacing: .5px; }
 .blackbox a:focus-visible { outline-color: #171716; }
+.chio { --accent: #89dac6; background: #211d2a; border: 1px solid #66536e; border-top: 3px solid #f18ade; border-radius: 8px; }
+.chio .eyebrow { color: #c7b8d2; }
+.chio h2 { font-family: var(--mono); color: #f4edf8; }
+.chio > p:not(.eyebrow) { color: #e0d5e7; }
+.chio > p.status { color: #c7b8d2; border-color: #66536e; }
+.chio .terminal { background: #17131e; border-color: #66536e; border-radius: 5px; font-family: var(--mono); }
+.terminal > span { display: block; color: #f18ade; font-size: 46px; font-weight: 700; line-height: 1.35; letter-spacing: -2px; }
+.terminal > span > span { color: #89dac6; }
+.terminal > div { margin-top: 10px; color: #c7b8d2; font-size: 12px; line-height: 1.5; }
+.chio .button { border-radius: 4px; font-family: var(--mono); }
 .site-footer { border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-block: 25px 32px; color: var(--muted); font-size: 12px; }
 .skip-link { position: fixed; left: 16px; top: 12px; z-index: 10; padding: 12px; background: var(--ink); color: var(--paper); transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
