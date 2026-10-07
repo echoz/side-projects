@@ -28,6 +28,8 @@ compositions and lively color; Blackbox uses a flight-recorder theme with indust
 orange, precise labels, records and provenance. The user chose these directions.
 Chio's index card reflects its existing dark-plum terminal theme, with pink type
 and a mint cursor.
+Keep the diagonal index-card ribbons current with each project's release status;
+use a version and "shipped" for a release, and "In progress" for ongoing work.
 Let the subject shape composition, typography and interaction; do not reuse one
 landing-page template with different accent colors. Keep readability and factual
 status more important than decorative instrument labels or effects.
