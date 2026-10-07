@@ -29,7 +29,9 @@ orange, precise labels, records and provenance. The user chose these directions.
 Chio's index card reflects its existing dark-plum terminal theme, with pink type
 and a mint cursor.
 Keep the diagonal index-card ribbons current with each project's release status;
-use a version and "shipped" for a release, and "In progress" for ongoing work.
+show only the version for a release, and repeating yellow-and-black construction
+stripes for ongoing work. Give construction ribbons an accessible status label
+without visible text.
 Let the subject shape composition, typography and interaction; do not reuse one
 landing-page template with different accent colors. Keep readability and factual
 status more important than decorative instrument labels or effects.
