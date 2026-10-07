@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101416">
+  <meta name="description" content="Marquee turns changing context into a small, live pixel billboard. Explore a synthetic browser illustration of this private Swift prototype, its USB display and simulator, and its current limits.">
+  <title>Marquee — A little billboard for right now</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#main"><span class="brand-icon" aria-hidden="true">▦</span>MARQUEE<span class="accent">.</span></a>
+    <nav aria-label="Main navigation"><a href="#billboard">Try the billboard</a><a href="#system">How it works</a><a href="#status">Project status</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Personal pixel billboards / private prototype</p>
+        <h1 id="hero-title">A little billboard<br>for <span>right now.</span></h1>
+        <p class="hero-description">A run in progress. An allowance being used. A reminder to get coffee. Marquee turns changing context about one person into a small, live display. Sources supply facts, a provider chooses what matters, and Marquee keeps the pixels up to date.</p>
+        <div class="hero-actions"><a class="button" href="#billboard">Try the illustration <span aria-hidden="true">↘</span></a><a class="text-link" href="#status">What works today <span aria-hidden="true">↓</span></a></div>
+        <p class="release-note">Pre-release software · application source is private · public overview only</p>
+      </div>
+      <aside class="briefing" aria-label="Current setup">
+        <div class="panel-heading"><span>CURRENT SETUP</span><span class="accent">MQ / 01</span></div>
+        <h2>Context.<br>Choice.<br>Pixels.</h2>
+        <dl><div><dt>Development</dt><dd>Swift 6.4+ / macOS 15+</dd></div><div><dt>Physical display</dt><dd>TC001 / WLED / USB</dd></div><div><dt>Without hardware</dt><dd>SVG simulator + terminal viewer</dd></div><div><dt>Automatic demo</dt><dd>Synthetic facts + heuristic</dd></div></dl>
+        <p>No account or display is needed for the local synthetic simulator path.</p>
+      </aside>
+    </section>
+    <section class="requirements" aria-label="Requirements and current limitations">
+      <article><span class="card-number">01 / THE HOST</span><h2>A Mac runs the current path.</h2><p>macOS is exercised. Linux execution is unverified, and Windows host support is unfinished. USB output and the simulator can work without a network after dependencies are cached.</p></article>
+      <article><span class="card-number">02 / THE FACTS</span><h2>Real sources are still to come.</h2><p>Today’s automatic demonstration uses synthetic quota and workout observations. Real personal-subscription and workout integrations are not implemented. Model-backed providers are optional.</p></article>
+      <article><span class="card-number">03 / THE DEVICE</span><h2>Sent is a delivery receipt.</h2><p>TC001 output has been physically exercised and user-confirmed. A successful write does not prove visibility or unattended reliability. Automatic USB reconnect and plugin-crash recovery remain deferred.</p></article>
+    </section>
+    <section class="billboard-section" id="billboard" aria-labelledby="billboard-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / Make a small statement</p><h2 id="billboard-title">Thirty-two by eight.<br>Room for the moment.</h2></div><p>This browser illustration uses invented values and an original pixel renderer. Choose a view, move its progress, or write a short manual label.</p></div>
+      <div class="demo-shell">
+        <div class="panel-heading"><span>SYNTHETIC BROWSER ILLUSTRATION</span><span>32 × 8 PIXELS</span></div>
+        <div class="display-surround"><div class="pixel-display"><svg id="pixel-grid" viewBox="0 0 384 96" role="img" aria-labelledby="pixel-title"><title id="pixel-title">Synthetic quota illustration: ETA 1H, 62 percent used.</title></svg><span class="device-dot" aria-hidden="true"></span></div></div>
+        <div class="display-readout"><span id="view-tag">ILLUSTRATED / QUOTA</span><p id="readout" role="status" aria-live="polite">ETA 1H · 62% of a synthetic allowance used.</p></div>
+        <div class="demo-controls">
+          <fieldset><legend>Choose content</legend><div class="choices"><button type="button" data-view="quota" aria-pressed="true">Quota</button><button type="button" data-view="workout" aria-pressed="false">Workout</button><button type="button" data-view="manual" aria-pressed="false">Manual</button><button type="button" data-view="fallback" aria-pressed="false">Fallback</button></div></fieldset>
+          <div class="progress-control"><label for="progress"><span id="progress-label">Allowance used</span><output id="progress-value" for="progress">62%</output></label><input id="progress" type="range" min="0" max="100" value="62" step="1"></div>
+          <div class="manual-controls" id="manual-controls" hidden><label for="manual-label">Short label <span>(A–Z, 0–9, spaces · up to 8 characters)</span></label><input id="manual-label" type="text" maxlength="8" value="COFFEE" autocomplete="off" spellcheck="false" pattern="[A-Za-z0-9 ]{1,8}" aria-describedby="manual-note"><label class="checkbox-label"><input id="manual-progress" type="checkbox"> Include progress</label><p id="manual-note">The caller supplies manual progress; it does not advance itself.</p></div>
+        </div>
+        <noscript><p class="no-script">Enable JavaScript to try the synthetic pixel illustration. Example views: ETA 1H with 62% allowance used, RUN with 35% goal progress, and manual COFFEE.</p></noscript>
+        <p class="demo-disclosure">Illustration only: this is not an application capture, a running Marquee host, or a connection to a device, model or account. The controls switch immediately; the real automatic host owns turn timing.</p>
+      </div>
+      <div class="demo-notes"><article><h3>Same screen. New readings.</h3><p>Live bindings keep text and progress tied to current facts while a selection is on screen. A new reading can update the pixels without starting a new turn.</p></article><article><h3>Your words take over.</h3><p>Manual text and progress work without a source or provider. Manual override holds until you explicitly return to automatic mode. A separate timed demo can advance progress using host elapsed time.</p></article><article><h3>Disclosure comes first.</h3><p>The host filters what a provider can see. Health facts are excluded by default. This page’s workout is invented and does not exercise the application’s privacy controls.</p></article></div>
+    </section>
+    <section class="system-section" id="system" aria-labelledby="system-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / The route to the wall</p><h2 id="system-title">Facts in. Pixels out.</h2></div><p>One long-lived Swift host coordinates separate plugin processes. Domain and device knowledge stay with the plugins that own them.</p></div>
+      <ol class="system-flow"><li><span class="card-number">01 / SOURCES</span><h3>Bring the context.</h3><p>Source plugins publish typed facts and updates. The implemented scripted source provides synthetic quota and workout observations.</p></li><li><span class="card-number">02 / HOST + PROVIDER</span><h3>Choose the moment.</h3><p>Marquee prepares complete screens with live bindings. The default heuristic or a model provider selects content; the host owns disclosure, turn timing, formatting and layout.</p></li><li><span class="card-number">03 / DISPLAYS</span><h3>Deliver the pixels.</h3><p>A display plugin receives the rendered frame. The current paths are USB to a WLED TC001, or a local SVG simulator with a read-only true-color terminal viewer.</p></li></ol>
+      <div class="principle"><span aria-hidden="true">↻</span><div><h3>The model chooses content. Marquee builds the screen.</h3><p>Inference selects a host-prepared option or continues an existing selection. It does not draw pixels or author layouts. Marquee can reflow changing values, and the default heuristic needs no model endpoint.</p></div></div>
+    </section>
+    <section class="status-section" id="status" aria-labelledby="status-title">
+      <div class="status-intro"><p class="eyebrow">03 / Capabilities and evidence</p><h2 id="status-title">A working slice.<br>An unfinished product.</h2><p>The automatic pipeline is implemented and exercised on macOS. The broader product still needs real sources, recovery work and platform validation.</p><span class="milestone-label">Development status / October 7, 2026</span></div>
+      <div class="milestones"><article><span class="milestone-status">IMPLEMENTED / MACOS</span><h3>Automatic and manual billboards</h3><p>Synthetic quota → workout → quota, live progress, privacy filtering, fallback and manual override run through real source, provider and simulator processes. The CLI and Swift client share the host’s control path.</p></article><article><span class="milestone-status">VERIFIED / SOFTWARE</span><h3>Tests and simulator evidence</h3><p>The latest recorded serial macOS checkpoint passed 1,283 tests in 180 suites across 13 binaries, including 59 integration tests. It used synthetic credentials and test-owned resources; no live account, remote model or physical display was accessed in that run.</p></article><article><span class="milestone-status">EXERCISED / PHYSICAL DEVICE</span><h3>TC001 over USB</h3><p>Text, replace/clear and a text/progress demo have been user-confirmed. The latest specifically dated device check, September 21, sent RUN at 60% and 75%, then COFFEE; the user confirmed seeing COFFEE. That is separate from software-test evidence.</p></article><article><span class="milestone-status caution">OPTIONAL / QUALITY UNDER EVALUATION</span><h3>Model-backed selection</h3><p>Configurable model providers support Chat Completions and Responses. Bounded synthetic trials demonstrate accepted selections and live bindings. Valid replies alone do not establish good judgment, useful rotation, acceptable latency or unattended readiness.</p></article><article><span class="milestone-status caution">PLANNED / NOT IMPLEMENTED</span><h3>Beyond the first display</h3><p>Real quota/workout integrations, TC002, general animation, managed plugin installation and runtime USB/plugin recovery remain unfinished. Simulator recording/playback and complete cross-platform adapters are also future work.</p></article></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#main">MARQUEE<span class="accent">.</span></a><p>Context for a small display.</p><a href="../">All side projects <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

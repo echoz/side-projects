@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111214">
+  <meta name="description" content="Blackbox is a private, pre-release local Garmin archive: exact source payloads, a rebuildable SQLite projection, and local REST and terminal clients. Remote synchronization is currently unavailable.">
+  <title>Blackbox — Keep the source. Query your copy.</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#main" aria-label="Blackbox home"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M4 7h28v22H4Z"/><path d="M10 13h16M10 19h16M10 25h7"/></svg><span>BLACKBOX<span class="accent">.</span></span></a>
+    <nav aria-label="Main navigation"><a href="#system">The archive</a><a href="#demo">Explore the idea</a><a href="#status">Project status</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dash" aria-hidden="true"></span> Local Garmin archive / private project</p>
+        <h1 id="hero-title">Keep the source.<br><span>Query your copy.</span></h1>
+        <p class="hero-description">A single-owner service for preserving Garmin Connect data on your own storage. Exact source payloads stay in an immutable archive. Query daily summaries through REST and a CLI; follow system status and runs in a separate read-only terminal monitor.</p>
+        <div class="hero-actions"><a class="button" href="#demo">Explore the archive <span aria-hidden="true">↘</span></a><a class="text-link" href="#status">What works today <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <aside class="archive-graphic" aria-label="Archive and projection concept">
+        <div class="graphic-heading"><span>OWNER-CONTROLLED STORAGE</span><span>BB / 01</span></div>
+        <div class="archive-stack" aria-hidden="true"><div class="sheet back"><span>SOURCE / 001</span></div><div class="sheet middle"><span>SOURCE / 002</span></div><div class="sheet front"><span>IMMUTABLE ARCHIVE</span><strong>Original<br>bytes.</strong><div class="sheet-rule"></div><span>RECEIPTS + CONTENT</span></div></div>
+        <div class="graphic-foot"><span class="status-dot" aria-hidden="true"></span> The archive is recovery authority.</div>
+      </aside>
+    </section>
+    <div class="checkpoint wrap" role="note"><span class="checkpoint-label">PRE-RELEASE / CURRENT CHECKPOINT</span><p><strong>Remote synchronization is currently unavailable.</strong> Authentication, retained credentials, local queries, protected artifact export, and local replay remain available. Automatic full-history acquisition is still being built.</p></div>
+    <section class="system-section wrap" id="system" aria-labelledby="system-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / The ownership model</p><h2 id="system-title">The original survives the interpretation.</h2></div><p>Blackbox reads Garmin’s unofficial private interfaces. Retrieval serves committed local data; a query never calls Garmin.</p></div>
+      <ol class="system-flow">
+        <li><div class="component-top"><span>01 / KEEP</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 5h24v6H4Zm2 6v16h20V11M12 16h8"/></svg></div><h3>Immutable source archive</h3><p>Each committed observation has its own receipt. Identical payload bytes share one content object. Exact source bytes and their provenance remain under the owner’s control.</p><span class="flow-tag">Local storage / content deduplication</span></li>
+        <li><div class="component-top"><span>02 / INTERPRET</span><svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="7" rx="11" ry="4"/><path d="M5 7v18c0 5 22 5 22 0V7M5 16c0 5 22 5 22 0"/></svg></div><h3>Rebuildable SQLite</h3><p>Installed importers turn supported archived responses into daily summaries. SQLite is a query projection: supported archives can reconstruct it locally, without another download.</p><span class="flow-tag">Source acceptance ≠ import success</span></li>
+        <li><div class="component-top"><span>03 / INSPECT</span><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2"/><path d="m8 12 4 4-4 4m8 0h7"/></svg></div><h3>Local API &amp; terminal</h3><p>The daemon owns storage. A scriptable CLI retrieves summaries, coverage, failures and artifacts. A private Chio monitor receives pushed status and run observations, with explicit history browsing.</p><span class="flow-tag">REST / blackboxctl / read-only monitor</span></li>
+      </ol>
+    </section>
+    <section class="demo-section wrap" id="demo" aria-labelledby="demo-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / Synthetic browser illustration</p><h2 id="demo-title">One archive. A fresh interpretation.</h2></div><p>Explore a tiny invented archive. Clear its sample projection, then rebuild it from the same source observations.</p></div>
+      <div class="demo-disclosure"><span class="demo-badge">SYNTHETIC</span><p>This browser illustration uses simplified sample records. It is not an application capture or an implementation of Blackbox’s storage, importer, or API. It connects to no service.</p></div>
+      <div class="demo-console">
+        <div class="console-heading"><span>ARCHIVE EXPLORER / CONCEPT DEMO</span><span class="console-state" id="projection-state">Sample projection available</span></div>
+        <div class="demo-toolbar">
+          <div><label for="sample-day">Sample day</label><select id="sample-day"><option value="2026-09-19">September 19, 2026</option><option value="2026-09-18">September 18, 2026</option></select></div>
+          <div><label for="sample-fields">Query shape</label><select id="sample-fields"><option value="full">Full sample record</option><option value="steps">Date + steps only</option></select></div>
+          <div class="demo-controls"><button type="button" id="clear-projection">Clear sample projection</button><button type="button" id="rebuild-projection" disabled>Rebuild from sample archive</button></div>
+        </div>
+        <div class="demo-panels">
+          <section class="source-panel" aria-labelledby="source-title"><div class="panel-heading"><h3 id="source-title">Retained source observations</h3><span id="receipt-count">3 receipts</span></div><ol class="receipt-list" id="receipt-list"><li>Enable JavaScript to explore the synthetic observations.</li></ol><div class="archive-intact"><span class="status-dot" aria-hidden="true"></span> Sample source archive stays unchanged.</div></section>
+          <section class="query-panel" aria-labelledby="query-title"><div class="panel-heading"><h3 id="query-title">Derived sample query</h3><span>SIMPLIFIED JSON</span></div><pre tabindex="0" aria-label="Derived synthetic sample record"><code id="query-output">{
+  "date": "2026-09-19",
+  "steps": 8420,
+  "distance_meters": 6100,
+  "sleep_minutes": null,
+  "source_observation": "sample-03"
+}</code></pre><p class="query-note" id="query-note">The newer observation has no sleep value. The earlier value is not carried forward.</p></section>
+        </div>
+        <p class="demo-event" id="demo-event" role="status" aria-live="polite" aria-atomic="true">Three invented observations; two derived daily records. No Garmin requests.</p>
+      </div>
+      <noscript><p class="noscript-note">The sample above is static because JavaScript is disabled. Blackbox keeps original source observations and derives each current daily summary from one whole successfully imported snapshot.</p></noscript>
+      <div class="demo-notes"><p><span class="note-label">MISSING STAYS MISSING</span>The real daily view uses a whole successfully imported snapshot. Absent measurements do not become zero or inherit an earlier reading.</p><p><span class="note-label">REBUILD HAS LIMITS</span>Archive reconstruction restores supported source-derived records. It can lose operational run history and invalidate projection cursors; it does not recover every failed attempt.</p></div>
+    </section>
+    <section class="principle-section wrap" aria-labelledby="principle-title"><span class="principle-mark" aria-hidden="true">↓</span><div><p class="eyebrow">Exact source, deliberate access</p><h2 id="principle-title">Inspect the record. Export the original.</h2><p>Local reads expose normalized data and public artifact metadata. Exact-byte downloads require a separate artifact-access capability. The CLI verifies downloaded byte counts and SHA-256, then publishes a new file without overwriting an existing one.</p></div></section>
+    <section class="status-section wrap" id="status" aria-labelledby="status-title">
+      <div class="status-intro"><p class="eyebrow">03 / Capabilities and evidence</p><h2 id="status-title">A working local archive.<br>A deliberate next step.</h2><p>The usable data scope is daily summaries. This private project is under active development; broader health and workout acquisition remains target behavior.</p><span class="milestone-label">Project checkpoint / October 7, 2026</span></div>
+      <div class="milestones">
+        <article><span class="milestone-index">01</span><div><span class="milestone-status available">AVAILABLE / LOCAL OPERATIONS</span><h3>Own and query daily summaries</h3><p>Date-free archive-v2 setup, authentication with optional MFA and retained tokens, local REST/CLI retrieval, paginated inspection, field selection, protected source export, and explicit local replay are implemented. The daemon owns an independent local importer; a separate read-only monitor consumes pushed status and run updates.</p></div></article>
+        <article><span class="milestone-index">02</span><div><span class="milestone-status available">VERIFIED / SYNTHETIC PLATFORM TESTS</span><h3>Exercise recovery through real boundaries</h3><p>The current checkpoint has recorded macOS and Linux regression and deterministic gates, compiled CLI/REST journeys, and archive-only reconstruction using synthetic data. An optimized arm64 Linux service smoke passed with an Apple-builder source-copy workaround. The current monitor has separate terminal-process verification.</p></div></article>
+        <article><span class="milestone-index">03</span><div><span class="milestone-status">HISTORICAL / OWNER-CONFIRMED LIVE CHECKS</span><h3>Keep live evidence in context</h3><p>Earlier builds authenticated, reused retained tokens after restart, ingested a daily summary, and served health data through REST in owner-confirmed checks. Those results do not qualify the current build. Actual live token renewal and rotation remain unverified.</p></div></article>
+        <article><span class="milestone-index">04</span><div><span class="milestone-status">PLANNED / ACQUISITION + RELEASE</span><h3>Discover and preserve more history</h3><p>Automatic full-history synchronization, activities and FIT files, remaining Garmin datasets, complete supported host deployment, and backup/verify/restore tools are still pending. Native Docker deployment and an unmodified Dockerfile build remain separate qualification gaps.</p></div></article>
+      </div>
+    </section>
+    <section class="requirements-section wrap" aria-labelledby="requirements-title">
+      <div class="section-heading"><div><p class="eyebrow">04 / Operating boundaries</p><h2 id="requirements-title">One owner. Local storage.</h2></div><p>A Swift service with explicit storage ownership and local clients.</p></div>
+      <div class="requirements-grid"><article><h3>Linux / Docker target</h3><p>Swift 6.4 with strict concurrency. Native development requires macOS 15 or newer. The service image contains the daemon and CLI; the private monitor is built separately.</p></article><article><h3>Explicit local setup</h3><p>Use owner-controlled local POSIX storage, restricted credential files, and a named IANA time zone. Current archive-v2 setup takes no historical start date. Earlier archive or SQLite formats are refused without automatic conversion or deletion.</p></article><article><h3>Unofficial, read-only access</h3><p>Garmin’s private interfaces are unsupported and can change. Blackbox does not modify Garmin records or bypass challenges or rate limits. The supported API publication is loopback-only; wider access needs a separately reviewed secure boundary.</p></article></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand footer-brand" href="#main">BLACKBOX<span class="accent">.</span></a><p>Keep the source. Query locally.</p><a href="../">All side projects <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

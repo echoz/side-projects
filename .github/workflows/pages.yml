@@ -3,9 +3,9 @@ name: Public site
 on:
   push:
     branches: [main]
-    paths: ["index.html", "pitwall/**", ".github/workflows/pages.yml"]
+    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", ".github/workflows/pages.yml"]
   pull_request:
-    paths: ["index.html", "pitwall/**", ".github/workflows/pages.yml"]
+    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -28,10 +28,12 @@ jobs:
           from pathlib import Path
           import shutil
 
-          assets = ("index.html", "pitwall/index.html", "pitwall/styles.css",
+          assets = ("index.html", "styles.css", "pitwall/index.html", "pitwall/styles.css",
                     "pitwall/favicon.svg", "pitwall/tui-capture.svg",
                     "pitwall/tui-capture.txt", "pitwall/transponder-large.png",
-                    "pitwall/transponder-half.png", "pitwall/transponder-compact.png")
+                    "pitwall/transponder-half.png", "pitwall/transponder-compact.png",
+                    "marquee/index.html", "marquee/styles.css", "marquee/demo.js", "marquee/favicon.svg",
+                    "blackbox/index.html", "blackbox/styles.css", "blackbox/demo.js", "blackbox/favicon.svg")
           for name in assets:
               source = Path(name)
               if not source.is_file() or source.is_symlink() or any(

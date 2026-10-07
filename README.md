@@ -5,6 +5,8 @@ Public project overviews and synthetic demonstrations.
 | Project | Overview |
 | --- | --- |
 | [Pitwall](https://echoz.github.io/side-projects/pitwall/) | Self-hosted workout telemetry, a Garmin data field, and a terminal interface. Includes captures of the actual Garmin data field and Chio TUI using synthetic telemetry. |
+| [Marquee](https://echoz.github.io/side-projects/marquee/) | Personal pixel billboards, host-rendered content and live progress. Includes an interactive synthetic browser illustration; TC001 output and synthetic automatic sources have separate verification. |
+| [Blackbox](https://echoz.github.io/side-projects/blackbox/) | Locally owned Garmin data, an immutable source archive and rebuildable query views. Includes a synthetic archive/query illustration; production remote synchronization is currently unavailable. |
 
 The [project index](https://echoz.github.io/side-projects/) links to each page.
 This repository contains public presentation assets and publishing configuration;
@@ -16,7 +18,7 @@ application code, credentials, and personal data are not part of this site.
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8765/` for the index or `/pitwall/` for Pitwall.
+Open `http://127.0.0.1:8765/` for the index, `/pitwall/`, `/marquee/`, or `/blackbox/`.
 GitHub Actions stages an explicit file list and deploys the resulting artifact
 after changes reach `main`. Pull requests validate without deploying. The workflow
 can also be run manually. Keep Pages configured to use GitHub Actions.
@@ -24,6 +26,28 @@ can also be run manually. Keep Pages configured to use GitHub Actions.
 When adding a project, add its directory, index link, README entry, and reviewed
 assets to `.github/workflows/pages.yml`. Existing synthetic demos must stay
 independent of live devices, services, clocks, and browser storage.
+
+## Marquee and Blackbox illustrations
+
+Both application repositories remain private. These pages summarize their purpose,
+current capabilities and limitations, with original browser illustrations made for
+this public site. They contain no application source or internal documents, make
+no requests to the applications or Garmin, and are not simulator or terminal
+captures. All displayed values are synthetic. Demo controls operate only on fixed
+in-memory examples and do not persist data.
+
+Marquee's illustration explains small pixel displays and changing content. Keep
+physical TC001 output, synthetic source behavior and model-selection evidence
+distinct. Blackbox's illustration explains preserved source bytes, local query
+views and reconstruction. It must not imply that remote synchronization is enabled,
+that all Garmin datasets are supported, or that current releases have inherited
+historical live/deployment qualification.
+
+When project work changes capabilities, setup, limitations, verification or visible
+behavior, review its public page in the same task. Check local links, JavaScript,
+keyboard interaction and mobile/desktop layout, update the explicit Pages artifact
+list for any new asset, then verify the deployed revision. Keep real account data,
+device identifiers, credentials and private capture logs out of this repository.
 
 ## Pitwall terminal capture
 

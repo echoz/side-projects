@@ -9,7 +9,9 @@ synthetic demonstrations; never copy private source history, internal documents,
 credentials, device identifiers, or real workout data into this repository.
 
 Each project owns one shallow directory. `index.html` is the project index;
-`pitwall/` owns Pitwall's standalone landing page. Keep links relative to support
+`pitwall/`, `marquee/`, and `blackbox/` own their standalone pages. The root
+`styles.css` belongs to the project index; each project owns its own styling.
+Keep links relative to support
 GitHub Pages' project path. Avoid external assets, analytics, and live telemetry.
 
 `.github/workflows/pages.yml` explicitly lists the files allowed into the public
@@ -23,3 +25,17 @@ during Garmin workouts/races, through a paired phone to a self-hosted server and
 CLI/TUI. Put the phone requirement, possible delivery delay, and current
 simulator-only verification near the top. Preserve the difference between the
 intended physical setup and what has actually been validated.
+
+Marquee and Blackbox are private projects. Their public pages are overviews, not
+source releases or hosted versions of the applications. Keep browser illustrations
+explicitly labeled, deterministic and synthetic; never describe them as actual
+simulator, hardware or terminal captures. Actual captures, if added later, must
+come from the running application with synthetic inputs and recorded provenance.
+
+Review the owning project's current README and verification records when updating
+its page. Marquee must distinguish exercised TC001 output from synthetic automatic
+sources and unfinished platform/device support. Blackbox must prominently state
+that production remote synchronization is unavailable while that restriction is
+current; local recovery/query evidence and historical live evidence are distinct.
+Update the index and this repository's README when their summaries change, then
+verify the Pages deployment. Do not publish private documents or data as evidence.
