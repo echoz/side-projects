@@ -146,13 +146,13 @@
       </div>
     </section>
     <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
-      <div class="section-heading"><div><p class="eyebrow">04 / Upcoming · not implemented</p><h2 id="roadmap-title">Two tracks. One workout view.</h2></div><p>Build on today's telemetry while optional source integrations develop in parallel. Reporting starts with a steady cadence; console and plan work can use existing telemetry and fixtures alongside it. Release dates are not set.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">04 / In progress and upcoming</p><h2 id="roadmap-title">Two tracks. One workout view.</h2></div><p>The first reporting changes and plugin contract are implemented. Their remaining gates are below; later items are planned. Console and plan work can develop alongside optional integrations. Release dates are not set.</p></div>
       <div class="roadmap-lanes">
         <article class="roadmap-lane" aria-labelledby="workout-track-title">
           <p class="roadmap-track">TRACK 01 / WORKOUT EXPERIENCE</p>
           <h3 id="workout-track-title">Clearer progress. Deliberate reporting.</h3>
           <ol>
-            <li><h4>Keep completion counts between uploads.</h4><p>First: a watch-local callback completion counter that survives skipped reports, plus true Fixed upload cadence. A full buffer will no longer trigger an early upload; gaps and resets stay explicit.</p></li>
+            <li><h4>Completion counts + Fixed cadence: qualification next.</h4><p>The opt-in path counts captured workout callbacks and sends at steady 5/10-second slots. Server, storage and real CLI/TUI checks pass on macOS and Linux, including lost replies and visible count inconsistencies. Fresh Garmin runtime and memory checks are still pending; counts do not identify native workout steps.</p></li>
             <li><h4>Report significant changes.</h4><p>Schedule meaningful events with minimum spacing and periodic updates, without noisy readings causing a burst of uploads.</p></li>
             <li><h4>Build the F1-style workout console.</h4><p>Prioritize pace, heart rate, time, distance and data freshness. Keep diagnostics close by; show trends only where retained measurements support them.</p></li>
             <li><h4>Align manual or imported workout plans.</h4><p>Bono, Pitwall's internal interpretation and advice component, will combine pinned plan revisions with observed completion counts. Show current and next steps where supported; keep uncertain alignment visible.</p></li>
@@ -164,7 +164,7 @@
           <p class="roadmap-track">TRACK 02 / OPTIONAL SOURCE PLUGINS</p>
           <h3 id="source-track-title">Add context without delaying telemetry.</h3>
           <ol>
-            <li><h4>Define the plugin contract and test fixture.</h4><p>Give each source an explicit contract for capabilities, dated observations and provenance. Use synthetic contract-test fixtures so adapters and workout features can develop independently.</p></li>
+            <li><h4>Contract ready. Build the process host next.</h4><p>The typed plugin contract and synthetic fixtures pass on macOS and Linux. They preserve missing values, dated daily context and provenance. The process host still needs shutdown, timeout and recovery checks before plugins can run.</p></li>
             <li><h4>Read Blackbox's existing local daily summaries.</h4><p>Start with read-only context already available in the separate Blackbox project. Remote synchronization is currently disabled; planned-workout and completed-activity access need further contracts.</p></li>
             <li><h4>Add providers and plans when access is verified.</h4><p>Investigate further sources against real access and supported contracts. Runna access remains unverified. Manual and imported plan work can proceed without a provider connection.</p></li>
           </ol>

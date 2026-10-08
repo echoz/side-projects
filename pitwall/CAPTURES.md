@@ -22,6 +22,13 @@ The overview prioritizes workout measurements and progress; exact source,
 delivery and last-observed callback details remain in diagnostics. Compact views
 keep duration/distance and context shortcuts visible, with identities in diagnostics.
 
+The October 8 counter/Fixed increment adds paged callback-count and reporting
+diagnostics, including an explicit warning for a retained count decrease. The
+existing overview image remains accurate; it does not show those new pages or
+claim Garmin runtime qualification for the opt-in reporting path. Actual synthetic
+daemon-to-Chio checks of those diagnostics pass on macOS and Linux. Fresh Garmin
+runtime/memory checks remain pending.
+
 The recording uses an xterm-compatible true-color terminal. The SVG preserves
 the captured ANSI colors, cell positions, borders, and visible text. It embeds
 glyph outlines and has no external resources. It is a fixed
