@@ -1,37 +1,29 @@
 
- PITWALL — live activity overview
+ PITWALL — activity overview
  SIMULATOR — synthetic measurements
+ Successful snapshot read
+ Age: 0 s at last check; source clock unverified
+ Timer: On (source observed)
  ╭ Measurements ─────────────────────────────────────╮  ╭ Activity · source observed ───────────────────────╮
  │ Heart rate: 145 bpm                               │  │ Profile: Synthetic trail                          │
  │ Speed: 3.0 m/s                                    │  │ Sport: Running / Trail                            │
- │ HR zone: Zone 3                                   │  │ Timer: On (source observed)                       │
- │ Pace: 5:33 /km (derived)                          │  │ Timer time: 32:14.000                             │
- │ Cadence: 86 rpm                                   │  │ Elapsed time: 33:14.000                           │
- │ Power: 245 W                                      │  │ Distance: 6200.5 m                                │
- ╰───────────────────────────────────────────────────╯  │ Elevation: -12.5 m                                │
-                                                        │ Ascent / descent: 120.0 m / 30.0 m                │
+ │ Pace: 5:33 /km (derived)                          │  │ Timer time: 32:14                                 │
+ │ HR zone: Zone 3                                   │  │ Elapsed time: 33:14                               │
+ │ Cadence: 86 rpm                                   │  │ Distance: 6.20 km                                 │
+ │ Power: 245 W                                      │  │ Elevation: -12.5 m                                │
+ ╰───────────────────────────────────────────────────╯  │ Ascent / descent: 120.0 m / 30.0 m                │
                                                         ╰───────────────────────────────────────────────────╯
- Successful snapshot read
- Age: 1 s; source clock unverified
- ╭ Last observed callbacks ──────────────────────────╮  ╭ Source & delivery ────────────────────────────────╮
- │ Timer callback: start · #0 · 2026-10-07T14:14:16Z │  │ Device: simulator-device                        ▐ │
- │ Lap callback: #1 · Manual · 2026-10-07T14:15:26Z  │  │ Session: demo-session                           ▐ │
- │ Workout callback: Step completed · #2 ·           │  │ Producer epoch: demo-epoch                      ▐ │
- │ 2026-10-07T14:16:16Z                              │  │ Source sequence: 1                              ▐ │
- │ Split callback: start · #3 · Interval recovery ·  │  │ Battery: 72.5 %                                 ▐ │
- │ 2026-10-07T14:16:31Z                              │  │ Phone link: disconnected (source observed)      ▐ │
- │ Split distance: 400.0 m · timer 2:00.000 ·        │  │ Firmware / Connect IQ: 18.29 / 6.0.3            ▐ │
- │ elapsed 2:00.000                                  │  │ Queue: 4 · dropped: 2 · rejected: 0             ▐ │
- │ Split ascent / descent: 0.0 m / 0.0 m             │  │ Last ACK age: 0:12.000 (source observed)        ▐ │
- │ Split average / max speed: 3.0 m/s / 4.0 m/s      │  │ Location: 0.0, 0.0 degrees · quality code 3     ▐ │
- │ Last observed per category; callbacks may         │  │ HR zone bounds: 90, 110, 130, 150, 170, 190 bpm ▐ │
- │ coalesce.                                         │  │ Phone link does not establish internet or       ▐ │
- │                                                   │  │ delivery now.                                   ▐ │
- │                                                   │  │ Last check: 2026-10-07T14:17:17Z                  │
- │                                                   │  │ Last sample read: 2026-10-07T14:17:17Z            │
- ╰───────────────────────────────────────────────────╯  ╰───────────────────────────────────────────────────╯
- Watch contact and activity completion: unknown. Phone link is a source observation.
- n/p context  j/k fields  o overview
- ────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
- live server updates q quit Ctrl-C quit
+ Explore observed context
+ 1 Summary · 2 Navigation · 3 Pressure
+ 4 Effort · 5 Swimming · 6 Cycling
+
+
+
+ Device: simulator-device
+ Session: demo-session
+ Producer epoch: demo-epoch
+ Source sequence: 1
+ Watch contact and activity completion: unknown. Phone link is a source observation.
+ 1–6 select · n/p context · j/k fields · o overview
+ d diagnostics · live updates · q quit · Ctrl-C quit

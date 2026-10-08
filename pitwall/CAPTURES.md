@@ -6,21 +6,25 @@ Paths below are relative to the repository root.
 ## Pitwall terminal capture
 
 `pitwall/tui-capture.svg` is a faithful terminal-cell rendering of the actual
-running Chio TUI, captured at 110 columns by 38 rows on October 7, 2026. Its plain
+running Chio TUI, captured at 110 columns by 30 rows on October 8, 2026. Its plain
 text equivalent is `pitwall/tui-capture.txt`. The real local daemon received a
 synthetic sample with heart rate 145 bpm, speed 3.0 m/s and rich activity context,
 including cadence, power, distance, timer, last observed callbacks and source
 diagnostics. The measurement overview is preserved alongside six additional
 context views: activity summary/profile, navigation, pressure, effort, swimming
 and cycling. The TUI read it through
-the authenticated server-pushed client path using `tui --live`. The visible
-device/session/epoch identities and GPS coordinates are synthetic. This capture
+the authenticated server-pushed client path using `tui --live`. The
+device/session/epoch identities and all supplied GPS coordinates are synthetic. This capture
 demonstrates the server and client; it bypasses the Garmin simulator. In the
-interactive TUI, `n`/`p` changes context, `j`/`k` changes field page, and `o`
-returns to the overview.
+interactive TUI, `1`–`6` selects a named context, `n`/`p` cycles contexts, `j`/`k`
+changes field page, `d` opens paged diagnostics and `o` returns to the overview.
+The overview prioritizes workout measurements and progress; exact source,
+delivery and last-observed callback details remain in diagnostics. Compact views
+keep duration/distance and context shortcuts visible, with identities in diagnostics.
 
-The SVG preserves the captured ANSI colors, cell positions, borders, and visible
-text. It embeds glyph outlines and has no external resources. It is a fixed
+The recording uses an xterm-compatible true-color terminal. The SVG preserves
+the captured ANSI colors, cell positions, borders, and visible text. It embeds
+glyph outlines and has no external resources. It is a fixed
 recording, not an interactive web terminal. Refresh captures from the running
 client; do not invent output or substitute real workout data. Never publish raw
 capture logs, provisioning state, credentials, or private source files.
@@ -61,7 +65,7 @@ not a complete event history or native workout-plan alignment.
 
 `pitwall/transponder-large.png`, `pitwall/transponder-half.png`, and
 `pitwall/transponder-compact.png` are actual Forerunner 970 simulator screen
-captures from October 6, 2026, using Garmin Connect IQ SDK 9.2. They were saved
+captures from October 8, 2026, using Garmin Connect IQ SDK 9.2. They were saved
 directly with Garmin’s **File → Save Screen Capture** at 454 × 454 pixels, without
 image editing.
 
@@ -72,9 +76,11 @@ acknowledgment was replaced with HTTP 503; these screen captures show the runnin
 renderer and are not separate transport tests. Phone delivery and physical-watch
 behavior remain unverified.
 
-The large field uses a red heart for heart rate and blue speedometer for speed,
-with units and upload diagnostics. Smaller fields use symbols, numeric counts
-and ages; `SIM` is their only word. A blue arrow means sending, amber circular
+Every size now shows telemetry delivery only; the uploaded telemetry is unchanged.
+The large field has one delivery symbol and short label, a separate historical
+`LAST ACK` row, and queue/loss symbols with counts. Garmin's native fields supply
+workout measurements. Smaller fields use symbols, numeric counts and ages;
+`SIM` is their only word. A blue arrow means sending, amber circular
 arrow means retry, red octagon means stopped, and green check plus age means an
 earlier accepted upload. A neutral circle means idle; a clock plus `--` means no
 ACK. The tray counts queued/in-flight samples. Crossed downward arrow and circled
