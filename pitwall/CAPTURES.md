@@ -40,6 +40,13 @@ the extreme floating-point fixture and needs a string-escaping adapter; physical
 phone encoding is unverified. The page must keep the phone requirement, possible
 delays, and physical-delivery/HTTPS limitations prominent.
 
+On October 7, the actual Garmin simulator also passed a five-minute pushed-client
+run with the Linux ARM64 server and real CLI/TUI in Apple containers: 278 accepted
+samples, 22 reconciled overwrites, a 4,713-byte largest body and 21,280 minimum
+sampled free bytes. The run verified frozen ACK-loss retry, same-volume restart,
+fresh client sessions and terminal restoration. This extends the transport
+evidence; the existing images above retain their original capture provenance.
+
 The added contexts preserve the source observations: summary averages/maxima,
 calories, start time/location and a losslessly represented activity profile
 identifier; navigation bearings, course deviation and destinations; distinct
