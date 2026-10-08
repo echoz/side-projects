@@ -7,13 +7,13 @@
   <meta name="description" content="Near-live Garmin workout progress, measurements and activity context, through a paired phone to your own server and terminal. Simulator-verified prototype; physical phone delivery remains unverified.">
   <title>Pitwall — Near-live Garmin workout telemetry</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20261008-telemetry">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="#main" aria-label="Pitwall home"><svg viewBox="0 0 40 32" aria-hidden="true"><path d="M3 27V5h17c7 0 11 4 11 10s-4 10-11 10H12v-7h8c2 0 3-1 3-3s-1-3-3-3h-9v15Z"/><path d="M34 5h3v22h-3Z"/></svg><span>PITWALL<span class="brand-period">.</span></span></a>
-    <nav aria-label="Main navigation"><a href="#system">Components</a><a href="#terminal">The terminal <span aria-hidden="true">↗</span></a><a href="#progress">Project status</a></nav>
+    <nav aria-label="Main navigation"><a href="#system">Components</a><a href="#telemetry">Supported uploads</a><a href="#terminal">The terminal <span aria-hidden="true">↗</span></a><a href="#progress">Project status</a></nav>
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
@@ -42,6 +42,54 @@
         <li><div class="component-top"><span class="flow-number">02 / ON YOUR SERVER</span><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="5" width="24" height="9" rx="2"/><rect x="4" y="18" width="24" height="9" rx="2"/><path d="M9 9h1m4 0h9M9 22h1m4 0h9"/></svg></div><h3>Pitwall daemon</h3><p>A Linux daemon packaged with the CLI and TUI in one Docker image. It saves readings to SQLite before acknowledging uploads; a persistent volume keeps data across container replacement.</p><span class="flow-tag">Docker / SwiftNIO / SQLite</span></li>
         <li><div class="component-top"><span class="flow-number">03 / AT THE WALL</span><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="3"/><path d="m8 12 4 4-4 4m8 0h7"/></svg></div><h3>CLI / TUI</h3><p>An agent-friendly CLI and a Chio terminal interface for measurements, activity context and delivery health. Poll or receive server-pushed snapshots locally, or run the client over SSH.</p><span class="flow-tag">Scriptable CLI / Chio TUI</span></li>
       </ol>
+    </section>
+    <section class="telemetry-section" id="telemetry" aria-labelledby="telemetry-title">
+      <div class="section-heading"><div><p class="eyebrow">Supported uploads / Watch → service</p><h2 id="telemetry-title">What Transponder can send.</h2></div><p>The telemetry service accepts these readings when Garmin provides them. The watch field shows delivery status; the uploaded data contains much more.</p></div>
+      <p class="telemetry-availability"><strong>Availability varies by activity, device, navigation and sensors.</strong> Missing readings stay missing. Rich uploads are verified with synthetic data in Garmin’s simulator; physical watch and phone delivery remain unverified.</p>
+      <dl class="telemetry-catalog">
+        <div><dt><span class="telemetry-number" aria-hidden="true">01</span>Workout measurements</dt><dd><ul>
+          <li>Heart rate, speed, cadence and power.</li>
+          <li>Distance, timer time, elapsed time and sampled timer state.</li>
+          <li>Elevation, total ascent and total descent.</li>
+          <li>Sport-specific heart-rate zone boundaries.</li>
+        </ul></dd></div>
+        <div><dt><span class="telemetry-number" aria-hidden="true">02</span>Activity &amp; summary</dt><dd><ul>
+          <li>Activity profile name and identifier, sport and sub-sport.</li>
+          <li>Garmin’s average and maximum heart rate, speed, cadence and power.</li>
+          <li>Calories, activity start time and start location.</li>
+        </ul></dd></div>
+        <div><dt><span class="telemetry-number" aria-hidden="true">03</span>Location &amp; navigation</dt><dd><ul>
+          <li>Latitude, longitude and Garmin’s GPS accuracy quality code.</li>
+          <li>Heading, bearing to destination, bearing from start and track angle.</li>
+          <li>Destination and next-point names, distances and elevations; off-course distance.</li>
+        </ul></dd></div>
+        <div><dt><span class="telemetry-number" aria-hidden="true">04</span>Pressure &amp; effort</dt><dd><ul>
+          <li>Ambient, raw ambient and sea-level pressure as separate readings.</li>
+          <li>Oxygen saturation, estimated energy expenditure per minute and aerobic Training Effect.</li>
+        </ul></dd></div>
+        <div><dt><span class="telemetry-number" aria-hidden="true">05</span>Swimming</dt><dd><ul>
+          <li>Previous interval’s average stroke distance.</li>
+          <li>Previous length’s stroke type and SWOLF score.</li>
+        </ul></dd></div>
+        <div><dt><span class="telemetry-number" aria-hidden="true">06</span>Cycling</dt><dd><ul>
+          <li>Observed front and rear gears: gear index, maximum index and tooth count.</li>
+        </ul></dd></div>
+        <div><dt><span class="telemetry-number" aria-hidden="true">07</span>Last-observed events</dt><dd><ul>
+          <li>Timer start, pause, resume, stop or reset.</li>
+          <li>Lap notification and its trigger code; workout started or step completed.</li>
+          <li>Split start or end, type, distance, timer and elapsed time, ascent and descent, average and maximum speed.</li>
+          <li>Observation time and ordering for the latest event in each category, not a complete event history.</li>
+        </ul></dd></div>
+        <div><dt><span class="telemetry-number" aria-hidden="true">08</span>Device &amp; delivery</dt><dd><ul>
+          <li>Watch battery, reported phone connection, firmware and Connect IQ versions.</li>
+          <li>Queued, dropped and rejected sample counts; time since the last upload acknowledgment.</li>
+          <li>Sample timestamps, ordering and source/session identifiers.</li>
+        </ul><p>Phone connection and an earlier acknowledgment do not prove current delivery.</p></dd></div>
+      </dl>
+      <div class="telemetry-limits">
+        <p><strong>Calculated in the viewer</strong>Pace comes from speed. The displayed heart-rate zone comes from heart rate and the uploaded zone boundaries.</p>
+        <p><strong>Not supplied by the data field</strong>Native workout-step names, targets and repeat numbers. A timer stop or silence does not confirm a finished or saved workout.</p>
+      </div>
     </section>
     <section class="transponder-section" id="transponder" aria-labelledby="transponder-title">
       <div class="section-heading"><div><p class="eyebrow">01 / On the watch</p><h2 id="transponder-title">The actual Garmin data field.</h2></div><p>Transponder rendered in Garmin’s Forerunner 970 simulator. Every size shows telemetry delivery: sending, retrying, queued samples and the last acknowledgment. Use Garmin’s native fields for workout measurements.</p></div>
@@ -89,7 +137,7 @@
     <section class="progress-section" id="progress" aria-labelledby="progress-title">
       <div class="progress-intro"><p class="eyebrow">03 / Current capabilities and limits</p><h2 id="progress-title">What works today.</h2><p>Synthetic activity data flows through the local server into the CLI and TUI, including six additional context views. Rich uploads now have end-to-end Garmin simulator evidence. The ring buffer keeps recent unsent readings during interruptions; overwritten readings remain visible as loss. Available fields depend on the activity, navigation and sensors. Physical workouts and races have not been validated.</p><span class="milestone-label">Development status / October 2026</span></div>
       <div class="milestones">
-        <article><span class="milestone-index complete" aria-hidden="true">NEW</span><div><span class="milestone-status complete-text">VERIFIED / SYNTHETIC SIMULATOR + LOCAL</span><h3>See more of the workout.</h3><p>The overview prioritizes heart rate, speed, pace, cadence, power, distance, sampled timer state and elevation. Diagnostics keeps GPS, battery, upload health and last-observed timer, lap, workout and split events available without crowding the workout view. Six additional views cover activity summary and profile, navigation, pressure, effort, swimming and cycling. This is sampled context, not a complete event history; Garmin blocks native workout-step names, targets and repeat numbers from data fields.</p><p>Summary includes native averages, maxima, calories, start time/location and the activity profile identifier. Navigation includes bearings, course deviation and destinations. Pressure keeps ambient, raw and sea-level readings distinct. Effort includes oxygen saturation, estimated energy expenditure and aerobic Training Effect. Swimming shows the previous interval or length; cycling shows observed front and rear gears. Availability varies by sport, device and sensors.</p></div></article>
+        <article><span class="milestone-index complete" aria-hidden="true">NEW</span><div><span class="milestone-status complete-text">VERIFIED / SYNTHETIC SIMULATOR + LOCAL</span><h3>See more of the workout.</h3><p>The TUI puts workout measurements in the overview, with six additional context views and separate delivery diagnostics. The <a class="text-link" href="#telemetry">supported upload list</a> above details the readings and events the service accepts. End-to-end verification uses synthetic Garmin simulator data; it does not establish which native readings a physical activity will provide.</p></div></article>
         <article><span class="milestone-index complete" aria-hidden="true">01</span><div><span class="milestone-status complete-text">VERIFIED / SIMULATOR + LOCAL</span><h3>Five-minute simulator workout</h3><p>A five-minute Garmin simulator run against the Linux container delivered 278 rich synthetic samples into SQLite and accounted for 22 readings overwritten during deliberate interruptions. Batches awaiting acknowledgment stayed unchanged for safe retry. Fresh CLI and TUI sessions showed advancing readings after the container restarted.</p></div></article>
         <article><span class="milestone-index complete" aria-hidden="true">02</span><div><span class="milestone-status complete-text">MEASURED / LOCAL SIMULATOR RUN</span><h3>Server-pushed updates</h3><p>In the earlier HR/speed run, the CLI observed 42 of 42 batch snapshots in the timing window. Local upload-to-CLI timing: <strong>median ≈47 ms; 95th percentile ≈91 ms</strong>, including test observation delay. Watch batching, phone transport and TUI screen rendering are outside this measurement. These results describe one local run, with no latency guarantee.</p></div></article>
         <article><span class="milestone-index complete" aria-hidden="true">03</span><div><span class="milestone-status complete-text">VERIFIED / LINUX DOCKER</span><h3>Run the server in Docker</h3><p>One image includes the daemon, CLI and actual Chio TUI. Private readings and credentials survive container replacement. Run clients inside the container, using SSH to reach your server. The default Docker setup exposes no network ports; phone HTTPS access is still to come.</p><p>Local Mac testing keeps Garmin’s actual simulator on macOS and runs the Linux server, CLI and Chio TUI in Apple containers. This combined path now passes a five-minute workout with server-pushed readings, a lost acknowledgment and a server restart. Physical watch and phone delivery remain unverified.</p><p>Known issue: quitting the Linux TUI immediately after a resize has intermittently stalled in testing. The cause remains under investigation.</p></div></article>

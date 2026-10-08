@@ -68,7 +68,7 @@ section {
   transform: translateY(0);
 }
 
-.site-header, .hero, .system-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .site-footer {
+.site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .site-footer {
   width: min(100% - 96px, 1248px);
   margin-inline: auto;
 }
@@ -322,6 +322,89 @@ a:hover {
 .compact-heading {
   margin-bottom: 17px;
   align-items: center;
+}
+
+.telemetry-section {
+  padding-block: 45px;
+  border-top: 1px solid var(--rule);
+}
+
+.telemetry-availability {
+  max-width: 850px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.telemetry-availability strong {
+  color: var(--ink);
+}
+
+.telemetry-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.telemetry-catalog>div {
+  padding: 24px;
+  background: var(--panel);
+}
+
+.telemetry-catalog dt {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -.4px;
+}
+
+.telemetry-number {
+  color: var(--red);
+  font: 11px/1.6 var(--mono);
+  letter-spacing: 1px;
+}
+
+.telemetry-catalog dd {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.telemetry-catalog ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.telemetry-catalog li+li {
+  margin-top: 5px;
+}
+
+.telemetry-catalog dd>p {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.telemetry-limits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.telemetry-limits strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
 }
 
 .compact-heading h2 {
@@ -775,7 +858,7 @@ figcaption a {
     width: calc(100% - 64px);
   }
 
-  .site-header, .hero, .system-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .site-footer {
+  .site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .site-footer {
     width: calc(100% - 64px);
   }
 
@@ -816,13 +899,15 @@ figcaption a {
     padding: 20px;
   }
 
-  .site-header, .hero, .system-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .site-footer {
+  .site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .site-footer {
     width: calc(100% - 40px);
   }
 
   .site-header {
     min-height: 83px;
     gap: 18px;
+    flex-wrap: wrap;
+    padding-block: 18px;
   }
 
   .brand {
@@ -941,6 +1026,22 @@ figcaption a {
   .section-heading>p {
     max-width: none;
     margin-top: 14px;
+  }
+
+  .telemetry-section {
+    padding-block: 35px;
+  }
+
+  .telemetry-catalog, .telemetry-limits {
+    grid-template-columns: 1fr;
+  }
+
+  .telemetry-catalog>div {
+    padding: 20px;
+  }
+
+  .telemetry-limits {
+    gap: 18px;
   }
 
   .transponder-gallery {
