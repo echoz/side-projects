@@ -20,8 +20,7 @@ on each of macOS and Linux ARM64 at this candidate. Real-process checks preserve
 Significant facts through storage, clients and replay. Garmin targets compile;
 at this capture checkpoint, the then-current 69-test SDK runtime suite and
 production upload matrix were pending with HTTPS enabled. The original Significant
-implementation is on main, merged
-on October 9, 2026 at `46758111d37e60c8f7ad4b1ed8296bce7469cc92`
+implementation merged on October 9, 2026 at `46758111d37e60c8f7ad4b1ed8296bce7469cc92`
 from the approved head `a79f6c1cab95afc56997f46d49268d26b5f12787`.
 This is not a release. Physical phone/watch delivery, battery savings and a
 fresh release-image check remain open. The readability changes and merge
@@ -46,8 +45,11 @@ native encoder peak allocation or physical-watch memory.
 
 HTTPS enforcement was restored after the matrix. A fresh negative probe observed
 three explicit SDK secure-connection rejections for plain HTTP acknowledgments.
-The repair is under review, not merged or released; main retains the original
-implementation. These checks do not refresh the captures or prove physical
+The repair was subsequently merged on main on October 9, 2026 at
+`8c557a0398fa8ad27dc84bbd6b8b8348bdb6873b` from the approved head
+`88870d170de8597de8e772edc41c2aebd4fa7835`. It is simulator-qualified,
+not released. The merge did not refresh the captures; their provenance remains
+`93bb6ab1ba531a8d1de50a686ee03492cea8bc75`. These checks do not prove physical
 watch/phone delivery, phone-reachable HTTPS, battery savings or fresh release-image
 qualification.
 
