@@ -18,14 +18,38 @@ The exporter checks actual terminal cells and clean exit at 110 × 36 and 80 × 
 All 369 Swift Testing functions in 67 suites plus 14 XCTest checks pass locally
 on each of macOS and Linux ARM64 at this candidate. Real-process checks preserve
 Significant facts through storage, clients and replay. Garmin targets compile;
-the new 69-test SDK runtime suite and production upload matrix remain pending
-with HTTPS enabled. Significant reporting is now implemented on main, merged
+at this capture checkpoint, the then-current 69-test SDK runtime suite and
+production upload matrix were pending with HTTPS enabled. The original Significant
+implementation is on main, merged
 on October 9, 2026 at `46758111d37e60c8f7ad4b1ed8296bce7469cc92`
 from the approved head `a79f6c1cab95afc56997f46d49268d26b5f12787`.
 This is not a release. Physical phone/watch delivery, battery savings and a
 fresh release-image check remain open. The readability changes and merge
 did not refresh the captures or alter their visible display; their
 recorded provenance remains `93bb6ab1ba531a8d1de50a686ee03492cea8bc75`.
+
+Significant runtime repair candidate, October 9, 2026: the merged implementation
+subsequently encountered a Garmin runtime stack overflow. Candidate `8c7d30c`
+repairs immutable copying without changing reporting policy or wire data,
+strengthens qualification checks and corrects the synthetic heart-rate scenario.
+All 72 Garmin SDK tests pass; 140 harness checks pass on each of macOS and
+Linux ARM64. Independent review found no issues. All four five-minute production
+simulator cases pass: polling and pushed clients, each with ordinary and maximum
+payloads, using the native macOS daemon, SQLite and real CLI/TUI. Each case
+accepts 15 reports from 17 attempts with exactly two frozen retries, observes
+completion counts advancing from zero to five and all ten reporting reasons,
+and records no drops or rejections. Across the matrix, the largest encoded body
+is 3,811 bytes and the lowest sampled free memory is 25,096 bytes. Send attempts
+remain at least 5,000 ms apart; the largest stable heartbeat gap is 30,967 ms,
+within the 31,500 ms qualification tolerance. These memory samples do not measure
+native encoder peak allocation or physical-watch memory.
+
+HTTPS enforcement was restored after the matrix. A fresh negative probe observed
+three explicit SDK secure-connection rejections for plain HTTP acknowledgments.
+The repair is under review, not merged or released; main retains the original
+implementation. These checks do not refresh the captures or prove physical
+watch/phone delivery, phone-reachable HTTPS, battery savings or fresh release-image
+qualification.
 
 The exporter’s accessible description was subsequently corrected to say
 “observed reporting policy”; captured cells and values are unchanged.
