@@ -7,9 +7,18 @@ Paths below are relative to the repository root.
 
 Instrument preview checkpoint, October 8, 2026: Pitwall revision
 `f99eec77fbedb838ea4a1ec027623697cf376da4`.
-Normal navigation and synthetic console capture checks are verified. Immediate
-quit after an 80×28 resize exceeds the five-second shutdown qualification limit
-on both macOS and Linux ARM64. The preview is not ready for release.
+Normal navigation and synthetic console capture checks passed at this checkpoint.
+Immediate quit after an 80×28 resize failed the five-second shutdown qualification
+limit on both macOS and Linux ARM64. That historical failure is preserved below.
+
+Shutdown-fix candidate, October 9, 2026: Pitwall revision
+`99a37770884f8c7e241f32a2596f87b94531089a` selects synchronous terminal rendering.
+The unchanged 32-case shutdown matrix passes three iterations (96 cases) on each
+of macOS and Linux ARM64, including the original immediate-resize case, exact
+exit codes and terminal restoration within the unchanged five-second deadline.
+The fix is in review and awaits merge; these local results do not establish
+release readiness. The visible layout is unchanged, so the original synthetic
+captures remain at `f99eec7` and have not been regenerated.
 
 `pitwall/tui-capture.svg` and its plain-text equivalent
 `pitwall/tui-capture.txt` record the running production Chio workout console
@@ -70,30 +79,41 @@ identities, raw callbacks and delivery details remain in diagnostics. Below the
 80×24 layout, a 36×18 compact view retains primary measurements, source/read/age,
 context navigation and quit. The public compact capture represents 80×24.
 
-The final instrument checkpoint passes 290 Swift Testing functions in
-52 suites and 14 XCTest tests on each of macOS and Linux ARM64. The final full
-suite repeat is confirmed; shutdown qualification remains failing as described below. Eight SVG export
-tests pass on both platforms, including all 256 braille glyphs and style handling.
-Final real synthetic authenticated instrument, activity-layout and reporting
-client checks pass on both platforms. All four published capture sessions exit
-cleanly through the ordinary quit path and pass terminal cleanup checks. Wide bars/dials, 80×24 gauges, 36×18 numeric
+The original instrument checkpoint passed 290 Swift Testing functions in
+52 suites and 14 XCTest tests on each of macOS and Linux ARM64. Eight SVG export
+tests passed on both platforms, including all 256 braille glyphs and style handling.
+Real synthetic authenticated instrument, activity-layout and reporting
+client checks passed on both platforms at that checkpoint. All four published capture sessions exited
+cleanly through the ordinary quit path and passed terminal cleanup checks. Wide bars/dials, 80×24 gauges, 36×18 numeric
 fallbacks and no-color cells were inspected. Normal navigation and capture checks
-pass, but immediate quit after an 80×28 resize exceeds the five-second limit on
-both platforms. This is a failing qualification case for the instrument preview;
-it is not treated as an unrelated or solely pre-existing issue.
+passed, but immediate quit after an 80×28 resize exceeded the five-second limit on
+both platforms. This was a failing qualification case for that instrument preview;
+it was not treated as an unrelated or solely pre-existing issue.
+
+The shutdown-fix candidate repeats the full 290-function/52-suite and 14-XCTest
+checks successfully on both platforms. Its continuous-upload pressure regression
+passes on both platforms. All six real-client checks and eight capture-export
+regressions pass on both macOS and Linux ARM64.
+The pressure regression keeps synthetic uploads independent
+of screen waits, observes advancing readings and ordinary keys through repeated
+resizes in polling and pushed modes, then quits immediately after resizing while
+uploads remain active. It preserves the five-second exit and exact restoration
+requirements. Intermediate snapshot displays may still be skipped.
 
 The capture harness waits for a complete frame and verifies clean quit,
 exact terminal settings, cursor and alternate-screen restoration before writing
-publishable assets. These normal capture paths do not establish the failing
-immediate-resize/quit case. Export checks preserve colors, inverse cells and glyphs.
+publishable assets. These normal capture paths did not establish the original
+immediate-resize/quit case; the candidate's separate shutdown matrix now passes
+that case locally. Export checks preserve colors, inverse cells and glyphs.
 
 The opt-in reporting path now passes 54 Garmin SDK tests and its first five-minute
 production case: 10-second reporting with adversarial payloads and polling clients,
 including sampled memory checks. Seven other combinations remain pending.
 Simulator HTTPS enforcement has been restored and verified: plain HTTP uploads
 are rejected. Physical watch/phone delivery and phone-reachable HTTPS remain
-unverified. Immediate quit after resizing remains a failing instrument-preview
-qualification case on both platforms.
+unverified. The local shutdown-fix candidate does not complete the remaining
+Garmin qualification cases or establish physical delivery, phone-reachable HTTPS
+or a fresh Docker release-image qualification.
 
 The recording uses an xterm-compatible true-color terminal. The SVG preserves
 the captured ANSI colors, cell positions, borders, and visible text. Terminal
