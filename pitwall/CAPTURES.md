@@ -167,14 +167,20 @@ publishable assets. These normal capture paths did not establish the original
 immediate-resize/quit case; the candidate's separate shutdown matrix now passes
 that case locally. Export checks preserve colors, inverse cells and glyphs.
 
-The opt-in reporting path now passes 54 Garmin SDK tests and its first five-minute
-production case: 10-second reporting with adversarial payloads and polling clients,
-including sampled memory checks. Seven other combinations remain pending.
-Simulator HTTPS enforcement has been restored and verified: plain HTTP uploads
-are rejected. Physical watch/phone delivery and phone-reachable HTTPS remain
-unverified. The local shutdown-fix candidate does not complete the remaining
-Garmin qualification cases or establish physical delivery, phone-reachable HTTPS
-or a fresh Docker release-image qualification.
+Reporting qualification checkpoint, October 9, 2026: all 54 Garmin SDK tests
+and eight five-minute production Fixed cases pass with the native macOS daemon,
+SQLite and real CLI/TUI: 5/10-second cadence, polling/pushed clients and
+ordinary/adversarial payloads. Each case checks frozen lost-ACK retry,
+same-database outage/recovery and sampled memory. Minimum sampled free memory
+is 35,432 bytes; this does not measure native encoder peak or physical memory.
+Two initial SDK launches timed out before ACK acceptance; unchanged full cases
+passed after normal simulator restarts. Later cases used fresh simulator sessions.
+The cause of those startup failures remains unproved. Simulator HTTPS enforcement
+was restored after the matrix; a fresh probe returned the explicit secure-connection
+requirement rejection. This blocks HTTP ACK consumption even when a request reaches
+the test server. Physical watch/phone delivery, phone-reachable HTTPS, battery
+behavior and a fresh Docker release-image qualification remain open. These new
+transport results do not change the capture revisions or visible console design above.
 
 The recording uses an xterm-compatible true-color terminal. The SVG preserves
 the captured ANSI colors, cell positions, borders, and visible text. Terminal
