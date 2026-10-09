@@ -2,22 +2,22 @@
  PITWALL / WORKOUT CONTROL
  SIMULATOR — synthetic measurements
  Successful snapshot read
- Age: 0 s at last check; source clock unverified
+ Age: 1 s at last check; source clock unverified
  Timer: On (source observed)
  ╭ WORKOUT / LATEST MEASUREMENTS ─────────────────────────────────────────────╮
  │ Pace: 5:33 /km                       Heart rate: 145 bpm                   │
- │ Time 32:14                           Distance 6.20 km                      │
+ │ Active time: 32:14                   Distance: 6.20 km                     │
  │ Speed: 3.0 m/s · pace derived                                              │
  │ Cadence: 86 rpm · Power: 245 W                                             │
  ╰────────────────────────────────────────────────────────────────────────────╯
  Battery: 72% observed ━━━━━━── · Reporting: Fixed · 10 s
- Policy observed 2 s ago at check
+ Policy observed 3 s ago at check
  Captured completions: 3 · plan position unknown
  Since captured start · generation 1
  1 Summary  2 Navigation  3 Pressure
  4 Effort   5 Swimming    6 Cycling
 
- Session: demo-session
+ Running (auto) · v layout · Session: demo-session
  Watch contact / completion: unknown · phone link is only an observation.
- 1–6 select · n/p context · j/k fields · o overview
+ 1–6 select · n/p context · j/k fields · o overview · v layout
  d diagnostics · live updates · q quit · Ctrl-C quit

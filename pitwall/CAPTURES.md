@@ -5,21 +5,29 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
-Recorded October 8, 2026, from Pitwall revision `4f2fd55`.
+Activity-layout checkpoint, October 8, 2026: Pitwall revision `5f21a642d7ae69a186bb12e19822c657d10c5b2d`.
+These captures replace the earlier console recordings from `4f2fd55`.
 
 `pitwall/tui-capture.svg` and its plain-text equivalent
 `pitwall/tui-capture.txt` record the running production Chio workout console
-at 110 columns by 36 rows. `pitwall/tui-compact-capture.svg` and
-`pitwall/tui-compact-capture.txt` record its stacked 80-column by 24-row view.
-Both use the real daemon and authenticated `tui --live` client, with synthetic
+in the Running layout at 110 columns by 36 rows. `pitwall/tui-compact-capture.svg` and
+`pitwall/tui-compact-capture.txt` record its stacked Running 80-column by 24-row view.
+`pitwall/tui-cycling-capture.svg` and `pitwall/tui-cycling-capture.txt` record the
+Cycling layout at 110 columns by 36 rows: 30.6 km/h (8.5 m/s), 245 W, 86 rpm and
+145 bpm. Other observations match the Running fixture. The Running captures
+use the real daemon and authenticated `tui --live` client, with synthetic
 schema-4 observations: 145 bpm, 3.0 m/s, 6.20 km, 32:14 active time, 72% observed
 battery, applied Fixed 10-second reporting and three captured completions since
 start generation 1. Source identities and workout values are synthetic. The
 capture bypasses Garmin and does not establish physical phone/watch delivery.
 
-The first console slice has a red strip, four wide primary panels for derived
-pace, heart rate, active time and distance, and separate session and observed
-reporting context. Battery, applied Fixed interval and policy observation age
+The console has Running, Cycling and General layouts. Running
+uses four stable primary slots for derived pace, heart rate, active time and
+distance. Cycling uses speed in km/h, power, cadence and heart rate, with active
+time/distance context below at wide/80×24 sizes and in diagnostics at compact size. General uses speed in km/h, heart rate, active time
+and distance. Missing measurements stay unavailable in their fixed slots.
+A red strip and separate session and observed reporting context remain. Battery,
+applied Fixed interval and policy observation age
 are source facts; phone connection does not prove current delivery. The wide HR
 pointer spans supplied zone bounds and preserves below/above/unknown labels.
 Missing/collapsed bounds show `Zone range unavailable`. An eight-cell battery bar
@@ -29,6 +37,15 @@ denominator. Captured completion counts retain their lifetime and uncertainty. P
 current/next steps and targets are unavailable. No timeline, trend history or
 provider data is invented.
 
+Auto selects Running for observed sport `1`, Cycling for `2`/`21`, and General
+for other explicit sports. A missing profile retains the last automatic layout
+within the same device/session/producer-epoch stream, initially General. `v`
+cycles Auto → Running manual → Cycling manual → General manual → Auto and returns
+to the overview. Updates and resizes retain manual selection; a new full source
+stream resets manual selection and automatic memory. Raw JSON, `--once` and wire
+contracts remain unchanged. Hiking, swimming and strength specializations remain
+proposed; these layouts add no plan, history or map capability.
+
 Six context views remain available: activity summary/profile, navigation,
 pressure, effort, swimming and cycling. In the interactive TUI, `1`–`6` selects
 a named context, `n`/`p` cycles contexts, `j`/`k` changes field page, `d` opens
@@ -37,12 +54,14 @@ identities, raw callbacks and delivery details remain in diagnostics. Below the
 stacked layout, a 36×18 compact view retains primary measurements, source/read/age,
 context navigation and quit. The public compact capture represents 80×24.
 
-The redesigned screen passes local macOS and Linux renderer and real-process
-checks, including live updates, cached outage/recovery, context navigation,
-count decrease/exhaustion, missing and zero readings, and source-clock uncertainty.
-The full suites pass 274 Swift Testing functions and 14 XCTest tests per platform.
-Actual 110×36, 80×24 and 36×18 terminal cells were inspected; no-color output also
-passes. The capture harness waits for a complete frame and verifies clean quit,
+The activity-layout checkpoint passes 283 Swift Testing functions in 50 suites
+and 14 XCTest tests on each of macOS and Linux ARM64. Renderer and hosted-session
+checks cover the three layouts, zero/missing readings, missing/unsupported sport,
+manual selection, stream resets and resizing. Real synthetic authenticated client
+checks and 32 terminal shutdown cases per platform supplement those tests.
+Actual Running and Cycling 110×36/80×24/36×18 cells, General 36×18 cells and
+Cycling no-color output were inspected. Linux no-color export also passes.
+The capture harness waits for a complete frame and verifies clean quit,
 exact terminal settings, cursor and alternate-screen restoration before writing
 publishable assets. Export checks preserve colors, inverse cells and glyphs.
 

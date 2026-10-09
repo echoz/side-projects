@@ -4,18 +4,18 @@
  Successful snapshot read
  Age: 1 s at last check; source clock unverified
  Timer: On (source observed)
- ╭ PACE ───────────────────╮ ╭ HEART RATE ────────────╮ ╭ ACTIVE TIME ───────────╮ ╭ DISTANCE ──────────────╮
- │ 5:33 /km                │ │ 145 bpm                │ │ 32:14                  │ │ 6.20 km                │
- │ Derived from speed      │ │ Zone 3                 │ │ Observed timer         │ │ Observed distance      │
- │                         │ │ 90 ──────◆──── 190     │ │                        │ │                        │
+ ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
+ │ 30.6 km/h               │ │ 245 W                  │ │ 86 rpm                 │ │ 145 bpm                │
+ │ Derived from m/s        │ │ Observed power         │ │ Observed cadence       │ │ Zone 3                 │
+ │                         │ │                        │ │                        │ │ 90 ──────◆──── 190     │
  ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
 
  ╭ SESSION / SOURCE OBSERVED ────────────────────────╮ ╭ TRANSPONDER / LAST REPORTED ───────────────────────╮
- │ Synthetic trail                                   │ │ Battery: 72% observed ━━━━━━──                     │
- │ Running · Trail                                   │ │ Applied reporting: Fixed · 10 s                    │
- │ Speed: 3.0 m/s                                    │ │ Policy observed 3 s ago at check                   │
- │ Cadence: 86 rpm                                   │ │ Source clock unverified                            │
- │ Power: 245 W                                      │ │ Phone: disconnected (observed)                     │
+ │ Synthetic ride                                    │ │ Battery: 72% observed ━━━━━━──                     │
+ │ Cycling · unknown                                 │ │ Applied reporting: Fixed · 10 s                    │
+ │ Speed: 8.5 m/s                                    │ │ Policy observed 3 s ago at check                   │
+ │ Active time: 32:14                                │ │ Source clock unverified                            │
+ │ Distance: 6.20 km                                 │ │ Phone: disconnected (observed)                     │
  │ Elapsed time: 33:14                               │ │ Delivery now / finish reserve: unknown             │
  ╰───────────────────────────────────────────────────╯ ╰────────────────────────────────────────────────────╯
 
@@ -29,7 +29,7 @@
 
 
 
- Running (auto) · v layout · Session: demo-session
+ Cycling (auto) · v layout · Session: demo-session
  Watch contact / completion: unknown · phone link is only an observation.
  1–6 select · n/p context · j/k fields · o overview · v layout
  d diagnostics · live updates · q quit · Ctrl-C quit
