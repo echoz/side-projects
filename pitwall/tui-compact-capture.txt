@@ -1,7 +1,7 @@
 
  PITWALL / WORKOUT CONTROL
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 2 s at last check; source clock unverified
+ Read OK · Age: 1 s at last check; source clock unverified
  ╭ PACE ───────────╮ ╭ HEART RATE ─────╮ ╭ ACTIVE TIME ────╮ ╭ DISTANCE ──────╮
  │ 5:33 /km        │ │ 145 bpm         │ │ 32:14           │ │ 6.20 km        │
  │ Derived from s… │ │ Zone 3          │ │ Observed timer  │ │ Observed dist… │
@@ -17,7 +17,7 @@
 
 
 
- Last reported · Battery: 72% · Significant 5 s min / 30 s heartbeat · d detai…
+ Last reported · Battery: 72% · Auto 30 s · steady activity · d details
  Running (auto) · Bars · live updates · Session: demo-session
  1–6 context · n/p next/prev · j/k fields · o overview · v layout
  g dials · d diagnostics · m menu · q quit · Ctrl-C quit

@@ -5,8 +5,47 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
+Local Auto preview checkpoint, October 9, 2026: the Running wide and compact
+SVG/text pairs (`tui-capture` and `tui-compact-capture`) are refreshed from the
+candidate revision `3cfad25da709fd5356af0ae9ffb8684449f91d63` on
+`codex/local-auto-reporting`. The CLI and capture sources are unchanged from the
+captured working tree. This is a candidate checkpoint, not a merged or released
+revision. They use the actual local daemon
+and authenticated Chio client with synthetic readings: 145 bpm, 3.0 m/s, 6.2 km,
+32:14 active time and 72% battery. Both footers show `Last reported`,
+`Auto 30 s` and `steady activity`. `Running (auto)` separately describes the
+sport-layout selection, not the reporting policy.
+
+The capture harness checks actual terminal cells and clean quit at 110 × 36
+and 80 × 24 before writing the reviewed SVG/text pairs. The SVG paths and
+plain-text transcript come from the same captured terminal cells. No Garmin
+watch or simulator participates in these terminal recordings. The candidate
+passes 382 Swift Testing functions, 14 XCTest checks and 157 harness checks on
+each of macOS and Linux ARM64. Actual service/client checks for Auto, Fixed,
+Significant, recovery and activity contexts pass on both platforms. All 86 offline
+Garmin SDK tests pass; the production Auto simulator upload matrix remains open.
+A current negative HTTPS probe confirms the SDK secure-connection rejection
+(`-1001`) for plain HTTP acknowledgments. These
+platform and terminal checks do not prove physical phone/watch delivery, battery
+savings or release-image qualification. Only these two Running pairs are
+refreshed; the other five menu, Replay and Cycling pairs retain the Live-or-Replay
+checkpoint below.
+
+Local Auto targets new reports at 10 seconds around qualified changes, 30 seconds
+for steady activity or unknown battery and 60 seconds when paused or protecting
+low battery. Reserve protection has priority over faster reporting. Each report
+freezes its source decision and interval through retries, storage, CLI/TUI and
+replay. These are targets rather than guaranteed delivery intervals. The candidate
+does not consume Bono hints, estimate battery life or establish physical-watch
+behavior. The public page must retain its candidate-in-progress status until
+final verification and merge evidence are recorded.
+
+The following Significant checkpoints are historical. Their Running recordings
+have been superseded by this Auto preview; their verification evidence remains
+separate from Auto qualification.
+
 Significant preview checkpoint, October 9, 2026: the Running wide and compact
-SVG/text pairs (`tui-capture` and `tui-compact-capture`) are refreshed from
+SVG/text pairs (`tui-capture` and `tui-compact-capture`) were refreshed from
 candidate revision `93bb6ab1ba531a8d1de50a686ee03492cea8bc75`. They use the actual
 local daemon and authenticated Chio client with synthetic readings: 145 bpm,
 3.0 m/s, 6.2 km, 32:14 active time and 72% battery. The footer shows Significant
@@ -55,7 +94,7 @@ qualification.
 
 The exporter’s accessible description was subsequently corrected to say
 “observed reporting policy”; captured cells and values are unchanged.
-Only those two Running pairs are replaced. The other five menu, Replay and
+At that checkpoint, only those two Running pairs were replaced. The other five menu, Replay and
 Cycling pairs retain the Live-or-Replay checkpoint below. Every image is a static
 synthetic application capture; none is a browser implementation or live feed.
 
@@ -70,7 +109,7 @@ Live-or-Replay capture checkpoint, October 9, 2026: Pitwall source/test revision
 `f546ea5a9bc4f95975cafe9ad5a93b2139e36a61`. The seven terminal SVG/text pairs
 were originally captured from this revision using the real local daemon and
 authenticated Chio client. The five menu, Replay and Cycling pairs retain that original provenance;
-the two Running pairs now use the Significant checkpoint above.
+the two Running pairs now use the Auto preview checkpoint above.
 Merging the console refactor itself did not refresh any captures.
 
 `tui-menu-capture.svg` / `.txt` show the branded startup chooser at 110 × 36.
@@ -150,8 +189,8 @@ battery, applied Fixed 10-second reporting, elevation −12.5 m, ascent 120.0 m
 and descent 30.0 m. The supplied fixture also includes three captured completions
 since start generation 1; completion detail is in diagnostics. Source identities and workout values are synthetic. The
 capture bypasses Garmin and does not establish physical phone/watch delivery.
-Those original Running pairs have now been replaced by the Significant pairs
-described at the top; the Cycling pairs retain the Fixed fixture.
+Those original Running pairs were later replaced by Significant captures and
+now use the Auto preview described at the top; the Cycling pairs retain the Fixed fixture.
 
 The console has Running, Cycling and General layouts. Four large numeric cards
 lead the wide overview. Running uses stable primary slots for derived pace,
