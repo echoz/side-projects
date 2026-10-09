@@ -659,6 +659,21 @@ figcaption a {
   color: var(--ink);
 }
 
+.terminal-compact {
+  margin-top: 20px;
+}
+
+.terminal-compact summary {
+  padding-block: 12px;
+  cursor: pointer;
+  color: var(--ink);
+  font: 11px/1.7 var(--mono);
+}
+
+.terminal-compact .terminal-scroll img {
+  min-width: 620px;
+}
+
 .terminal-notes {
   display: grid;
   grid-template-columns: 1fr 1fr;

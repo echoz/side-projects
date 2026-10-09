@@ -5,33 +5,55 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
-`pitwall/tui-capture.svg` is a faithful terminal-cell rendering of the actual
-running Chio TUI, captured at 110 columns by 30 rows on October 8, 2026. Its plain
-text equivalent is `pitwall/tui-capture.txt`. The real local daemon received a
-synthetic sample with heart rate 145 bpm, speed 3.0 m/s and rich activity context,
-including cadence, power, distance, timer, last observed callbacks and source
-diagnostics. The measurement overview is preserved alongside six additional
-context views: activity summary/profile, navigation, pressure, effort, swimming
-and cycling. The TUI read it through
-the authenticated server-pushed client path using `tui --live`. The
-device/session/epoch identities and all supplied GPS coordinates are synthetic. This capture
-demonstrates the server and client; it bypasses the Garmin simulator. In the
-interactive TUI, `1`–`6` selects a named context, `n`/`p` cycles contexts, `j`/`k`
-changes field page, `d` opens paged diagnostics and `o` returns to the overview.
-The overview prioritizes workout measurements and progress; exact source,
-delivery and last-observed callback details remain in diagnostics. Compact views
-keep duration/distance and context shortcuts visible, with identities in diagnostics.
+Recorded October 8, 2026, from Pitwall revision `4f2fd55`.
 
-The October 8 counter/Fixed increment adds paged callback-count and reporting
-diagnostics, including an explicit warning for a retained count decrease. The
-existing overview image remains accurate; it does not show those new pages or
-claim Garmin runtime qualification for the opt-in reporting path. Actual synthetic
-daemon-to-Chio checks of those diagnostics pass on macOS and Linux. Fresh Garmin
-runtime/memory checks remain pending.
+`pitwall/tui-capture.svg` and its plain-text equivalent
+`pitwall/tui-capture.txt` record the running production Chio workout console
+at 110 columns by 36 rows. `pitwall/tui-compact-capture.svg` and
+`pitwall/tui-compact-capture.txt` record its stacked 80-column by 24-row view.
+Both use the real daemon and authenticated `tui --live` client, with synthetic
+schema-4 observations: 145 bpm, 3.0 m/s, 6.20 km, 32:14 active time, 72% observed
+battery, applied Fixed 10-second reporting and three captured completions since
+start generation 1. Source identities and workout values are synthetic. The
+capture bypasses Garmin and does not establish physical phone/watch delivery.
+
+The first console slice has a red strip, four wide primary panels for derived
+pace, heart rate, active time and distance, and separate session and observed
+reporting context. Battery, applied Fixed interval and policy observation age
+are source facts; phone connection does not prove current delivery. The wide HR
+pointer spans supplied zone bounds and preserves below/above/unknown labels.
+Missing/collapsed bounds show `Zone range unavailable`. An eight-cell battery bar
+uses the observed percentage in wide and 80×24 views; missing battery has no bar.
+Neither gauge invents a target or workout completion percentage without a
+denominator. Captured completion counts retain their lifetime and uncertainty. Plan position,
+current/next steps and targets are unavailable. No timeline, trend history or
+provider data is invented.
+
+Six context views remain available: activity summary/profile, navigation,
+pressure, effort, swimming and cycling. In the interactive TUI, `1`–`6` selects
+a named context, `n`/`p` cycles contexts, `j`/`k` changes field page, `d` opens
+paged diagnostics, `o` returns to the overview and `q` quits. Full source
+identities, raw callbacks and delivery details remain in diagnostics. Below the
+stacked layout, a 36×18 compact view retains primary measurements, source/read/age,
+context navigation and quit. The public compact capture represents 80×24.
+
+The redesigned screen passes local macOS and Linux renderer and real-process
+checks, including live updates, cached outage/recovery, context navigation,
+count decrease/exhaustion, missing and zero readings, and source-clock uncertainty.
+The full suites pass 274 Swift Testing functions and 14 XCTest tests per platform.
+Actual 110×36, 80×24 and 36×18 terminal cells were inspected; no-color output also
+passes. The capture harness waits for a complete frame and verifies clean quit,
+exact terminal settings, cursor and alternate-screen restoration before writing
+publishable assets. Export checks preserve colors, inverse cells and glyphs.
+
+Fresh Garmin runtime/memory checks for the opt-in
+reporting path and physical watch/phone delivery remain pending. The Linux
+quit-after-resize issue remains open independently of console captures.
 
 The recording uses an xterm-compatible true-color terminal. The SVG preserves
 the captured ANSI colors, cell positions, borders, and visible text. It embeds
-glyph outlines and has no external resources. It is a fixed
+glyph outlines and has no external resources. Plain-text transcripts omit trailing
+row padding without changing visible text or column positions. It is a fixed
 recording, not an interactive web terminal. Refresh captures from the running
 client; do not invent output or substitute real workout data. Never publish raw
 capture logs, provisioning state, credentials, or private source files.
@@ -55,8 +77,8 @@ On October 7, the actual Garmin simulator also passed a five-minute pushed-clien
 run with the Linux ARM64 server and real CLI/TUI in Apple containers: 278 accepted
 samples, 22 reconciled overwrites, a 4,713-byte largest body and 21,280 minimum
 sampled free bytes. The run verified frozen ACK-loss retry, same-volume restart,
-fresh client sessions and terminal restoration. This extends the transport
-evidence; the existing images above retain their original capture provenance.
+fresh client sessions and terminal restoration. These historical transport checks
+are separate from the refreshed console recordings above.
 
 The added contexts preserve the source observations: summary averages/maxima,
 calories, start time/location and a losslessly represented activity profile
