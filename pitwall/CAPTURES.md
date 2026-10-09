@@ -67,9 +67,11 @@ publishable assets. Export checks preserve colors, inverse cells and glyphs.
 
 The opt-in reporting path now passes 54 Garmin SDK tests and its first five-minute
 production case: 10-second reporting with adversarial payloads and polling clients,
-including sampled memory checks. Seven other combinations and the final
-HTTPS-enforcement check remain pending; physical watch/phone delivery is unverified. The Linux
-quit-after-resize issue remains open independently of console captures.
+including sampled memory checks. Seven other combinations remain pending.
+Simulator HTTPS enforcement has been restored and verified: plain HTTP uploads
+are rejected. Physical watch/phone delivery and phone-reachable HTTPS remain
+unverified. The Linux quit-after-resize issue remains open independently of
+console captures.
 
 The recording uses an xterm-compatible true-color terminal. The SVG preserves
 the captured ANSI colors, cell positions, borders, and visible text. It embeds
