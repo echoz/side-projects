@@ -5,6 +5,29 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
+Significant preview checkpoint, October 9, 2026: the Running wide and compact
+SVG/text pairs (`tui-capture` and `tui-compact-capture`) are refreshed from
+candidate revision `93bb6ab1ba531a8d1de50a686ee03492cea8bc75`. They use the actual
+local daemon and authenticated Chio client with synthetic readings: 145 bpm,
+3.0 m/s, 6.2 km, 32:14 active time and 72% battery. The footer shows Significant
+reporting with five-second minimum spacing and a 30-second heartbeat target.
+The retained report has heart-rate/speed reasons and a 12-second observed silence
+age. No Garmin watch or simulator participates in these terminal recordings.
+
+The exporter checks actual terminal cells and clean exit at 110 × 36 and 80 × 24.
+All 369 Swift Testing functions in 67 suites plus 14 XCTest checks pass locally
+on each of macOS and Linux ARM64 at this candidate. Real-process checks preserve
+Significant facts through storage, clients and replay. Garmin targets compile;
+the new runtime suite and production upload matrix remain pending with HTTPS
+enabled. The implementation is under review, not merged or released. Physical
+phone/watch delivery, battery savings and a fresh release-image check remain open.
+
+The exporter’s accessible description was subsequently corrected to say
+“observed reporting policy”; captured cells and values are unchanged.
+Only those two Running pairs are replaced. The other five menu, Replay and
+Cycling pairs retain the Live-or-Replay checkpoint below. Every image is a static
+synthetic application capture; none is a browser implementation or live feed.
+
 Current status, October 9, 2026: the shutdown fix, Live-or-Replay console and
 console-state refactor are merged on main. This is not a release. The final
 source/test checkpoint passed 353 Swift Testing functions in 63 suites plus
@@ -13,10 +36,11 @@ cases per platform. Physical watch/phone delivery, phone-reachable HTTPS and a
 fresh Docker release-image qualification remain separate open gates.
 
 Live-or-Replay capture checkpoint, October 9, 2026: Pitwall source/test revision
-`f546ea5a9bc4f95975cafe9ad5a93b2139e36a61`. All seven terminal SVG/text pairs
-on the page were captured from this revision using the real local daemon and
-authenticated Chio client. The recordings retain that original provenance;
-merging the later refactor did not refresh them.
+`f546ea5a9bc4f95975cafe9ad5a93b2139e36a61`. The seven terminal SVG/text pairs
+were originally captured from this revision using the real local daemon and
+authenticated Chio client. The five menu, Replay and Cycling pairs retain that original provenance;
+the two Running pairs now use the Significant checkpoint above.
+Merging the console refactor itself did not refresh any captures.
 
 `tui-menu-capture.svg` / `.txt` show the branded startup chooser at 110 × 36.
 Neither provider runs at the menu. Choose Live or Replay with arrows and Enter,
@@ -77,8 +101,8 @@ of macOS and Linux ARM64, including the original immediate-resize case, exact
 exit codes and terminal restoration within the unchanged five-second deadline.
 At that checkpoint the fix was in review; it is now merged as noted above.
 These local results do not establish release readiness. The visible layout was
-unchanged at that checkpoint; the current captures now include the replay
-capture checkpoint’s footer and use the original capture revision above.
+unchanged at that checkpoint. The menu, Replay and Cycling captures use the
+Live-or-Replay revision above; Running uses the later Significant checkpoint.
 
 `pitwall/tui-capture.svg` and its plain-text equivalent
 `pitwall/tui-capture.txt` record the running production Chio workout console
@@ -88,13 +112,15 @@ in the Running layout at 110 columns by 36 rows. `pitwall/tui-compact-capture.sv
 Cycling layout at 110 columns by 36 rows: 30.6 km/h (8.5 m/s), 245 W, 86 rpm and
 145 bpm. `pitwall/tui-dials-capture.svg` and `pitwall/tui-dials-capture.txt`
 record the same Cycling observations at 110 columns by 36 rows after `g` selects
-dials. Other observations match the Running fixture. The Running captures
-use the real daemon and authenticated `tui --live` client, with synthetic
-schema-4 observations: 145 bpm, 3.0 m/s, 6.20 km, 32:14 active time, 72% observed
+dials. Other observations match the original Running fixture. The original
+Live-or-Replay Running captures used the real daemon and authenticated
+`tui --live` client, with synthetic schema-4 observations: 145 bpm, 3.0 m/s, 6.20 km, 32:14 active time, 72% observed
 battery, applied Fixed 10-second reporting, elevation −12.5 m, ascent 120.0 m
 and descent 30.0 m. The supplied fixture also includes three captured completions
 since start generation 1; completion detail is in diagnostics. Source identities and workout values are synthetic. The
 capture bypasses Garmin and does not establish physical phone/watch delivery.
+Those original Running pairs have now been replaced by the Significant pairs
+described at the top; the Cycling pairs retain the Fixed fixture.
 
 The console has Running, Cycling and General layouts. Four large numeric cards
 lead the wide overview. Running uses stable primary slots for derived pace,

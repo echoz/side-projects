@@ -29,7 +29,7 @@
 
 
 
- Last reported · Battery: 72% · Fixed 10 s · d details
+ Last reported · Battery: 72% · Significant 5 s min / 30 s heartbeat · d details
  Running (auto) · Bars · live updates · Session: demo-session
  1–6 context · n/p next/prev · j/k fields · o overview · v layout
  g dials · d diagnostics · m menu · q quit · Ctrl-C quit

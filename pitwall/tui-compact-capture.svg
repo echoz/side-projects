@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="698.297" height="456" viewBox="0 0 698.297 456" role="img" aria-labelledby="title description">
 <title id="title">Pitwall actual Chio console — synthetic server-pushed telemetry</title>
-<desc id="description">Actual 80-column, 24-row terminal cells, color; captured from a daemon supplied synthetic measurements, an explicit activity profile, captured completion count and observed Fixed reporting. This recording is not interactive. An adjacent plain-text transcript accompanies it.</desc>
+<desc id="description">Actual 80-column, 24-row terminal cells, color; captured from a daemon supplied synthetic measurements, an explicit activity profile, captured completion count and the observed reporting policy. This recording is not interactive. An adjacent plain-text transcript accompanies it.</desc>
 <defs>
 <path id="g0" d="M457 1245V807H578Q723 807 781.5 856.0Q840 905 840 1026Q840 1147 781.5 1196.0Q723 1245 578 1245ZM162 1493H567Q876 1493 1011.5 1383.0Q1147 1273 1147 1026Q1147 779 1011.5 669.0Q876 559 567 559H457V0H162Z"/>
 <path id="g1" d="M172 1233V1493H1061V1233H764V260H1061V0H172V260H469V1233Z"/>
@@ -99,11 +99,10 @@
 <path id="g94" d="M369 713V166H608Q784 166 859.0 227.5Q934 289 934 430Q934 576 855.0 644.5Q776 713 608 713ZM369 1327V877H604Q750 877 815.5 933.0Q881 989 881 1114Q881 1227 816.5 1277.0Q752 1327 604 1327ZM166 1493H608Q837 1493 961.0 1394.0Q1085 1295 1085 1114Q1085 977 1019.5 898.0Q954 819 823 799Q970 777 1053.5 673.5Q1137 570 1137 410Q1137 207 1004.0 103.5Q871 0 608 0H166Z"/>
 <path id="g95" d="M139 1493H1079V1407L545 0H334L854 1323H139Z"/>
 <path id="g96" d="M696 319Q696 241 748.5 188.0Q801 135 879 135Q956 135 1009.5 188.5Q1063 242 1063 319Q1063 396 1009.0 450.0Q955 504 879 504Q801 504 748.5 451.0Q696 398 696 319ZM561 319Q561 454 653.0 546.5Q745 639 879 639Q943 639 1000.5 615.0Q1058 591 1104 545Q1150 498 1175.0 440.0Q1200 382 1200 319Q1200 186 1107.0 93.0Q1014 0 879 0Q743 0 652.0 91.5Q561 183 561 319ZM121 465 86 561 1128 979 1169 883ZM168 1112Q168 1033 220.5 980.5Q273 928 352 928Q429 928 483.0 981.5Q537 1035 537 1112Q537 1189 483.0 1242.5Q429 1296 352 1296Q275 1296 221.5 1243.0Q168 1190 168 1112ZM33 1112Q33 1247 125.0 1339.5Q217 1432 352 1432Q416 1432 474.5 1408.0Q533 1384 578 1339Q623 1294 647.5 1235.5Q672 1177 672 1112Q672 978 579.0 885.5Q486 793 352 793Q217 793 125.0 885.0Q33 977 33 1112Z"/>
-<path id="g97" d="M233 1493H1112V1323H436V883H1049V713H436V0H233Z"/>
+<path id="g97" d="M356 643H877V479H356Z"/>
 <path id="g98" d="M1118 1120 717 584 1157 0H944L616 449L289 0H76L516 584L115 1120H319L616 715L911 1120Z"/>
-<path id="g99" d="M356 643H877V479H356Z"/>
-<path id="g100" d="M600 -20V977H283V1120H784V-20Q784 -215 694.5 -320.5Q605 -426 440 -426H186V-270H420Q510 -270 555.0 -207.5Q600 -145 600 -20ZM600 1556H784V1323H600Z"/>
-<path id="g101" d="M332 555Q332 341 399.5 232.0Q467 123 600 123Q733 123 801.5 232.5Q870 342 870 555Q870 768 801.5 877.5Q733 987 600 987Q467 987 399.5 878.0Q332 769 332 555ZM870 139Q825 56 748.5 11.5Q672 -33 571 -33Q370 -33 253.5 122.5Q137 278 137 551Q137 829 253.0 986.0Q369 1143 571 1143Q671 1143 747.5 1099.5Q824 1056 870 973V1116H1055V-430H870Z"/>
+<path id="g99" d="M600 -20V977H283V1120H784V-20Q784 -215 694.5 -320.5Q605 -426 440 -426H186V-270H420Q510 -270 555.0 -207.5Q600 -145 600 -20ZM600 1556H784V1323H600Z"/>
+<path id="g100" d="M332 555Q332 341 399.5 232.0Q467 123 600 123Q733 123 801.5 232.5Q870 342 870 555Q870 768 801.5 877.5Q733 987 600 987Q467 987 399.5 878.0Q332 769 332 555ZM870 139Q825 56 748.5 11.5Q672 -33 571 -33Q370 -33 253.5 122.5Q137 278 137 551Q137 829 253.0 986.0Q369 1143 571 1143Q671 1143 747.5 1099.5Q824 1056 870 973V1116H1055V-430H870Z"/>
 </defs>
 <rect width="100%" height="100%" fill="#101114"/>
 <rect x="12.000" y="12" width="8.429" height="18" fill="#101419"/>
@@ -2522,23 +2521,43 @@
 <use href="#g47" fill="#bdc7d5" transform="translate(239.575 368) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g96" fill="#bdc7d5" transform="translate(248.004 368) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g17" fill="#bdc7d5" transform="translate(264.861 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g97" fill="#bdc7d5" transform="translate(281.719 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g18" fill="#bdc7d5" transform="translate(281.719 368) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g32" fill="#bdc7d5" transform="translate(290.147 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g98" fill="#bdc7d5" transform="translate(298.576 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g31" fill="#bdc7d5" transform="translate(307.005 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g43" fill="#bdc7d5" transform="translate(315.434 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g84" fill="#bdc7d5" transform="translate(332.291 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g82" fill="#bdc7d5" transform="translate(340.720 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g26" fill="#bdc7d5" transform="translate(357.577 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g17" fill="#bdc7d5" transform="translate(374.435 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g43" fill="#bdc7d5" transform="translate(391.292 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g43" fill="#bdc7d5" transform="translate(408.149 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g31" fill="#bdc7d5" transform="translate(416.578 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g29" fill="#bdc7d5" transform="translate(425.007 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g35" fill="#bdc7d5" transform="translate(433.436 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g32" fill="#bdc7d5" transform="translate(441.864 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g48" fill="#bdc7d5" transform="translate(450.293 368) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g26" fill="#bdc7d5" transform="translate(458.722 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g46" fill="#bdc7d5" transform="translate(298.576 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g28" fill="#bdc7d5" transform="translate(307.005 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g32" fill="#bdc7d5" transform="translate(315.434 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g51" fill="#bdc7d5" transform="translate(323.862 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g32" fill="#bdc7d5" transform="translate(332.291 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g33" fill="#bdc7d5" transform="translate(340.720 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g35" fill="#bdc7d5" transform="translate(349.148 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g28" fill="#bdc7d5" transform="translate(357.577 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g29" fill="#bdc7d5" transform="translate(366.006 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g90" fill="#bdc7d5" transform="translate(382.863 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g26" fill="#bdc7d5" transform="translate(399.721 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g34" fill="#bdc7d5" transform="translate(416.578 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g32" fill="#bdc7d5" transform="translate(425.007 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g28" fill="#bdc7d5" transform="translate(433.436 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g93" fill="#bdc7d5" transform="translate(450.293 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g76" fill="#bdc7d5" transform="translate(467.150 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g82" fill="#bdc7d5" transform="translate(475.579 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g26" fill="#bdc7d5" transform="translate(492.437 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g30" fill="#bdc7d5" transform="translate(509.294 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g31" fill="#bdc7d5" transform="translate(517.723 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g35" fill="#bdc7d5" transform="translate(526.151 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g37" fill="#bdc7d5" transform="translate(534.580 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g29" fill="#bdc7d5" transform="translate(543.009 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g41" fill="#bdc7d5" transform="translate(551.438 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g31" fill="#bdc7d5" transform="translate(559.866 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g35" fill="#bdc7d5" transform="translate(568.295 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g29" fill="#bdc7d5" transform="translate(576.724 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g17" fill="#bdc7d5" transform="translate(593.581 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g43" fill="#bdc7d5" transform="translate(610.438 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g43" fill="#bdc7d5" transform="translate(627.296 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g31" fill="#bdc7d5" transform="translate(635.725 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g29" fill="#bdc7d5" transform="translate(644.153 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g35" fill="#bdc7d5" transform="translate(652.582 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g32" fill="#bdc7d5" transform="translate(661.011 368) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g74" fill="#bdc7d5" transform="translate(669.439 368) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g24" fill="#919dad" transform="translate(20.429 386) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g36" fill="#919dad" transform="translate(28.857 386) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g28" fill="#919dad" transform="translate(37.286 386) scale(0.0068359375 -0.0068359375)"/>
@@ -2582,7 +2601,7 @@
 <use href="#g31" fill="#919dad" transform="translate(433.436 386) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g34" fill="#919dad" transform="translate(441.864 386) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g40" fill="#919dad" transform="translate(450.293 386) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g99" fill="#919dad" transform="translate(458.722 386) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g97" fill="#919dad" transform="translate(458.722 386) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g26" fill="#919dad" transform="translate(467.150 386) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g31" fill="#919dad" transform="translate(475.579 386) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g26" fill="#919dad" transform="translate(484.008 386) scale(0.0068359375 -0.0068359375)"/>
@@ -2614,7 +2633,7 @@
 <use href="#g31" fill="#bdc7d5" transform="translate(231.146 404) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g42" fill="#bdc7d5" transform="translate(239.575 404) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g17" fill="#bdc7d5" transform="translate(256.433 404) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g100" fill="#bdc7d5" transform="translate(273.290 404) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g99" fill="#bdc7d5" transform="translate(273.290 404) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g93" fill="#bdc7d5" transform="translate(281.719 404) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g49" fill="#bdc7d5" transform="translate(290.147 404) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g51" fill="#bdc7d5" transform="translate(307.005 404) scale(0.0068359375 -0.0068359375)"/>
@@ -2667,8 +2686,8 @@
 <use href="#g28" fill="#bdc7d5" transform="translate(273.290 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g36" fill="#bdc7d5" transform="translate(281.719 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g17" fill="#bdc7d5" transform="translate(298.576 422) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g101" fill="#bdc7d5" transform="translate(315.434 422) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g101" fill="#bdc7d5" transform="translate(332.291 422) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g100" fill="#bdc7d5" transform="translate(315.434 422) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g100" fill="#bdc7d5" transform="translate(332.291 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g36" fill="#bdc7d5" transform="translate(340.720 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g32" fill="#bdc7d5" transform="translate(349.148 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g29" fill="#bdc7d5" transform="translate(357.577 422) scale(0.0068359375 -0.0068359375)"/>
@@ -2677,9 +2696,9 @@
 <use href="#g29" fill="#bdc7d5" transform="translate(399.721 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g37" fill="#bdc7d5" transform="translate(408.149 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g48" fill="#bdc7d5" transform="translate(416.578 422) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g99" fill="#bdc7d5" transform="translate(425.007 422) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g97" fill="#bdc7d5" transform="translate(425.007 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g54" fill="#bdc7d5" transform="translate(433.436 422) scale(0.0068359375 -0.0068359375)"/>
-<use href="#g101" fill="#bdc7d5" transform="translate(450.293 422) scale(0.0068359375 -0.0068359375)"/>
+<use href="#g100" fill="#bdc7d5" transform="translate(450.293 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g36" fill="#bdc7d5" transform="translate(458.722 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g32" fill="#bdc7d5" transform="translate(467.150 422) scale(0.0068359375 -0.0068359375)"/>
 <use href="#g29" fill="#bdc7d5" transform="translate(475.579 422) scale(0.0068359375 -0.0068359375)"/>
