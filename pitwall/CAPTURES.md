@@ -18,9 +18,14 @@ The exporter checks actual terminal cells and clean exit at 110 × 36 and 80 × 
 All 369 Swift Testing functions in 67 suites plus 14 XCTest checks pass locally
 on each of macOS and Linux ARM64 at this candidate. Real-process checks preserve
 Significant facts through storage, clients and replay. Garmin targets compile;
-the new runtime suite and production upload matrix remain pending with HTTPS
-enabled. The implementation is under review, not merged or released. Physical
-phone/watch delivery, battery savings and a fresh release-image check remain open.
+the new 69-test SDK runtime suite and production upload matrix remain pending
+with HTTPS enabled. Significant reporting is now implemented on main, merged
+on October 9, 2026 at `46758111d37e60c8f7ad4b1ed8296bce7469cc92`
+from the approved head `a79f6c1cab95afc56997f46d49268d26b5f12787`.
+This is not a release. Physical phone/watch delivery, battery savings and a
+fresh release-image check remain open. The merge and subsequent readability
+changes did not refresh the captures or alter their visible display; their
+recorded provenance remains `93bb6ab1ba531a8d1de50a686ee03492cea8bc75`.
 
 The exporter’s accessible description was subsequently corrected to say
 “observed reporting policy”; captured cells and values are unchanged.
