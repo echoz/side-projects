@@ -1,20 +1,12 @@
 
- PITWALL / LIVE + REPLAY
- LIVE Read OK · SIMULATOR / synthetic
- Age: 0s at check; clock unverified
- LIVE src 2026-10-09T14:10:37Z
- ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
- │ 30.6 km/h               │ │ 260 W                  │ │ 86 rpm                 │ │ 145 bpm                │
- │ Derived from m/s        │ │ Observed power         │ │ Observed cadence       │ │ Zone 3                 │
- │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱ │
- │ Scale 0–60 km/h         │ │ Scale 0–600 W          │ │ Scale 0–180 rpm        │ │ Zones 90–190 bpm       │
- │                         │ │                        │ │                        │ │                        │
- ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
- REPLAY Paused · historical
- REPLAY src 2026-10-09T14:09:39Z
+ PITWALL / REPLAY · Cycling (auto) · Bars
+ SIMULATOR — synthetic measurements · Timer: On (source observed)
+ src 2026-10-09T14:49:56Z
  Historical; source clock unverified
- SIMULATOR / synthetic · seq 1 / 2 · Cycling
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
+ │  _   _     _            │ │      _   _             │ │  _   _                 │ │      _   _             │
+ │  _| |_     _|           │ │   | |_| | |            │ │ |_| | |                │ │   |  _| |_|            │
+ │ |_   _| . |_            │ │   |  _| |_|            │ │ |_| |_|                │ │   |  _| |_|            │
  │ 25.2 km/h               │ │ 190 W                  │ │ 80 rpm                 │ │ 138 bpm                │
  │ Derived from m/s        │ │ Observed power         │ │ Observed cadence       │ │ Zone 3                 │
  │ ▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │
@@ -22,14 +14,22 @@
  │                         │ │                        │ │                        │ │                        │
  ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
 
+ ╭ WORKOUT / OBSERVED ───────────────────────────────╮ ╭ TERRAIN / OBSERVED ────────────────────────────────╮
+ │ Active time: 31:20                                │ │ Elevation: -12.5 m                                 │
+ │ Distance: 6.00 km                                 │ │ Ascent: 120.0 m · Descent: 30.0 m                  │
+ │ Speed: 7.0 m/s                                    │ ╰────────────────────────────────────────────────────╯
+ │ Elapsed time: 33:14                               │
+ ╰───────────────────────────────────────────────────╯
+
+ Synthetic ride · Display scales only · no workout targets
+
+ 1 Summary  2 Navigation  3 Pressure
+ 4 Effort   5 Swimming    6 Cycling
 
 
 
-
-
-
-
-
- Space play/pause [ ] step b start
- r refresh history · l return live · v live layout · g Bars
- 1–6 context · n/p · j/k fields · o · d info · q quit · Ctrl-C quit
+ Paused · seq 1 / 2
+ [──────────────────────────────────────────────────────────────────────────────────────────────────────────]
+ Retained sequence position · Space play/pause · [/] step · b start · r reopen
+ 1–6 context · n/p next/prev · j/k fields · o overview · v layout
+ g dials · d diagnostics · m menu · q quit · Ctrl-C quit

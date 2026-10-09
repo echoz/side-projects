@@ -1,0 +1,35 @@
+
+ ▰▰▰  PITWALL / WORKOUT CONTROL
+ █▀█ █ ▀█▀ █   █ █▀█ █   █
+ █▀▀ █  █  █ █ █ █▀█ █   █
+ ▀   ▀  ▀   ▀ ▀  ▀ ▀ ▀▀▀ ▀▀▀
+ YOUR WORKOUT. FROM THE PIT WALL.
+
+
+ CHOOSE YOUR FEED
+
+
+ ▶ LIVE  /  l
+   Follow incoming telemetry.
+
+
+
+   REPLAY  /  r
+   Play back recorded telemetry.
+
+
+
+ Session: demo-session
+ Epoch: demo-epoch
+ One feed. One instrument panel.
+
+
+
+
+
+
+
+ ↑/↓ select · Enter open · l Live · r Replay · m menu from dashboard
+
+
+ q quit · Ctrl-C quit

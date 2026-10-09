@@ -5,50 +5,49 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
-Current live/replay candidate, October 9, 2026: Pitwall source/test revision
-`41597573c4b124947aece3560a76653acf8c55a0`. This candidate remains in review,
-not a release. All six terminal SVG/text pairs on the page were captured from
+Current Live-or-Replay candidate, October 9, 2026: Pitwall source/test revision
+`f546ea5a9bc4f95975cafe9ad5a93b2139e36a61`. This candidate remains in review,
+not a release. All seven terminal SVG/text pairs on the page were captured from
 this revision using the real local daemon and authenticated Chio client.
 
-`pitwall/tui-replay-capture.svg` / `.txt` show simultaneous live and paused
-historical Cycling instruments at 110 × 36. `pitwall/tui-replay-compact-capture.svg`
-/ `.txt` show the same scenario at 80 × 24, with a live measurement strip above
-replay. The replay view opens after two accepted observations; a third upload
-then raises live power to 260 W while the paused first observation stays at
-190 W, 25.2 km/h, 80 rpm and 138 bpm. Its retained view ends at sequence 2,
-separate from the advancing live head. Source timestamps and identities are
-synthetic. The capture checks the actual terminal cells and clean exit before
-exporting; no watch or phone participates in this recording.
+`tui-menu-capture.svg` / `.txt` show the branded startup chooser at 110 × 36.
+Neither provider runs at the menu. Choose Live or Replay with arrows and Enter,
+or `l` / `r`; `m` or Escape returns to the chooser and stops the active provider.
+One dashboard renders the selected feed. Returning to Replay opens a fresh view
+at its first retained observation. `--live` selects pushed transport for Live,
+not the startup mode. Health-only and one-shot output bypass this chooser.
 
-The four existing Running/Cycling bars/dials recordings were refreshed for the
-new replay shortcut in the wide footer. Their observations and layout remain
-as described below. Additional current recordings inspect replay dials at
-110 × 36, the 36 × 18 numeric fallback and no-color output; those extra QA
-recordings are not published. The page's six pairs are static recordings,
-not browser implementations of the TUI.
+`tui-replay-capture.svg` / `.txt` show paused historical Cycling instruments at
+110 × 36. `tui-replay-compact-capture.svg` / `.txt` show the same feed at 80 × 24.
+History opens after two accepted observations. A third upload then raises the
+current sample to 260 W, while the visible historical observation remains
+190 W, 25.2 km/h, 80 rpm and 138 bpm at sequence 1 of the captured upper bound 2.
+The Replay screen contains no live strip. Source timestamps and identities are
+synthetic. The capture checks actual terminal cells and clean exit before export;
+no watch or phone participates.
 
-Replay uses bounded pages of accepted server observations. Press `r` to open or
-refresh, Space to play/pause at source-time spacing, `[` / `]` to step, `b` for
-the beginning and `l` for live only. Source-clock reversals pause playback;
-sequence gaps are not interpolated. Explicit navigation jumps do not themselves
-prove missing telemetry. Reaching a view's end is not workout completion.
-Historical profiles and measurements come from the selected observation, with
-General used when its sport is missing. Current live metadata is not added to
-old observations. CLI history reads use the same authenticated operation.
+The playback bar shows retained sequence position, including gaps. It does not
+measure elapsed duration, sample-count percentage or workout completion. Space
+plays/pauses at 1× source-time spacing; `[` / `]` step, `b` returns to the retained
+beginning, and `r` reopens history. The provider owns its clock and pauses on
+source-clock reversal. No missing observations are interpolated. Historical
+sport defaults to General when absent and never borrows a future classification;
+`v` can deliberately override the active layout. Returning to the menu clears
+layout selection, while the `g` Bars/Dials preference survives.
 
-Final replay-layout checkpoint `f34bdd512775e7433c529e3be5e1af81433b1c78`
-fixes complete dial-card sizing. Twelve focused renderer tests pass on each of
-macOS and Linux ARM64, including full card borders and complete source times.
-New actual macOS recordings inspect Dials at 110 × 36, 110 × 30, 80 × 24,
-60 × 24 and 64 × 27. Two full panels appear when they fit; shorter terminals
-keep the live strip, and narrow terminals use numeric fallbacks. The six
-published recordings use Bars in replay, which this correction does not change;
-they retain their exact capture revision above. The full preceding application
-suite passes 335 Swift Testing functions and 14 XCTest tests on each platform;
-these focused renderer checks qualify the subsequent layout-only change.
+The four Running/Cycling bars/dials recordings below were refreshed with the
+new menu shortcut. Additional QA recordings inspect Replay dials at 80 × 24,
+36 × 18 numeric controls and no-color output; those three are not published.
+All seven published pairs are static recordings, not browser versions of the TUI.
+The complete Swift suite passes 341 test functions in 62 suites plus 14 XCTest
+checks on each of macOS and Linux ARM64. Real terminal mode-switching/playback
+checks pass in polling and pushed modes while independent synthetic uploads
+continue. The candidate does not establish physical watch/phone behavior or a
+fresh Docker release-image qualification.
 
-The earlier checkpoints below preserve the instrument and shutdown evidence
-that preceded this candidate; their captures have now been refreshed as above.
+The older checkpoints below preserve earlier instrument and shutdown evidence.
+Their public recordings have been refreshed at the revision above; earlier
+side-by-side Live/Replay presentation has been superseded by this chooser.
 
 Instrument preview checkpoint, October 8, 2026: Pitwall revision
 `f99eec77fbedb838ea4a1ec027623697cf376da4`.

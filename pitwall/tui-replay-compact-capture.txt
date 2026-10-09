@@ -1,14 +1,8 @@
 
- PITWALL / LIVE + REPLAY
- LIVE Read OK · SIMULATOR / synthetic
- Age: 0s at check; clock unverified
- LIVE src 2026-10-09T14:11:09Z
- LIVE HR 145 bpm · Speed 30.6 km/h
- Power 260 W · Cad 86 rpm
- REPLAY Paused · historical
- REPLAY src 2026-10-09T14:10:12Z
+ PITWALL / REPLAY · Cycling (auto) · Bars
+ SIMULATOR — synthetic measurements · Timer: On (source observed)
+ src 2026-10-09T14:49:59Z
  Historical; source clock unverified
- SIMULATOR / synthetic · seq 1 / 2 · Cycling
  ╭ SPEED ──────────╮ ╭ POWER ──────────╮ ╭ CADENCE ────────╮ ╭ HEART RATE ────╮
  │ 25.2 km/h       │ │ 190 W           │ │ 80 rpm          │ │ 138 bpm        │
  │ Derived from m… │ │ Observed power  │ │ Observed caden… │ │ Zone 3         │
@@ -18,6 +12,12 @@
  ╰─────────────────╯ ╰─────────────────╯ ╰─────────────────╯ ╰────────────────╯
 
 
- Space play/pause [ ] step b start
- r refresh history · l return live · v live layout · g Bars
- 1–6 context · n/p · j/k fields · o · d info · q quit · Ctrl-C quit
+
+
+
+
+ Paused · seq 1 / 2
+ [────────────────────────────────────────────────────────────────────────────]
+ Retained sequence position · Space play/pause · [/] step · b start · r reopen
+ 1–6 context · n/p next/prev · j/k fields · o overview · v layout
+ g dials · d diagnostics · m menu · q quit · Ctrl-C quit
