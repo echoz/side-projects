@@ -8,7 +8,11 @@
  │  _| |_| . |_|           │ │ |_    |  _|            │ │ |_| |_|                │ │   |   |  _|            │
  │ 30.6 km/h               │ │ 245 W                  │ │ 86 rpm                 │ │ 145 bpm                │
  │ Derived from m/s        │ │ Observed power         │ │ Observed cadence       │ │ Zone 3                 │
- │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱ │
+ │      ⢀⣀⠤⠤⠤⠤⠤⠤⠤⢄⣀        │ │      ⢀⡠⠤⠤⠤⠤⠤⠤⠤⣀⡀       │ │      ⢀⡠⠤⠤⠤⠤⠤⠤⠤⣀⡀       │ │      ⢀⡠⠤⠤⠤⠤⠤⠤⠤⣀⡀       │
+ │   ⢀⠔⠒⠁     ⡇    ⠉⠒⠢⡀    │ │   ⢀⠔⠊⠁  ⢆      ⠈⠒⠢⡀    │ │   ⢀⠔⠊⠁   ⢸     ⠈⠒⠢⡀    │ │   ⢀⠔⠊⠁     ⢰   ⠈⠒⠢⡀    │
+ │ ⢀⠔⠁        ⡇       ⠈⠢⡀  │ │ ⢀⠔⠁     ⠈⡆        ⠈⠢⡀  │ │ ⢀⠔⠁       ⡇       ⠈⠢⡀  │ │ ⢀⠔⠁        ⡎      ⠈⠢⡀  │
+ │ ⡜          ⡇         ⢣  │ │ ⡜        ⠸⡀         ⢣  │ │ ⡜         ⢇         ⢣  │ │ ⡜         ⢀⠇        ⢣  │
+ │ ⠃          ⠇         ⠈⠆ │ │ ⠃         ⠱         ⠈⠆ │ │ ⠃         ⠸         ⠈⠆ │ │ ⠃         ⠸         ⠈⠆ │
  │ Scale 0–60 km/h         │ │ Scale 0–600 W          │ │ Scale 0–180 rpm        │ │ Zones 90–190 bpm       │
  │                         │ │                        │ │                        │ │                        │
  ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
@@ -25,11 +29,7 @@
  1 Summary  2 Navigation  3 Pressure
  4 Effort   5 Swimming    6 Cycling
 
-
-
-
-
  Last reported · Battery: 72% · Fixed 10 s · d details
- Cycling (auto) · Bars · live updates · Session: demo-session
+ Cycling (auto) · Dials · live updates · Session: demo-session
  1–6 context · n/p next/prev · j/k fields · o overview · v layout
- g dials · d diagnostics · q quit · Ctrl-C quit
+ g bars · d diagnostics · q quit · Ctrl-C quit
