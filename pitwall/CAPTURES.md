@@ -5,10 +5,18 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
-Current Live-or-Replay candidate, October 9, 2026: Pitwall source/test revision
-`f546ea5a9bc4f95975cafe9ad5a93b2139e36a61`. This candidate remains in review,
-not a release. All seven terminal SVG/text pairs on the page were captured from
-this revision using the real local daemon and authenticated Chio client.
+Current status, October 9, 2026: the shutdown fix, Live-or-Replay console and
+console-state refactor are merged on main. This is not a release. The final
+source/test checkpoint passed 353 Swift Testing functions in 63 suites plus
+14 XCTest checks on each of macOS and Linux ARM64, with 96 terminal shutdown
+cases per platform. Physical watch/phone delivery, phone-reachable HTTPS and a
+fresh Docker release-image qualification remain separate open gates.
+
+Live-or-Replay capture checkpoint, October 9, 2026: Pitwall source/test revision
+`f546ea5a9bc4f95975cafe9ad5a93b2139e36a61`. All seven terminal SVG/text pairs
+on the page were captured from this revision using the real local daemon and
+authenticated Chio client. The recordings retain that original provenance;
+merging the later refactor did not refresh them.
 
 `tui-menu-capture.svg` / `.txt` show the branded startup chooser at 110 × 36.
 Neither provider runs at the menu. Choose Live or Replay with arrows and Enter,
@@ -39,8 +47,8 @@ The four Running/Cycling bars/dials recordings below were refreshed with the
 new menu shortcut. Additional QA recordings inspect Replay dials at 80 × 24,
 36 × 18 numeric controls and no-color output; those three are not published.
 All seven published pairs are static recordings, not browser versions of the TUI.
-The complete Swift suite passes 341 test functions in 62 suites plus 14 XCTest
-checks on each of macOS and Linux ARM64. Real terminal mode-switching/playback
+At the capture checkpoint, the complete Swift suite passed 341 test functions
+in 62 suites plus 14 XCTest checks on each of macOS and Linux ARM64. Real terminal mode-switching/playback
 checks pass in polling and pushed modes while independent synthetic uploads
 continue. The candidate does not establish physical watch/phone behavior or a
 fresh Docker release-image qualification.
@@ -53,8 +61,8 @@ The subsequent October 9 console-state refactor keeps this visual design and
 these shortcuts. Menu navigation, layout and gauge preferences, context pages
 and playback commands now use the same immutable model/message/reducer/effect
 flow as the telemetry clients. Chio renders the resulting model. The recordings
-above retain their original capture revision; this refactor remains in the same
-unmerged candidate and adds no device-validation or release-readiness claim.
+above retain their original capture revision; this refactor is now merged and
+adds no device-validation or release-readiness claim.
 
 Instrument preview checkpoint, October 8, 2026: Pitwall revision
 `f99eec77fbedb838ea4a1ec027623697cf376da4`.
@@ -67,9 +75,10 @@ Shutdown-fix candidate, October 9, 2026: Pitwall revision
 The unchanged 32-case shutdown matrix passes three iterations (96 cases) on each
 of macOS and Linux ARM64, including the original immediate-resize case, exact
 exit codes and terminal restoration within the unchanged five-second deadline.
-The fix is in review and awaits merge; these local results do not establish
-release readiness. The visible layout was unchanged at that checkpoint; the current captures now
-include the replay candidate’s footer and use the revision above.
+At that checkpoint the fix was in review; it is now merged as noted above.
+These local results do not establish release readiness. The visible layout was
+unchanged at that checkpoint; the current captures now include the replay
+capture checkpoint’s footer and use the original capture revision above.
 
 `pitwall/tui-capture.svg` and its plain-text equivalent
 `pitwall/tui-capture.txt` record the running production Chio workout console
@@ -121,7 +130,7 @@ and retains the bars/dials appearance through updates, resizing and full source
 stream changes. Raw JSON, `--once` and wire
 contracts remain unchanged. Hiking, swimming and strength specializations remain
 proposed; the layout choice itself adds no plan or map capability. Recorded playback is
-a separate view in the current candidate.
+a separate view in the merged console.
 
 Six context views remain available: activity summary/profile, navigation,
 pressure, effort, swimming and cycling. In the interactive TUI, `1`–`6` selects
