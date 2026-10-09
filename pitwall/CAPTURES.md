@@ -49,6 +49,13 @@ The older checkpoints below preserve earlier instrument and shutdown evidence.
 Their public recordings have been refreshed at the revision above; earlier
 side-by-side Live/Replay presentation has been superseded by this chooser.
 
+The subsequent October 9 console-state refactor keeps this visual design and
+these shortcuts. Menu navigation, layout and gauge preferences, context pages
+and playback commands now use the same immutable model/message/reducer/effect
+flow as the telemetry clients. Chio renders the resulting model. The recordings
+above retain their original capture revision; this refactor remains in the same
+unmerged candidate and adds no device-validation or release-readiness claim.
+
 Instrument preview checkpoint, October 8, 2026: Pitwall revision
 `f99eec77fbedb838ea4a1ec027623697cf376da4`.
 Normal navigation and synthetic console capture checks passed at this checkpoint.
