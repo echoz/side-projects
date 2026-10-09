@@ -160,7 +160,7 @@
       </div>
     </section>
     <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
-      <div class="section-heading"><div><p class="eyebrow">04 / In progress and upcoming</p><h2 id="roadmap-title">Two tracks. One workout view.</h2></div><p>The console comes first, using measurements already available. Its Running, Cycling and General layouts are checked locally on macOS and Linux. Reporting qualification and optional plugin hosting follow. Plans and trends need their own data contracts. Release dates are not set.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">04 / In progress and upcoming</p><h2 id="roadmap-title">Two tracks. One workout view.</h2></div><p>The console comes first, using measurements already available. Its Running, Cycling and General layouts are checked locally on macOS and Linux. Reporting qualification and optional source integration continue. Plans and trends need their own data contracts. Release dates are not set.</p></div>
       <div class="roadmap-lanes">
         <article class="roadmap-lane" aria-labelledby="workout-track-title">
           <p class="roadmap-track">TRACK 01 / WORKOUT EXPERIENCE</p>
@@ -178,7 +178,7 @@
           <p class="roadmap-track">TRACK 02 / OPTIONAL SOURCE PLUGINS</p>
           <h3 id="source-track-title">Add context without delaying telemetry.</h3>
           <ol>
-            <li><h4>Contract ready. Process host follows the console.</h4><p>PitwallSourcePluginKit is a shared Swift contract library for immutable plugin messages, validation and pure response decisions, with no live I/O. Its synthetic fixtures pass on macOS and Linux, preserving missing values, dated daily context and provenance. The future host in Pitwall's daemon will own plugin launches, reads, deadlines, recovery and storage; it is not implemented yet.</p></li>
+            <li><h4>Contract ready. One bounded source read implemented.</h4><p>PitwallSourcePluginKit is a shared Swift contract library for immutable plugin messages, validation and pure response decisions, with no live I/O. Its synthetic fixtures pass on macOS and Linux, preserving missing values, dated daily context and provenance. PitwallRuntime now launches a separate executable for one bounded read, validates its handshake and reply, and handles cancellation, timeouts and child cleanup. An independent synthetic plugin exercises this boundary; real-process checks pass on macOS and Linux.</p><p>Daemon configuration, a persistent source-instance registry, retained inputs and provider adapters remain planned. This host does not yet add source context to the workout console.</p></li>
             <li><h4>Read Blackbox's existing local daily summaries.</h4><p>Actual source plugins will be separate executables. The first planned plugin is a read-only adapter for context already available in the separate Blackbox project; it is not implemented yet. Blackbox's remote synchronization is currently disabled; planned-workout and completed-activity access need further contracts.</p></li>
             <li><h4>Add providers and plans when access is verified.</h4><p>Investigate further sources against real access and supported contracts. Runna access remains unverified. Manual and imported plan work can proceed without a provider connection.</p></li>
           </ol>
