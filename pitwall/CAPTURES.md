@@ -23,8 +23,8 @@ watch or simulator participates in these terminal recordings. The candidate
 passes 382 Swift Testing functions, 14 XCTest checks and 157 harness checks on
 each of macOS and Linux ARM64. Actual service/client checks for Auto, Fixed,
 Significant, recovery and activity contexts pass on both platforms. All 86 offline
-Garmin SDK tests pass; the production Auto simulator upload matrix remains open.
-A current negative HTTPS probe confirms the SDK secure-connection rejection
+Garmin SDK tests pass; the production Auto simulator upload matrix remains
+unverified. SDK HTTPS enforcement remains enabled. A current negative HTTPS probe confirms the SDK secure-connection rejection
 (`-1001`) for plain HTTP acknowledgments. These
 platform and terminal checks do not prove physical phone/watch delivery, battery
 savings or release-image qualification. Only these two Running pairs are
@@ -37,8 +37,21 @@ low battery. Reserve protection has priority over faster reporting. Each report
 freezes its source decision and interval through retries, storage, CLI/TUI and
 replay. These are targets rather than guaranteed delivery intervals. The candidate
 does not consume Bono hints, estimate battery life or establish physical-watch
-behavior. The public page must retain its candidate-in-progress status until
-final verification and merge evidence are recorded.
+behavior. Implementation on main is separate from production upload qualification and
+release readiness.
+
+Local Auto merge checkpoint, October 9, 2026: PR #12 merged at
+`cc01c5446060188498001178369c7a3fc3166787` from approved head
+`3c813c665f3fe9db5e5ac8a3a71e4756345b1288`. The final review change makes
+reporting-detail selection exhaustive without changing displayed output.
+Focused reporting presentation checks pass on both macOS and Linux ARM64:
+nine tests in four suites. The merge does not refresh the SVG/text pairs;
+their capture provenance remains `3cfad25da709fd5356af0ae9ffb8684449f91d63`.
+Local Auto is implemented on main, not released. The production Auto simulator
+upload matrix remains unverified, SDK HTTPS enforcement remains enabled, and
+physical watch/phone validation is deferred. The offline SDK and platform
+checks above do not establish production uploads, physical delivery, battery
+savings or fresh release-image qualification.
 
 The following Significant checkpoints are historical. Their Running recordings
 have been superseded by this Auto preview; their verification evidence remains
