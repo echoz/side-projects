@@ -5,6 +5,51 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
+Current live/replay candidate, October 9, 2026: Pitwall source/test revision
+`41597573c4b124947aece3560a76653acf8c55a0`. This candidate remains in review,
+not a release. All six terminal SVG/text pairs on the page were captured from
+this revision using the real local daemon and authenticated Chio client.
+
+`pitwall/tui-replay-capture.svg` / `.txt` show simultaneous live and paused
+historical Cycling instruments at 110 × 36. `pitwall/tui-replay-compact-capture.svg`
+/ `.txt` show the same scenario at 80 × 24, with a live measurement strip above
+replay. The replay view opens after two accepted observations; a third upload
+then raises live power to 260 W while the paused first observation stays at
+190 W, 25.2 km/h, 80 rpm and 138 bpm. Its retained view ends at sequence 2,
+separate from the advancing live head. Source timestamps and identities are
+synthetic. The capture checks the actual terminal cells and clean exit before
+exporting; no watch or phone participates in this recording.
+
+The four existing Running/Cycling bars/dials recordings were refreshed for the
+new replay shortcut in the wide footer. Their observations and layout remain
+as described below. Additional current recordings inspect replay dials at
+110 × 36, the 36 × 18 numeric fallback and no-color output; those extra QA
+recordings are not published. The page's six pairs are static recordings,
+not browser implementations of the TUI.
+
+Replay uses bounded pages of accepted server observations. Press `r` to open or
+refresh, Space to play/pause at source-time spacing, `[` / `]` to step, `b` for
+the beginning and `l` for live only. Source-clock reversals pause playback;
+sequence gaps are not interpolated. Explicit navigation jumps do not themselves
+prove missing telemetry. Reaching a view's end is not workout completion.
+Historical profiles and measurements come from the selected observation, with
+General used when its sport is missing. Current live metadata is not added to
+old observations. CLI history reads use the same authenticated operation.
+
+Final replay-layout checkpoint `f34bdd512775e7433c529e3be5e1af81433b1c78`
+fixes complete dial-card sizing. Twelve focused renderer tests pass on each of
+macOS and Linux ARM64, including full card borders and complete source times.
+New actual macOS recordings inspect Dials at 110 × 36, 110 × 30, 80 × 24,
+60 × 24 and 64 × 27. Two full panels appear when they fit; shorter terminals
+keep the live strip, and narrow terminals use numeric fallbacks. The six
+published recordings use Bars in replay, which this correction does not change;
+they retain their exact capture revision above. The full preceding application
+suite passes 335 Swift Testing functions and 14 XCTest tests on each platform;
+these focused renderer checks qualify the subsequent layout-only change.
+
+The earlier checkpoints below preserve the instrument and shutdown evidence
+that preceded this candidate; their captures have now been refreshed as above.
+
 Instrument preview checkpoint, October 8, 2026: Pitwall revision
 `f99eec77fbedb838ea4a1ec027623697cf376da4`.
 Normal navigation and synthetic console capture checks passed at this checkpoint.
@@ -17,8 +62,8 @@ The unchanged 32-case shutdown matrix passes three iterations (96 cases) on each
 of macOS and Linux ARM64, including the original immediate-resize case, exact
 exit codes and terminal restoration within the unchanged five-second deadline.
 The fix is in review and awaits merge; these local results do not establish
-release readiness. The visible layout is unchanged, so the original synthetic
-captures remain at `f99eec7` and have not been regenerated.
+release readiness. The visible layout was unchanged at that checkpoint; the current captures now
+include the replay candidate’s footer and use the revision above.
 
 `pitwall/tui-capture.svg` and its plain-text equivalent
 `pitwall/tui-capture.txt` record the running production Chio workout console
@@ -57,8 +102,8 @@ to a compact footer; full source identities, callbacks and delivery details rema
 in diagnostics. Battery, applied Fixed interval and policy observation age are
 source facts; phone connection does not prove current delivery. Captured completion
 counts retain their lifetime and uncertainty. Plan position, current/next steps
-and targets are unavailable. No timeline, trend history, map, provider data or
-workout completion percentage is invented.
+and targets are unavailable. No trend chart, map, provider data or workout completion percentage is invented.
+The separately labeled replay view displays original accepted observations.
 
 Auto selects Running for observed sport `1`, Cycling for `2`/`21`, and General
 for other explicit sports. A missing profile retains the last automatic layout
@@ -69,7 +114,8 @@ stream resets manual selection and automatic memory. `g` returns to the overview
 and retains the bars/dials appearance through updates, resizing and full source
 stream changes. Raw JSON, `--once` and wire
 contracts remain unchanged. Hiking, swimming and strength specializations remain
-proposed; these layouts add no plan, history or map capability.
+proposed; the layout choice itself adds no plan or map capability. Recorded playback is
+a separate view in the current candidate.
 
 Six context views remain available: activity summary/profile, navigation,
 pressure, effort, swimming and cycling. In the interactive TUI, `1`–`6` selects

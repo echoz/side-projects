@@ -32,4 +32,4 @@
  Last reported · Battery: 72% · Fixed 10 s · d details
  Running (auto) · Bars · live updates · Session: demo-session
  1–6 context · n/p next/prev · j/k fields · o overview · v layout
- g dials · d diagnostics · q quit · Ctrl-C quit
+ g dials · d diagnostics · r replay · q quit · Ctrl-C quit

@@ -1,7 +1,7 @@
 
  PITWALL / WORKOUT CONTROL
  SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 1 s at last check; source clock unverified
+ Read OK · Age: 0 s at last check; source clock unverified
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
  │  _   _     _            │ │  _       _             │ │  _   _                 │ │          _             │
  │  _| | |   |_            │ │  _| |_| |_             │ │ |_| |_                 │ │   | |_| |_             │
@@ -32,4 +32,4 @@
  Last reported · Battery: 72% · Fixed 10 s · d details
  Cycling (auto) · Dials · live updates · Session: demo-session
  1–6 context · n/p next/prev · j/k fields · o overview · v layout
- g bars · d diagnostics · q quit · Ctrl-C quit
+ g bars · d diagnostics · r replay · q quit · Ctrl-C quit
