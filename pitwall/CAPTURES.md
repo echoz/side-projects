@@ -3,12 +3,15 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Current dashboard captures — source aggregate candidate
+## Current dashboard captures — merged source aggregates
 
 October 10, 2026: the Live/Replay SVG/text pairs now come from Pitwall source
-checkpoint `5bbb52a7f82205f8c0b43b3621e2fe176a54feba`, a candidate awaiting
-qualification and review. The map dashboard itself is already on main; the
-source average/max companions are not merged or released. These are
+checkpoint `5bbb52a7f82205f8c0b43b3621e2fe176a54feba`. Pitwall PR #24 merged on
+October 10 at `ad2f457b87ceac4fbc9ed84ced7b47521509917a` from approved head
+`61ade74bfe3d21427832f722563eb40288891244`. The map dashboard and source
+average/max companions are now on main. This is a development build, not a
+release. The merge did not refresh the captures; their source checkpoint and
+recorded bytes are unchanged. These are
 `pitwall/tui-map-live.svg` / `.txt` and `pitwall/tui-map-replay.svg` / `.txt`,
 captured at 110 × 48 on macOS from the actual authenticated local daemon and
 Chio client using synthetic data. No watch or phone participates.
@@ -28,13 +31,14 @@ scenarios pass on macOS, with clean quit and exact terminal restoration checked
 before export. The instrument process check also passes source-only updates,
 clearing, bars/dials, compact sizes and cached outage/recovery. Separate Linux
 full-suite verification passes. **The macOS full suite still fails its original
-20-second hosted interaction deadline, reproduced in isolation.** The candidate
-remains draft; these captures do not imply complete qualification.
+20-second hosted interaction deadline: 20.349 seconds in the full suite and
+20.300 seconds in isolation.** The user accepted the merge with this failure
+handled as follow-up; these captures do not imply complete qualification.
 
 The existing continuous-update resize/quit problem remains separate: the earlier
 merged dashboard failed its unchanged five-second gate on macOS and Linux. The
 user accepted that earlier merge with the issue handled as follow-up. This
-candidate does not claim that the runtime repair has happened or that all timing
+merge does not claim that the runtime repair has happened or that all timing
 gates pass. No fresh Docker release-image, Garmin SDK, physical delivery or
 battery evidence is added.
 
