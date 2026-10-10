@@ -3,6 +3,80 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Navigation and Running presentation — unmerged candidate
+
+Captured October 10, 2026 from application source candidate
+`c3071fe250c291ba6891f1f108b002103df6f635` on macOS. The `pitwall` executable
+SHA-256 is `3606a118b7b6da5c87f746d560a3703f0761171e969b7ae56318b3b309598a2c`.
+The Running Replay frame's synthetic source timestamp is `2026-10-10T22:09:23Z`;
+it records retained sequence 1 of 4 while newer uploads remain independent.
+Both actual process scenarios passed before exporting their frames, including
+five-second quit and exact terminal restoration. Navigation checks all eleven
+fields, clearing, paging, cache recovery and selected history at 100×32; Running
+checks six instruments, Bars/Dials, independent source summaries, clearing,
+cache recovery and selected history down to 100×44 Replay. The optional Running
+preview also verified actual OpenFreeMap tile loading and provider attribution.
+
+The final focused macOS check passed 21 test functions in four suites. The
+preceding full suite passed 499 of 500 Swift Testing functions plus all 16 XCTest
+checks, with only the already documented hosted layout timeout. Linux's full
+suite passed all 500 Swift Testing functions plus 16 XCTest checks; final padding
+regressions passed separately (17 functions), and both final offline process
+scenarios passed with the minimum Replay sizes and five-second quit/restoration.
+SwiftRules 0.1.3 reported no new violations across
+297 files. A separate reviewer found no remaining actionable issues after the
+padding correction. This evidence does not qualify sustained-update shutdown or
+physical-device behavior.
+
+The approved public asset names are:
+
+- `pitwall/tui-navigation-live.svg` / `.txt`: Live navigation context at 110 × 36.
+- `pitwall/tui-running-replay.svg` / `.txt`: Running Replay dashboard at 110 × 48.
+- `pitwall/tui-running-instruments.svg` / `.txt`: expanded Running at 110 × 48.
+
+Refresh all three pairs from the real authenticated local daemon and running
+Chio client with curated synthetic observations, explicit true color and no watch
+or phone. Export each SVG and transcript from the same terminal cells only after
+clean exit and exact terminal-restoration checks pass. Preserve actual basemap
+credits in the Running capture; if it uses online tiles, retain OpenMapTiles,
+OpenStreetMap contributors, ODbL and OpenFreeMap attribution. No web-page map
+requests or fabricated terminal output are permitted. All other capture pairs
+retain their existing provenance below.
+
+The navigation candidate changes context `2` at 100 × 32 or larger: segmented
+numeric readouts and complete ordinary values across the existing four-field
+pages, covering eleven source fields. Angles retain signed radians; distances,
+elevations and destination/next-point names remain source facts. There is no
+compass, angle normalization, turn instruction or ETA. Smaller terminals retain
+the existing field inspector. Missing and zero remain distinct, with ordinary
+text when complete segmented values cannot fit.
+
+The Running candidate retains primary pace, heart rate, active time and distance.
+At 100 × 44 or larger, expanded instruments add cadence and power beside terrain,
+with independently supplied source average/max companions. Cadence remains rpm;
+pace is derived from current speed. Shorter layouts retain their existing primary
+presentation. The six-widget Running main map is already implemented on main;
+its new Replay recording makes that existing layout visible. Both pages use only
+the selected Live or Replay observation, including historical missing values.
+
+This candidate is unmerged and not release-qualified. Merged cycling gear and
+terrain evidence is separate below. The known macOS interaction delay and the
+sustained-update resize/quit failure on macOS and Linux remain open; ordinary
+capture cleanup does not qualify those workloads. Physical Garmin delivery,
+phone-reachable HTTPS and a fresh Docker release-image qualification remain
+separate open gates.
+
+### Capture integrity
+
+| Asset | SHA-256 |
+| --- | --- |
+| `tui-navigation-live.svg` | `f412a44848ee64e92a72164d84893380e1556b5f321dc9db8b0ea64c68d896b5` |
+| `tui-navigation-live.txt` | `fab258e16ee86e40baae1a9b8c3ce809ec85f7333af4b212dbef1aaf39a84cc5` |
+| `tui-running-replay.svg` | `d88ba797b8ba804280bb27e453e2363e724eb2c93041cb41a8d0633958d1e2f7` |
+| `tui-running-replay.txt` | `4ee1bc6ff3ff86755429ee4d3eb79403afb43ed9db2ae8106821820df1d9acd4` |
+| `tui-running-instruments.svg` | `f39973e82c326179d6bd743e9c1be1db29549309363df54d481faa8c02af5f47` |
+| `tui-running-instruments.txt` | `5f86182555dff5d80482460ab2361b400010b7baf83bec3e59eda8c55a0a6d8f` |
+
 ## Cycling gear instruments — merged on main
 
 The October 10 gear change adds `pitwall/tui-gears-live.svg` / `.txt`, an actual

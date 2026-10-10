@@ -1,0 +1,35 @@
+
+ PITWALL · context 2/6
+ LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
+ Read OK · Age: 3 s at last check; source clock unverified
+ Navigation · source radians
+ Fields 1–4/11 · source observed
+      _     _                                                 _   _
+  _  | |   |_                                            |    _| |_
+     |_| .  _|                                           | . |_   _|
+ Heading (source radians):                             Bearing (source radians):
+ -0.5 rad                                              1.25 rad
+
+  _     _                                                   _     _
+  _|   |_                                               _   _|   | |
+ |_  .  _|                                                  _| . |_|
+ Bearing from start (radians):                         Track (source radians):
+ 2.5 rad                                               -3.0 rad
+
+
+
+
+
+
+
+
+
+
+
+ Device: simulator-device
+ Session: demo-session
+ Epoch: demo-epoch · seq 1
+ Last reported · Battery: 72% · Fixed 10 s · d details
+ Cycling (auto) · Bars · live updates · Session: demo-session
+ 1–6 context · n/p switch · j/k fields · o dashboard · v layout · a dashboard
+ g dials · d diagnostics · m menu · q quit · Ctrl-C quit

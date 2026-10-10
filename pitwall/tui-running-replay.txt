@@ -1,0 +1,47 @@
+
+ PITWALL / REPLAY · Running (auto) · SIMULATOR / synthetic · Following
+ 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-10T22:09:23Z
+                              ⢀⠎  ⡔⠁   ⠉⠢⢄                   ⢀⠎                 ⡔⠁               ⡰⠉
+ ⠣⢄                          ⢀⠎  ⡜        ⠓⢄                ⢠⠊                 ⡸                ⡰⠁
+ ⢄ ⠑⠢⣀                      ⢀⠎ ⢀⠎           ⠉⠢⣀            ⡠⠃                 ⡔⠁               ⡔⠁
+  ⠉⠒⢄⡀⠑⠢⢄⡀                 ⡰⠃ ⡠⠎               ⠑⠢⡀        ⡰⠁                 ⡜                ⡜
+     ⠈⠒⢄⣀⠈⠑⠢⢄⡀           ⢠⠊  ⡔⠁                  ⠈⠑⢄⡀    ⡜                 ⢀⡜               ⢀⠜
+         ⠉⠒⠤⢄⡉⠑⠒⠤⠤⣀⣀⣀⡀  ⡔⠁ ⢠⠊                       ⠈⠢⢄⢀⠎                 ⢠⠃               ⢀⠎
+ ⣀⣀⣀⣀⣀⣀⣀⣀⡀   ⠈⠉⠑⠒⠤⡤⢤⣀⣈⣩⠋⠙⠒⡖⠁                          ⡸⠙⢤                ⡠⠃               ⢀⠎
+         ⠈⠉⠉⠑⠒⠒⠤⢄⣀⢱ ⢀⠜⠈⠉⣩⠋⠢⢄⡀                        ⡰⡠⠤⡀⠑⠢⡀            ⡰⠁               ⢠⠃
+                  ⢹⡱⠓⠤⢄⣎⡀   ⠈⠑⠒⢄⡀                  ⢀⡔⠁⠣⠥⠃ Selected observation          ⢠⠃
+                 ⢠⠊  ⡰⠁ ⠈⠉⠒⠢⣀   ⠉⠒⠤⣀              ⢀⠎          ⠉⠢⣀    ⢀⠜                ⡰⠁
+ ⠒⠒⠒⠤⠤⠤⣀⣀ ⢀⣀⣀   ⡔⠁ ⢠⠊        ⠑⢢     ⠑⠢⣀          ⢠⠊              ⠑⣄ ⢀⠎                ⡰⠁
+         ⠉⠁ ⠈⠉⡲⠪⠤⣀⡔⠁          ⠉⠒⢄⡀     ⠉⠢⡀      ⡠⠃                 ⠙⠭⣀               ⡰⠁
+            ⢀⠔⠁ ⡠⠊⠈⠉⠒⠢⢄⡀         ⠈⠑⠤⡀⣄⡀  ⠈⠒⢤⡀ ⢀⠔⠁                     ⠱⣀            ⡸
+           ⡠⠊  ⡔⠁      ⠈⠉⠒⠤⣀        ⠈ ⠈⠑⠤⣀  ⢨⠕⢹                         ⠑⠤⡀       ⢀⡜⠁
+         ⢠⠊  ⢠⠊             ⠉⠒⠦⣀          ⠑⡢⢇⡠⠃                           ⠈⠑⠢⣀⡀ ⣀⠔⡝
+       ⢀⡰⠁ ⢀⡔⠉⠢⡀                ⠉⠒⠤⢄      ⡰⢁⡰⠉⠒⢄⡀                             ⠉⠫⣀⡜
+ › OpenFreeMap · OpenMapTiles · © OpenStreetMap contributors
+ ODbL · https://openfreemap.org
+ ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
+ │ PACE                             │ │ HEART RATE                      │ │ CADENCE                         │
+ │  _     _   _                     │ │ 145 bpm                         │ │ 86 rpm                          │
+ │ |_  .  _|  _|                    │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │
+ │  _| .  _|  _|                    │ │ Zones 90–190 bpm                │ │ Scale 0–180 rpm                 │
+ │ 5:33 /km                         │ │ Src avg 139 · max 172 bpm       │ │ Src avg 84 · max 96 rpm         │
+ │ Derived from speed               │ │                                 │ │                                 │
+ ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
+
+ ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
+ │ ACTIVE TIME                      │ │ DISTANCE                        │ │ POWER                           │
+ │  _   _                           │ │  _     _   _                    │ │ 245 W                           │
+ │  _|  _| .   | |_|                │ │ |_     _| | |                   │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │
+ │  _| |_  .   |   |                │ │ |_| . |_  |_|                   │ │ Scale 0–600 W                   │
+ │ 32:14                            │ │ 6.20 km                         │ │ Src avg 222 · max 398 W         │
+ │ Observed timer                   │ │ Observed distance               │ │                                 │
+ ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
+
+ Historical; source clock unverified · Paused
+ OpenFreeMap online · Basemap ready
+ Timer: On (observed)
+ Last reported · ▰ 72% battery · ↑ 4 queued · 2 dropped / 0 rejected · d details
+ Paused · seq 1 / 4
+ [──────────────────────────────────────────────────────────────────────────────────────────────────────────]
+ Retained sequence position · Space play/pause · [/] step · b start · r reopen
+ ↑↓←→ pan ± zoom · c follow · e retry · i instruments · 1–6 context · v layout · d info · m menu · q quit
