@@ -3,51 +3,65 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Current main-dashboard captures — merged development checkpoint
+## Current dashboard captures — source aggregate candidate
 
-October 10, 2026: Pitwall PR #22 merged at
+October 10, 2026: the Live/Replay SVG/text pairs now come from Pitwall source
+checkpoint `5bbb52a7f82205f8c0b43b3621e2fe176a54feba`, a candidate awaiting
+qualification and review. The map dashboard itself is already on main; the
+source average/max companions are not merged or released. These are
+`pitwall/tui-map-live.svg` / `.txt` and `pitwall/tui-map-replay.svg` / `.txt`,
+captured at 110 × 48 on macOS from the actual authenticated local daemon and
+Chio client using synthetic data. No watch or phone participates.
+
+The map sits above two rows of three measurements with a compact status footer.
+`Src avg` / `max` beside speed, HR, cadence and power come from the same selected
+observation as the current readings. They are independent source facts, not
+averages of uploaded history; zero and missing remain distinct. The Live
+capture selects sequence 7 (252 W, source average 229 W and maximum 405 W).
+Replay selects sequence 1 of 6 (246 W, source average 223 W and maximum 399 W).
+Both retain 30.6 km/h, 86 rpm, 145 bpm, 32:14 and 6.20 km as current readings.
+The synthetic source maximum speed is below current speed intentionally; the
+viewer does not repair or clamp independently reported facts.
+
+The complete offline map interaction and optional online Live/Replay capture
+scenarios pass on macOS, with clean quit and exact terminal restoration checked
+before export. The instrument process check also passes source-only updates,
+clearing, bars/dials, compact sizes and cached outage/recovery. Separate Linux
+full-suite verification passes. **The macOS full suite still fails its original
+20-second hosted interaction deadline, reproduced in isolation.** The candidate
+remains draft; these captures do not imply complete qualification.
+
+The existing continuous-update resize/quit problem remains separate: the earlier
+merged dashboard failed its unchanged five-second gate on macOS and Linux. The
+user accepted that earlier merge with the issue handled as follow-up. This
+candidate does not claim that the runtime repair has happened or that all timing
+gates pass. No fresh Docker release-image, Garmin SDK, physical delivery or
+battery evidence is added.
+
+The captures explicitly enable OpenFreeMap street tiles for synthetic Singapore
+coordinates. The default remains the offline, public-domain Natural Earth land
+map. Online requests originate from the TUI host and reveal the viewed region
+to the provider; remote tile sources require HTTPS. The actual recorded cells,
+transcripts and SVG glyph paths preserve OpenMapTiles, OpenStreetMap contributors,
+ODbL and OpenFreeMap credits. The web page serves local static images and makes
+no map requests. It shows one selected point, not a trail or accuracy radius.
+
+Only these two current terminal captures are displayed on the landing page. The
+seven archived instrument pairs below remain available for older asset links.
+Current controls use `i` for expanded instruments, `o`/`a` for the dashboard,
+`g` for bars/dials, `v` for layout and `m` for the chooser. Small terminals keep
+current readings first; the full source summary remains in context `1`.
+
+## Historical initial main-dashboard captures
+
+Pitwall PR #22 merged on October 10 at
 `0fd26b9f279aab53f122c234930c8bd32c4eb5d0` from approved head
-`4ee4a4c2375bec4657bad267efa56a94327440a4`. Only documentation changed after
-source checkpoint `66e0087a936e190be483ab00ec070035a706d163`; that exact source
-checkpoint produced the current map SVG/text pairs at 110 × 48 on macOS.
-These are `pitwall/tui-map-live.svg` / `.txt` and
-`pitwall/tui-map-replay.svg` / `.txt`. They show the actual authenticated local
-client and daemon with synthetic data, using explicitly enabled OpenFreeMap
-street tiles. Live and Replay use the same selected-observation contract.
-The main dashboard places the map above two rows of three measurement widgets,
-with a compact status footer; a tall terminal allocates about 40% to the map.
-Their complete map scenario and clean quit passed before export. The page itself
-makes no map requests. The recorded terminal cells and matching transcripts
-retain OpenMapTiles, OpenStreetMap contributors, ODbL and OpenFreeMap credits;
-the SVG exporter preserves these as glyph paths.
-
-**Merged development status, not release qualification:** the broader
-continuous-update resize/quit test fails its unchanged five-second gate on both
-macOS and Linux. Quitting immediately after resize during sustained updates may
-be delayed. A focused macOS diagnosis observed clean exit and restoration about
-15.3 seconds after quit; this does not establish a complete root cause. The user
-explicitly accepted merging with this known issue. Chio/SwiftTUI rendering repair
-and renewed interaction, pressure and shutdown qualification remain follow-up
-work. Historical passing shutdown checks do not qualify this dashboard.
-
-The landing page now shows only the current Live and Replay dashboard captures.
-The seven earlier instrument pairs remain unchanged in the repository as
-historical assets, with their provenance below; they are no longer displayed
-on the landing page. Existing asset URLs remain available for older links.
-Their on-screen controls describe the earlier client. Current controls use `i` for expanded
-instruments, `o`/`a` for the dashboard, `g` to toggle instrument style and open
-expanded instruments, and `v` to cycle the activity layout and return to the
-dashboard. No watch or phone participates in the terminal recordings; Garmin
-PNGs and simulator upload evidence retain their separate provenance below.
-
-The default map remains the offline, public-domain Natural Earth land map.
-Explicit online mode requests OpenFreeMap tiles from the TUI host and reveals
-the viewed region to that provider; remote tile configurations require HTTPS.
-The public page serves static local assets only. These captures do not establish
-physical watch/phone delivery, battery behavior or fresh Docker release-image
-qualification. They show one selected GPS point, not a trail or accuracy radius.
-
-The superseded 110 × 36 offline map checkpoint is retained below as history.
+`4ee4a4c2375bec4657bad267efa56a94327440a4`. Its 110 × 48 online map SVG/text
+pairs were produced from source checkpoint
+`66e0087a936e190be483ab00ec070035a706d163`. They were superseded at the same
+asset paths by the source-aggregate candidate above; their prior bytes remain
+in Git history. The main dashboard merge did not waive the sustained-update
+resize/quit failure. Earlier passing shutdown checks do not qualify it.
 
 ## Historical selected GPS map candidate preview
 

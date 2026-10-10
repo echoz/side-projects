@@ -1,6 +1,6 @@
 
  PITWALL / LIVE · Cycling (auto) · SIMULATOR / synthetic · Following
- 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-10T18:56:04Z
+ 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-10T20:12:28Z
                               ⢀⠎  ⡔⠁   ⠉⠢⢄                   ⢀⠎                 ⡔⠁               ⡰⠉
  ⠣⢄                          ⢀⠎  ⡜        ⠓⢄                ⢠⠊                 ⡸                ⡰⠁
  ⢄ ⠑⠢⣀                      ⢀⠎ ⢀⠎           ⠉⠢⣀            ⡠⠃                 ⡔⠁               ⡔⠁
@@ -27,7 +27,7 @@
  │ 30.6 km/h                        │ │ 252 W                           │ │ 86 rpm                          │
  │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │
  │ Scale 0–60 km/h                  │ │ Scale 0–600 W                   │ │ Scale 0–180 rpm                 │
- │                                  │ │                                 │ │                                 │
+ │ Src avg 10.1 · max 16.9 km/h     │ │ Src avg 229 · max 405 W         │ │ Src avg 84 · max 96 rpm         │
  ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
 
  ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
@@ -38,9 +38,9 @@
  │ 145 bpm                          │ │ 32:14                           │ │ 6.20 km                         │
  │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ Observed timer                  │ │ Observed distance               │
  │ Zones 90–190 bpm                 │ │                                 │ │                                 │
- │                                  │ │                                 │ │                                 │
+ │ Src avg 139 · max 172 bpm        │ │                                 │ │                                 │
  ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
- Read OK · 119 s at check · clock unverified
+ Read OK · 120 s at check · clock unverified
  OpenFreeMap online · Basemap ready
  Timer: On (observed)
  Last reported · ▰ 72% battery · ↑ 4 queued · 2 dropped / 0 rejected · d details
