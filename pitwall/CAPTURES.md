@@ -3,9 +3,9 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Cycling gear instrument candidate preview
+## Cycling gear instruments — merged on main
 
-The October 10 candidate adds `pitwall/tui-gears-live.svg` / `.txt`, an actual
+The October 10 gear change adds `pitwall/tui-gears-live.svg` / `.txt`, an actual
 synthetic 110 × 36 true-color capture from the authenticated local daemon and
 running Chio client. Application source checkpoint:
 `b9b00ed9da6f321be97d5654531560f269b1a141`; macOS executable SHA-256:
@@ -28,7 +28,12 @@ written only after both sessions exit cleanly; no recoloring is applied.
 The full Linux suite passes. All new gear tests pass on macOS; its existing
 20-second layout interaction check still fails. The sustained-update resize/quit
 issue remains open; these captures do not requalify that separate workload.
-This is a candidate awaiting merge, not a release or physical-device qualification.
+This is a merged development build, not a release or physical-device qualification.
+PR #27 merged at `46b026b4dcf716df3eb0a773b388bbf8b308057e` from approved
+head `fef79a3ca722447e35e963df77a32d1506ad771a`; their complete trees match.
+The view-name follow-up changes internal names only and passes 57 selected tests
+on each of macOS and Linux. The existing capture retains its original source
+and executable provenance; no new capture or release qualification is claimed.
 
 ## Terrain instrument — merged on main
 
@@ -130,7 +135,7 @@ ODbL and OpenFreeMap credits. The web page serves local static images and makes
 no map requests. It shows one selected point, not a trail or accuracy radius.
 
 The two merged dashboard captures remain on the landing page, alongside the
-merged terrain capture and separately labelled gear candidate above. The seven archived instrument pairs
+merged terrain and gear captures above. The seven archived instrument pairs
 below remain available for older asset links.
 Current controls use `i` for expanded instruments, `o`/`a` for the dashboard,
 `g` for bars/dials, `v` for layout and `m` for the chooser. Small terminals keep
