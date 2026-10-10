@@ -1,0 +1,35 @@
+
+ PITWALL / REPLAY MAP · SIMULATOR / synthetic · Following
+ 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-10T17:11:39Z
+ Historical; source clock unverified · Paused · Offline coarse/no streets · Basemap ready
+
+      ⠱⣰ ⠈⢁⠔⢞⠤⠤⣀⣀⣀⣀⣀⣀⢄                                              ⡔⠉
+       ⠉⠓⠒⠊ ⠘⠢⡀       ⠣⡀                                          ⡠⠊
+              ⢨⠂       ⠈⢢⣀⣠            ⡠⠤⠒⠊⠉⢆             ⣀⠤⡀⡤⠤⠒⠉⠉
+            ⢠⠊⠁            ⡇         ⡠⠊     ⠈⢢⡀         ⠠⡊  ⠈⠁
+          ⣀⠔⠁              ⢇      ⢀⠔⠉         ⡇ ⣀        ⠱⡄          ⢠⠋⢆
+    ⢀⣀⠤⠒⠊⠉                 ⠸⡀    ⢰⠁           ⠋⠉ ⢇        ⠘⡄         ⢱ ⡎
+ ⡤⠒⠊⠁                       ⠱⡀   ⢸               ⠘⡄⡰⢄      ⢸         ⠈⠒⠽⢤⡀
+ ⢄⡠⠤⠔⠒⠒⡝                     ⠱⡀  ⡎                ⡇⡇ ⠉⠢⢄ ⢀⡠⠚
+      ⡔⠁                      ⠘⣄⠜⡜⢦               ⡟⢄    ⠧⠊              ⢀⠴⠱⡀
+     ⡜                           ⢧⣀⠇              ⠣⡀⠑⢄           ⢀⠔⢄⡀  ⠚⠉⠣⣀⠇
+    ⡸                                          ⠙⢖⠤⡀⠱⡀ ⢇        ⢀⠎⠁ ⢠⠊     ⠁
+  ⡠⠊                                            ⠈⠢⡈⠑⠺⡦⡠⠤⡀    ⡠⠊⠁   ⢇  ⡀   ⡀
+ ⠎                                                ⠘⢄ ⠈⠣⠥⠃ Selected observation ⣀⡠⡀
+                                                    ⠱⡀ ⠑⠢⡀  ⢣⡀    ⡸ ⣸⢈⡙⡟⠁      ⠉⣒⠮⠱⣀⡠⠔⠲⠤⣀⣀
+                                                     ⠈⠲⡀⢸    ⠈⠉⠑⠒⠒⠃ ⠈⣿⠑⣼⡄       ⠈⠒⠤⢅⣀⡀    ⠉⠑⢄
+                                                       ⠈⠽⢕⣒⠤⠤⠦⠤⡀    ⠈⠉ ⠈             ⠈⡆      ⠱⡀
+                                                          ⠈⠉⠉⠓⠒⠛⠻⠒                   ⠚⠢⠤⠤⣀⠔⠉⠑⠢⢌⡢⣀
+                                                                                ⢤⢄⣀⣀⡀    ⢰⡀    ⠈⠒⠁
+    ⢀⠜⢦                                                                       ⢰⠊⠉  ⢠⠃    ⡇⢣⡀
+ ⢀⡠⠖⠁ ⢸                                                                  ⡠⠊⠉⠑⠒⠃    ⠪⠤⣀  ⢰⠁ ⠘⢆
+ ⡇    ⡎                                                                ⡠⠊             ⠉⠒⠎   ⠸⡀
+ ⠃   ⢸                                                              ⣀⡠⠔⠁                     ⠣⡀
+    ⢀⠇                                                          ⡤⠒⠊⠉                          ⠈⠢⡀
+ ⡀  ⡜                                                           ⡇                               ⠈⢢⡀
+ › Made with Natural Earth
+ Public domain · https://www.naturalearthdata.com/about/terms-of-use/
+ Paused · seq 1 / 5
+ [──────────────────────────────────────────────────────────────────────────────────────────────────────────]
+ Retained sequence position · Space play/pause · [/] step · b start · r reopen
+ ↑↓←→ pan +/- zoom · c follow · e retry · o overview · m menu · q/Ctrl-C quit

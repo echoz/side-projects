@@ -3,6 +3,46 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Selected GPS map candidate preview
+
+October 10, 2026: the selected-point GPS map is a PR candidate pending approval,
+not merged on main and not released. Capture source revision:
+`6906fff4d5f02d6b565f63a0aaf75478b6eaf786`.
+
+The candidate preview pairs are `pitwall/tui-map-live.svg` / `.txt` and
+`pitwall/tui-map-replay.svg` / `.txt`, each at 110 × 36 on macOS. They come from
+the actual local daemon and authenticated production Chio client with synthetic
+observations. The Live map shows the selected synthetic observation; Replay
+shows its selected accepted historical observation. Both use the bundled offline
+Natural Earth land map. The SVG and transcript in each pair must come from the
+same recorded terminal cells, with clean quit and exact terminal restoration
+checked before export. No Garmin simulator, physical watch or phone participates.
+
+The screen supplies one selected location marker, original source time and Garmin
+GPS quality code. Missing, cached Live and historical Replay states stay explicit;
+polar locations outside the Mercator camera range retain their original location
+summary. GPS quality is not an accuracy radius. No connected trail, reconstructed
+fix, street detail or workout completion is claimed by the default basemap.
+
+The bundled Natural Earth 1:110m land geometry is public domain, with
+“Made with Natural Earth” credit. It provides coarse geographic context without
+network acquisition. Explicit online mode uses OpenFreeMap; tile requests from
+the TUI host reveal the viewed region to that provider. An explicit remote tile
+configuration requires HTTPS. The public page uses only static local SVG/text
+assets and never connects to a tile provider, live daemon or watch.
+
+Candidate keyboard controls: `a` opens the map; arrows pan; `+` / `−` zoom;
+`c` follows the selected point; `e` retries loading; `o` returns to the overview;
+`m` returns to the mode chooser. Compact allocation retains a location summary.
+The actual map scenario passes on macOS and Linux ARM64, in color and monochrome terminals,
+including repeated map re-entry, pan/zoom/follow, missing/polar/zero locations,
+Live outage/recovery, resizing, historical selection while new uploads arrive,
+and clean quit. A local synthetic vector-tile fixture exercises the production
+loader, lazy requests, failure/retry, credential separation and cancellation.
+Independent source review found no actionable issues. These captures do not
+establish external-provider availability or physical-device behavior. All earlier instrument pairs and Garmin PNGs
+retain their separately recorded provenance below.
+
 ## Pitwall terminal capture
 
 Shared Chio instrument preview checkpoint, October 10, 2026: all seven terminal
@@ -12,8 +52,9 @@ SVG/text pairs are refreshed from Pitwall candidate revision
 at `4665935fb3468fe26d27d389f30b48cf45989363`; its tree matches the approved
 head `95f0ea3a7e15360d4044206a579f3020fbedbe89`. The capture source is unchanged.
 Shared instruments, the Live/Replay console and simulator-qualified reporting
-modes are on main. This is not a release. A map-readiness assessment was included;
-Pitwall still has no map screen, so these captures show measurement instruments.
+modes are on main. This is not a release. A map-readiness assessment was included.
+At that instrument checkpoint, Pitwall had no map screen; those captures show
+measurement instruments. The separate GPS map candidate is described above.
 
 The recordings use the actual local daemon and authenticated production Chio
 client with synthetic measurements. Running wide and compact retain the Auto
