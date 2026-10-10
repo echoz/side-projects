@@ -3,6 +3,35 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Terrain instrument candidate preview
+
+The October 10 terrain candidate adds `pitwall/tui-terrain.svg` / `.txt`, an
+actual synthetic 110 × 36 true-color capture of the expanded Cycling page.
+This candidate is separate from the two merged main-dashboard captures below.
+Application source checkpoint: `5de9f5858ee245b44717f0ead695c854507c8f89`.
+The capture uses the macOS executable with SHA-256
+`21f578448ca4281336bddfa96edfd4d73b410d3c2d4b4221c59acc46ebd24b5b`.
+The independent terrain renderer checks pass on macOS and Linux, including
+signed/zero/missing readings, valid extreme values, retained updates and width
+fitting. The full Linux suite passes; the macOS full suite retains the known
+20-second layout interaction failure. True-color real terminal checks pass on
+both platforms, including terrain-only updates, clearing, resizes and clean
+quit. A macOS Replay capture retains historical terrain while newer Live
+observations arrive. These checks do not replace the sustained-update shutdown
+gate or establish physical Garmin behavior.
+It promotes existing terrain context to a shared Chio elevation readout with
+independent source ascent/descent totals. The panel does not infer a gauge range,
+gradient, target, route or elevation history. Negative elevation, zero totals
+and missing observations remain distinct. Small layouts still prioritize the
+primary measurements; the terrain panel retains its existing wide allocation.
+
+The capture uses the real authenticated local daemon and TUI with synthetic
+observations: elevation −12.5 m, ascent 120 m and descent 30 m. No watch or phone
+participates. The SVG and transcript are exported from the same terminal cells;
+true color is explicit and terminal cleanup must pass before export. This is a
+development candidate, not a release or physical-device qualification. Existing
+interaction and sustained-update shutdown limitations remain open.
+
 ## Current dashboard captures — merged source aggregates
 
 October 10, 2026: the Live/Replay SVG/text pairs now come from Pitwall source
@@ -30,7 +59,7 @@ shell supplies `NO_COLOR=1`, an empty `COLORTERM` and `CLICOLOR=0`.
 The application binary is unchanged from source checkpoint `5bbb52a`; current
 Pitwall main `9cf2793e17dea4b8e9a8e9781f0e0de6eb00e64c` contains that application.
 Capture tooling revision `94e0686` changes only the capture commands, their
-regressions and documentation for this refresh. Twelve local
+regressions and documentation for this refresh; PR #25 merged it at `46beb1f`. Twelve local
 capture regressions pass, including exact RGB preservation and explicit
 monochrome selection. Color captures use a shared true-color environment;
 monochrome exports require the capture command's explicit `--no-color` option.
@@ -71,8 +100,9 @@ transcripts and SVG glyph paths preserve OpenMapTiles, OpenStreetMap contributor
 ODbL and OpenFreeMap credits. The web page serves local static images and makes
 no map requests. It shows one selected point, not a trail or accuracy radius.
 
-Only these two current terminal captures are displayed on the landing page. The
-seven archived instrument pairs below remain available for older asset links.
+The two merged dashboard captures remain on the landing page, alongside the
+separately labelled terrain candidate above. The seven archived instrument pairs
+below remain available for older asset links.
 Current controls use `i` for expanded instruments, `o`/`a` for the dashboard,
 `g` for bars/dials, `v` for layout and `m` for the chooser. Small terminals keep
 current readings first; the full source summary remains in context `1`.

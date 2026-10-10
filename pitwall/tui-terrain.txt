@@ -1,0 +1,35 @@
+
+ PITWALL / WORKOUT CONTROL
+ LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
+ Read OK · Age: 1 s at last check; source clock unverified
+ ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
+ │  _   _     _            │ │  _       _             │ │  _   _                 │ │          _             │
+ │  _| | |   |_            │ │  _| |_| |_             │ │ |_| |_                 │ │   | |_| |_             │
+ │  _| |_| . |_|           │ │ |_    |  _|            │ │ |_| |_|                │ │   |   |  _|            │
+ │ 30.6 km/h               │ │ 245 W                  │ │ 86 rpm                 │ │ 145 bpm                │
+ │ Derived from m/s        │ │ Observed power         │ │ Observed cadence       │ │ Zone 3                 │
+ │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱ │
+ │ Scale 0–60 km/h         │ │ Scale 0–600 W          │ │ Scale 0–180 rpm        │ │ Zones 90–190 bpm       │
+ │                         │ │                        │ │                        │ │                        │
+ │ Src avg 10.1 km/h       │ │ Src avg 222 W          │ │ Src avg 84 rpm         │ │ Src avg 139 bpm        │
+ │ Src max 16.9 km/h       │ │ Src max 398 W          │ │ Src max 96 rpm         │ │ Src max 172 bpm        │
+ ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
+
+ ╭ WORKOUT / OBSERVED ───────────────────────────────╮ ╭ TERRAIN / OBSERVED ────────────────────────────────╮
+ │ Active time: 32:14                                │ │          _     _                   Ascent: 120.0 m │
+ │ Distance: 6.20 km                                 │ │  _    |  _|   |_                   Descent: 30.0 m │
+ │ Speed: 8.5 m/s                                    │ │       | |_  .  _|                                  │
+ │ Elapsed time: 33:14                               │ │ ELEVATION: -12.5 m                                 │
+ ╰───────────────────────────────────────────────────╯ ╰────────────────────────────────────────────────────╯
+
+ Synthetic ride · Display scales only · no workout targets
+
+ 1 Summary  2 Navigation  3 Pressure
+ 4 Effort   5 Swimming    6 Cycling
+
+
+
+ Last reported · Battery: 72% · Fixed 10 s · d details
+ Cycling (auto) · Bars · live updates · Session: demo-session
+ 1–6 context · n/p switch · j/k fields · o dashboard · v layout · a dashboard
+ g dials · d diagnostics · m menu · q quit · Ctrl-C quit

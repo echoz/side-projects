@@ -38,7 +38,8 @@ jobs:
                     "pitwall/tui-replay-compact-capture.txt", "pitwall/tui-menu-capture.svg",
                     "pitwall/tui-menu-capture.txt", "pitwall/tui-map-live.svg",
                     "pitwall/tui-map-live.txt", "pitwall/tui-map-replay.svg",
-                    "pitwall/tui-map-replay.txt", "pitwall/transponder-large.png",
+                    "pitwall/tui-map-replay.txt", "pitwall/tui-terrain.svg",
+                    "pitwall/tui-terrain.txt", "pitwall/transponder-large.png",
                     "pitwall/transponder-half.png", "pitwall/transponder-compact.png",
                     "marquee/index.html", "marquee/styles.css", "marquee/demo.js", "marquee/favicon.svg",
                     "blackbox/index.html", "blackbox/styles.css", "blackbox/demo.js", "blackbox/favicon.svg")
