@@ -130,7 +130,7 @@ ODbL and OpenFreeMap credits. The web page serves local static images and makes
 no map requests. It shows one selected point, not a trail or accuracy radius.
 
 The two merged dashboard captures remain on the landing page, alongside the
-separately labelled terrain candidate above. The seven archived instrument pairs
+merged terrain capture and separately labelled gear candidate above. The seven archived instrument pairs
 below remain available for older asset links.
 Current controls use `i` for expanded instruments, `o`/`a` for the dashboard,
 `g` for bars/dials, `v` for layout and `m` for the chooser. Small terminals keep
