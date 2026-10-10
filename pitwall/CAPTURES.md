@@ -8,9 +8,12 @@ Paths below are relative to the repository root.
 Shared Chio instrument preview checkpoint, October 10, 2026: all seven terminal
 SVG/text pairs are refreshed from Pitwall candidate revision
 `b0c47654349e3fe643b9a6f21e9ccf227788f1bf`, using shared Chio instruments pinned to
-`eb1ffb3cb76933f7bfe403321fe43394445ad533`. This candidate is awaiting Pitwall
-review; it is not merged or released. The existing Live/Replay console and
-simulator-qualified reporting modes remain on main.
+`eb1ffb3cb76933f7bfe403321fe43394445ad533`. Pitwall PR #21 merged on October 10
+at `4665935fb3468fe26d27d389f30b48cf45989363`; its tree matches the approved
+head `95f0ea3a7e15360d4044206a579f3020fbedbe89`. The capture source is unchanged.
+Shared instruments, the Live/Replay console and simulator-qualified reporting
+modes are on main. This is not a release. A map-readiness assessment was included;
+Pitwall still has no map screen, so these captures show measurement instruments.
 
 The recordings use the actual local daemon and authenticated production Chio
 client with synthetic measurements. Running wide and compact retain the Auto
