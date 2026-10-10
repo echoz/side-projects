@@ -3,11 +3,40 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Terrain instrument candidate preview
+## Cycling gear instrument candidate preview
 
-The October 10 terrain candidate adds `pitwall/tui-terrain.svg` / `.txt`, an
+The October 10 candidate adds `pitwall/tui-gears-live.svg` / `.txt`, an actual
+synthetic 110 × 36 true-color capture from the authenticated local daemon and
+running Chio client. Application source checkpoint:
+`b9b00ed9da6f321be97d5654531560f269b1a141`; macOS executable SHA-256:
+`7c93d93f3cf28b62475f94897452ebbe9d42409cf75cfaa63c3bf364a7e02adc`.
+The capture uses front index 1 / maximum index 2 / 34 teeth and rear index 6 /
+maximum index 12 / 21 teeth. Those are independent raw source facts, without
+index offsets, gear ratios, gear-count inference or sensor connectivity claims.
+Missing members remain missing. No watch or phone participates.
+
+The cycling context uses shared Chio readouts at 100 × 32 or larger, retaining
+all six labelled facts; smaller terminals retain field paging. Separate actual
+Live/Replay process checks pass in true color and monochrome on macOS and Linux,
+including zero/partial/missing/extreme values, clearing, cached outages, compact
+paging, resizing and the original five-second quit/terminal-restoration checks.
+Historical gears remain historical while newer Live observations arrive.
+The same run exports an unpublished Replay capture as additional local evidence.
+The public SVG and transcript come from the same actual terminal cells and are
+written only after both sessions exit cleanly; no recoloring is applied.
+
+The full Linux suite passes. All new gear tests pass on macOS; its existing
+20-second layout interaction check still fails. The sustained-update resize/quit
+issue remains open; these captures do not requalify that separate workload.
+This is a candidate awaiting merge, not a release or physical-device qualification.
+
+## Terrain instrument — merged on main
+
+The October 10 terrain change adds `pitwall/tui-terrain.svg` / `.txt`, an
 actual synthetic 110 × 36 true-color capture of the expanded Cycling page.
-This candidate is separate from the two merged main-dashboard captures below.
+PR #26 merged on October 10 at `8dde4fb6781d531597dbacafb42de44c9c2fe41a`.
+The merge tree matches approved head `1769558a93fdf3d874c4980805b71b32e3c82d06`;
+the capture below retains its original source provenance, separately from the main dashboard.
 Application source checkpoint: `5de9f5858ee245b44717f0ead695c854507c8f89`.
 The capture uses the macOS executable with SHA-256
 `21f578448ca4281336bddfa96edfd4d73b410d3c2d4b4221c59acc46ebd24b5b`.
@@ -29,7 +58,7 @@ The capture uses the real authenticated local daemon and TUI with synthetic
 observations: elevation −12.5 m, ascent 120 m and descent 30 m. No watch or phone
 participates. The SVG and transcript are exported from the same terminal cells;
 true color is explicit and terminal cleanup must pass before export. This is a
-development candidate, not a release or physical-device qualification. Existing
+merged development build, not a release or physical-device qualification. Existing
 interaction and sustained-update shutdown limitations remain open.
 
 ## Current dashboard captures — merged source aggregates

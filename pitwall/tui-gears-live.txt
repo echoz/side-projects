@@ -1,0 +1,35 @@
+
+ PITWALL · context 6/6
+ LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
+ Read OK · Age: 3 s at last check; source clock unverified
+ Cycling · source gear facts
+ Fields 1–6/6 · source observed
+ FRONT GEAR                                             REAR GEAR
+                                                         _
+   |                                                    |_
+   |                                                    |_|
+ Front gear index: 1 (source index)                     Rear gear index: 6 (source index)
+ Front maximum index: 2 (source index)                  Rear maximum index: 12 (source index)
+ Front gear teeth: 34 teeth                             Rear gear teeth: 21 teeth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Device: simulator-device
+ Session: demo-session
+ Epoch: demo-epoch · seq 1
+ Last reported · Battery: 72% · Fixed 10 s · d details
+ Cycling (auto) · Bars · live updates · Session: demo-session
+ 1–6 context · n/p switch · j/k fields · o dashboard · v layout · a dashboard
+ g dials · d diagnostics · m menu · q quit · Ctrl-C quit
