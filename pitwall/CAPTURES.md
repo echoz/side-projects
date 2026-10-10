@@ -3,13 +3,58 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Selected GPS map candidate preview
+## Current main-dashboard captures — merged development checkpoint
 
-October 10, 2026: the selected-point GPS map is a PR candidate pending approval,
-not merged on main and not released. Capture source revision:
+October 10, 2026: Pitwall PR #22 merged at
+`0fd26b9f279aab53f122c234930c8bd32c4eb5d0` from approved head
+`4ee4a4c2375bec4657bad267efa56a94327440a4`. Only documentation changed after
+source checkpoint `66e0087a936e190be483ab00ec070035a706d163`; that exact source
+checkpoint produced the current map SVG/text pairs at 110 × 48 on macOS.
+These are `pitwall/tui-map-live.svg` / `.txt` and
+`pitwall/tui-map-replay.svg` / `.txt`. They show the actual authenticated local
+client and daemon with synthetic data, using explicitly enabled OpenFreeMap
+street tiles. Live and Replay use the same selected-observation contract.
+The main dashboard places the map above two rows of three measurement widgets,
+with a compact status footer; a tall terminal allocates about 40% to the map.
+Their complete map scenario and clean quit passed before export. The page itself
+makes no map requests. The recorded terminal cells and matching transcripts
+retain OpenMapTiles, OpenStreetMap contributors, ODbL and OpenFreeMap credits;
+the SVG exporter preserves these as glyph paths.
+
+**Merged development status, not release qualification:** the broader
+continuous-update resize/quit test fails its unchanged five-second gate on both
+macOS and Linux. Quitting immediately after resize during sustained updates may
+be delayed. A focused macOS diagnosis observed clean exit and restoration about
+15.3 seconds after quit; this does not establish a complete root cause. The user
+explicitly accepted merging with this known issue. Chio/SwiftTUI rendering repair
+and renewed interaction, pressure and shutdown qualification remain follow-up
+work. Historical passing shutdown checks do not qualify this dashboard.
+
+The seven earlier instrument pairs remain unchanged and are historical captures
+of their own checkpoint, not recordings of this main dashboard. Their on-screen
+controls describe that earlier client. Current controls use `i` for expanded
+instruments, `o`/`a` for the dashboard, `g` to toggle instrument style and open
+expanded instruments, and `v` to cycle the activity layout and return to the
+dashboard. No watch or phone participates in the terminal recordings; Garmin
+PNGs and simulator upload evidence retain their separate provenance below.
+
+The default map remains the offline, public-domain Natural Earth land map.
+Explicit online mode requests OpenFreeMap tiles from the TUI host and reveals
+the viewed region to that provider; remote tile configurations require HTTPS.
+The public page serves static local assets only. These captures do not establish
+physical watch/phone delivery, battery behavior or fresh Docker release-image
+qualification. They show one selected GPS point, not a trail or accuracy radius.
+
+The superseded 110 × 36 offline map checkpoint is retained below as history.
+
+## Historical selected GPS map candidate preview
+
+Earlier October 10, 2026 checkpoint: the selected-point GPS map was a PR
+candidate pending approval. This is historical provenance for the superseded
+110 × 36 offline captures, not the files now displayed. Capture source revision:
 `6906fff4d5f02d6b565f63a0aaf75478b6eaf786`.
 
-The candidate preview pairs are `pitwall/tui-map-live.svg` / `.txt` and
+The earlier candidate preview pairs used `pitwall/tui-map-live.svg` / `.txt` and
 `pitwall/tui-map-replay.svg` / `.txt`, each at 110 × 36 on macOS. They come from
 the actual local daemon and authenticated production Chio client with synthetic
 observations. The Live map shows the selected synthetic observation; Replay
@@ -43,10 +88,10 @@ Independent source review found no actionable issues. These captures do not
 establish external-provider availability or physical-device behavior. All earlier instrument pairs and Garmin PNGs
 retain their separately recorded provenance below.
 
-## Pitwall terminal capture
+## Historical instrument captures still displayed
 
-Shared Chio instrument preview checkpoint, October 10, 2026: all seven terminal
-SVG/text pairs are refreshed from Pitwall candidate revision
+Shared Chio instrument preview checkpoint, October 10, 2026: all seven instrument
+SVG/text pairs were refreshed from Pitwall candidate revision
 `b0c47654349e3fe643b9a6f21e9ccf227788f1bf`, using shared Chio instruments pinned to
 `eb1ffb3cb76933f7bfe403321fe43394445ad533`. Pitwall PR #21 merged on October 10
 at `4665935fb3468fe26d27d389f30b48cf45989363`; its tree matches the approved
@@ -54,7 +99,8 @@ head `95f0ea3a7e15360d4044206a579f3020fbedbe89`. The capture source is unchanged
 Shared instruments, the Live/Replay console and simulator-qualified reporting
 modes are on main. This is not a release. A map-readiness assessment was included.
 At that instrument checkpoint, Pitwall had no map screen; those captures show
-measurement instruments. The separate GPS map candidate is described above.
+measurement instruments. The current main-dashboard captures and their separate source checkpoint are
+described above. These seven instrument pairs remain unchanged.
 
 The recordings use the actual local daemon and authenticated production Chio
 client with synthetic measurements. Running wide and compact retain the Auto
@@ -82,7 +128,8 @@ instrument smoke check. The pinned SwiftRules 0.1.3 gate reports no violations i
 local terminal and client behavior, not physical watch/phone delivery, battery
 savings or fresh Docker release-image qualification.
 
-All seven current terminal pairs use this checkpoint. The older records below
+All seven instrument pairs still displayed use this checkpoint. They have not
+been refreshed for the main dashboard. The older records below
 preserve their historical capture revisions, verification and limitations;
 references there to a pair retaining an earlier revision describe that checkpoint,
 not the files currently published. The Garmin PNGs remain the October 8 simulator

@@ -1,35 +1,47 @@
 
- PITWALL / REPLAY MAP · SIMULATOR / synthetic · Following
- 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-10T17:11:39Z
- Historical; source clock unverified · Paused · Offline coarse/no streets · Basemap ready
+ PITWALL / REPLAY · Cycling (auto) · SIMULATOR / synthetic · Following
+ 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-10T18:55:58Z
+                              ⢀⠎  ⡔⠁   ⠉⠢⢄                   ⢀⠎                 ⡔⠁               ⡰⠉
+ ⠣⢄                          ⢀⠎  ⡜        ⠓⢄                ⢠⠊                 ⡸                ⡰⠁
+ ⢄ ⠑⠢⣀                      ⢀⠎ ⢀⠎           ⠉⠢⣀            ⡠⠃                 ⡔⠁               ⡔⠁
+  ⠉⠒⢄⡀⠑⠢⢄⡀                 ⡰⠃ ⡠⠎               ⠑⠢⡀        ⡰⠁                 ⡜                ⡜
+     ⠈⠒⢄⣀⠈⠑⠢⢄⡀           ⢠⠊  ⡔⠁                  ⠈⠑⢄⡀    ⡜                 ⢀⡜               ⢀⠜
+         ⠉⠒⠤⢄⡉⠑⠒⠤⠤⣀⣀⣀⡀  ⡔⠁ ⢠⠊                       ⠈⠢⢄⢀⠎                 ⢠⠃               ⢀⠎
+ ⣀⣀⣀⣀⣀⣀⣀⣀⡀   ⠈⠉⠑⠒⠤⡤⢤⣀⣈⣩⠋⠙⠒⡖⠁                          ⡸⠙⢤                ⡠⠃               ⢀⠎
+         ⠈⠉⠉⠑⠒⠒⠤⢄⣀⢱ ⢀⠜⠈⠉⣩⠋⠢⢄⡀                        ⡰⡠⠤⡀⠑⠢⡀            ⡰⠁               ⢠⠃
+                  ⢹⡱⠓⠤⢄⣎⡀   ⠈⠑⠒⢄⡀                  ⢀⡔⠁⠣⠥⠃ Selected observation          ⢠⠃
+                 ⢠⠊  ⡰⠁ ⠈⠉⠒⠢⣀   ⠉⠒⠤⣀              ⢀⠎          ⠉⠢⣀    ⢀⠜                ⡰⠁
+ ⠒⠒⠒⠤⠤⠤⣀⣀ ⢀⣀⣀   ⡔⠁ ⢠⠊        ⠑⢢     ⠑⠢⣀          ⢠⠊              ⠑⣄ ⢀⠎                ⡰⠁
+         ⠉⠁ ⠈⠉⡲⠪⠤⣀⡔⠁          ⠉⠒⢄⡀     ⠉⠢⡀      ⡠⠃                 ⠙⠭⣀               ⡰⠁
+            ⢀⠔⠁ ⡠⠊⠈⠉⠒⠢⢄⡀         ⠈⠑⠤⡀⣄⡀  ⠈⠒⢤⡀ ⢀⠔⠁                     ⠱⣀            ⡸
+           ⡠⠊  ⡔⠁      ⠈⠉⠒⠤⣀        ⠈ ⠈⠑⠤⣀  ⢨⠕⢹                         ⠑⠤⡀       ⢀⡜⠁
+         ⢠⠊  ⢠⠊             ⠉⠒⠦⣀          ⠑⡢⢇⡠⠃                           ⠈⠑⠢⣀⡀ ⣀⠔⡝
+       ⢀⡰⠁ ⢀⡔⠉⠢⡀                ⠉⠒⠤⢄      ⡰⢁⡰⠉⠒⢄⡀                             ⠉⠫⣀⡜
+ › OpenFreeMap · OpenMapTiles · © OpenStreetMap contributors
+ ODbL · https://openfreemap.org
+ ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
+ │ SPEED                            │ │ POWER                           │ │ CADENCE                         │
+ │ 30.6 km/h                        │ │ 246 W                           │ │ 86 rpm                          │
+ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │
+ │ Scale 0–60 km/h                  │ │ Scale 0–600 W                   │ │ Scale 0–180 rpm                 │
+ │                                  │ │                                 │ │                                 │
+ │                                  │ │                                 │ │                                 │
+ ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
 
-      ⠱⣰ ⠈⢁⠔⢞⠤⠤⣀⣀⣀⣀⣀⣀⢄                                              ⡔⠉
-       ⠉⠓⠒⠊ ⠘⠢⡀       ⠣⡀                                          ⡠⠊
-              ⢨⠂       ⠈⢢⣀⣠            ⡠⠤⠒⠊⠉⢆             ⣀⠤⡀⡤⠤⠒⠉⠉
-            ⢠⠊⠁            ⡇         ⡠⠊     ⠈⢢⡀         ⠠⡊  ⠈⠁
-          ⣀⠔⠁              ⢇      ⢀⠔⠉         ⡇ ⣀        ⠱⡄          ⢠⠋⢆
-    ⢀⣀⠤⠒⠊⠉                 ⠸⡀    ⢰⠁           ⠋⠉ ⢇        ⠘⡄         ⢱ ⡎
- ⡤⠒⠊⠁                       ⠱⡀   ⢸               ⠘⡄⡰⢄      ⢸         ⠈⠒⠽⢤⡀
- ⢄⡠⠤⠔⠒⠒⡝                     ⠱⡀  ⡎                ⡇⡇ ⠉⠢⢄ ⢀⡠⠚
-      ⡔⠁                      ⠘⣄⠜⡜⢦               ⡟⢄    ⠧⠊              ⢀⠴⠱⡀
-     ⡜                           ⢧⣀⠇              ⠣⡀⠑⢄           ⢀⠔⢄⡀  ⠚⠉⠣⣀⠇
-    ⡸                                          ⠙⢖⠤⡀⠱⡀ ⢇        ⢀⠎⠁ ⢠⠊     ⠁
-  ⡠⠊                                            ⠈⠢⡈⠑⠺⡦⡠⠤⡀    ⡠⠊⠁   ⢇  ⡀   ⡀
- ⠎                                                ⠘⢄ ⠈⠣⠥⠃ Selected observation ⣀⡠⡀
-                                                    ⠱⡀ ⠑⠢⡀  ⢣⡀    ⡸ ⣸⢈⡙⡟⠁      ⠉⣒⠮⠱⣀⡠⠔⠲⠤⣀⣀
-                                                     ⠈⠲⡀⢸    ⠈⠉⠑⠒⠒⠃ ⠈⣿⠑⣼⡄       ⠈⠒⠤⢅⣀⡀    ⠉⠑⢄
-                                                       ⠈⠽⢕⣒⠤⠤⠦⠤⡀    ⠈⠉ ⠈             ⠈⡆      ⠱⡀
-                                                          ⠈⠉⠉⠓⠒⠛⠻⠒                   ⠚⠢⠤⠤⣀⠔⠉⠑⠢⢌⡢⣀
-                                                                                ⢤⢄⣀⣀⡀    ⢰⡀    ⠈⠒⠁
-    ⢀⠜⢦                                                                       ⢰⠊⠉  ⢠⠃    ⡇⢣⡀
- ⢀⡠⠖⠁ ⢸                                                                  ⡠⠊⠉⠑⠒⠃    ⠪⠤⣀  ⢰⠁ ⠘⢆
- ⡇    ⡎                                                                ⡠⠊             ⠉⠒⠎   ⠸⡀
- ⠃   ⢸                                                              ⣀⡠⠔⠁                     ⠣⡀
-    ⢀⠇                                                          ⡤⠒⠊⠉                          ⠈⠢⡀
- ⡀  ⡜                                                           ⡇                               ⠈⢢⡀
- › Made with Natural Earth
- Public domain · https://www.naturalearthdata.com/about/terms-of-use/
- Paused · seq 1 / 5
+ ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
+ │ HEART RATE                       │ │ ACTIVE TIME                     │ │ DISTANCE                        │
+ │ 145 bpm                          │ │  _   _                          │ │  _     _   _                    │
+ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │  _|  _| .   | |_|               │ │ |_     _| | |                   │
+ │ Zones 90–190 bpm                 │ │  _| |_  .   |   |               │ │ |_| . |_  |_|                   │
+ │                                  │ │ 32:14                           │ │ 6.20 km                         │
+ │                                  │ │ Observed timer                  │ │ Observed distance               │
+ ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
+
+ Historical; source clock unverified · Paused
+ OpenFreeMap online · Basemap ready
+ Timer: On (observed)
+ Last reported · ▰ 72% battery · ↑ 4 queued · 2 dropped / 0 rejected · d details
+ Paused · seq 1 / 6
  [──────────────────────────────────────────────────────────────────────────────────────────────────────────]
  Retained sequence position · Space play/pause · [/] step · b start · r reopen
- ↑↓←→ pan +/- zoom · c follow · e retry · o overview · m menu · q/Ctrl-C quit
+ ↑↓←→ pan ± zoom · c follow · e retry · i instruments · 1–6 context · v layout · d info · m menu · q quit
