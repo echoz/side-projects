@@ -5,6 +5,18 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
+Local Auto qualification merge checkpoint, October 9, 2026: PR #19 merged at
+`de3787bf56eb06475fe52025928f51836f6e5eec` from approved head
+`c9cef32b7fc52ab89460b897b503727a77bf4699`. The complete merge tree equals the
+approved head, preserving the qualification evidence recorded below at
+`a1f0614220321627c59730a1b408ff3c6f8da1b6`: four Auto cases, four representative
+Fixed/Significant regressions, 88 offline SDK tests and 160 harness checks on
+each of macOS and Linux ARM64. The qualification is now on main; this is not a
+release. The merge adds no new test, physical watch/phone, battery or fresh Docker
+release-image evidence. HTTPS enforcement remains restored. All SVG/text pairs
+retain their original capture provenance; the following candidate and earlier
+checkpoint records preserve their historical status and limitations.
+
 Local Auto simulator qualification checkpoint, October 9, 2026: candidate
 `a1f0614220321627c59730a1b408ff3c6f8da1b6` passes all four five-minute synthetic
 Auto runs in Garmin SDK 9.2.0: ordinary and maximum payloads, each with polling
