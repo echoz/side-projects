@@ -10,11 +10,32 @@ checkpoint `5bbb52a7f82205f8c0b43b3621e2fe176a54feba`. Pitwall PR #24 merged on
 October 10 at `ad2f457b87ceac4fbc9ed84ced7b47521509917a` from approved head
 `61ade74bfe3d21427832f722563eb40288891244`. The map dashboard and source
 average/max companions are now on main. This is a development build, not a
-release. The merge did not refresh the captures; their source checkpoint and
-recorded bytes are unchanged. These are
+release. The merge itself did not refresh the captures; the subsequent true-color
+refresh below preserves the same compiled application. These are
 `pitwall/tui-map-live.svg` / `.txt` and `pitwall/tui-map-replay.svg` / `.txt`,
 captured at 110 × 48 on macOS from the actual authenticated local daemon and
 Chio client using synthetic data. No watch or phone participates.
+
+A later October 10 refresh explicitly selects 24-bit true color for every color
+capture, independently of inherited shell settings. The original map images
+used the terminal renderer's 256-color fallback, which approximated the intended
+charcoal surface (`#10141B`) as navy (`#00005F`). The new files are fresh captures
+from the running client, not recolored images. Their recorded cells and SVGs
+preserve charcoal `#10141B`, cyan measurements `#7DDCEB` and the red header
+`#FF554D`; capture checks reject missing exact charcoal/cyan values. The earlier
+256-color bytes remain in Git history. Both Live and Replay complete their real
+process and terminal-restoration checks before export, even when the invoking
+shell supplies `NO_COLOR=1`, an empty `COLORTERM` and `CLICOLOR=0`.
+
+The application binary is unchanged from source checkpoint `5bbb52a`; current
+Pitwall main `9cf2793e17dea4b8e9a8e9781f0e0de6eb00e64c` contains that application.
+Capture tooling revision `94e0686` changes only the capture commands, their
+regressions and documentation for this refresh. Twelve local
+capture regressions pass, including exact RGB preservation and explicit
+monochrome selection. Color captures use a shared true-color environment;
+monochrome exports require the capture command's explicit `--no-color` option.
+Ordinary non-export smoke tests retain their inherited color mode. No renderer
+fix, new full-suite run or changed timing qualification is claimed.
 
 The map sits above two rows of three measurements with a compact status footer.
 `Src avg` / `max` beside speed, HR, cadence and power come from the same selected
