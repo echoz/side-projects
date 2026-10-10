@@ -5,6 +5,29 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
+Local Auto simulator qualification checkpoint, October 9, 2026: candidate
+`a1f0614220321627c59730a1b408ff3c6f8da1b6` passes all four five-minute synthetic
+Auto runs in Garmin SDK 9.2.0: ordinary and maximum payloads, each with polling
+and pushed clients, using the native macOS daemon, SQLite and actual CLI/TUI.
+Each accepts 11 reports from 13 attempts, observes all five policy decisions,
+preserves two exact frozen retries and advances captured completion counts from
+zero to five across the first lost acknowledgment. The largest encoded body is
+3,724 bytes; the lowest sampled free memory is 19,592 bytes. These samples do not
+measure native encoder peak allocation or physical-watch memory. The Garmin
+runtime passes 88 offline tests; 160 harness checks pass on each of macOS and
+Linux ARM64.
+
+The Auto implementation is already on main; this follow-up qualification candidate
+is separate and is not a release. Four representative Fixed/Significant producer
+regressions also pass. Three Significant startup attempts failed; full unchanged
+reruns passed after manual simulator restarts. This does not establish unattended
+multi-case reliability. HTTPS enforcement is restored and verified by explicit SDK
+rejection of plain HTTP responses (`-1001`). Physical watch/phone delivery, battery
+savings and fresh Docker release-image qualification remain open. These runs do
+not change the terminal display or refresh any capture: all SVG/text pairs retain
+the exact provenance below. The following preview and merge records describe
+their historical checkpoints, including qualification gaps at that time.
+
 Local Auto preview checkpoint, October 9, 2026: the Running wide and compact
 SVG/text pairs (`tui-capture` and `tui-compact-capture`) are refreshed from the
 candidate revision `3cfad25da709fd5356af0ae9ffb8684449f91d63` on
