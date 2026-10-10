@@ -30,9 +30,11 @@ explicitly accepted merging with this known issue. Chio/SwiftTUI rendering repai
 and renewed interaction, pressure and shutdown qualification remain follow-up
 work. Historical passing shutdown checks do not qualify this dashboard.
 
-The seven earlier instrument pairs remain unchanged and are historical captures
-of their own checkpoint, not recordings of this main dashboard. Their on-screen
-controls describe that earlier client. Current controls use `i` for expanded
+The landing page now shows only the current Live and Replay dashboard captures.
+The seven earlier instrument pairs remain unchanged in the repository as
+historical assets, with their provenance below; they are no longer displayed
+on the landing page. Existing asset URLs remain available for older links.
+Their on-screen controls describe the earlier client. Current controls use `i` for expanded
 instruments, `o`/`a` for the dashboard, `g` to toggle instrument style and open
 expanded instruments, and `v` to cycle the activity layout and return to the
 dashboard. No watch or phone participates in the terminal recordings; Garmin
@@ -88,7 +90,7 @@ Independent source review found no actionable issues. These captures do not
 establish external-provider availability or physical-device behavior. All earlier instrument pairs and Garmin PNGs
 retain their separately recorded provenance below.
 
-## Historical instrument captures still displayed
+## Archived instrument captures
 
 Shared Chio instrument preview checkpoint, October 10, 2026: all seven instrument
 SVG/text pairs were refreshed from Pitwall candidate revision
@@ -128,8 +130,8 @@ instrument smoke check. The pinned SwiftRules 0.1.3 gate reports no violations i
 local terminal and client behavior, not physical watch/phone delivery, battery
 savings or fresh Docker release-image qualification.
 
-All seven instrument pairs still displayed use this checkpoint. They have not
-been refreshed for the main dashboard. The older records below
+All seven archived instrument pairs use this checkpoint. They have not
+been refreshed for the main dashboard and are no longer displayed on the landing page. The older records below
 preserve their historical capture revisions, verification and limitations;
 references there to a pair retaining an earlier revision describe that checkpoint,
 not the files currently published. The Garmin PNGs remain the October 8 simulator
