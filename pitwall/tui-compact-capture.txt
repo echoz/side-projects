@@ -1,7 +1,7 @@
 
  PITWALL / WORKOUT CONTROL
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 1 s at last check; source clock unverified
+ Read OK · Age: 2 s at last check; source clock unverified
  ╭ PACE ───────────╮ ╭ HEART RATE ─────╮ ╭ ACTIVE TIME ────╮ ╭ DISTANCE ──────╮
  │ 5:33 /km        │ │ 145 bpm         │ │ 32:14           │ │ 6.20 km        │
  │ Derived from s… │ │ Zone 3          │ │ Observed timer  │ │ Observed dist… │

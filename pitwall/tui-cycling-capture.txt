@@ -1,7 +1,7 @@
 
  PITWALL / WORKOUT CONTROL
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 2 s at last check; source clock unverified
+ Read OK · Age: 3 s at last check; source clock unverified
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
  │  _   _     _            │ │  _       _             │ │  _   _                 │ │          _             │
  │  _| | |   |_            │ │  _| |_| |_             │ │ |_| |_                 │ │   | |_| |_             │

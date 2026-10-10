@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="951.158" height="672" viewBox="0 0 951.158 672" role="img" aria-labelledby="title description">
 <title id="title">Pitwall actual Chio console — synthetic server-pushed telemetry</title>
-<desc id="description">Actual 110-column, 36-row terminal cells, color; captured from a daemon supplied synthetic measurements, an explicit activity profile, captured completion count and observed Fixed reporting. This recording is not interactive. An adjacent plain-text transcript accompanies it.</desc>
+<desc id="description">Actual 110-column, 36-row terminal cells, color; captured from a daemon supplied synthetic measurements, an explicit activity profile, captured completion count and the observed reporting policy. This recording is not interactive. An adjacent plain-text transcript accompanies it.</desc>
 <defs>
 <path id="g0" d="M919 240H6L314 824H1227Z"/>
 <path id="g1" d="M457 1245V807H578Q723 807 781.5 856.0Q840 905 840 1026Q840 1147 781.5 1196.0Q723 1245 578 1245ZM162 1493H567Q876 1493 1011.5 1383.0Q1147 1273 1147 1026Q1147 779 1011.5 669.0Q876 559 567 559H457V0H162Z"/>

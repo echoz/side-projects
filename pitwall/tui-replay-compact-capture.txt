@@ -1,7 +1,7 @@
 
  PITWALL / REPLAY · Cycling (auto) · Bars
  SIMULATOR — synthetic measurements · Timer: On (source observed)
- src 2026-10-09T14:49:59Z
+ src 2026-10-10T15:15:47Z
  Historical; source clock unverified
  ╭ SPEED ──────────╮ ╭ POWER ──────────╮ ╭ CADENCE ────────╮ ╭ HEART RATE ────╮
  │ 25.2 km/h       │ │ 190 W           │ │ 80 rpm          │ │ 138 bpm        │

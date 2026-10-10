@@ -1,7 +1,7 @@
 
  PITWALL / REPLAY · Cycling (auto) · Bars
  SIMULATOR — synthetic measurements · Timer: On (source observed)
- src 2026-10-09T14:49:56Z
+ src 2026-10-10T15:15:43Z
  Historical; source clock unverified
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
  │  _   _     _            │ │      _   _             │ │  _   _                 │ │      _   _             │

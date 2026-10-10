@@ -5,6 +5,45 @@ Paths below are relative to the repository root.
 
 ## Pitwall terminal capture
 
+Shared Chio instrument preview checkpoint, October 10, 2026: all seven terminal
+SVG/text pairs are refreshed from Pitwall candidate revision
+`b0c47654349e3fe643b9a6f21e9ccf227788f1bf`, using shared Chio instruments pinned to
+`eb1ffb3cb76933f7bfe403321fe43394445ad533`. This candidate is awaiting Pitwall
+review; it is not merged or released. The existing Live/Replay console and
+simulator-qualified reporting modes remain on main.
+
+The recordings use the actual local daemon and authenticated production Chio
+client with synthetic measurements. Running wide and compact retain the Auto
+30-second steady-activity fixture; Cycling bars and dials retain Fixed 10-second
+reporting. The menu starts no provider. Replay wide and compact show the paused
+historical Cycling observation at 190 W, 25.2 km/h, 80 rpm and 138 bpm, at retained
+sequence 1 of the captured upper bound 2. Menu, Running wide, Cycling bars/dials
+and Replay wide use 110 × 36; Running and Replay compact use 80 × 24.
+
+Shared gauges and numeric readouts preserve the display scales, units, formatting
+and missing-value meaning. When large digits cannot fit, ordinary text preserves
+the reading. The SVG and transcript in each pair come from the same recorded
+terminal cells; no console output was reconstructed. The capture harness checks
+clean quit and terminal restoration before exporting. All seven published pairs
+were refreshed; additional Cycling dial no-color and 36 × 18 numeric recordings
+are not published.
+No Garmin simulator, physical watch or phone participates in these recordings.
+
+At this candidate checkpoint, macOS and Linux ARM64 each pass 413 Swift Testing
+functions in 75 suites plus 16 XCTest checks, all seven service/client process
+checks and 96 terminal shutdown cases. The macOS capture/export checks pass all
+eight exporter tests and nine capture scenarios; Linux also passes a no-color
+instrument smoke check. The pinned SwiftRules 0.1.3 gate reports no violations in
+278 files. Independent review found no issues. These checks establish the stated
+local terminal and client behavior, not physical watch/phone delivery, battery
+savings or fresh Docker release-image qualification.
+
+All seven current terminal pairs use this checkpoint. The older records below
+preserve their historical capture revisions, verification and limitations;
+references there to a pair retaining an earlier revision describe that checkpoint,
+not the files currently published. The Garmin PNGs remain the October 8 simulator
+captures and have not been refreshed.
+
 Local Auto qualification merge checkpoint, October 9, 2026: PR #19 merged at
 `de3787bf56eb06475fe52025928f51836f6e5eec` from approved head
 `c9cef32b7fc52ab89460b897b503727a77bf4699`. The complete merge tree equals the
