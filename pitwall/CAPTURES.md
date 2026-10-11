@@ -3,6 +3,22 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Audit follow-up — unmerged
+
+The October 10 audit follow-up preserves these capture bytes and visible layout.
+It removes repeated control-theme setup from passive instruments and the
+persistent terminal shell. The full Swift suite now passes 504 functions and
+16 XCTest checks on each of macOS and Linux ARM64, including the unchanged
+20-second hosted layout interaction check. Existing bar/dial and map process
+checks pass on both platforms, including true-color and monochrome instruments
+and ordinary quit/restoration. This supersedes the hosted interaction failure
+for the audit candidate only; earlier sections retain their original results.
+
+The separate sustained-update resize/quit workload remains unqualified. This
+follow-up is unmerged and is not a release. The captures keep their original
+source and executable provenance; no new watch, phone or release-image evidence
+is implied. No application source, internal audit report or raw logs are public.
+
 ## Source average/max gauge references — unmerged candidate
 
 Captured October 10, 2026 local time (October 11 UTC) from application source
