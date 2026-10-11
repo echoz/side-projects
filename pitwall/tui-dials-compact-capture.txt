@@ -1,0 +1,23 @@
+
+ PITWALL / WORKOUT CONTROL
+ LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
+ Read OK · Age: 0 s at last check; source clock unverified
+ ╭ SPEED ──────────╮ ╭ POWER ──────────╮ ╭ CADENCE ────────╮ ╭ HEART RATE ────╮
+ │ 30.6 km/h       │ │ 245 W           │ │ 86 rpm          │ │ 145 bpm        │
+ │ Derived from m… │ │ Observed power  │ │ Observed caden… │ │ Zone 3         │
+ │ Scale 0–60 km/h │ │ Scale 0–600 W   │ │ Scale 0–180 rpm │ │ 90–190 bpm     │
+ │                 │ │                 │ │                 │ │                │
+ ╰─────────────────╯ ╰─────────────────╯ ╰─────────────────╯ ╰────────────────╯
+ Active time: 32:14 · Distance: 6.20 km
+ Speed: 8.5 m/s · Elapsed time: 33:14
+ Display scales only · no workout targets
+
+
+
+
+
+
+ Last reported · Battery: 72% · Fixed 10 s · d details
+ Cycling (auto) · Dials · live updates · Session: demo-session
+ 1–6 context · n/p switch · j/k fields · o dashboard · v layout · a dashboard
+ g bars · d diagnostics · m menu · q quit · Ctrl-C quit

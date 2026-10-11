@@ -1,7 +1,7 @@
 
  PITWALL / WORKOUT CONTROL
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 0 s at last check; source clock unverified
+ Read OK · Age: 1 s at last check; source clock unverified
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
  │  _   _     _            │ │  _       _             │ │  _   _                 │ │          _             │
  │  _| | |   |_            │ │  _| |_| |_             │ │ |_| |_                 │ │   | |_| |_             │
@@ -9,11 +9,10 @@
  │ 30.6 km/h               │ │ 245 W                  │ │ 86 rpm                 │ │ 145 bpm                │
  │ Derived from m/s        │ │ Observed power         │ │ Observed cadence       │ │ Zone 3                 │
  │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱ │
- │     1 2                 │ │         1     2        │ │           12           │ │           1      2     │
- │ 1 Src avg 10.1 km/h     │ │ 1 Src avg 222 W        │ │ 1 Src avg 84 rpm       │ │ 1 Src avg 139 bpm      │
- │ 2 Src max 16.9 km/h     │ │ 2 Src max 398 W        │ │ 2 Src max 96 rpm       │ │ 2 Src max 172 bpm      │
  │ Scale 0–60 km/h         │ │ Scale 0–600 W          │ │ Scale 0–180 rpm        │ │ Zones 90–190 bpm       │
  │                         │ │                        │ │                        │ │                        │
+ │ Src avg 10.1 km/h       │ │ Src avg 222 W          │ │ Src avg 84 rpm         │ │ Src avg 139 bpm        │
+ │ Src max 16.9 km/h       │ │ Src max 398 W          │ │ Src max 96 rpm         │ │ Src max 172 bpm        │
  ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
 
  ╭ WORKOUT / OBSERVED ───────────────────────────────╮ ╭ TERRAIN / OBSERVED ────────────────────────────────╮
@@ -27,6 +26,7 @@
 
  1 Summary  2 Navigation  3 Pressure
  4 Effort   5 Swimming    6 Cycling
+
 
 
  Last reported · Battery: 72% · Fixed 10 s · d details

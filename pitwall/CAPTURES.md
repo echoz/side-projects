@@ -3,9 +3,66 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Independent audit recovery — unmerged candidate
+## Audit recovery with merged Chio instruments — unmerged candidate
 
-The audit-only recovery is a separate candidate based on main checkpoint
+The separate Pitwall candidate `faf65458bf707c1428a07a2cdd6f7192ef90a66f`
+adopts merged Chio source `3064a883be2b2c9ff30c8011a9465786db0c1f24`.
+The SwiftTUI pin and other dependencies are unchanged. This remains an unmerged
+Pitwall PR #31 candidate; the source average/max gauge reference experiment is
+shelved and excluded.
+
+Dials retain a fixed 20 × 5 face. Below 20 available columns, a numeric reading,
+scale and indication replace the face. Display ranges remain explicit; this
+adds no targets, workout completion or history-derived measurements. Numerical
+source average/max companions already on main remain independent source facts.
+
+Captured October 11, 2026 local time from the candidate above. The macOS
+executable SHA-256 is
+`087de5db2664519fbad629bc400fe08196394781b8d56364aca36540122b6a37`.
+The three actual synthetic true-color SVG/transcript pairs record Cycling bars
+and fixed-size dials at 110 × 36, plus the dial-mode numeric fallback at
+80 × 24. Both wide SVGs are 951.158 × 672; the compact SVG is 698.297 × 456.
+Visual inspection covered the actual bars, dials, compact fallback and private
+monochrome capture before publication. Only the three true-color pairs are
+public. No watch or phone participates; these recordings come from the actual
+local daemon and running Chio client, not a browser illustration.
+
+The full Swift suite passed 492 functions in 83 suites and all 16 XCTest checks
+on each of macOS and Linux. Full-suite times were 111.885 seconds and
+130.794 seconds, respectively. The original 20-second hosted layout interaction
+check passed in 16.590 seconds on macOS and 15.592 seconds on Linux. Both
+explicit builds and bounded actual-process checks passed: true-color and
+monochrome instruments and gears, Live/Replay map, polling/pushed clients, and
+configured loopback MVT lazy loading, error/retry, credential separation and
+ordinary quit/restoration. SwiftRules 0.1.3 reported no violations across
+295 files with an empty baseline; independent review found no actionable issues.
+These results apply to this unmerged candidate. Prior Python and offline SDK
+evidence was reused with unchanged inputs, not newly rerun.
+
+This refresh replaces the bars/dials pairs at their existing paths and adds
+`pitwall/tui-dials-compact-capture.svg` / `.txt`. The shelved reference-mark
+capture bytes remain in Git at public-site checkpoint `72fd1f9`; their hashes,
+source and executable provenance are preserved in the historical section below.
+Navigation, Running and all other captures retain their existing provenance.
+Existing Fixed upload-matrix evidence is unchanged and was not rerun for this
+candidate. Sustained-update resize/quit, physical Garmin/phone delivery,
+phone-reachable HTTPS and fresh Docker release-image qualification remain
+separate open gates. This is not a release.
+
+### Capture integrity
+
+| Asset | SHA-256 |
+| --- | --- |
+| `tui-cycling-capture.svg` | `6e1d26b270cf436c470ba45bfbd7b3ef270ba71258f9e45c06220411194f668d` |
+| `tui-cycling-capture.txt` | `7296701595f1300b2e23f6f1309032f9830d4017fcddc68b2b49813200ceb964` |
+| `tui-dials-capture.svg` | `4d8e22769e318a86c5c5a1fa0d712b30517f4efdd1408149aacf69ca6f41cdae` |
+| `tui-dials-capture.txt` | `57569d4f1b0591c5684d0c6d743801677a92433e6de065e2f4d1ec56563c62fe` |
+| `tui-dials-compact-capture.svg` | `d11d1726036493c42ec0196ee555d4ed73340d563b5262e0dfe4919d916271e3` |
+| `tui-dials-compact-capture.txt` | `16d58fbef52c8325eee6cb667c4759d5be1dc9688dff694ba4997504d627575f` |
+
+## Independent audit recovery — historical checkpoint
+
+This preceding audit-only recovery checkpoint was based on main checkpoint
 `49f73f2`, recovering the audit fixes from `53d813f` with the existing main
 Chio and SwiftTUI dependencies. It excludes the shelved source average/max
 reference-mark experiment. This recovery is unmerged to main.
@@ -18,8 +75,8 @@ hosted layout interaction check passed in 17.036 seconds on macOS and
 These results apply to the separate recovery candidate, not the current main
 branch or the historical source-reference captures below.
 
-No captures were refreshed: every asset retains its original source, executable
-and integrity provenance. The sustained-update resize/quit workload remains
+No captures were refreshed at this checkpoint: the then-current assets retained
+their original source, executable and integrity provenance. The sustained-update resize/quit workload remains
 unqualified. Physical Garmin/phone delivery, phone-reachable HTTPS and fresh
 Docker release-image qualification remain separate gates; this is not a release.
 
@@ -46,9 +103,11 @@ is implied. No application source, internal audit report or raw logs are public.
 
 ## Source average/max gauge references — shelved historical experiment
 
-The proposal is shelved, not an active upcoming capability. These unchanged
-synthetic captures document the historical experiment and retain their original
-source, executable and integrity provenance. Existing numerical source
+The proposal is shelved, not an active upcoming capability. Its historical
+synthetic capture bytes are preserved in Git at public-site checkpoint
+`72fd1f9`, with their original source, executable and integrity provenance.
+The current bars/dials assets now show the separate Chio adoption candidate
+documented above; the historical record below describes the replaced bytes. Existing numerical source
 average/max companions on main are unaffected by this status.
 
 Captured October 10, 2026 local time (October 11 UTC) from application source
@@ -58,7 +117,7 @@ Chio source `8fb378eecc8ce9e558a3c29542b91e76984b104a`. The SwiftTUI pin
 `f4009701c95e53d9e094f1d658f42b14654ddb14343724515c0caffeb8f2c9f6`.
 
 `pitwall/tui-cycling-capture.svg` / `.txt` and
-`pitwall/tui-dials-capture.svg` / `.txt` now record actual Cycling bars and dials
+`pitwall/tui-dials-capture.svg` / `.txt` recorded actual Cycling bars and dials
 at 110 × 36, in true color, from the authenticated local daemon and running
 Chio client. SVG dimensions are 951.158 × 672. Both pairs were exported from
 actual terminal cells after five-second quit and exact terminal-restoration
@@ -105,7 +164,7 @@ Issue 23's sustained-update resize/quit problem remains open; ordinary capture
 cleanup does not qualify that workload. Physical Garmin/phone delivery,
 phone-reachable HTTPS and fresh Docker release-image qualification remain
 separate gates. No watch or phone participates in these synthetic captures.
-Retain these captures as historical evidence. Any future replacement must come
+Retain this provenance and the Git checkpoint as historical evidence. Any future replacement must come
 from the actual client using synthetic observations, with matching SVG/text cells
 exported only after the quit/restoration checks pass. Never publish raw
 capture logs, credentials, provisioning state or private source.
