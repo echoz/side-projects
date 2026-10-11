@@ -52,6 +52,9 @@ during Garmin workouts/races, through a paired phone to a self-hosted server and
 CLI/TUI. Put the phone requirement, possible delivery delay, and current
 simulator-only verification near the top. Preserve the difference between the
 intended physical setup and what has actually been validated.
+Keep implemented capabilities in the feature listing. The roadmap contains only
+in-progress or upcoming work, with concise descriptions; move completed items
+into features instead of accumulating milestone history on the page.
 
 Marquee and Blackbox are private projects. Their public pages are overviews, not
 source releases or hosted versions of the applications. Keep browser illustrations

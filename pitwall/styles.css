@@ -68,7 +68,7 @@ section {
   transform: translateY(0);
 }
 
-.site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .roadmap-section, .site-footer {
+.site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .features-section, .roadmap-section, .site-footer {
   width: min(100% - 96px, 1248px);
   margin-inline: auto;
 }
@@ -723,91 +723,53 @@ figcaption a {
   max-width: 880px;
 }
 
-.progress-section {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 90px;
-  padding-block: 72px 78px;
-}
-
-.progress-intro h2 {
-  font-size: 45px;
-  line-height: 1.05;
-  letter-spacing: -1.8px;
-  margin-top: 19px;
-}
-
-.progress-intro>p:last-of-type {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.75;
-  margin-top: 23px;
-  max-width: 330px;
-}
-
-.milestone-label {
-  display: block;
-  color: var(--muted);
-  font: 9px/1.7 var(--mono);
-  margin-top: 27px;
-}
-
-.milestones article {
-  display: flex;
-  gap: 22px;
-  padding-bottom: 25px;
-}
-
-.milestones article+article {
+.features-section {
+  padding-block: 48px;
   border-top: 1px solid var(--rule);
-  padding-top: 24px;
 }
 
-.milestones article:last-child {
-  padding-bottom: 0;
-}
-
-.milestone-index {
+.feature-list {
   display: grid;
-  place-items: center;
-  width: 33px;
-  height: 33px;
-  flex-shrink: 0;
-  border: 1px solid #484a53;
-  color: var(--muted);
-  font: 11px/1 var(--mono);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.milestone-index.complete {
-  color: #101114;
-  background: var(--green);
-  border-color: var(--green);
+.feature-list li {
+  padding: 24px;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--green);
+  background: var(--panel);
 }
 
-.milestone-status {
-  color: #c1b8a3;
-  font: 9px/1.6 var(--mono);
+.feature-index {
+  color: var(--green);
+  font: 10px/1.6 var(--mono);
   letter-spacing: 1px;
 }
 
-.complete-text {
-  color: var(--green);
-}
-
-.milestones h3 {
-  font-size: 20px;
-  margin-block: 10px;
+.feature-list h3 {
+  margin-block: 14px 10px;
+  font-size: 21px;
+  line-height: 1.2;
   letter-spacing: -.5px;
 }
 
-.milestones p {
+.feature-list p, .feature-note {
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
-.roadmap-jump {
-  margin-top: 18px;
+.feature-list .text-link {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.feature-note {
+  margin-top: 20px;
 }
 
 .roadmap-section {
@@ -841,7 +803,7 @@ figcaption a {
   margin-top: 12px;
 }
 
-.roadmap-lane ol {
+.roadmap-lane ul {
   margin: 24px 0 0;
   padding-left: 24px;
 }
@@ -865,7 +827,7 @@ figcaption a {
   line-height: 1.4;
 }
 
-.roadmap-lane li p, .roadmap-lane-note, .roadmap-boundary {
+.roadmap-lane li p, .roadmap-lane-note {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.8;
@@ -875,14 +837,6 @@ figcaption a {
   margin-top: 25px;
   padding-top: 20px;
   border-top: 1px solid var(--rule);
-}
-
-.roadmap-boundary {
-  margin-top: 24px;
-}
-
-.roadmap-boundary strong {
-  color: var(--ink);
 }
 
 .site-footer {
@@ -952,7 +906,7 @@ figcaption a {
     width: calc(100% - 64px);
   }
 
-  .site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .roadmap-section, .site-footer {
+  .site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .features-section, .roadmap-section, .site-footer {
     width: calc(100% - 64px);
   }
 
@@ -979,8 +933,8 @@ figcaption a {
     font-size: 21px;
   }
 
-  .progress-section {
-    gap: 48px;
+  .feature-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 }
@@ -993,7 +947,7 @@ figcaption a {
     padding: 20px;
   }
 
-  .site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .progress-section, .roadmap-section, .site-footer {
+  .site-header, .hero, .system-section, .telemetry-section, .transponder-section, .terminal-section, .principle-section, .features-section, .roadmap-section, .site-footer {
     width: calc(100% - 40px);
   }
 
@@ -1211,31 +1165,16 @@ figcaption a {
     padding: 22px 20px;
   }
 
-  .progress-section {
+  .features-section {
+    padding-block: 35px 40px;
+  }
+
+  .feature-list {
     grid-template-columns: 1fr;
-    gap: 32px;
-    padding-block: 48px 52px;
   }
 
-  .progress-intro h2 {
-    font-size: 39px;
-  }
-
-  .progress-intro>p:last-of-type {
-    max-width: none;
-  }
-
-  .milestone-label {
-    margin-top: 18px;
-  }
-
-  .milestones article {
-    gap: 15px;
-  }
-
-  .milestone-status {
-    font-size: 8px;
-    letter-spacing: .7px;
+  .feature-list li {
+    padding: 22px 20px;
   }
 
   .site-footer {
