@@ -3,6 +3,26 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Independent audit recovery — unmerged candidate
+
+The audit-only recovery is a separate candidate based on main checkpoint
+`49f73f2`, recovering the audit fixes from `53d813f` with the existing main
+Chio and SwiftTUI dependencies. It excludes the shelved source average/max
+reference-mark experiment. This recovery is unmerged to main.
+
+The recovered candidate’s full Swift suite passed 489 functions in 83 suites
+and all 16 XCTest checks on each of macOS and Linux. The original 20-second
+hosted layout interaction check passed in 17.036 seconds on macOS and
+13.450 seconds on Linux. SwiftRules 0.1.3 reported no violations across
+295 files with an empty baseline; independent review found no actionable issues.
+These results apply to the separate recovery candidate, not the current main
+branch or the historical source-reference captures below.
+
+No captures were refreshed: every asset retains its original source, executable
+and integrity provenance. The sustained-update resize/quit workload remains
+unqualified. Physical Garmin/phone delivery, phone-reachable HTTPS and fresh
+Docker release-image qualification remain separate gates; this is not a release.
+
 ## Audit follow-up — preserved on the shelved proposal branch
 
 The October 10 audit follow-up preserves these capture bytes and visible layout.
