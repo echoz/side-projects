@@ -180,12 +180,16 @@ capture logs, credentials, provisioning state or private source.
 | `tui-dials-capture.svg` | `b746da63795e34ae1777238373a2441536b0a57b79a18a9d24cc27c9598e4c60` |
 | `tui-dials-capture.txt` | `136526b1291c67d697b313e60729914d9d9ee189ba5b0e879e0132544b35d17d` |
 
-## Navigation and Running refresh — unmerged PR #28 candidate
+## Navigation and Running refresh — on main
 
-Captured October 11, 2026 local time from application source
-`a415fb59544c81e9bf99b19e3040599d1b363358` on macOS. The candidate includes
-current main `282b879` and retains merged Chio source
-`3064a883be2b2c9ff30c8011a9465786db0c1f24`; PR #28 remains unmerged.
+PR #28 merged to main on October 11, 2026 at
+`1bbc48a5eec8892d87d6a745be1878b477328a1b`. The merge tree matches approved
+head `dd7ca97cd1e6922edfba9e21697badad79ebeed8`. These captures were originally
+made October 11, 2026 local time from application source
+`a415fb59544c81e9bf99b19e3040599d1b363358` on macOS and show the implementation
+now included in that merge. No capture bytes changed for this status update.
+The captured candidate includes main checkpoint `282b879` and retains merged
+Chio source `3064a883be2b2c9ff30c8011a9465786db0c1f24`.
 The executable SHA-256 is
 `f1d63bbc443f61d0d5aa0416ee0a8e6b9faa9ba8affcb97ec86110829b4374f3`.
 
