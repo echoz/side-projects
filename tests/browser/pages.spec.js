@@ -1,7 +1,7 @@
 const { test, expect } = require('./site-fixture');
 
 for (const width of [320, 768, 1280]) {
-  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/', '/perch/']) {
+  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/']) {
     test(`${path} loads images and fits a ${width}px viewport`, async ({ page }) => {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(path);
@@ -19,7 +19,7 @@ for (const width of [320, 768, 1280]) {
 }
 
 test('each local page offers a keyboard skip link', async ({ page }) => {
-  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/', '/perch/']) {
+  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/']) {
     await page.goto(path);
     await page.keyboard.press('Tab');
     const skip = page.getByRole('link', { name: 'Skip to content' });
@@ -37,6 +37,37 @@ test('index status ribbons expose construction status and the released version',
   await expect(page.getByRole('img', { name: 'Under construction', exact: true })).toHaveCount(4);
   await expect(page.getByText('v0.1.0', { exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: /Chio/ })).toHaveAttribute('href', 'https://echoz.github.io/Chio/');
+  await expect(page.getByRole('link', { name: 'Explore Perch', exact: true })).toHaveAttribute('href', 'https://echoz.github.io/Perch/');
+});
+
+test('index groups software and physical projects separately', async ({ page }) => {
+  await page.goto('/');
+  const software = page.getByRole('region', { name: 'It worked on my machine.', exact: true });
+  const physical = page.getByRole('region', { name: 'Some assembly required.', exact: true });
+  await expect(software).toBeVisible();
+  await expect(physical).toBeVisible();
+  await expect(software.getByRole('link')).toHaveCount(4);
+  for (const name of ['Explore Pitwall', 'Explore Marquee', 'Explore Blackbox', 'Explore Chio']) {
+    await expect(software.getByRole('link', { name, exact: true })).toBeVisible();
+  }
+  await expect(physical.getByRole('link')).toHaveCount(1);
+  await expect(physical.getByRole('link', { name: 'Explore Perch', exact: true })).toBeVisible();
+});
+
+test('Perch’s former address redirects to its own GitHub Pages site', async ({ page, context }) => {
+  const destination = 'https://echoz.github.io/Perch/';
+  await context.route(destination, async route => {
+    expect(route.request().method()).toBe('GET');
+    expect(route.request().isNavigationRequest()).toBe(true);
+    await route.fulfill({
+      status: 200,
+      contentType: 'text/html',
+      body: '<!doctype html><html lang="en"><head><title>Perch destination</title></head><body><main><h1>Perch destination</h1></main></body></html>'
+    });
+  });
+  await page.goto('/perch/');
+  await expect(page).toHaveURL(destination);
+  await expect(page.getByRole('heading', { name: 'Perch destination', exact: true })).toBeVisible();
 });
 
 test('wide Pitwall captures remain keyboard-scrollable on a phone width', async ({ page }) => {

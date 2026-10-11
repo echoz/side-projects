@@ -9,18 +9,24 @@ synthetic demonstrations; never copy private source history, internal documents,
 credentials, device identifiers, or real workout data into this repository.
 
 Each project hosted here owns one shallow directory. `index.html` is the project index;
-`pitwall/`, `marquee/`, `blackbox/`, and `perch/` own their standalone pages. The root
+`pitwall/`, `marquee/`, and `blackbox/` own their standalone pages. The root
 `styles.css` belongs to the project index; each project owns its own styling.
 Chio's index entry links to its existing public site at `https://echoz.github.io/Chio/`;
-its source and site are maintained in its own repository. Keep hosted-page links
+its source and site are maintained in its own repository. Perch’s full project
+page is hosted at `https://echoz.github.io/Perch/` in its public repository.
+`perch/index.html` preserves the former address with an accessible static redirect;
+`perch/dock.webp` remains the project-index render. Keep hosted-page links
 relative to support GitHub Pages' project path. Avoid external assets, analytics,
 and live telemetry.
 
 Present the collection as AI-assisted, deliberately curated personal projects,
 mostly built to scratch an itch. Keep the README a brief introduction, project
 list and publishing guide; put detailed capabilities and limits on the project
-pages. Pitwall capture provenance and refresh instructions live in
-`pitwall/CAPTURES.md`; read it before updating those captures or their claims.
+pages. Group the index into Software ("It worked on my machine.") for Pitwall,
+Marquee, Blackbox and Chio, and Physical things ("Some assembly required.") for
+Perch. Use section headings above project headings, and preserve each project’s
+card identity and status ribbon. Pitwall capture provenance and refresh
+instructions live in `pitwall/CAPTURES.md`; read it before updating those captures or their claims.
 
 Preserve each project's distinct visual identity. Pitwall uses motorsport telemetry;
 Marquee uses a playful pixel-display theme with luminous LED type, small-screen
@@ -30,7 +36,9 @@ Chio's index card reflects its existing dark-plum terminal theme, with pink type
 and a mint cursor.
 Perch uses warm cream, sage and coral, soft organic curves, and actual CAD renders
 to reflect its sculpted tabletop dock. Its CAD and candidate print packages are
-public in `echoz/Perch`; link to those releases rather than duplicating archives.
+public in `echoz/Perch`; link to its own site, CAD and releases rather than
+duplicating the page or archives here. Maintain the warm, organic theme of the
+index entry and relocation page.
 Keep the W0.1 candidate status and physical-fit limits explicit. Accepted card fit
 does not establish revised player fit, headphone retention or loaded stability.
 Keep the diagonal index-card ribbons current with each project's release status;

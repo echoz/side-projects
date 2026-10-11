@@ -35,9 +35,14 @@ the public pages remain static and do not load them.
    coverage includes scene state, text normalization, eight-character rendering,
    and zero/half/full progress. Blackbox coverage includes whole-record
    replacement, null versus zero, query shape, clear/rebuild, retained receipts
-   and focus transfer. All five local pages are checked at 320, 768 and 1280px;
+   and focus transfer. All four local pages are checked at 320, 768 and 1280px;
    lazy images must decode and the document must fit. Wide Pitwall captures must
    remain keyboard-scrollable. Skip links and accessible status labels are checked.
+   Perch’s former local address is checked separately: its actual redirect must
+   navigate to `https://echoz.github.io/Perch/`. Only that exact destination is
+   fulfilled with an inert document in the test; the shared network restrictions
+   remain in force. Perch’s full page and public CAD are maintained in its own
+   repository and keep the soft, organic dock theme.
 
 The browser fixture rejects unapproved requests, page errors and HTTP failures.
 It also trips on common live-data capabilities (fetch, XHR, sockets, event streams,

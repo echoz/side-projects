@@ -46,10 +46,5 @@
   "blackbox/demo.js",
   "blackbox/favicon.svg",
   "perch/index.html",
-  "perch/styles.css",
-  "perch/loaded.webp",
-  "perch/dock.webp",
-  "perch/base.webp",
-  "perch/rear.webp",
-  "perch/mast.webp"
+  "perch/dock.webp"
 ]
