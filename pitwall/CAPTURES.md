@@ -180,7 +180,74 @@ capture logs, credentials, provisioning state or private source.
 | `tui-dials-capture.svg` | `b746da63795e34ae1777238373a2441536b0a57b79a18a9d24cc27c9598e4c60` |
 | `tui-dials-capture.txt` | `136526b1291c67d697b313e60729914d9d9ee189ba5b0e879e0132544b35d17d` |
 
-## Navigation and Running presentation — unmerged candidate
+## Navigation and Running refresh — unmerged PR #28 candidate
+
+Captured October 11, 2026 local time from application source
+`a415fb59544c81e9bf99b19e3040599d1b363358` on macOS. The candidate includes
+current main `282b879` and retains merged Chio source
+`3064a883be2b2c9ff30c8011a9465786db0c1f24`; PR #28 remains unmerged.
+The executable SHA-256 is
+`f1d63bbc443f61d0d5aa0416ee0a8e6b9faa9ba8affcb97ec86110829b4374f3`.
+
+The three actual synthetic true-color SVG/transcript pairs replace the existing
+navigation Live 110 × 36, Running Replay 110 × 48 and expanded Running
+110 × 48 recordings. Their SVG dimensions remain 951.158 × 672 for navigation
+and 951.158 × 888 for Running. The new expanded Running pair is byte-identical
+to its historical pair despite its refreshed source provenance. The Running
+Replay source timestamp is `2026-10-11T07:42:50Z`. Its online street-map capture
+passed the optional actual-process scenario in 48.780 seconds, retaining actual
+OpenMapTiles, OpenStreetMap contributors, ODbL and OpenFreeMap attribution.
+The web page makes no map requests. No watch or phone participates.
+
+The full Swift suite passed 506 functions in 85 suites and all 16 XCTest checks
+on each of macOS and Linux. The unchanged original 20-second hosted layout
+interaction check passed in 17.134 seconds on macOS and 15.265 seconds on Linux.
+The new focused coverage passed 34 functions in five suites. Navigation and
+Running actual-process checks passed in true color and monochrome on both
+platforms. All eleven Linux checks passed, including existing instruments,
+maps, clients and MapSource scenarios. Ordinary quit and exact terminal restoration passed before
+capture export. SwiftRules 0.1.3 reported no violations across 298 files with an
+empty baseline. Independent review of the whole PR found no actionable issues.
+The selected public images and private monochrome/dial recordings were visually
+reviewed; the private dial scenario passed in 6.398 seconds. Only the six approved
+true-color capture files are public.
+
+Navigation keeps the existing four-field pages and eleven raw source facts,
+with numeric readouts at 100 × 32 or larger. Signed radians, names, complete
+units, missing values and zero remain explicit. It adds no compass, normalized
+angle, turn instruction or ETA; smaller terminals retain the field inspector.
+Its theme is applied only to the context panel.
+
+Expanded Running retains primary pace, heart rate, active time and distance.
+At 100 × 44 or larger, cadence and power sit beside terrain. At 100 columns,
+secondary dial cards retain numeric readings, scales and indications; from
+101 columns, complete 20 × 5 dial faces fit. Source average/max companions stay
+independent facts; cadence remains rpm and pace is derived from current speed.
+The six-widget Running map is already on main. These views use the selected
+Live or Replay observation and add no targets, workout completion or
+history-derived measurements.
+
+This refresh supersedes the current recordings from `c3071fe`; their original
+source, executable, checks and hashes remain in the historical section below,
+with their bytes retained in public-site checkpoint `758bc50`. PR #31's audit
+recovery and fixed-size dials are on main; PR #29's reference marks remain
+shelved. Issue #23's sustained-update resize/quit workload remains unqualified.
+The passing bounded interaction check does not close that separate gate.
+Physical Garmin/phone delivery, phone-reachable HTTPS and fresh Docker
+release-image qualification remain open. This is not a release.
+
+### Refreshed capture integrity
+
+| Asset | SHA-256 |
+| --- | --- |
+| `tui-navigation-live.svg` | `452931142f05b859c1aed4af677ed81c62d6ba03f5a49f77ee922b2edcdc93af` |
+| `tui-navigation-live.txt` | `71fcf4e171f04be7c071b7896116a91d7082b3d5bd5c18ebaf85ebf19313f2cb` |
+| `tui-running-instruments.svg` | `f39973e82c326179d6bd743e9c1be1db29549309363df54d481faa8c02af5f47` |
+| `tui-running-instruments.txt` | `5f86182555dff5d80482460ab2361b400010b7baf83bec3e59eda8c55a0a6d8f` |
+| `tui-running-replay.svg` | `da21d25ff8903a609ca1d80fa1f3e726cfe01cb6918373d903b666820a6ac337` |
+| `tui-running-replay.txt` | `5767b054d7d54959752de9f832302061295721ad7fa92483cab531d871247d9d` |
+
+## Navigation and Running presentation — historical unmerged checkpoint
 
 Captured October 10, 2026 from application source candidate
 `c3071fe250c291ba6891f1f108b002103df6f635` on macOS. The `pitwall` executable
