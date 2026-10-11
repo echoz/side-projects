@@ -3,20 +3,22 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Audit recovery with merged Chio instruments — unmerged candidate
+## Audit recovery with merged Chio instruments — on main
 
-The separate Pitwall candidate `faf65458bf707c1428a07a2cdd6f7192ef90a66f`
+Pitwall PR #31 merged to main on October 11, 2026 at
+`c6302697bc1142b7e2a44a7a8ff60ace9ea42790`. The captured source
+`faf65458bf707c1428a07a2cdd6f7192ef90a66f` is included in that merge and
 adopts merged Chio source `3064a883be2b2c9ff30c8011a9465786db0c1f24`.
-The SwiftTUI pin and other dependencies are unchanged. This remains an unmerged
-Pitwall PR #31 candidate; the source average/max gauge reference experiment is
-shelved and excluded.
+The SwiftTUI pin and other dependencies are unchanged. The source average/max
+gauge reference experiment remains shelved and excluded.
 
 Dials retain a fixed 20 × 5 face. Below 20 available columns, a numeric reading,
 scale and indication replace the face. Display ranges remain explicit; this
 adds no targets, workout completion or history-derived measurements. Numerical
 source average/max companions already on main remain independent source facts.
 
-Captured October 11, 2026 local time from the candidate above. The macOS
+Captured October 11, 2026 local time from the source above before its merge.
+No captures were refreshed for the merge status update. The macOS
 executable SHA-256 is
 `087de5db2664519fbad629bc400fe08196394781b8d56364aca36540122b6a37`.
 The three actual synthetic true-color SVG/transcript pairs record Cycling bars
@@ -36,8 +38,8 @@ monochrome instruments and gears, Live/Replay map, polling/pushed clients, and
 configured loopback MVT lazy loading, error/retry, credential separation and
 ordinary quit/restoration. SwiftRules 0.1.3 reported no violations across
 295 files with an empty baseline; independent review found no actionable issues.
-These results apply to this unmerged candidate. Prior Python and offline SDK
-evidence was reused with unchanged inputs, not newly rerun.
+These results apply to the tested candidate now included in the merge. Prior
+Python and offline SDK evidence was reused with unchanged inputs, not newly rerun.
 
 This refresh replaces the bars/dials pairs at their existing paths and adds
 `pitwall/tui-dials-compact-capture.svg` / `.txt`. The shelved reference-mark
@@ -106,7 +108,7 @@ is implied. No application source, internal audit report or raw logs are public.
 The proposal is shelved, not an active upcoming capability. Its historical
 synthetic capture bytes are preserved in Git at public-site checkpoint
 `72fd1f9`, with their original source, executable and integrity provenance.
-The current bars/dials assets now show the separate Chio adoption candidate
+The current bars/dials assets now show the merged Chio adoption
 documented above; the historical record below describes the replaced bytes. Existing numerical source
 average/max companions on main are unaffected by this status.
 
