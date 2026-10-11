@@ -22,7 +22,7 @@ and live telemetry.
 Present the collection as AI-assisted, deliberately curated personal projects,
 mostly built to scratch an itch. Keep the README a brief introduction, project
 list and publishing guide; put detailed capabilities and limits on the project
-pages. Group the index into Software ("It worked on my machine.") for Pitwall,
+pages. Group the index into Metaphysical (software, "It worked on my machine.") for Pitwall,
 Marquee, Blackbox and Chio, and Physical things ("Some assembly required.") for
 Perch. Use section headings above project headings, and preserve each project’s
 card identity and status ribbon. Pitwall capture provenance and refresh

@@ -5,7 +5,7 @@ curated, with care put into design, implementation, and verification.
 
 ## It worked on my machine.
 
-Software projects.
+Metaphysical: software projects.
 
 | Project | What it does |
 | --- | --- |
