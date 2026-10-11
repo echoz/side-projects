@@ -42,9 +42,15 @@ was fixed and verified, with no other actionable issues remaining.
 Each platform's full suite passes 502 of 503 Swift Testing functions and all
 16 XCTest checks. The sole failure is the existing 20-second hosted layout
 interaction timeout, now observed on both platforms. The focused macOS run
-passes 43 functions. SwiftRules 0.1.3 reports no new violations. The map-specific
-smoke rerun is still pending updates to older caption assertions; no passing
-map-smoke result is claimed here.
+passes 43 functions. SwiftRules 0.1.3 reports no new violations.
+
+The final offline Map/Replay process checks pass on macOS and Linux. Live at
+110 × 48 shows reference marks; Replay at 110 × 48 uses complete numeric
+fallbacks, while 110 × 50 shows reference marks. Selected historical facts stay
+unchanged as newer Live uploads arrive; stepping changes the references to the
+newly selected observation. Both loopback MapSource scenarios also pass source
+acquisition, retry and credential-separation checks. These bounded process
+results do not qualify the hosted layout deadline or sustained-update shutdown.
 
 This application/dependency candidate is unmerged and not release-qualified.
 Issue 23's sustained-update resize/quit problem remains open; ordinary capture
