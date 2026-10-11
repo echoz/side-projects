@@ -1,7 +1,7 @@
 const { test, expect } = require('./site-fixture');
 
 for (const width of [320, 768, 1280]) {
-  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/']) {
+  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/', '/perch/']) {
     test(`${path} loads images and fits a ${width}px viewport`, async ({ page }) => {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(path);
@@ -19,7 +19,7 @@ for (const width of [320, 768, 1280]) {
 }
 
 test('each local page offers a keyboard skip link', async ({ page }) => {
-  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/']) {
+  for (const path of ['/', '/pitwall/', '/marquee/', '/blackbox/', '/perch/']) {
     await page.goto(path);
     await page.keyboard.press('Tab');
     const skip = page.getByRole('link', { name: 'Skip to content' });
@@ -34,7 +34,7 @@ test('each local page offers a keyboard skip link', async ({ page }) => {
 
 test('index status ribbons expose construction status and the released version', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('img', { name: 'Under construction', exact: true })).toHaveCount(3);
+  await expect(page.getByRole('img', { name: 'Under construction', exact: true })).toHaveCount(4);
   await expect(page.getByText('v0.1.0', { exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: /Chio/ })).toHaveAttribute('href', 'https://echoz.github.io/Chio/');
 });

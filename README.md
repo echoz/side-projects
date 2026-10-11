@@ -9,10 +9,12 @@ curated, with care put into design, implementation, and verification.
 | [Marquee](https://echoz.github.io/side-projects/marquee/) | Personal pixel displays for what matters now. |
 | [Blackbox](https://echoz.github.io/side-projects/blackbox/) | A local archive and query layer for Garmin data. |
 | [Chio](https://echoz.github.io/Chio/) | A Swift toolkit for expressive terminal interfaces. |
+| [Perch](https://echoz.github.io/side-projects/perch/) | A sculpted, 3D-printable home for a Yoto Mini, cards and kids’ headphones. |
 
 Browse the [project index](https://echoz.github.io/side-projects/).
-Chio is open source; Pitwall, Marquee, and Blackbox have private source code and
-public overviews. Each project's site describes its current capabilities and
+Chio is open source; Perch shares its print candidates and editable CAD in its
+[public repository](https://github.com/echoz/Perch). Pitwall, Marquee, and Blackbox
+have private source code and public overviews. Each project's site describes its current capabilities and
 limits. Demonstrations use synthetic data.
 
 ## Preview and publish

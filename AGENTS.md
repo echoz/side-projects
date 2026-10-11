@@ -9,7 +9,7 @@ synthetic demonstrations; never copy private source history, internal documents,
 credentials, device identifiers, or real workout data into this repository.
 
 Each project hosted here owns one shallow directory. `index.html` is the project index;
-`pitwall/`, `marquee/`, and `blackbox/` own their standalone pages. The root
+`pitwall/`, `marquee/`, `blackbox/`, and `perch/` own their standalone pages. The root
 `styles.css` belongs to the project index; each project owns its own styling.
 Chio's index entry links to its existing public site at `https://echoz.github.io/Chio/`;
 its source and site are maintained in its own repository. Keep hosted-page links
@@ -28,6 +28,11 @@ compositions and lively color; Blackbox uses a flight-recorder theme with indust
 orange, precise labels, records and provenance. The user chose these directions.
 Chio's index card reflects its existing dark-plum terminal theme, with pink type
 and a mint cursor.
+Perch uses warm cream, sage and coral, soft organic curves, and actual CAD renders
+to reflect its sculpted tabletop dock. Its CAD and candidate print packages are
+public in `echoz/Perch`; link to those releases rather than duplicating archives.
+Keep the W0.1 candidate status and physical-fit limits explicit. Accepted card fit
+does not establish revised player fit, headphone retention or loaded stability.
 Keep the diagonal index-card ribbons current with each project's release status;
 show only the version for a release, and repeating yellow-and-black construction
 stripes for ongoing work. Give construction ribbons an accessible status label

@@ -35,7 +35,7 @@ the public pages remain static and do not load them.
    coverage includes scene state, text normalization, eight-character rendering,
    and zero/half/full progress. Blackbox coverage includes whole-record
    replacement, null versus zero, query shape, clear/rebuild, retained receipts
-   and focus transfer. All four local pages are checked at 320, 768 and 1280px;
+   and focus transfer. All five local pages are checked at 320, 768 and 1280px;
    lazy images must decode and the document must fit. Wide Pitwall captures must
    remain keyboard-scrollable. Skip links and accessible status labels are checked.
 
