@@ -3,6 +3,67 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Source average/max gauge references — unmerged candidate
+
+Captured October 10, 2026 local time (October 11 UTC) from application source
+`9bf090a2b5161132eada68f038c91d7fa07ea2f9`, with explicitly pinned, unmerged
+Chio source `8fb378eecc8ce9e558a3c29542b91e76984b104a`. The SwiftTUI pin
+`2d84ac` is unchanged. The executable SHA-256 is
+`f4009701c95e53d9e094f1d658f42b14654ddb14343724515c0caffeb8f2c9f6`.
+
+`pitwall/tui-cycling-capture.svg` / `.txt` and
+`pitwall/tui-dials-capture.svg` / `.txt` now record actual Cycling bars and dials
+at 110 × 36, in true color, from the authenticated local daemon and running
+Chio client. SVG dimensions are 951.158 × 672. Both pairs were exported from
+actual terminal cells after five-second quit and exact terminal-restoration
+checks passed. These four files replace the earlier instrument recordings at
+the same paths; their previous bytes remain in Git history. Older sections below
+describe historical checkpoints for these paths. All other captures, including
+navigation and Running previews, retain their existing provenance.
+
+The synthetic current readings are 30.6 km/h, 245 W, 86 rpm and 145 bpm.
+Independently supplied source averages are 10.1 km/h, 222 W, 84 rpm and 139 bpm;
+source maxima are 16.9 km/h, 398 W, 96 rpm and 172 bpm. The speed maximum is
+intentionally below the current speed; the client does not repair independent
+source facts. Reference `1` means source average and `2` means source maximum;
+when both occupy one cell, `*` marks the overlap and both numeric captions remain.
+Off-scale references retain explicit below/above labels. Optional values remain
+optional, including in selected historical observations. These are source facts,
+not client-computed history, targets or workout completion. Compact views may
+omit companions while prioritizing current values; Summary retains full facts.
+
+Actual instrument process checks pass on macOS and Linux in true color and
+monochrome: source updates, overlap, partially missing values, clearing,
+110 × 36 / 80 × 24 / 36 × 18 layouts, cached outage/recovery and ordinary quit.
+The bars, dials and monochrome actual captures were visually inspected; numeric
+reference captions and scales fit. A separate review's full-scale-fit finding
+was fixed and verified, with no other actionable issues remaining.
+
+Each platform's full suite passes 502 of 503 Swift Testing functions and all
+16 XCTest checks. The sole failure is the existing 20-second hosted layout
+interaction timeout, now observed on both platforms. The focused macOS run
+passes 43 functions. SwiftRules 0.1.3 reports no new violations. The map-specific
+smoke rerun is still pending updates to older caption assertions; no passing
+map-smoke result is claimed here.
+
+This application/dependency candidate is unmerged and not release-qualified.
+Issue 23's sustained-update resize/quit problem remains open; ordinary capture
+cleanup does not qualify that workload. Physical Garmin/phone delivery,
+phone-reachable HTTPS and fresh Docker release-image qualification remain
+separate gates. No watch or phone participates in these synthetic captures.
+Refresh from the actual client using synthetic observations and export matching
+SVG/text cells only after the quit/restoration checks pass. Never publish raw
+capture logs, credentials, provisioning state or private source.
+
+### Capture integrity
+
+| Asset | SHA-256 |
+| --- | --- |
+| `tui-cycling-capture.svg` | `d117dfaa8a13711c248d6ad73a8bf24bc808b423be5e4683e53b7dbc10468e3d` |
+| `tui-cycling-capture.txt` | `fcc5da84911564b33f5c4e005f5bf1cb62f235d8457d6f21e130b3246f11a513` |
+| `tui-dials-capture.svg` | `b746da63795e34ae1777238373a2441536b0a57b79a18a9d24cc27c9598e4c60` |
+| `tui-dials-capture.txt` | `136526b1291c67d697b313e60729914d9d9ee189ba5b0e879e0132544b35d17d` |
+
 ## Navigation and Running presentation — unmerged candidate
 
 Captured October 10, 2026 from application source candidate
