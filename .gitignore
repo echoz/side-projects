@@ -8,3 +8,7 @@ _site/
 credentials.json
 secrets/
 node_modules/
+.cache/
+test-results/
+playwright-report/
+__pycache__/

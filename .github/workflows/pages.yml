@@ -3,9 +3,9 @@ name: Public site
 on:
   push:
     branches: [main]
-    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", ".github/workflows/pages.yml"]
+    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", "public-assets.json", "scripts/**", "tests/**", "package.json", "pnpm-lock.yaml", "playwright.config.js", ".github/workflows/pages.yml"]
   pull_request:
-    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", ".github/workflows/pages.yml"]
+    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", "public-assets.json", "scripts/**", "tests/**", "package.json", "pnpm-lock.yaml", "playwright.config.js", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -22,44 +22,16 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
-      - name: Stage only approved public assets
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Install pinned validation dependencies
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import shutil
-
-          assets = ("index.html", "styles.css", "pitwall/index.html", "pitwall/styles.css",
-                    "pitwall/favicon.svg", "pitwall/tui-capture.svg",
-                    "pitwall/tui-capture.txt", "pitwall/tui-compact-capture.svg",
-                    "pitwall/tui-compact-capture.txt", "pitwall/tui-cycling-capture.svg",
-                    "pitwall/tui-cycling-capture.txt", "pitwall/tui-dials-capture.svg",
-                    "pitwall/tui-dials-capture.txt", "pitwall/tui-replay-capture.svg",
-                    "pitwall/tui-replay-capture.txt", "pitwall/tui-replay-compact-capture.svg",
-                    "pitwall/tui-replay-compact-capture.txt", "pitwall/tui-menu-capture.svg",
-                    "pitwall/tui-menu-capture.txt", "pitwall/tui-map-live.svg",
-                    "pitwall/tui-map-live.txt", "pitwall/tui-map-replay.svg",
-                    "pitwall/tui-map-replay.txt", "pitwall/tui-terrain.svg",
-                    "pitwall/tui-terrain.txt", "pitwall/tui-gears-live.svg",
-                    "pitwall/tui-gears-live.txt", "pitwall/tui-navigation-live.svg",
-                    "pitwall/tui-navigation-live.txt", "pitwall/tui-running-replay.svg",
-                    "pitwall/tui-running-replay.txt", "pitwall/tui-running-instruments.svg",
-                    "pitwall/tui-running-instruments.txt", "pitwall/transponder-large.png",
-                    "pitwall/transponder-half.png", "pitwall/transponder-compact.png",
-                    "marquee/index.html", "marquee/styles.css", "marquee/demo.js", "marquee/favicon.svg",
-                    "blackbox/index.html", "blackbox/styles.css", "blackbox/demo.js", "blackbox/favicon.svg")
-          for name in assets:
-              source = Path(name)
-              if not source.is_file() or source.is_symlink() or any(
-                  parent.is_symlink() for parent in source.parents
-              ):
-                  raise SystemExit("Public assets must be regular files, never symlinks")
-          destination = Path("_site")
-          destination.mkdir()
-          for name in assets:
-              target = destination / name
-              target.parent.mkdir(parents=True, exist_ok=True)
-              shutil.copyfile(name, target)
-          PY
+          npm install --global pnpm@11.25.0 --ignore-scripts
+          pnpm install --frozen-lockfile --ignore-scripts
+          pnpm exec playwright install --with-deps chromium
+      - name: Validate packaging, syntax and browser behavior
+        run: pnpm test
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: _site

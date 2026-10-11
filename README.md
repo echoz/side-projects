@@ -18,14 +18,16 @@ limits. Demonstrations use synthetic data.
 ## Preview and publish
 
 ```sh
-python3 -m http.server 8765 --bind 127.0.0.1
+python3 scripts/build_site.py
+python3 -m http.server 8765 --bind 127.0.0.1 --directory _site
 ```
 
 Open `http://127.0.0.1:8765/`. Chio links to its separately maintained site.
-GitHub Actions validates an explicit asset list and deploys changes on `main`;
-pull requests validate without deploying.
+GitHub Actions checks the staged artifact, JavaScript syntax and browser behavior
+before deploying changes on `main`; pull requests validate without deploying.
 
 Keep project summaries and links current. For a page hosted here, update the
-approved asset list in `.github/workflows/pages.yml` when adding files, check
-links and layout, and verify the deployment. See [AGENTS.md](AGENTS.md) for
+approved asset list in `public-assets.json` when adding files. Run `pnpm test`
+and the applicable [manual checks](VERIFYING.md), then verify the deployment.
+See [AGENTS.md](AGENTS.md) for
 maintenance guidance and [Pitwall capture notes](pitwall/CAPTURES.md) for provenance.

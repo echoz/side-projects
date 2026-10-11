@@ -1,0 +1,14 @@
+{
+  "name": "side-projects-validation",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "python3 scripts/build_site.py",
+    "test:artifact": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:syntax": "node --check marquee/demo.js && node --check blackbox/demo.js",
+    "test:browser": "playwright test",
+    "test": "pnpm test:artifact && pnpm test:syntax && pnpm build && pnpm test:browser"
+  },
+  "devDependencies": { "@playwright/test": "1.62.1" }
+}
