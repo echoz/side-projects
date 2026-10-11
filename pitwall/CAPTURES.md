@@ -25,8 +25,9 @@ The synthetic current readings are 30.6 km/h, 245 W, 86 rpm and 145 bpm.
 Independently supplied source averages are 10.1 km/h, 222 W, 84 rpm and 139 bpm;
 source maxima are 16.9 km/h, 398 W, 96 rpm and 172 bpm. The speed maximum is
 intentionally below the current speed; the client does not repair independent
-source facts. Reference `1` means source average and `2` means source maximum;
-when both occupy one cell, `*` marks the overlap and both numeric captions remain.
+source facts. Numbers link marks to their labelled source captions. When both are supplied,
+`1` is average and `2` is maximum. If only maximum is supplied, it uses `1`.
+When both occupy one cell, `*` marks the overlap and both numeric captions remain.
 Off-scale references retain explicit below/above labels. Optional values remain
 optional, including in selected historical observations. These are source facts,
 not client-computed history, targets or workout completion. Compact views may
