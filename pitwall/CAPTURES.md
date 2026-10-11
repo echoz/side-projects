@@ -3,7 +3,7 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Audit follow-up — unmerged
+## Audit follow-up — merged into draft candidate
 
 The October 10 audit follow-up preserves these capture bytes and visible layout.
 It removes repeated control-theme setup from passive instruments and the
@@ -14,8 +14,9 @@ checks pass on both platforms, including true-color and monochrome instruments
 and ordinary quit/restoration. This supersedes the hosted interaction failure
 for the audit candidate only; earlier sections retain their original results.
 
-The separate sustained-update resize/quit workload remains unqualified. This
-follow-up is unmerged and is not a release. The captures keep their original
+The audit repair is now merged into the source-reference candidate branch.
+That candidate remains draft and unmerged to main. The separate sustained-update
+resize/quit workload remains unqualified; this is not a release. The captures keep their original
 source and executable provenance; no new watch, phone or release-image evidence
 is implied. No application source, internal audit report or raw logs are public.
 
