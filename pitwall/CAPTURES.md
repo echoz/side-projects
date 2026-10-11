@@ -3,24 +3,33 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Audit follow-up — merged into draft candidate
+## Audit follow-up — preserved on the shelved proposal branch
 
 The October 10 audit follow-up preserves these capture bytes and visible layout.
 It removes repeated control-theme setup from passive instruments and the
-persistent terminal shell. The full Swift suite now passes 504 functions and
-16 XCTest checks on each of macOS and Linux ARM64, including the unchanged
+persistent terminal shell. The audit candidate’s full Swift suite passed
+504 functions and 16 XCTest checks on each of macOS and Linux ARM64, including the unchanged
 20-second hosted layout interaction check. Existing bar/dial and map process
-checks pass on both platforms, including true-color and monochrome instruments
+checks passed on both platforms, including true-color and monochrome instruments
 and ordinary quit/restoration. This supersedes the hosted interaction failure
 for the audit candidate only; earlier sections retain their original results.
 
-The audit repair is now merged into the source-reference candidate branch.
-That candidate remains draft and unmerged to main. The separate sustained-update
-resize/quit workload remains unqualified; this is not a release. The captures keep their original
+The audit repair (PR #30) was merged only into the source-reference proposal
+branch at `c80859d`, not main. The source-reference proposal (PR #29) is shelved
+and closed without merging to main. Its branch preserves the proposal and audit
+repair as historical work. Neither change is implemented on main. Numerical
+source average/max companions already on main remain separate from the shelved
+gauge reference marks. The sustained-update resize/quit workload remains
+unqualified; this is not a release. The captures keep their original
 source and executable provenance; no new watch, phone or release-image evidence
 is implied. No application source, internal audit report or raw logs are public.
 
-## Source average/max gauge references — unmerged candidate
+## Source average/max gauge references — shelved historical experiment
+
+The proposal is shelved, not an active upcoming capability. These unchanged
+synthetic captures document the historical experiment and retain their original
+source, executable and integrity provenance. Existing numerical source
+average/max companions on main are unaffected by this status.
 
 Captured October 10, 2026 local time (October 11 UTC) from application source
 `9bf090a2b5161132eada68f038c91d7fa07ea2f9`, with explicitly pinned, unmerged
@@ -70,13 +79,15 @@ newly selected observation. Both loopback MapSource scenarios also pass source
 acquisition, retry and credential-separation checks. These bounded process
 results do not qualify the hosted layout deadline or sustained-update shutdown.
 
-This application/dependency candidate is unmerged and not release-qualified.
+This application/dependency experiment is shelved, unmerged to main and not
+release-qualified.
 Issue 23's sustained-update resize/quit problem remains open; ordinary capture
 cleanup does not qualify that workload. Physical Garmin/phone delivery,
 phone-reachable HTTPS and fresh Docker release-image qualification remain
 separate gates. No watch or phone participates in these synthetic captures.
-Refresh from the actual client using synthetic observations and export matching
-SVG/text cells only after the quit/restoration checks pass. Never publish raw
+Retain these captures as historical evidence. Any future replacement must come
+from the actual client using synthetic observations, with matching SVG/text cells
+exported only after the quit/restoration checks pass. Never publish raw
 capture logs, credentials, provisioning state or private source.
 
 ### Capture integrity
