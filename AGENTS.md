@@ -37,9 +37,13 @@ Let the subject shape composition, typography and interaction; do not reuse one
 landing-page template with different accent colors. Keep readability and factual
 status more important than decorative instrument labels or effects.
 
-`.github/workflows/pages.yml` explicitly lists the files allowed into the public
-website artifact. Update that list deliberately when adding a public asset.
-Verify links, JavaScript syntax, responsive layout, and any changed demo behavior.
+`public-assets.json` explicitly lists the files allowed into the public website
+artifact. Update that list deliberately when adding a public asset; keep the
+workflow path triggers current for any new project directory. Build through
+`scripts/build_site.py` and run `pnpm test` before publishing. The workflow uploads
+only the validated `_site` directory. Follow [VERIFYING.md](VERIFYING.md) for setup,
+the test contracts and manual browser checks. Never edit tests while a relevant
+test runner is active; coordinate writers and wait for completion before changes.
 Keep synthetic values visibly labeled and distinguish verified behavior from
 planned features. Project application code belongs in its own repository.
 
