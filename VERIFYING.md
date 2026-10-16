@@ -69,6 +69,22 @@ HTML and runtime behavior separately. Public CI runs `pnpm test`, including wrap
 rejection fixtures, without access to the private checker. A public CI pass does
 not establish that the required local documentation gate ran.
 
+### Adoption record / 2026-10-16
+
+[Adoption PR #4](https://github.com/echoz/side-projects/pull/4) pins the release above.
+The implementation at `7eb4fa3ee5cf703992ebe465d7f4916246a1f241` passed local
+`pnpm verify` on macOS: four documentation guides, zero modules, zero findings,
+13 Python tests, both syntax checks, 48 staged assets and 24 Chromium tests.
+A temporary missing-link fixture failed through the real wrapper with exit 1.
+Separate read-only review found no actionable findings. Public CI results belong
+to the PR's current commit; they do not substitute for the local documentation gate.
+
+This records a verified local candidate. The default branch at
+`8cc3e79d169cf09a4e09d6650b1b6dba5ca0eafa` had no documentation enrollment.
+Default-branch adoption requires the approved merge and subsequent verification.
+Pitwall PR #3 and its page-only changes remain separate. No new visual,
+screen-reader, other-browser or physical-device qualification is claimed here.
+
 ## Automated contracts
 
 `pnpm test` runs these gates in sequence, stopping on failure:
