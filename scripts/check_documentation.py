@@ -8,8 +8,8 @@ import subprocess
 import sys
 
 
-RELEASE = '0.1.5'
-REVISION = 'd777c8ccbe990a8e90462c928042574d9dbe9d53'
+RELEASE = '0.1.6'
+REVISION = '7088419f33f118bff250202717edf6d5249746b6'
 CHECKER_HASH = 'f9597904c389e3a485e360d4fbbda57d8acb521ee9dab924251cfa2c762d6af7'
 REQUIREMENTS_HASH = '6fd7cf677f2a33fc6d78057d60cf9ea9df01d21e85a1de4ccde742b1d57b584b'
 PROJECT_ROOT = Path(__file__).resolve().parents[1]

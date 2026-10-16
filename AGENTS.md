@@ -74,7 +74,7 @@ workflow path triggers current for any new project directory. Build through
 only the validated `_site` directory. Follow [VERIFYING.md](VERIFYING.md) for setup,
 the fixed documentation-tool setup, test contracts and manual browser checks.
 The documentation gate checks the four enrolled current Markdown guides. Version
-0.1.5 cannot inventory this flat repository root, so new page discovery and source
+0.1.6 cannot inventory this flat repository root, so new page discovery and source
 ownership remain manual. Keep the source map and `.documentation-rules.json`
 current without fake modules or exclusions. Public CI runs `pnpm test`; the private
 shared documentation checker remains a required local gate. Never edit tests while a relevant
