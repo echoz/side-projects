@@ -43,7 +43,7 @@ GitHub Actions checks the staged artifact, JavaScript syntax and browser behavio
 before deploying changes on `main`; pull requests validate without deploying.
 
 Keep project summaries and links current. For a page hosted here, update the
-approved asset list in `public-assets.json` when adding files. Run `pnpm test`
+approved asset list in `public-assets.json` when adding files. Run `pnpm verify`
 and the applicable [manual checks](VERIFYING.md), then verify the deployment.
 See [AGENTS.md](AGENTS.md) for
 maintenance guidance and [Pitwall capture notes](pitwall/CAPTURES.md) for provenance.

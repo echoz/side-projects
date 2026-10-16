@@ -4,6 +4,8 @@
   "packageManager": "pnpm@11.25.0",
   "engines": { "node": ">=24" },
   "scripts": {
+    "check:docs": "python3 scripts/check_documentation.py",
+    "verify": "pnpm check:docs && pnpm test",
     "build": "python3 scripts/build_site.py",
     "test:artifact": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:syntax": "node --check marquee/demo.js && node --check blackbox/demo.js",
