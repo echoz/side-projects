@@ -1,7 +1,14 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "moduleRoots": [],
   "modules": [],
   "excludedModules": [],
-  "documents": ["README.md", "AGENTS.md", "VERIFYING.md", "pitwall/CAPTURES.md"]
+  "documents": ["README.md", "AGENTS.md", "VERIFYING.md", "pitwall/CAPTURES.md"],
+  "deliverables": [
+    {"id": "SideProjects", "root": "."},
+    {"id": "SideProjects.PitwallPage", "root": "pitwall", "parent": "SideProjects"},
+    {"id": "SideProjects.MarqueePage", "root": "marquee", "parent": "SideProjects"},
+    {"id": "SideProjects.BlackboxPage", "root": "blackbox", "parent": "SideProjects"},
+    {"id": "SideProjects.PerchRedirect", "root": "perch", "parent": "SideProjects"}
+  ]
 }

@@ -47,3 +47,9 @@ approved asset list in `public-assets.json` when adding files. Run `pnpm verify`
 and the applicable [manual checks](VERIFYING.md), then verify the deployment.
 See [AGENTS.md](AGENTS.md) for
 maintenance guidance and [Pitwall capture notes](pitwall/CAPTURES.md) for provenance.
+
+The static index lives in [index.html](index.html) and [styles.css](styles.css),
+which own card composition, project themes and status ribbons. Each local page
+has its own source guide: [Pitwall](pitwall/README.md), [Marquee](marquee/README.md),
+[Blackbox](blackbox/README.md) and the [Perch redirect](perch/README.md).
+The [source map](AGENTS.md) also identifies internal build and verification tooling.

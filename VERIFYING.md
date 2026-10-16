@@ -18,7 +18,7 @@ the public pages remain static and do not load them.
 
 Before PR readiness or publishing, run `pnpm verify`. It runs `pnpm check:docs`
 first, then the public site checks below. The documentation check needs a separate,
-clean [EngineeringRules 0.1.5 release](https://github.com/echoz/EngineeringRules/releases/tag/v0.1.5)
+clean [EngineeringRules 0.1.7 release](https://github.com/echoz/EngineeringRules/releases/tag/v0.1.7)
 checkout and its isolated Python environment. That repository is private; use
 existing authorized access during explicit setup. Do not put credentials or the
 shared checker's source in this public repository or its Pages artifact.
@@ -26,12 +26,12 @@ shared checker's source in this public repository or its Pages artifact.
 The pin lives in [the repository wrapper](scripts/check_documentation.py), outside
 [the closed documentation schema](.documentation-rules.json):
 
-- Tag `v0.1.5`, peeled commit `d777c8ccbe990a8e90462c928042574d9dbe9d53`.
-- Release tree `e69ab6129adf602097443bb0ad48f91f93609acc`.
-- Checker SHA-256 `f9597904c389e3a485e360d4fbbda57d8acb521ee9dab924251cfa2c762d6af7`.
+- Tag `v0.1.7`, peeled commit `4dd986441275fa768709887eaa0952218057397e`.
+- Release tree `33dad1daa878f5cb36a66e83324e74ecf3f533c7`.
+- Checker SHA-256 `a581576ff1fb6bd56e80785ebed9d028ea7a3ace986b97a20b4587b2cd2515fb`.
 - Requirements SHA-256 `6fd7cf677f2a33fc6d78057d60cf9ea9df01d21e85a1de4ccde742b1d57b584b`.
 
-The default installation is `~/.local/share/engineering-rules/0.1.5`. Reuse that
+The default installation is `~/.local/share/engineering-rules/0.1.7`. Reuse that
 verified shared installation; never switch or modify it during a project check.
 For another host, follow the released README in a dedicated clean checkout:
 
@@ -42,7 +42,7 @@ python3 -m venv .build/docs-venv
   -r Configuration/documentation-requirements.txt
 
 # From SideProjects, if the existing installation is elsewhere:
-pnpm check:docs --tool-root /path/to/engineering-rules-0.1.5
+pnpm check:docs --tool-root /path/to/engineering-rules-0.1.7
 pnpm test
 ```
 
@@ -53,15 +53,28 @@ It fails if the tool or environment is missing or mismatched. The shared checker
 requires exactly `markdown-it-py` 3.0.0 and `mdurl` 0.1.2. Checking never downloads,
 upgrades or repairs dependencies. SideProjects has no Swift sources or SwiftRules pin.
 
-All four current Markdown guides are enrolled: `README.md`, `AGENTS.md`,
-`VERIFYING.md` and `pitwall/CAPTURES.md`. Their CommonMark local destinations must
-exist. The [source map](AGENTS.md) records page, state, effect and tooling ownership.
-The 0.1.5 schema rejects a root of `.` and inventories only immediate child
-folders of named roots. It cannot represent these top-level page boundaries.
-Therefore `moduleRoots`, `modules` and `excludedModules` are empty: this enrollment
-checks documentation links, with **zero automatic module-inventory coverage**.
-Review new page directories and their owning documentation manually. Do not
-restructure the site or invent nested modules solely to satisfy the checker.
+Version 0.1.7 adds documentation schema 2 and source-root README review to the
+shared engineering-review workflow. Parser dependency pins remain unchanged.
+The global readiness workflow uses the separately installed skill; the required
+SideProjects checks remain the commands in this guide.
+
+Schema 2 declares five deliverables: the index at `.` and the Pitwall, Marquee,
+Blackbox and Perch-redirect source directories, each with a stable ID. The four
+nested pages name the index as parent. Each root must exist and contain its own
+regular, nonblank UTF-8 `README.md`. These five READMEs and the existing `AGENTS.md`,
+`VERIFYING.md` and `pitwall/CAPTURES.md` form eight checked documents; their CommonMark
+local destinations must exist. The [source map](AGENTS.md) identifies ownership
+and distinguishes internal contributor scripts from consumer-facing pages.
+
+The existing `moduleRoots`, `modules` and `excludedModules` remain empty. Module
+inventory still examines only immediate children of configured roots and rejects
+`.` as a module root. Schema 2 deliverables support `.` and explicit nested roots,
+so the five actual page boundaries now receive README enforcement without source
+reorganization. This is declared-deliverable coverage, with **zero automatic
+module-inventory coverage**. Independent review must still check completeness,
+actual source ownership and useful content; the checker cannot discover an omitted
+page or prove prose quality. New guides are contributor documentation, excluded
+from the public website asset allowlist.
 
 Heading fragments, HTML links, external destinations, prose accuracy and useful
 architecture remain manual review. Existing artifact and browser checks cover
@@ -69,9 +82,9 @@ HTML and runtime behavior separately. Public CI runs `pnpm test`, including wrap
 rejection fixtures, without access to the private checker. A public CI pass does
 not establish that the required local documentation gate ran.
 
-### Adoption record / 2026-10-16
+### Initial 0.1.5 adoption / 2026-10-16
 
-[Adoption PR #4](https://github.com/echoz/side-projects/pull/4) pins the release above.
+[Adoption PR #4](https://github.com/echoz/side-projects/pull/4) introduced the 0.1.5 pin.
 The implementation at `7eb4fa3ee5cf703992ebe465d7f4916246a1f241` passed local
 `pnpm verify` on macOS: four documentation guides, zero modules, zero findings,
 13 Python tests, both syntax checks, 48 staged assets and 24 Chromium tests.
@@ -79,11 +92,11 @@ A temporary missing-link fixture failed through the real wrapper with exit 1.
 Separate read-only review found no actionable findings. Public CI results belong
 to the PR's current commit; they do not substitute for the local documentation gate.
 
-This records a verified local candidate. The default branch at
-`8cc3e79d169cf09a4e09d6650b1b6dba5ca0eafa` had no documentation enrollment.
-Default-branch adoption requires the approved merge and subsequent verification.
-Pitwall PR #3 and its page-only changes remain separate. No new visual,
-screen-reader, other-browser or physical-device qualification is claimed here.
+PR #4 merged at `cbffadc8a76e6f4166ab7511c9661eae43a42096`. The local documentation
+gate passed again on that merged commit, and public CI and Pages deployment passed.
+These results establish the initial 0.1.5 adoption, not verification of later pins.
+No new visual, screen-reader, other-browser or physical-device qualification is
+claimed here.
 
 ## Automated contracts
 
