@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "moduleRoots": [],
+  "modules": [],
+  "excludedModules": [],
+  "documents": ["README.md", "AGENTS.md", "VERIFYING.md", "pitwall/CAPTURES.md"]
+}

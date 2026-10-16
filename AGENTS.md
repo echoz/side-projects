@@ -19,6 +19,23 @@ page is hosted at `https://echoz.github.io/Perch/` in its public repository.
 relative to support GitHub Pages' project path. Avoid external assets, analytics,
 and live telemetry.
 
+The following source map owns the repository's flat page and tooling boundaries.
+Review it when adding a page or changing state, effects or verification ownership.
+
+| Boundary | Responsibility and owning guide |
+| --- | --- |
+| [Index](index.html), [index styles](styles.css) | Collection navigation, project cards and release ribbons |
+| [Marquee](marquee/), [Blackbox](blackbox/) | Independent overview pages; each `demo.js` owns its transient synthetic browser state |
+| [Pitwall](pitwall/) | Overview and recorded synthetic captures; [capture guide](pitwall/CAPTURES.md) owns provenance and refresh |
+| [Perch](perch/) | Former-address redirect and index render; the full page and CAD live in Perch's separate repository |
+| [Build](scripts/build_site.py), [asset manifest](public-assets.json) | Approved inputs, static reference validation and generated `_site` output |
+| [Documentation invocation](scripts/check_documentation.py) | Verify and invoke a separately installed, immutable checker; no installation or repair |
+| [Python fixtures](tests/), [browser checks](tests/browser/) | CLI acceptance/rejection and staged-page behavior; [verification guide](VERIFYING.md) owns commands and limits |
+
+[Package commands](package.json) compose the local gates. The [Pages workflow](.github/workflows/pages.yml)
+owns public CI and deployment. Browser tests own their loopback preview process;
+application code and live device/service state remain in the owning projects.
+
 Present the collection as AI-assisted, deliberately curated personal projects,
 mostly built to scratch an itch. Keep the README a brief introduction, project
 list and publishing guide; put detailed capabilities and limits on the project
@@ -53,9 +70,14 @@ status more important than decorative instrument labels or effects.
 `public-assets.json` explicitly lists the files allowed into the public website
 artifact. Update that list deliberately when adding a public asset; keep the
 workflow path triggers current for any new project directory. Build through
-`scripts/build_site.py` and run `pnpm test` before publishing. The workflow uploads
+`scripts/build_site.py` and run `pnpm verify` before PR readiness or publishing. The workflow uploads
 only the validated `_site` directory. Follow [VERIFYING.md](VERIFYING.md) for setup,
-the test contracts and manual browser checks. Never edit tests while a relevant
+the fixed documentation-tool setup, test contracts and manual browser checks.
+The documentation gate checks the four enrolled current Markdown guides. Version
+0.1.5 cannot inventory this flat repository root, so new page discovery and source
+ownership remain manual. Keep the source map and `.documentation-rules.json`
+current without fake modules or exclusions. Public CI runs `pnpm test`; the private
+shared documentation checker remains a required local gate. Never edit tests while a relevant
 test runner is active; coordinate writers and wait for completion before changes.
 Keep synthetic values visibly labeled and distinguish verified behavior from
 planned features. Project application code belongs in its own repository.

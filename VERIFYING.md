@@ -6,7 +6,7 @@ Use Python 3.9+, Node.js 24 and the pinned pnpm version in `package.json`.
 npm install --global pnpm@11.25.0 --ignore-scripts
 pnpm install --frozen-lockfile --ignore-scripts
 pnpm exec playwright install chromium
-pnpm test
+pnpm verify
 ```
 
 On Linux, install browser system dependencies with
@@ -14,11 +14,67 @@ On Linux, install browser system dependencies with
 dependencies and Chromium checks. These dependencies are development tools;
 the public pages remain static and do not load them.
 
+## Required documentation gate
+
+Before PR readiness or publishing, run `pnpm verify`. It runs `pnpm check:docs`
+first, then the public site checks below. The documentation check needs a separate,
+clean [EngineeringRules 0.1.5 release](https://github.com/echoz/EngineeringRules/releases/tag/v0.1.5)
+checkout and its isolated Python environment. That repository is private; use
+existing authorized access during explicit setup. Do not put credentials or the
+shared checker's source in this public repository or its Pages artifact.
+
+The pin lives in [the repository wrapper](scripts/check_documentation.py), outside
+[the closed documentation schema](.documentation-rules.json):
+
+- Tag `v0.1.5`, peeled commit `d777c8ccbe990a8e90462c928042574d9dbe9d53`.
+- Release tree `e69ab6129adf602097443bb0ad48f91f93609acc`.
+- Checker SHA-256 `f9597904c389e3a485e360d4fbbda57d8acb521ee9dab924251cfa2c762d6af7`.
+- Requirements SHA-256 `6fd7cf677f2a33fc6d78057d60cf9ea9df01d21e85a1de4ccde742b1d57b584b`.
+
+The default installation is `~/.local/share/engineering-rules/0.1.5`. Reuse that
+verified shared installation; never switch or modify it during a project check.
+For another host, follow the released README in a dedicated clean checkout:
+
+```sh
+# Explicit setup only, inside the verified release checkout:
+python3 -m venv .build/docs-venv
+.build/docs-venv/bin/python -m pip install --require-hashes \
+  -r Configuration/documentation-requirements.txt
+
+# From SideProjects, if the existing installation is elsewhere:
+pnpm check:docs --tool-root /path/to/engineering-rules-0.1.5
+pnpm test
+```
+
+Verify the checkout's `HEAD` against the pinned commit before dependency setup.
+The wrapper checks that revision, working-tree cleanliness and both file hashes
+before running `.build/docs-venv/bin/python -B Scripts/check-docs.py --root <project>`.
+It fails if the tool or environment is missing or mismatched. The shared checker
+requires exactly `markdown-it-py` 3.0.0 and `mdurl` 0.1.2. Checking never downloads,
+upgrades or repairs dependencies. SideProjects has no Swift sources or SwiftRules pin.
+
+All four current Markdown guides are enrolled: `README.md`, `AGENTS.md`,
+`VERIFYING.md` and `pitwall/CAPTURES.md`. Their CommonMark local destinations must
+exist. The [source map](AGENTS.md) records page, state, effect and tooling ownership.
+The 0.1.5 schema rejects a root of `.` and inventories only immediate child
+folders of named roots. It cannot represent these top-level page boundaries.
+Therefore `moduleRoots`, `modules` and `excludedModules` are empty: this enrollment
+checks documentation links, with **zero automatic module-inventory coverage**.
+Review new page directories and their owning documentation manually. Do not
+restructure the site or invent nested modules solely to satisfy the checker.
+
+Heading fragments, HTML links, external destinations, prose accuracy and useful
+architecture remain manual review. Existing artifact and browser checks cover
+HTML and runtime behavior separately. Public CI runs `pnpm test`, including wrapper
+rejection fixtures, without access to the private checker. A public CI pass does
+not establish that the required local documentation gate ran.
+
 ## Automated contracts
 
 `pnpm test` runs these gates in sequence, stopping on failure:
 
-1. **Artifact regression fixtures:** exercise the real Python build command in
+1. **Python regression fixtures:** reject missing and unapproved documentation
+   tools before execution, and exercise the real Python build command in
    temporary directories. Missing, unsafe, duplicate and symlink assets fail;
    unlisted files stay out. Relative links, queries, fragments and CSS/SVG
    dependencies resolve within the staged artifact. Fixtures also check that
