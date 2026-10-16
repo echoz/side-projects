@@ -24,10 +24,11 @@ Review it when adding a page or changing state, effects or verification ownershi
 
 | Boundary | Responsibility and owning guide |
 | --- | --- |
-| [Index](index.html), [index styles](styles.css) | Collection navigation, project cards and release ribbons |
-| [Marquee](marquee/), [Blackbox](blackbox/) | Independent overview pages; each `demo.js` owns its transient synthetic browser state |
-| [Pitwall](pitwall/) | Overview and recorded synthetic captures; [capture guide](pitwall/CAPTURES.md) owns provenance and refresh |
-| [Perch](perch/) | Former-address redirect and index render; the full page and CAD live in Perch's separate repository |
+| [Index](index.html), [index styles](styles.css) | Collection navigation, project cards and release ribbons; [source guide](README.md) |
+| [Marquee](marquee/) | Independent overview and transient synthetic pixel-display state; [source guide](marquee/README.md) |
+| [Blackbox](blackbox/) | Independent overview and transient synthetic archive/query state; [source guide](blackbox/README.md) |
+| [Pitwall](pitwall/) | Overview and recorded synthetic captures; [source guide](pitwall/README.md); [capture guide](pitwall/CAPTURES.md) owns provenance and refresh |
+| [Perch](perch/) | Former-address redirect and index render; [source guide](perch/README.md); the full page and CAD live in Perch's separate repository |
 | [Build](scripts/build_site.py), [asset manifest](public-assets.json) | Approved inputs, static reference validation and generated `_site` output |
 | [Documentation invocation](scripts/check_documentation.py) | Verify and invoke a separately installed, immutable checker; no installation or repair |
 | [Python fixtures](tests/), [browser checks](tests/browser/) | CLI acceptance/rejection and staged-page behavior; [verification guide](VERIFYING.md) owns commands and limits |
@@ -35,6 +36,13 @@ Review it when adding a page or changing state, effects or verification ownershi
 [Package commands](package.json) compose the local gates. The [Pages workflow](.github/workflows/pages.yml)
 owns public CI and deployment. Browser tests own their loopback preview process;
 application code and live device/service state remain in the owning projects.
+
+[The documentation inventory](.documentation-rules.json) declares these five
+consumer-facing site roots: the index at `.` and four nested page directories.
+Each owns its source-root `README.md`. The Python scripts and test fixtures support
+this repository's contributor workflow; they are not separately offered tools.
+The page-bound demos expose no public framework component API. Private applications
+and the external Chio/Perch implementations are outside this repository's inventory.
 
 Present the collection as AI-assisted, deliberately curated personal projects,
 mostly built to scratch an itch. Keep the README a brief introduction, project
@@ -73,10 +81,11 @@ workflow path triggers current for any new project directory. Build through
 `scripts/build_site.py` and run `pnpm verify` before PR readiness or publishing. The workflow uploads
 only the validated `_site` directory. Follow [VERIFYING.md](VERIFYING.md) for setup,
 the fixed documentation-tool setup, test contracts and manual browser checks.
-The documentation gate checks the four enrolled current Markdown guides. Version
-0.1.6 cannot inventory this flat repository root, so new page discovery and source
-ownership remain manual. Keep the source map and `.documentation-rules.json`
-current without fake modules or exclusions. Public CI runs `pnpm test`; the private
+The 0.1.7 documentation gate uses schema 2 to check the five declared source roots,
+their READMEs and local links across eight current Markdown guides. New page
+discovery, actual source ownership and useful content remain review responsibilities.
+Keep the source map and `.documentation-rules.json` current without fake roots,
+modules or exclusions. Public CI runs `pnpm test`; the private
 shared documentation checker remains a required local gate. Never edit tests while a relevant
 test runner is active; coordinate writers and wait for completion before changes.
 Keep synthetic values visibly labeled and distinguish verified behavior from
