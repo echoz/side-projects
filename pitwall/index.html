@@ -52,6 +52,7 @@
         <li><span class="feature-index" aria-hidden="true">04 / REPORTING</span><h3>Choose when to report.</h3><p>Opt into Fixed, Significant or Auto reporting, with upload status and dropped-sample counts.</p></li>
         <li><span class="feature-index" aria-hidden="true">05 / CLI &amp; STREAMING</span><h3>Drive it from a terminal.</h3><p>Script JSON queries, poll or receive server-pushed readings, and run local clients over SSH.</p></li>
         <li><span class="feature-index" aria-hidden="true">06 / SELF-HOSTED</span><h3>Keep your own records.</h3><p>Run on Linux with Docker, retain readings in SQLite, and back up or restore while the daemon is stopped. No network ports are exposed by default.</p></li>
+        <li><span class="feature-index" aria-hidden="true">07 / WORKOUT CONTRACT</span><h3>Validate workout inputs.</h3><p>The plugin kit checks schedules, interval plans and target settings. Workout hosting and real provider connections remain upcoming.</p></li>
       </ul>
       <p class="feature-note">Development build: delivery timing is not guaranteed. Backups contain credentials and are unencrypted. <a class="text-link" href="#roadmap">See remaining work <span aria-hidden="true">↓</span></a></p>
     </section>
@@ -212,7 +213,7 @@
           <ul>
             <li><h4>More sport layouts</h4><p>Add hiking, swimming and strength views using the readings available for each activity.</p></li>
             <li><h4>Trends and trails</h4><p>Add bounded metric history, elevation profiles and GPS trails, keeping gaps visible.</p></li>
-            <li><h4>Plans and targets / upcoming</h4><p>Match scheduled workouts to live sessions, show interval targets and progress, and let the operator correct alignment.</p></li>
+            <li><h4>Plans and targets / upcoming</h4><p>Use manual or imported plans to show intervals, targets and progress, with operator corrections. Add provider schedules afterward.</p></li>
             <li><h4>Optional Bono advice</h4><p>Suggest reporting intervals while leaving the watch in control of collection and retries.</p></li>
             <li><h4>Completed-workout history</h4><p>Reconcile completed activities from other sources without duplicating recorded sessions.</p></li>
           </ul>
@@ -222,11 +223,11 @@
           <ul>
             <li><h4>Console reliability</h4><p>Fix terminal cleanup on macOS and finish console qualification.</p></li>
             <li><h4>Phone-reachable access</h4><p>Add authenticated HTTPS uploads, protected local control and device provisioning/recovery.</p></li>
-            <li><h4>Source plugins / in progress</h4><p>Refresh dated steps, distance, sleep and resting heart rate through a private CLI. Synthetic integration is tested; Blackbox and scheduled-workout imports are next.</p></li>
+            <li><h4>Source plugins / in progress</h4><p>Connect the workout contract to the daemon and provider schedules and prescriptions. Keep daily context optional.</p></li>
             <li><h4>Operations and release checks</h4><p>Add retention and scheduled/online backups; qualify a fresh Docker release image.</p></li>
             <li><h4>Watch and phone testing — deferred</h4><p>Check physical delivery, locked-phone behavior, native recording and battery impact when device testing resumes.</p></li>
           </ul>
-          <p class="roadmap-lane-note">Plugins remain optional. Blackbox remote sync is disabled; additional providers, including Runna, need verified access.</p>
+          <p class="roadmap-lane-note">Plugins remain optional. Blackbox workout-plan reads and remote sync remain unavailable; other providers need verified access.</p>
         </article>
       </div>
     </section>
