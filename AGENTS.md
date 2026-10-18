@@ -81,12 +81,15 @@ workflow path triggers current for any new project directory. Build through
 `scripts/build_site.py` and run `pnpm verify` before PR readiness or publishing. The workflow uploads
 only the validated `_site` directory. Follow [VERIFYING.md](VERIFYING.md) for setup,
 the fixed documentation-tool setup, test contracts and manual browser checks.
-The 0.1.7 documentation gate uses schema 2 to check the five declared source roots,
+The 0.1.8 documentation gate uses schema 2 to check the five declared source roots,
 their READMEs and local links across eight current Markdown guides. New page
 discovery, actual source ownership and useful content remain review responsibilities.
 Keep the source map and `.documentation-rules.json` current without fake roots,
 modules or exclusions. Public CI runs `pnpm test`; the private
-shared documentation checker remains a required local gate. Never edit tests while a relevant
+shared documentation checker remains a required local gate. Follow the manual
+naming-review scope in [VERIFYING.md](VERIFYING.md) and retain its evidence for
+independent engineering review; SwiftRules does not collect this repository's
+non-Swift names. Never edit tests while a relevant
 test runner is active; coordinate writers and wait for completion before changes.
 Keep synthetic values visibly labeled and distinguish verified behavior from
 planned features. Project application code belongs in its own repository.
