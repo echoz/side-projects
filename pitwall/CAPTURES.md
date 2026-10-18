@@ -3,6 +3,44 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Console qualification candidate — October 17, 2026
+
+A locally verified console candidate passes 96 shutdown cases per platform on
+macOS and Linux, plus continuous-update polling and pushed scenarios and Replay.
+The pressure checks keep independent synthetic uploads active through immediate
+resize and quit. The five-second exit deadline, expected exit codes, cursor and
+alternate-screen checks remain unchanged. Watch, subscription, map-source,
+instrument and activity-layout process checks also pass on both platforms.
+These are local synthetic checks, not physical-device or release qualification.
+
+The approved restoration comparison checks configured terminal flags, speeds
+and control characters. On Darwin, it permits only added `PENDIN` after an
+originally canonical, `PENDIN`-clear mode; every other attribute must match.
+Originally noncanonical or `PENDIN`-set modes retain exact comparison, as does
+Linux. Native PTY regressions separately verify unread-input preservation,
+including a queued interrupt. Comparison does not read or flush queued input.
+
+Linux verification uses candidate `7906d9b`; the final native Swift suite uses
+`693e684`, including a Darwin-specific test-fixture correction. The native
+process scenarios above initially use isolated source checkpoint `7801ad7`.
+That run passed 21 of 22 checks; its RGB instrument check failed a four-label
+assertion after waiting for only one label. The failed run did not capture its
+screen and does not establish whether that observation was transient.
+
+A focused correction at `3c3bc04` waits for complete annotation counts within
+the same deadline and preserves the assertions. Eight deterministic decoder
+regressions plus RGB/monochrome instrument and activity-layout process checks
+pass on macOS and Linux. Production code and dependency pins are unchanged
+across these checkpoints. Review and adoption remain pending; this candidate
+is not on main or released.
+
+This status update changes no SVG, transcript or other capture asset. Existing
+recordings retain their original source, executable and verification provenance;
+the dated failures and passes below remain historical evidence. No application
+source, raw process logs, internal documents, credentials or workout data are
+published. Physical watch and phone delivery, phone-reachable HTTPS and a fresh
+Docker release-image qualification remain open.
+
 ## Audit recovery with merged Chio instruments — on main
 
 Pitwall PR #31 merged to main on October 11, 2026 at
