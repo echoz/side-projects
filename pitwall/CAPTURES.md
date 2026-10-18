@@ -3,9 +3,14 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Console qualification candidate — October 17, 2026
+## Console qualification — on main
 
-A locally verified console candidate passes 96 shutdown cases per platform on
+Pitwall PR #40 merged on October 17, 2026 local time at
+`1bfd583a764373698193874328cbb2955dc09282`. The complete merge tree matches
+reviewed source head `8ab7410`; issue #23 is closed. The verified runtime and
+test inputs below are included in that merge.
+
+The console on main passes 96 shutdown cases per platform on
 macOS and Linux, plus continuous-update polling and pushed scenarios and Replay.
 The pressure checks keep independent synthetic uploads active through immediate
 resize and quit. The five-second exit deadline, expected exit codes, cursor and
@@ -31,8 +36,7 @@ A focused correction at `3c3bc04` waits for complete annotation counts within
 the same deadline and preserves the assertions. Eight deterministic decoder
 regressions plus RGB/monochrome instrument and activity-layout process checks
 pass on macOS and Linux. Production code and dependency pins are unchanged
-across these checkpoints. Review and adoption remain pending; this candidate
-is not on main or released.
+across these checkpoints. This is a merged development build, not a release.
 
 This status update changes no SVG, transcript or other capture asset. Existing
 recordings retain their original source, executable and verification provenance;
