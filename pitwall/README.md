@@ -6,7 +6,9 @@ and open `/pitwall/` on the local preview server.
 
 [index.html](index.html) composes the overview, status, feature and roadmap sections
 with static recordings. [styles.css](styles.css) owns the motorsport telemetry
-theme and responsive layout. Wide terminal recordings scroll within labeled,
+theme and responsive layout. The recorded-context preview is an unmerged
+candidate; the other recordings retain their own main/historical status.
+Wide terminal recordings scroll within labeled,
 keyboard-accessible regions; they are not an interactive web terminal.
 
 [CAPTURES.md](CAPTURES.md) owns recording provenance and refresh instructions.
