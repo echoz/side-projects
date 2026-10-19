@@ -3,6 +3,56 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Inferred stage following — D1b candidate
+
+The candidate adds opt-in `--follow-stages` after explicit selection of a starting
+stage. It records the operator's assumption that each later completion count
+means one forward leaf transition through the exact retained prescription,
+including repeats. The position is labeled **Inferred**; the next stage comes
+from the prescription. Absolute targets use the selected observation; no time
+or distance countdown is inferred.
+This is not native watch position. Missing, duplicate or reverse transitions may
+require correction, and detectable continuity failures make position uncertain.
+Neither silence nor counts beyond the final stage confirm workout completion.
+
+The first forward alignment creates version-3 interpretation while preserving
+version-1/version-2 recordings and the original assertion. Later corrections do
+not rewrite history. Bono needs no source plugin. This candidate is not merged
+or released and adds no physical watch/phone or fresh release-image qualification.
+
+### Current candidate recordings
+
+Captured October 19, 2026 local time with the actual native macOS daemon and
+Chio client through the CLI/PTY pipeline, using synthetic measurements only.
+The capture source packet SHA-256 is
+`e30469848cca3570b724aca56d1cc40fc69487af8add5dc1d7d4dbab428f1c8b`,
+based on main `d73318d2bee57170b39a1c077419b294c35ef7c2`. This identifies the
+source packet, not a Git commit. The actual TUI process check passed and both
+expanded-instrument captures received visual review. No whole-suite pass,
+merge, release, watch or phone qualification is implied.
+
+`workout-context-live.svg` / `.txt` and `workout-context-replay.svg` / `.txt`
+replace the alignment pair below at the same paths. Both show expanded Cycling
+instruments at 110 × 48 terminal cells; the SVGs are 951.158 × 888 and retain
+true colour. The inferred current stage is Recovery, 5 of 14, repeat 2 of 6;
+the next prescribed stage is Work, repeat 3 of 6. Heart rate is 145 bpm above
+the absolute 100–130 bpm target. Progress is unavailable because the stage
+boundary is unknown. Original Replay preserves that interpretation, paused at
+recorded input 3 of 4. Its bar measures recorded input position, not workout
+completion.
+
+Only these four approved synthetic assets were copied. SVG checks found no
+scripts, foreign objects, embedded images or external references; glyph links
+remain internal. Transcripts contain synthetic identities and measurements.
+These are actual application recordings, with no physical watch or phone.
+
+| Current asset | SHA-256 |
+| --- | --- |
+| `workout-context-live.svg` | `4e2b70ecb02ea2741854714d0e2011a338b9a785a6a90b0f8c19fd8c622e40a3` |
+| `workout-context-live.txt` | `622808012e88b4f7882db89a9f2b60d140d04f3816d843f60f546d0d727fc8e1` |
+| `workout-context-replay.svg` | `89781d4676b2c682138314f11eb7c902ff8ea898fa7aa8091e60244e5f30083f` |
+| `workout-context-replay.txt` | `9ead983d77f3d6c47e7599387e5095bb716a081466a86aab147e7b5ff091dbec` |
+
 ## Stage alignment — on main
 
 Bono works without a source plugin. Stage alignment builds on the
@@ -32,7 +82,7 @@ head `2bc924a`. This follows PR #44 at
 The merge does not regenerate recordings or establish fresh release-image or
 physical-device qualification.
 
-### Current premerge recordings
+### Superseded premerge alignment recordings
 
 Captured October 18, 2026 local time from source
 `b8fca06d90aa97793bce0798f82e33ec0efd2820`, tree
@@ -43,7 +93,8 @@ full suites passed for this source; the published recordings themselves are
 native macOS captures, not Linux or Garmin screen captures.
 
 `workout-context-live.svg` / `.txt` and `workout-context-replay.svg` / `.txt`
-replace the earlier context pair. Both show expanded Cycling instruments at
+replaced the earlier context pair at public-site base `3bcb89f`. These bytes are
+now superseded by the candidate pair above. Both show expanded Cycling instruments at
 110 × 48 terminal cells; the SVGs are 951.158 × 888 and retain true colour.
 Stage 2 of 14 is Work, repeat 1 of 6, with 15 seconds elapsed and 105 seconds
 remaining. Heart rate is 145 bpm inside the absolute 140–160 bpm target.
@@ -54,10 +105,10 @@ Only these four approved synthetic assets were copied. Transcripts contain
 synthetic identities and measurements. SVGs contain internal glyph references,
 with no scripts, foreign objects, embedded images or external references.
 The recording uses the running application, not a browser reconstruction;
-no physical watch or phone participates. These premerge captures are unchanged
-after the implementation merged; their source remains `b8fca06d`.
+no physical watch or phone participates. These historical premerge captures retain
+source `b8fca06d`; their original bytes remain in Git history.
 
-| Current asset | SHA-256 |
+| Historical asset at public-site base `3bcb89f` | SHA-256 |
 | --- | --- |
 | `workout-context-live.svg` | `b84643f96311b464fd489070068504f722b95acc21c703692c25cf8c245f3230` |
 | `workout-context-live.txt` | `901e7b5c2560322670b59772a2df5592cb6ef7af09fe2b4455da0daeb686179c` |

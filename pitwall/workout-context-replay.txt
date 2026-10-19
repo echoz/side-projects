@@ -1,14 +1,13 @@
 
  PITWALL / REPLAY · Cycling (auto) · Bars
  SIMULATOR — synthetic measurements · Timer: On (source observed)
- src 2026-10-19T03:41:28Z
+ src 2026-10-19T07:14:38Z
  Paused · historical · original output
- Plan: Synthetic six intervals · imported:cycling-alignment-v1
- Current 2/14 · Work · work · repetitions rep 1/6
- Remaining 105.0 s · elapsed 15.0 s · overrun 0.0 s
- ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱
- Target heartRate 140.0–160.0 bpm · actual 145.0 bpm (within)
- Next prescribed: Recovery · recovery · repetitions rep 1/6
+ Plan: Synthetic six intervals · imported:cycling-following-v1
+ Inferred 5/14 · Recovery · recovery · repetitions rep 2/6 · forward completions assumed
+ Progress unavailable: stage boundary unknown
+ Target heartRate 100.0–130.0 bpm · actual 145.0 bpm (above)
+ Next prescribed: Work · work · repetitions rep 3/6
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
  │  _   _     _            │ │  _       _             │ │  _   _                 │ │          _             │
  │  _| | |   |_            │ │  _| |_| |_             │ │ |_| |_                 │ │   | |_| |_             │
@@ -23,8 +22,8 @@
  ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
 
  ╭ WORKOUT / OBSERVED ───────────────────────────────╮ ╭ TERRAIN / OBSERVED ────────────────────────────────╮
- │ Active time: 32:29                                │ │          _     _                   Ascent: 120.0 m │
- │ Distance: 6.22 km                                 │ │  _    |  _|   |_                   Descent: 30.0 m │
+ │ Active time: 32:39                                │ │          _     _                   Ascent: 120.0 m │
+ │ Distance: 6.23 km                                 │ │  _    |  _|   |_                   Descent: 30.0 m │
  │ Speed: 8.5 m/s                                    │ │       | |_  .  _|                                  │
  │ Elapsed time: 33:14                               │ │ ELEVATION: -12.5 m                                 │
  ╰───────────────────────────────────────────────────╯ ╰────────────────────────────────────────────────────╯
@@ -40,8 +39,9 @@
 
 
 
- Paused · historical · Recorded input 4 / 4
- [━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+
+ Paused · historical · Recorded input 3 / 4
+ [━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━────────────────────────────────────]
  Space play/pause · [/] step · b start · r reopen
  1–6 context · n/p switch · j/k fields · o dashboard · v layout · a dashboard
  g dials · d diagnostics · m menu · q quit · Ctrl-C quit
