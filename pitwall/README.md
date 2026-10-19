@@ -6,8 +6,10 @@ and open `/pitwall/` on the local preview server.
 
 [index.html](index.html) composes the overview, status, feature and roadmap sections
 with static recordings. [styles.css](styles.css) owns the motorsport telemetry
-theme and responsive layout. The recorded-context preview is an unmerged
-candidate; the other recordings retain their own main/historical status.
+theme and responsive layout. Recorded workout context is implemented on main
+following the October 18 merge.
+Its October 17 recordings remain premerge captures; other recordings retain
+their own provenance.
 Wide terminal recordings scroll within labeled,
 keyboard-accessible regions; they are not an interactive web terminal.
 
