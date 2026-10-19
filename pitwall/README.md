@@ -8,8 +8,11 @@ and open `/pitwall/` on the local preview server.
 with static recordings. [styles.css](styles.css) owns the motorsport telemetry
 theme and responsive layout. Recorded workout context is implemented on main
 following the October 18 merge.
-Its October 17 recordings remain premerge captures; other recordings retain
-their own provenance.
+The workout-context preview shows actual October 18 synthetic captures from
+the unmerged stage-alignment candidate. Earlier captures retain their historical
+provenance in the capture guide. The roadmap identifies alignment as a candidate.
+Bono works without a source plugin; external source acquisition and athlete-relative
+targets remain future work.
 Wide terminal recordings scroll within labeled,
 keyboard-accessible regions; they are not an interactive web terminal.
 

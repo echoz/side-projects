@@ -3,7 +3,59 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Recorded workout context — on main
+## Stage alignment — unmerged candidate
+
+Bono works without a source plugin. The stage-alignment candidate builds on the
+recorded workout context already on main. It adds explicit one-based stage
+occurrence selection, including repeat identity, and an optional
+`startAtObservation` anchor at the current committed reading. Historical readings
+cannot be selected as anchors. Source time and distance measure progress from
+that anchor. Absolute heart-rate, power, cadence, speed and pace targets can be
+compared with the selected observation.
+
+Missing or changed counters, counter resets and source-clock discontinuities
+invalidate position. The candidate does not advance stages automatically.
+Its first alignment creates a version-2 run while retaining the version-1 run;
+later corrections append to the aligned run. History and `workout tui --run-id`
+can reopen an older run's original recording. The latter starts Original Replay;
+the menu can return to Live.
+
+Athlete-relative settings, provider lookup, the Blackbox adapter and automatic
+advancement remain future work. This candidate is not merged or released and
+adds no physical watch/phone or release-image qualification.
+
+### Current candidate recordings
+
+Captured October 18, 2026 local time from source
+`b8fca06d90aa97793bce0798f82e33ec0efd2820`, tree
+`8c7aeec83f1c08a8223ff2053ee622da3a51ef21`, with the actual native macOS
+Swift 6.4 daemon and Chio client in a PTY. The synthetic-only capture check
+passed and its process was reaped before export handoff. Native macOS and Linux
+full suites passed for this source; the published recordings themselves are
+native macOS captures, not Linux or Garmin screen captures.
+
+`workout-context-live.svg` / `.txt` and `workout-context-replay.svg` / `.txt`
+replace the earlier context pair. Both show expanded Cycling instruments at
+110 × 48 terminal cells; the SVGs are 951.158 × 888 and retain true colour.
+Stage 2 of 14 is Work, repeat 1 of 6, with 15 seconds elapsed and 105 seconds
+remaining. Heart rate is 145 bpm inside the absolute 140–160 bpm target.
+Original Replay retains the same interpretation, paused at recorded input
+4 of 4. Its playback bar measures recorded input position, not workout completion.
+
+Only these four approved synthetic assets were copied. Transcripts contain
+synthetic identities and measurements. SVGs contain internal glyph references,
+with no scripts, foreign objects, embedded images or external references.
+The recording uses the running application, not a browser reconstruction;
+no physical watch or phone participates. This remains an unmerged candidate.
+
+| Current asset | SHA-256 |
+| --- | --- |
+| `workout-context-live.svg` | `b84643f96311b464fd489070068504f722b95acc21c703692c25cf8c245f3230` |
+| `workout-context-live.txt` | `901e7b5c2560322670b59772a2df5592cb6ef7af09fe2b4455da0daeb686179c` |
+| `workout-context-replay.svg` | `741ecec25a19c23f8b36632a51a429458eb2373e431c3599efe02dc1ee04e648` |
+| `workout-context-replay.txt` | `3659bbcd720b0680955ddb878331b7f9cf1fc5a1dbde89f29d14bf57f0ec05f4` |
+
+## Recorded workout context — merged behavior, superseded recordings
 
 Pitwall PR #43 merged on October 18, 2026 local time at
 `8fa99d6170510cef9b3be9abb9a5aa698ce0bbdc`. Its complete merge tree
@@ -14,12 +66,13 @@ on main, with release qualification still open.
 
 Captured October 17, 2026 local time from the actual native macOS daemon and
 Chio client in a PTY, using synthetic readings and an explicitly selected imported
-cycling prescription revision. These remain premerge working-candidate recordings;
-no capture was refreshed from the merged source or a main binary. The separate
+cycling prescription revision. These premerge working-candidate recordings have
+since been replaced by the candidate pair above. No
+recording in this historical section came from a main binary. The separate
 existing main-dashboard assets retain their original provenance below.
 
-`workout-context-live.svg` / `.txt` and `workout-context-replay.svg` / `.txt`
-record the expanded Cycling instruments at 110 × 36 terminal cells; each SVG is
+At public-site commit `4212d08`, `workout-context-live.svg` / `.txt` and
+`workout-context-replay.svg` / `.txt` recorded expanded Cycling instruments at 110 × 36 terminal cells; each SVG is
 951.158 × 672. Capture waits for the instrument-specific marker before exporting
 actual terminal cells. Live shows 245 W, 145 bpm, imported revision
 `cycling-intervals-v1` and unresolved stage position. Replay shows those original
@@ -39,9 +92,9 @@ acquisition, newer-logic reinterpretation, physical delivery and release-image
 qualification remain separate work. The merge adds no fresh capture or release
 qualification evidence.
 
-### Premerge capture integrity
+### Superseded premerge capture integrity
 
-| Asset | SHA-256 |
+| Historical asset at public-site commit `4212d08` | SHA-256 |
 | --- | --- |
 | `workout-context-live.svg` | `bea8e0f29025a1614faac21992a645bd2f98d4496469e2fc8835ff2670ddaa31` |
 | `workout-context-live.txt` | `45918daba190d2a8c24c3bbc5d74ad73d44a3240b4562f9066680f9dce6c4cc6` |
