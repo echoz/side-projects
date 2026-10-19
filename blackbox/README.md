@@ -17,8 +17,18 @@ These are synthetic examples, not Garmin payloads or live recovery evidence.
 The page makes no service request and stores no persistent state; reloading resets
 the example. Preserve the owning project's stated remote-sync limitations.
 The October 18 overview records merged recent refresh and tracked catch-up,
-distinct from full-history completion, release and live qualification. Keep those
+distinct from full-history completion, release and supported deployment. Keep those
 boundaries explicit; this page is not application deployment evidence.
+Current-build checks in an owner-local Apple VM observed successful MFA
+authentication and a fresh archive binding. Ordinary scheduling acquired seven
+recent daily summaries without manual sync; independent importing produced seven
+canonical days without failures. Compiled CLI metadata queries checked accepted
+and imported coverage, canonical days and source references. A compatible restart
+retained credential presence without new MFA; run results, imported coverage and
+canonical source references remained identical. These checks do not establish
+token renewal, rotation or supported native Docker deployment. Full-history traversal,
+activities and FIT acquisition remain pending. Keep the browser demonstration
+synthetic.
 
 Run `pnpm verify` from the repository root. [Blackbox browser checks](../tests/browser/blackbox.spec.js)
 cover query shape, missing versus zero, whole-record replacement, retained receipts
