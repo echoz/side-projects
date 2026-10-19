@@ -1,8 +1,13 @@
 
  PITWALL / WORKOUT CONTROL
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Context read OK · Age: Source 64 s (clock unverified) · interpretation 0 s · lag 0 inputs
- Plan: Synthetic six intervals · imported:cycling-intervals-v1 · Stage unresolved
+ Context read OK · Age: Source 84 s (clock unverified) · interpretation 2 s · lag 0 inputs
+ Plan: Synthetic six intervals · imported:cycling-alignment-v1
+ Current 2/14 · Work · work · repetitions rep 1/6
+ Remaining 105.0 s · elapsed 15.0 s · overrun 0.0 s
+ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱
+ Target heartRate 140.0–160.0 bpm · actual 145.0 bpm (within)
+ Next prescribed: Recovery · recovery · repetitions rep 1/6
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
  │  _   _     _            │ │  _       _             │ │  _   _                 │ │          _             │
  │  _| | |   |_            │ │  _| |_| |_             │ │ |_| |_                 │ │   | |_| |_             │
@@ -17,16 +22,23 @@
  ╰─────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯ ╰────────────────────────╯
 
  ╭ WORKOUT / OBSERVED ───────────────────────────────╮ ╭ TERRAIN / OBSERVED ────────────────────────────────╮
- │ Active time: 32:14                                │ │          _     _                   Ascent: 120.0 m │
- │ Distance: 6.20 km                                 │ │  _    |  _|   |_                   Descent: 30.0 m │
+ │ Active time: 32:29                                │ │          _     _                   Ascent: 120.0 m │
+ │ Distance: 6.22 km                                 │ │  _    |  _|   |_                   Descent: 30.0 m │
  │ Speed: 8.5 m/s                                    │ │       | |_  .  _|                                  │
  │ Elapsed time: 33:14                               │ │ ELEVATION: -12.5 m                                 │
  ╰───────────────────────────────────────────────────╯ ╰────────────────────────────────────────────────────╯
 
- Synthetic ride · Display scales only · no workout targets
+ Synthetic ride · Display scales only
 
  1 Summary  2 Navigation  3 Pressure
  4 Effort   5 Swimming    6 Cycling
+
+
+
+
+
+
+
 
 
  Last reported · Battery: 72% · Fixed 10 s · d details
