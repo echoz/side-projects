@@ -16,6 +16,9 @@ absent instead of inheriting an older value, and zero remains a measured value.
 These are synthetic examples, not Garmin payloads or live recovery evidence.
 The page makes no service request and stores no persistent state; reloading resets
 the example. Preserve the owning project's stated remote-sync limitations.
+The October 18 overview distinguishes the recent-sync candidate from the default
+branch, full-history completion, release and live qualification. Recheck that
+distinction after the application change merges; this page is not deployment evidence.
 
 Run `pnpm verify` from the repository root. [Blackbox browser checks](../tests/browser/blackbox.spec.js)
 cover query shape, missing versus zero, whole-record replacement, retained receipts
