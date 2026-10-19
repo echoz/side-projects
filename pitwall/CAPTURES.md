@@ -3,6 +3,51 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Recorded workout context — on main
+
+Pitwall PR #43 merged on October 18, 2026 local time at
+`8fa99d6170510cef9b3be9abb9a5aa698ce0bbdc`. Its complete merge tree
+`1542824ea70bcc8435de011252ef56430e5ac2ed` matches reviewed head `f6c78216`.
+Bono combines readings with an explicitly selected imported plan revision and
+retains original interpretations across restart and Replay. This is implemented
+on main, with release qualification still open.
+
+Captured October 17, 2026 local time from the actual native macOS daemon and
+Chio client in a PTY, using synthetic readings and an explicitly selected imported
+cycling prescription revision. These remain premerge working-candidate recordings;
+no capture was refreshed from the merged source or a main binary. The separate
+existing main-dashboard assets retain their original provenance below.
+
+`workout-context-live.svg` / `.txt` and `workout-context-replay.svg` / `.txt`
+record the expanded Cycling instruments at 110 × 36 terminal cells; each SVG is
+951.158 × 672. Capture waits for the instrument-specific marker before exporting
+actual terminal cells. Live shows 245 W, 145 bpm, imported revision
+`cycling-intervals-v1` and unresolved stage position. Replay shows those original
+facts paused at input 2 of 18, with retained-input position rather than workout
+completion. The visible source age and interpretation age describe different
+facts. Source average/max values remain independent supplied measurements.
+
+The premerge candidate’s local synthetic acceptance covers Garmin simulator uploads,
+lost-ACK retry, accepted/consumed interpretation lag, restart/catch-up, unchanged
+original outputs, exclusion of a later plan from frozen replay, and normal quit
+with terminal restoration. Native macOS and Linux suites passed at their own
+candidate checkpoints; exact integrated evidence is owned by the private project.
+The published recordings themselves use a local synthetic daemon fixture, not a
+watch, phone or Garmin-screen recording. No private source, raw logs, credentials
+or real workout data are included. Plan alignment, targets, corrections, provider
+acquisition, newer-logic reinterpretation, physical delivery and release-image
+qualification remain separate work. The merge adds no fresh capture or release
+qualification evidence.
+
+### Premerge capture integrity
+
+| Asset | SHA-256 |
+| --- | --- |
+| `workout-context-live.svg` | `bea8e0f29025a1614faac21992a645bd2f98d4496469e2fc8835ff2670ddaa31` |
+| `workout-context-live.txt` | `45918daba190d2a8c24c3bbc5d74ad73d44a3240b4562f9066680f9dce6c4cc6` |
+| `workout-context-replay.svg` | `129595ff66f1199ad07444ef09191c4853eb52c419801b82068f6af8869b2be4` |
+| `workout-context-replay.txt` | `43df9b8eb49ddb066996a2be13db1c568d6dec76f588154a67773738a57d5a14` |
+
 ## Console qualification — on main
 
 Pitwall PR #40 merged on October 17, 2026 local time at
