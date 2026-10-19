@@ -8,9 +8,13 @@ and open `/pitwall/` on the local preview server.
 with static recordings. [styles.css](styles.css) owns the motorsport telemetry
 theme and responsive layout. Recorded workout context, explicit stage alignment,
 source-anchored progress and absolute target comparisons are implemented on main.
-The workout-context preview retains actual October 18 premerge synthetic captures;
-they have not been regenerated from the merge. Earlier captures retain their
-historical provenance in the capture guide. Automatic stage advancement remains upcoming.
+The workout-context preview uses actual October 19 native macOS synthetic captures
+of the D1b candidate. Earlier captures retain their historical provenance in the
+capture guide. The candidate adds opt-in `--follow-stages`: completion counts infer the current
+and next stages after an explicit forward-progress assertion. It compares absolute targets without
+inventing countdowns or claiming native watch position. Missing, duplicate or
+reverse transitions may require correction. Version-3 interpretation preserves
+earlier recordings and the original assertion. The candidate is not merged or released.
 Bono works without a source plugin; external source acquisition and athlete-relative
 targets remain future work.
 Wide terminal recordings scroll within labeled,
