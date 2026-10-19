@@ -3,9 +3,9 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Stage alignment — unmerged candidate
+## Stage alignment — on main
 
-Bono works without a source plugin. The stage-alignment candidate builds on the
+Bono works without a source plugin. Stage alignment builds on the
 recorded workout context already on main. It adds explicit one-based stage
 occurrence selection, including repeat identity, and an optional
 `startAtObservation` anchor at the current committed reading. Historical readings
@@ -14,17 +14,25 @@ that anchor. Absolute heart-rate, power, cadence, speed and pace targets can be
 compared with the selected observation.
 
 Missing or changed counters, counter resets and source-clock discontinuities
-invalidate position. The candidate does not advance stages automatically.
+invalidate position. Bono does not advance stages automatically.
 Its first alignment creates a version-2 run while retaining the version-1 run;
 later corrections append to the aligned run. History and `workout tui --run-id`
 can reopen an older run's original recording. The latter starts Original Replay;
 the menu can return to Live.
 
 Athlete-relative settings, provider lookup, the Blackbox adapter and automatic
-advancement remain future work. This candidate is not merged or released and
+advancement remain future work. This is implemented on main, not released, and
 adds no physical watch/phone or release-image qualification.
 
-### Current candidate recordings
+Pitwall PR #45 merged at `d73318d2bee57170b39a1c077419b294c35ef7c2`.
+Its merge tree `4c6c3102ea684e4869de7302ab4435a938492a76` matches the reviewed
+head `2bc924a`. This follows PR #44 at
+`50001d9ba697d5c9a1e740dea0086ecaf1985580`, whose tree
+`220437189f66396fd2dc93a4266936a51b000c66` matches its reviewed candidate.
+The merge does not regenerate recordings or establish fresh release-image or
+physical-device qualification.
+
+### Current premerge recordings
 
 Captured October 18, 2026 local time from source
 `b8fca06d90aa97793bce0798f82e33ec0efd2820`, tree
@@ -46,7 +54,8 @@ Only these four approved synthetic assets were copied. Transcripts contain
 synthetic identities and measurements. SVGs contain internal glyph references,
 with no scripts, foreign objects, embedded images or external references.
 The recording uses the running application, not a browser reconstruction;
-no physical watch or phone participates. This remains an unmerged candidate.
+no physical watch or phone participates. These premerge captures are unchanged
+after the implementation merged; their source remains `b8fca06d`.
 
 | Current asset | SHA-256 |
 | --- | --- |
@@ -67,7 +76,7 @@ on main, with release qualification still open.
 Captured October 17, 2026 local time from the actual native macOS daemon and
 Chio client in a PTY, using synthetic readings and an explicitly selected imported
 cycling prescription revision. These premerge working-candidate recordings have
-since been replaced by the candidate pair above. No
+since been replaced by the premerge alignment pair above. No
 recording in this historical section came from a main binary. The separate
 existing main-dashboard assets retain their original provenance below.
 
