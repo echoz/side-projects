@@ -116,7 +116,7 @@ contract too. Preserve framework-required names such as Playwright's `context`
 fixture when their technical meaning fits.
 
 Recorded captures and binary images are evidence assets, not owned declarations
-to rename. Private project implementations, external Chio/Perch sources, generated
+to rename. Private project implementations, external Chio, Perch and Toa Payoh Dragon sources, generated
 output and third-party dependencies remain outside this source review; record
 those limits. A retained or deferred name creates no naming baseline or permanent
 waiver. Keep the schema-2 source inventory and owning gates unchanged unless the

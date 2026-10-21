@@ -3,9 +3,9 @@ name: Public site
 on:
   push:
     branches: [main]
-    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", "perch/**", "public-assets.json", ".documentation-rules.json", "README.md", "AGENTS.md", "VERIFYING.md", "scripts/**", "tests/**", "package.json", "pnpm-lock.yaml", "playwright.config.js", ".github/workflows/pages.yml"]
+    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", "perch/**", "dragon/**", "public-assets.json", ".documentation-rules.json", "README.md", "AGENTS.md", "VERIFYING.md", "scripts/**", "tests/**", "package.json", "pnpm-lock.yaml", "playwright.config.js", ".github/workflows/pages.yml"]
   pull_request:
-    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", "perch/**", "public-assets.json", ".documentation-rules.json", "README.md", "AGENTS.md", "VERIFYING.md", "scripts/**", "tests/**", "package.json", "pnpm-lock.yaml", "playwright.config.js", ".github/workflows/pages.yml"]
+    paths: ["index.html", "styles.css", "pitwall/**", "marquee/**", "blackbox/**", "perch/**", "dragon/**", "public-assets.json", ".documentation-rules.json", "README.md", "AGENTS.md", "VERIFYING.md", "scripts/**", "tests/**", "package.json", "pnpm-lock.yaml", "playwright.config.js", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
