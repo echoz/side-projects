@@ -3,7 +3,7 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Unified Bono dashboard — current candidate recordings
+## Unified Bono dashboard — current premerge recordings
 
 Captured October 20–21, 2026 local time with the actual native macOS daemon and
 Chio TUI, using disposable synthetic telemetry. One `pitwall tui` command selects
@@ -45,8 +45,9 @@ embedded images and external references. Font glyph links remain internal.
 
 The Garmin PNGs are unchanged from their separately recorded simulator checks.
 This update adds no physical watch, phone, real-provider, VPS or Docker release-image
-qualification. The application and public-site changes remain candidates;
-site deployment requires a later authorized merge.
+qualification. The unified console, synthetic source refresh and retained schedule
+attachment are implemented. These unchanged premerge recordings do not establish
+site deployment or release qualification.
 
 | Current asset | SHA-256 |
 | --- | --- |

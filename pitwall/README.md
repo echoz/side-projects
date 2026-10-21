@@ -13,24 +13,23 @@ Stage following is also implemented on main. Opt-in
 forward-progress assertion. It compares absolute targets without inventing
 countdowns or claiming native watch position. Missing, duplicate or reverse
 transitions may require correction. Earlier recordings and the original assertion
-remain available. The visible terminal recordings belong to the unified-console
-candidate described below; this is not a release.
+remain available. The visible terminal recordings retain their premerge candidate provenance;
+they do not establish release qualification.
 
-The unified-console candidate consolidates presentation into `pitwall tui`.
+The unified console consolidates presentation into `pitwall tui`.
 Bono's committed interpretation feeds both modes: Live receives private daemon
 pushes and Original Replay reads retained outputs using its own playback clock.
 The chooser runs neither provider. Changing mode stops the previous provider.
 Raw CLI queries remain separate automation operations; the dashboard does not
 poll or substitute today's raw aggregates into recorded output. The refreshed
 synthetic recordings and their qualification limits are recorded in
-[CAPTURES.md](CAPTURES.md). Site deployment remains pending merge.
+[CAPTURES.md](CAPTURES.md). These records do not establish site deployment.
 
-The roadmap marks synthetic PWS2 workout-source process hosting as in progress.
-The candidate adds manual source schedule refresh/status
+Synthetic PWS2 workout-source process hosting provides manual source schedule refresh/status
 for an explicit 1–31-day `[start,end)` window and query time zone, separate durable
 source storage and structured CLI output. A failed refresh preserves the prior
-snapshot; an empty schedule remains valid. The next candidate adds explicit
-attachment to a workout and the same retained schedule in Live/Original Replay.
+snapshot; an empty schedule remains valid. Explicit attachment to a workout
+retains the same schedule in Live/Original Replay.
 The `s` page keeps source order, cancellations and uncertain revisions visible.
 Attachment selects no prescription and changes no active stage. Exact-prescription
 acquisition, real Blackbox/provider qualification and athlete-relative targets
