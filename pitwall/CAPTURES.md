@@ -3,6 +3,42 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Attached schedules — candidate
+
+Captured October 20, 2026 with the actual native macOS daemon, synthetic PWS2
+source executable, and Chio client through the CLI/PTY pipeline. The capture
+source packet SHA-256 is
+`1ea49e3f2165d11fc99198a2263a83c2ec38f20c0d8e915daecdd6d47382b08d`.
+This identifies the tested candidate snapshot, not a released or merged commit.
+
+`workout-schedule-live.svg` / `.txt` and `workout-schedule-replay.svg` / `.txt`
+show the attached schedule inspector at 110 × 36 terminal cells. Both SVGs are
+951.158 × 672 and preserve true colour (`TERM=xterm-256color`,
+`COLORTERM=truecolor`, with `NO_COLOR` absent). Live shows source attribution and
+two running entries with the same name but distinct morning/evening identities.
+Replay shows the next page: a cancelled ride and an unresolved prescription
+revision, paused at recorded input 2 of 2. This position is not workout progress.
+
+The source timestamps are fixed synthetic facts. The old September 23 measurement
+and its large, clock-unverified age remain visible; the capture does not pretend
+that the measurement is fresh. The attached schedule window is October 19–26.
+Attachment selects no prescription, infers no match, and changes no active stage.
+Later provider refreshes do not replace the recorded schedule.
+
+The actual process check exercised Live/Replay, schedule paging, 80 × 24 and
+36 × 18 resizing, and exit with terminal restoration within five seconds.
+Only the four approved synthetic recordings were copied. SVG checks found no
+scripts, foreign objects, embedded images or external references; glyph links
+remain internal. These checks add no real provider, physical watch/phone or
+Docker release-image qualification. Site deployment remains pending merge.
+
+| Candidate asset | SHA-256 |
+| --- | --- |
+| `workout-schedule-live.svg` | `38165ead4d11f92ea3b84d8aea30c26d08c9fbc36e53ddac5c543a835cd10524` |
+| `workout-schedule-live.txt` | `86fc3063335988110cb22af6f69eef72dd8e4c09e33525ffdb9d65a5f3e52b54` |
+| `workout-schedule-replay.svg` | `b16ce5e3e4c3006c4038a95fac9f8199c0c6b193c9343bba4bc7c8a53e697c2d` |
+| `workout-schedule-replay.txt` | `7747a817a43b49d2d79b783ff559d70deae5c936eef09e7c01b485bb0a432749` |
+
 ## Inferred stage following — on main
 
 Stage following adds opt-in `--follow-stages` after explicit selection of a starting
