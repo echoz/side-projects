@@ -8,15 +8,23 @@ and open `/pitwall/` on the local preview server.
 with static recordings. [styles.css](styles.css) owns the motorsport telemetry
 theme and responsive layout. Recorded workout context, explicit stage alignment,
 source-anchored progress and absolute target comparisons are implemented on main.
-The workout-context preview uses actual October 19 native macOS synthetic captures
-of the D1b candidate. Earlier captures retain their historical provenance in the
-capture guide. The candidate adds opt-in `--follow-stages`: completion counts infer the current
-and next stages after an explicit forward-progress assertion. It compares absolute targets without
-inventing countdowns or claiming native watch position. Missing, duplicate or
-reverse transitions may require correction. Version-3 interpretation preserves
-earlier recordings and the original assertion. The candidate is not merged or released.
-Bono works without a source plugin; external source acquisition and athlete-relative
-targets remain future work.
+Stage following is also implemented on main. The workout-context preview retains
+its actual October 19 native macOS synthetic premerge captures. Opt-in
+`--follow-stages` infers position from completion counts after an explicit
+forward-progress assertion. It compares absolute targets without inventing
+countdowns or claiming native watch position. Missing, duplicate or reverse
+transitions may require correction. Earlier recordings and the original assertion
+remain available. Capture bytes and source provenance are unchanged; this is not
+a release.
+
+The roadmap marks synthetic PWS2 workout-source process hosting as in progress.
+The candidate adds manual source schedule refresh/status
+for an explicit 1–31-day `[start,end)` window and query time zone, separate durable
+source storage and structured CLI output. A failed refresh preserves the prior
+snapshot; an empty schedule remains valid. No new TUI behavior is claimed.
+Explicit attachment of retained schedules to Bono, then candidates in Live/Replay,
+exact-prescription acquisition through the application, real Blackbox/provider
+qualification and athlete-relative targets remain upcoming. Bono needs no plugin.
 Wide terminal recordings scroll within labeled,
 keyboard-accessible regions; they are not an interactive web terminal.
 

@@ -3,9 +3,9 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Inferred stage following — D1b candidate
+## Inferred stage following — on main
 
-The candidate adds opt-in `--follow-stages` after explicit selection of a starting
+Stage following adds opt-in `--follow-stages` after explicit selection of a starting
 stage. It records the operator's assumption that each later completion count
 means one forward leaf transition through the exact retained prescription,
 including repeats. The position is labeled **Inferred**; the next stage comes
@@ -17,10 +17,11 @@ Neither silence nor counts beyond the final stage confirm workout completion.
 
 The first forward alignment creates version-3 interpretation while preserving
 version-1/version-2 recordings and the original assertion. Later corrections do
-not rewrite history. Bono needs no source plugin. This candidate is not merged
-or released and adds no physical watch/phone or fresh release-image qualification.
+not rewrite history. Bono needs no source plugin. Stage following is now merged
+on main. The existing premerge recordings retain their original source and bytes;
+the merge adds no fresh capture, release-image or physical watch/phone qualification.
 
-### Current candidate recordings
+### Current premerge stage-following recordings
 
 Captured October 19, 2026 local time with the actual native macOS daemon and
 Chio client through the CLI/PTY pipeline, using synthetic measurements only.
@@ -28,8 +29,8 @@ The capture source packet SHA-256 is
 `e30469848cca3570b724aca56d1cc40fc69487af8add5dc1d7d4dbab428f1c8b`,
 based on main `d73318d2bee57170b39a1c077419b294c35ef7c2`. This identifies the
 source packet, not a Git commit. The actual TUI process check passed and both
-expanded-instrument captures received visual review. No whole-suite pass,
-merge, release, watch or phone qualification is implied.
+expanded-instrument captures received visual review. These capture checks alone
+do not establish a whole-suite pass, release, watch or phone qualification.
 
 `workout-context-live.svg` / `.txt` and `workout-context-replay.svg` / `.txt`
 replace the alignment pair below at the same paths. Both show expanded Cycling
@@ -64,14 +65,14 @@ that anchor. Absolute heart-rate, power, cadence, speed and pace targets can be
 compared with the selected observation.
 
 Missing or changed counters, counter resets and source-clock discontinuities
-invalidate position. Bono does not advance stages automatically.
+invalidate position. Without the opt-in stage-following mode above, Bono does not advance stages automatically.
 Its first alignment creates a version-2 run while retaining the version-1 run;
 later corrections append to the aligned run. History and `workout tui --run-id`
 can reopen an older run's original recording. The latter starts Original Replay;
 the menu can return to Live.
 
-Athlete-relative settings, provider lookup, the Blackbox adapter and automatic
-advancement remain future work. This is implemented on main, not released, and
+Athlete-relative settings, provider lookup and the Blackbox adapter remain
+future work. This is implemented on main, not released, and
 adds no physical watch/phone or release-image qualification.
 
 Pitwall PR #45 merged at `d73318d2bee57170b39a1c077419b294c35ef7c2`.
@@ -94,7 +95,7 @@ native macOS captures, not Linux or Garmin screen captures.
 
 `workout-context-live.svg` / `.txt` and `workout-context-replay.svg` / `.txt`
 replaced the earlier context pair at public-site base `3bcb89f`. These bytes are
-now superseded by the candidate pair above. Both show expanded Cycling instruments at
+now superseded by the stage-following pair above. Both show expanded Cycling instruments at
 110 × 48 terminal cells; the SVGs are 951.158 × 888 and retain true colour.
 Stage 2 of 14 is Work, repeat 1 of 6, with 15 seconds elapsed and 105 seconds
 remaining. Heart rate is 145 bpm inside the absolute 140–160 bpm target.
