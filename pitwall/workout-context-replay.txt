@@ -1,8 +1,8 @@
 
  PITWALL / REPLAY · Cycling (auto) · Bars
  SIMULATOR — synthetic measurements · Timer: On (source observed)
- src 2026-10-19T07:14:38Z
- Paused · historical · original output
+ src 2026-10-21T07:14:48Z
+ Historical; source clock unverified
  Plan: Synthetic six intervals · imported:cycling-following-v1
  Inferred 5/14 · Recovery · recovery · repetitions rep 2/6 · forward completions assumed
  Progress unavailable: stage boundary unknown
@@ -41,7 +41,7 @@
 
 
  Paused · historical · Recorded input 3 / 4
- [━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━────────────────────────────────────]
+ Retained input position [━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━────────────────────────────]
  Space play/pause · [/] step · b start · r reopen
  1–6 context · n/p switch · j/k fields · o dashboard · v layout · a dashboard
  g dials · d diagnostics · m menu · q quit · Ctrl-C quit
