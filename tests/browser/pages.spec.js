@@ -34,7 +34,7 @@ test('each local page offers a keyboard skip link', async ({ page }) => {
 
 test('index status ribbons expose construction status and the released version', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('img', { name: 'Under construction', exact: true })).toHaveCount(4);
+  await expect(page.getByRole('img', { name: 'Under construction', exact: true })).toHaveCount(5);
   await expect(page.getByText('v0.1.0', { exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: /Chio/ })).toHaveAttribute('href', 'https://echoz.github.io/Chio/');
   await expect(page.getByRole('link', { name: 'Explore Perch', exact: true })).toHaveAttribute('href', 'https://echoz.github.io/Perch/');
@@ -50,8 +50,9 @@ test('index groups software and physical projects separately', async ({ page }) 
   for (const name of ['Explore Pitwall', 'Explore Marquee', 'Explore Blackbox', 'Explore Chio']) {
     await expect(software.getByRole('link', { name, exact: true })).toBeVisible();
   }
-  await expect(physical.getByRole('link')).toHaveCount(1);
+  await expect(physical.getByRole('link')).toHaveCount(2);
   await expect(physical.getByRole('link', { name: 'Explore Perch', exact: true })).toBeVisible();
+  await expect(physical.getByRole('link', { name: 'Explore Toa Payoh Dragon', exact: true })).toHaveAttribute('href', 'https://echoz.github.io/ToaPayohDragon/');
 });
 
 test('Perch’s former address redirects to its own GitHub Pages site', async ({ page, context }) => {

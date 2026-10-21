@@ -42,14 +42,15 @@ consumer-facing site roots: the index at `.` and four nested page directories.
 Each owns its source-root `README.md`. The Python scripts and test fixtures support
 this repository's contributor workflow; they are not separately offered tools.
 The page-bound demos expose no public framework component API. Private applications
-and the external Chio/Perch implementations are outside this repository's inventory.
+and the external Chio, Perch and Toa Payoh Dragon implementations are outside this repository's inventory.
 
 Present the collection as AI-assisted, deliberately curated personal projects,
 mostly built to scratch an itch. Keep the README a brief introduction, project
 list and publishing guide; put detailed capabilities and limits on the project
 pages. Group the index into Metaphysical (software, "It worked on my machine.") for Pitwall,
 Marquee, Blackbox and Chio, and Physical things ("Some assembly required.") for
-Perch. Use section headings above project headings, and preserve each project’s
+Perch and Toa Payoh Dragon. Use section headings above project headings, and
+preserve each project’s
 card identity and status ribbon. Pitwall capture provenance and refresh
 instructions live in `pitwall/CAPTURES.md`; read it before updating those captures or their claims.
 
@@ -66,6 +67,15 @@ duplicating the page or archives here. Maintain the warm, organic theme of the
 index entry and relocation page.
 Keep the W0.1 candidate status and physical-fit limits explicit. Accepted card fit
 does not establish revised player fit, headphone retention or loaded stability.
+
+Toa Payoh Dragon links to `https://echoz.github.io/ToaPayohDragon/` and its
+public `echoz/ToaPayohDragon` repository. The index card uses cream, orange and
+blue, rounded playful type and the approved v03 CAD render in `dragon/hero.webp`.
+That assets-only directory belongs to the index; it is not a separate page or
+deliverable. Keep v03 fit-test candidate status explicit: 94 parts, 29 fit samples,
+six-colour PLA, X1 Carbon with a 0.4 mm nozzle and no AMS. Physical fit and print
+success remain untested; do not claim every part prints without supports.
+
 Keep the diagonal index-card ribbons current with each project's release status;
 show only the version for a release, and repeating yellow-and-black construction
 stripes for ongoing work. Give construction ribbons an accessible status label
@@ -81,7 +91,7 @@ workflow path triggers current for any new project directory. Build through
 `scripts/build_site.py` and run `pnpm verify` before PR readiness or publishing. The workflow uploads
 only the validated `_site` directory. Follow [VERIFYING.md](VERIFYING.md) for setup,
 the fixed documentation-tool setup, test contracts and manual browser checks.
-The 0.1.8 documentation gate uses schema 2 to check the five declared source roots,
+The 0.1.9 documentation gate uses schema 2 to check the five declared source roots,
 their READMEs and local links across eight current Markdown guides. New page
 discovery, actual source ownership and useful content remain review responsibilities.
 Keep the source map and `.documentation-rules.json` current without fake roots,
