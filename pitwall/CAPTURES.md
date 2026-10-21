@@ -3,6 +3,89 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Unified Bono dashboard — current candidate recordings
+
+Captured October 20–21, 2026 local time with the actual native macOS daemon and
+Chio TUI, using disposable synthetic telemetry. One `pitwall tui` command selects
+Live or Original Replay. Live receives committed Bono status from the private
+daemon socket. Replay reads retained interpretations on a recorded-input clock;
+both modes feed the same map, instruments, stage and schedule views.
+
+The refreshed stage, map, Running, cycling-bars/dials and terrain recordings
+come from source packet
+`5a72ea1dd96e8fbdb9c315bb0d7b33c5dae532ac9c86530963e177d3b8585e53`.
+The unchanged gears, navigation and attached-schedule recordings retain source
+packet `6247a85904cac78cfb333d848f5ea18e0ae40251acbcdbae2c662766961dd015`.
+The later display change identifies Live on the instrument heading; it does not
+change those retained context or schedule views. These packets identify compiled
+candidate snapshots, not releases or merged commits. All capture-producing
+process checks passed, including terminal cells, mode changes and restoration.
+Capture checks alone do not establish a full-suite pass or deployment.
+
+These fourteen SVG/text pairs replace every terminal recording displayed on the
+page. Map, Running and stage-following pairs use 110 × 48 terminal cells; bars,
+dials, terrain, gears, navigation and schedules use 110 × 36. The compact dial
+fallback uses 80 × 24. SVGs preserve true colour with `COLORTERM=truecolor`,
+`TERM=xterm-256color` and `NO_COLOR` absent. Narrow cards retain numeric readings
+instead of shrinking dial faces. Historical playback bars measure recorded input
+position, not workout completion.
+
+The stage-following pair shows inferred Recovery, stage 5 of 14, repeat 2 of 6,
+with 145 bpm above the absolute 100–130 bpm target. The stage boundary remains
+unknown, so no countdown is invented. Replay is paused at recorded input 3 of 4.
+Schedules retain source order, duplicate names, cancellations and unresolved
+prescription revisions. Attachment selects no plan and confirms no match. Old
+synthetic source timestamps and their clock uncertainty remain visible.
+
+Map recordings use synthetic Singapore coordinates and actual OpenFreeMap tiles,
+with provider attribution retained inside the terminal. The website contains
+static recordings and makes no map-provider or telemetry requests. Only the
+approved SVG/text files were copied; checks reject scripts, foreign objects,
+embedded images and external references. Font glyph links remain internal.
+
+The Garmin PNGs are unchanged from their separately recorded simulator checks.
+This update adds no physical watch, phone, real-provider, VPS or Docker release-image
+qualification. The application and public-site changes remain candidates;
+site deployment requires a later authorized merge.
+
+| Current asset | SHA-256 |
+| --- | --- |
+| `workout-context-live.svg` | `d1cedf9ff0d153c183dd4c278f3b563c6a30c370c3d073c0c446f68297bfea1c` |
+| `workout-context-live.txt` | `d536e1eef15def1780ade998e60261ec5a1ca1d1eedcba2f8edf26afb153bfc4` |
+| `workout-context-replay.svg` | `0951f16498028f68dfddbdca0c4f70467b1e25d92d2f33c7d0671f217a270425` |
+| `workout-context-replay.txt` | `358e34349fd85044717d8c3979b42b51b6ee900055982fad7596ad07a890757e` |
+| `tui-map-live.svg` | `0a5caecf025028e7d9e6a57846b44d11e47dc5ce653d6565de601886ba20b955` |
+| `tui-map-live.txt` | `8e13e67c0d92d2907eff62662b089e5e697c28ce12b4ca68ee5d5ac8f4ab188b` |
+| `tui-map-replay.svg` | `f79612e2bb02650e041759743e98153515106bbc6653d20a3d2147f82270e770` |
+| `tui-map-replay.txt` | `48fc6532542e5707a7bb810c906cd58cf2ebf69c2959ef9448ceab2337676c7c` |
+| `tui-cycling-capture.svg` | `9ab54992aaca8bfe65390f9e57f07befd0091c12a6db72c21d19155ef58a8440` |
+| `tui-cycling-capture.txt` | `04251603a483a9bbcf0fd6687ecfa2809ecbdf2151103f09d563dedfe6f6b499` |
+| `tui-dials-capture.svg` | `9baf129be6fc037b27febe2f88f641e3951dd2e95146a543cdf044514d8482b0` |
+| `tui-dials-capture.txt` | `9eebfc7a023ceaf100e7bbda30f9ddd392d395e8e32a8a818585e9262736dbf0` |
+| `tui-dials-compact-capture.svg` | `7710dc99ed31bfec9170fbc02d8aade6d6cda28e0f17c1a9caaa3a2709ca8737` |
+| `tui-dials-compact-capture.txt` | `4d283022030d82f19433f2dc0aed00b81aee89cd93f001f63d155d675114556d` |
+| `tui-terrain.svg` | `9ab54992aaca8bfe65390f9e57f07befd0091c12a6db72c21d19155ef58a8440` |
+| `tui-terrain.txt` | `04251603a483a9bbcf0fd6687ecfa2809ecbdf2151103f09d563dedfe6f6b499` |
+| `tui-gears-live.svg` | `82bdfc21a9b9022542a9155bddcc04177abc6dc4ac99576ec66cf01e3e4460b8` |
+| `tui-gears-live.txt` | `d7bac3415bfe7261840c033b9113f406412682514575915e2982cd63928d0e61` |
+| `tui-navigation-live.svg` | `c6e18ade5550583b076583364663f1913d032603361df8a7afb29d5f77d1081d` |
+| `tui-navigation-live.txt` | `d980f7bd0240e110326097a1caf79f5988232292a3bbbb9474cdc2670be15fd4` |
+| `tui-running-replay.svg` | `13ca941292a9b68ff617f2d71056afb42b1a6e7ff5586c23813bf1e24589c739` |
+| `tui-running-replay.txt` | `549b8626f7f45d149cf3e84a70e2f0bd037454608b2e359871801d9559008f00` |
+| `tui-running-instruments.svg` | `b3475f863e6ac5ded69b78374afb1ffecd7c51deed5c9a04dd283ec1448019ad` |
+| `tui-running-instruments.txt` | `e582f0ef779d867e1b67c95bdaa07b792b4feb72ebab1349377b8893558f8b5d` |
+| `workout-schedule-live.svg` | `fbaedd60c9276857467d303ada7d2ab6fb5b3519dc723eb00b2967b33fba28fb` |
+| `workout-schedule-live.txt` | `564c48f1f380373bd5fee65f86bcaa107e57d32e7b3b42b660df6eb4421f1fc9` |
+| `workout-schedule-replay.svg` | `334ed1ceb96448a46ef4170fb3a36f5aa3cde6640a743fbcb6665ff76ce4072f` |
+| `workout-schedule-replay.txt` | `b4ed799b6acc3fd9238c5f5348d683ae6252b2d18f644e07a91587507ee99e9d` |
+
+## Historical capture records
+
+The sections below preserve prior checkpoints. Their asset hashes and references
+to “current” recordings describe those checkpoints, not the files now displayed.
+The table above owns the fourteen replacement pairs. Unchanged watch recordings
+retain their separate provenance below.
+
 ## Attached schedules — candidate
 
 Captured October 20, 2026 with the actual native macOS daemon, synthetic PWS2
@@ -57,7 +140,7 @@ not rewrite history. Bono needs no source plugin. Stage following is now merged
 on main. The existing premerge recordings retain their original source and bytes;
 the merge adds no fresh capture, release-image or physical watch/phone qualification.
 
-### Current premerge stage-following recordings
+### Historical premerge stage-following recordings
 
 Captured October 19, 2026 local time with the actual native macOS daemon and
 Chio client through the CLI/PTY pipeline, using synthetic measurements only.
@@ -625,7 +708,7 @@ true color is explicit and terminal cleanup must pass before export. This is a
 merged development build, not a release or physical-device qualification. Existing
 interaction and sustained-update shutdown limitations remain open.
 
-## Current dashboard captures — merged source aggregates
+## Historical dashboard captures — merged source aggregates
 
 October 10, 2026: the Live/Replay SVG/text pairs now come from Pitwall source
 checkpoint `5bbb52a7f82205f8c0b43b3621e2fe176a54feba`. Pitwall PR #24 merged on

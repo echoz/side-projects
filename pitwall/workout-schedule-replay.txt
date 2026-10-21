@@ -2,7 +2,7 @@
  PITWALL / REPLAY · General (auto) · Bars
  SIMULATOR — synthetic measurements · Timer: unknown
  src 2026-09-23T16:00:00Z
- Paused · historical · original output
+ Historical; source clock unverified
  ATTACHED SCHEDULE · no automatic selection
  Fields 4–5/5 · operator-associated · not matched or ranked
  CANCELLED · Synthetic cancelled ride · cycling
@@ -29,7 +29,7 @@
  Producer epoch: demo-epoch
  Source sequence: 1
  Paused · historical · Recorded input 2 / 2
- [━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+ Retained input position [━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
  Space play/pause · [/] step · b start · r reopen
  j/k schedule entries · a dashboard · m menu
  g dials · d diagnostics · m menu · q quit · Ctrl-C quit

@@ -8,14 +8,22 @@ and open `/pitwall/` on the local preview server.
 with static recordings. [styles.css](styles.css) owns the motorsport telemetry
 theme and responsive layout. Recorded workout context, explicit stage alignment,
 source-anchored progress and absolute target comparisons are implemented on main.
-Stage following is also implemented on main. The workout-context preview retains
-its actual October 19 native macOS synthetic premerge captures. Opt-in
+Stage following is also implemented on main. Opt-in
 `--follow-stages` infers position from completion counts after an explicit
 forward-progress assertion. It compares absolute targets without inventing
 countdowns or claiming native watch position. Missing, duplicate or reverse
 transitions may require correction. Earlier recordings and the original assertion
-remain available. Capture bytes and source provenance are unchanged; this is not
-a release.
+remain available. The visible terminal recordings belong to the unified-console
+candidate described below; this is not a release.
+
+The unified-console candidate consolidates presentation into `pitwall tui`.
+Bono's committed interpretation feeds both modes: Live receives private daemon
+pushes and Original Replay reads retained outputs using its own playback clock.
+The chooser runs neither provider. Changing mode stops the previous provider.
+Raw CLI queries remain separate automation operations; the dashboard does not
+poll or substitute today's raw aggregates into recorded output. The refreshed
+synthetic recordings and their qualification limits are recorded in
+[CAPTURES.md](CAPTURES.md). Site deployment remains pending merge.
 
 The roadmap marks synthetic PWS2 workout-source process hosting as in progress.
 The candidate adds manual source schedule refresh/status

@@ -1,6 +1,6 @@
 
  PITWALL / LIVE · Cycling (auto) · SIMULATOR / synthetic · Following
- 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-10T20:37:56Z
+ 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-21T07:15:46Z
                               ⢀⠎  ⡔⠁   ⠉⠢⢄                   ⢀⠎                 ⡔⠁               ⡰⠉
  ⠣⢄                          ⢀⠎  ⡜        ⠓⢄                ⢠⠊                 ⡸                ⡰⠁
  ⢄ ⠑⠢⣀                      ⢀⠎ ⢀⠎           ⠉⠢⣀            ⡠⠃                 ⡔⠁               ⡔⠁
@@ -21,27 +21,27 @@
  ODbL · https://openfreemap.org
  ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
  │ SPEED                            │ │ POWER                           │ │ CADENCE                         │
- │  _   _     _                     │ │  _   _   _                      │ │  _   _                          │
- │  _| | |   |_                     │ │  _| |_   _|                     │ │ |_| |_                          │
- │  _| |_| . |_|                    │ │ |_   _| |_                      │ │ |_| |_|                         │
  │ 30.6 km/h                        │ │ 252 W                           │ │ 86 rpm                          │
  │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │
  │ Scale 0–60 km/h                  │ │ Scale 0–600 W                   │ │ Scale 0–180 rpm                 │
  │ Src avg 10.1 · max 16.9 km/h     │ │ Src avg 229 · max 405 W         │ │ Src avg 84 · max 96 rpm         │
+ │                                  │ │                                 │ │                                 │
+ │                                  │ │                                 │ │                                 │
  ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
 
  ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
  │ HEART RATE                       │ │ ACTIVE TIME                     │ │ DISTANCE                        │
- │          _                       │ │  _   _                          │ │  _     _   _                    │
- │   | |_| |_                       │ │  _|  _| .   | |_|               │ │ |_     _| | |                   │
- │   |   |  _|                      │ │  _| |_  .   |   |               │ │ |_| . |_  |_|                   │
- │ 145 bpm                          │ │ 32:14                           │ │ 6.20 km                         │
- │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │ Observed timer                  │ │ Observed distance               │
- │ Zones 90–190 bpm                 │ │                                 │ │                                 │
- │ Src avg 139 · max 172 bpm        │ │                                 │ │                                 │
+ │ 145 bpm                          │ │  _   _                          │ │  _     _   _                    │
+ │ ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │  _|  _| .   | |_|               │ │ |_     _| | |                   │
+ │ Zones 90–190 bpm                 │ │  _| |_  .   |   |               │ │ |_| . |_  |_|                   │
+ │ Src avg 139 · max 172 bpm        │ │ 32:14                           │ │ 6.20 km                         │
+ │                                  │ │ Observed timer                  │ │ Observed distance               │
+ │                                  │ │                                 │ │                                 │
  ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
- Read OK · 120 s at check · clock unverified
+ Free run
+ No plan selected
+ Interpretation connected · Source 119 s (clock unverified) · interpretation 4 s · lag 0 inputs
  OpenFreeMap online · Basemap ready
  Timer: On (observed)
  Last reported · ▰ 72% battery · ↑ 4 queued · 2 dropped / 0 rejected · d details
- ↑↓←→ pan ± zoom · c follow · e retry · i instruments · 1–6 context · v layout · d info · m menu · q quit
+ ↑↓←→ pan ± zoom · c follow e retry · i instruments s schedule · 1–6 context v layout d info m menu q quit

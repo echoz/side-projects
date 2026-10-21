@@ -1,7 +1,7 @@
 
  PITWALL · context 6/6
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 3 s at last check; source clock unverified
+ Interpretation connected · Age: Source 1 s (clock unverified) · interpretation 0 s · lag 0 inputs
  Cycling · source gear facts
  Fields 1–6/6 · source observed
  FRONT GEAR                                             REAR GEAR

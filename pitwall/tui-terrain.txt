@@ -1,7 +1,9 @@
 
- PITWALL / WORKOUT CONTROL
+ PITWALL / LIVE · Cycling (auto) · Bars
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 1 s at last check; source clock unverified
+ Interpretation connected · Age: Source 1 s (clock unverified) · interpretation 0 s · lag 0 inputs
+ Free run
+ No plan selected
  ╭ SPEED ──────────────────╮ ╭ POWER ─────────────────╮ ╭ CADENCE ───────────────╮ ╭ HEART RATE ────────────╮
  │  _   _     _            │ │  _       _             │ │  _   _                 │ │          _             │
  │  _| | |   |_            │ │  _| |_| |_             │ │ |_| |_                 │ │   | |_| |_             │
@@ -22,12 +24,10 @@
  │ Elapsed time: 33:14                               │ │ ELEVATION: -12.5 m                                 │
  ╰───────────────────────────────────────────────────╯ ╰────────────────────────────────────────────────────╯
 
- Synthetic ride · Display scales only · no workout targets
+ Synthetic ride · Display scales only
 
  1 Summary  2 Navigation  3 Pressure
  4 Effort   5 Swimming    6 Cycling
-
-
 
  Last reported · Battery: 72% · Fixed 10 s · d details
  Cycling (auto) · Bars · live updates · Session: demo-session

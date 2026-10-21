@@ -1,7 +1,9 @@
 
- PITWALL / WORKOUT CONTROL
+ PITWALL / LIVE · Running (auto) · Bars
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 68 s at last check; source clock unverified
+ Interpretation connected · Age: Source 68 s (clock unverified) · interpretation 8 s · lag 0 inputs
+ Free run
+ No plan selected
  ╭ PACE ───────────────────╮ ╭ HEART RATE ────────────╮ ╭ ACTIVE TIME ───────────╮ ╭ DISTANCE ──────────────╮
  │  _     _   _            │ │          _             │ │  _   _                 │ │  _     _   _           │
  │ |_  .  _|  _|           │ │   | |_| |_             │ │  _|  _| .   | |_|      │ │ |_     _| | |          │
@@ -30,12 +32,10 @@
 
  Speed: 3.0 m/s · Elapsed time: 33:14
 
- Synthetic trail · Display scales only · no workout targets
+ Synthetic trail · Display scales only
 
  1 Summary  2 Navigation  3 Pressure
  4 Effort   5 Swimming    6 Cycling
-
-
 
 
 

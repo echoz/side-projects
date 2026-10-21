@@ -1,12 +1,12 @@
 
  PITWALL · attached schedule
  LIVE · SIMULATOR — synthetic measurements · Timer: unknown
- Context read OK · Age: Source 2381551 s (clock unverified) · interpretation 0 s · lag 0 inputs
+ Interpretation connected · Age: Source 2386181 s (clock unverified) · interpretation 0 s · lag 0 inputs
  ATTACHED SCHEDULE · no automatic selection
  Fields 1–3/5 · operator-associated · not matched or ranked
  Schedule #1 · complete coverage · synthetic-provider / synthetic-account
  2026-10-19 ≤ date < 2026-10-26 · query zone America/Los_Angeles
- Binding 1 / observation 1 · captured 1792368100000 ms · received 1792560750712 ms
+ Binding 1 / observation 1 · captured 1792368100000 ms · received 1792565380296 ms
  Source order; no match inferred. Refreshes do not replace this attachment.
  SCHEDULED · Synthetic intervals · running
  2026-10-19 in query calendar · source 2026-10-19 06:00:00.000 · America/Los_Angeles
@@ -30,6 +30,6 @@
  Producer epoch: demo-epoch
  Source sequence: 1
  Last reported · Battery: — · Policy unknown · d details
- General (auto) · Bars · auto refresh · Session: demo-session
+ General (auto) · Bars · live updates · Session: demo-session
  j/k schedule entries · a dashboard · m menu
  g dials · d diagnostics · m menu · q quit · Ctrl-C quit

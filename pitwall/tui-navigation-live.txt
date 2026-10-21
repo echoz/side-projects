@@ -1,7 +1,7 @@
 
  PITWALL · context 2/6
  LIVE · SIMULATOR — synthetic measurements · Timer: On (source observed)
- Read OK · Age: 1 s at last check; source clock unverified
+ Interpretation connected · Age: Source 1 s (clock unverified) · interpretation 0 s · lag 0 inputs
  Navigation · source radians
  Fields 1–4/11 · source observed
       _     _                                                 _   _
