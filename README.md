@@ -21,11 +21,13 @@ Physical things.
 | Project | What it does |
 | --- | --- |
 | [Perch](https://echoz.github.io/Perch/) | A sculpted, 3D-printable home for a Yoto Mini, cards and kids’ headphones. |
+| [Toa Payoh Dragon](https://echoz.github.io/ToaPayohDragon/) | A six-colour PLA model of Singapore’s dragon playground; v03 is a fit-test candidate. |
 
 Browse the [project index](https://echoz.github.io/side-projects/).
 Chio is open source; Perch shares its print candidates and editable CAD in its
 [public repository](https://github.com/echoz/Perch). Pitwall, Marquee, and Blackbox
-have private source code and public overviews. Each project's site describes its current capabilities and
+have private source code and public overviews. Toa Payoh Dragon shares its candidate CAD and print files in its
+[public repository](https://github.com/echoz/ToaPayohDragon); physical fit and print success remain untested. Each project's site describes its current capabilities and
 limits. Demonstrations use synthetic data.
 
 ## Preview and publish
@@ -35,7 +37,7 @@ python3 scripts/build_site.py
 python3 -m http.server 8765 --bind 127.0.0.1 --directory _site
 ```
 
-Open `http://127.0.0.1:8765/`. Chio and Perch link to their separately maintained
+Open `http://127.0.0.1:8765/`. Chio, Perch and Toa Payoh Dragon link to their separately maintained
 GitHub Pages sites. Perch’s warm, organic project page, print downloads and
 editable CAD live in its public repository; the previous `/perch/` address
 redirects to its own site.
