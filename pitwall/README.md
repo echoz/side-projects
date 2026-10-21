@@ -21,10 +21,12 @@ The roadmap marks synthetic PWS2 workout-source process hosting as in progress.
 The candidate adds manual source schedule refresh/status
 for an explicit 1–31-day `[start,end)` window and query time zone, separate durable
 source storage and structured CLI output. A failed refresh preserves the prior
-snapshot; an empty schedule remains valid. No new TUI behavior is claimed.
-Explicit attachment of retained schedules to Bono, then candidates in Live/Replay,
-exact-prescription acquisition through the application, real Blackbox/provider
-qualification and athlete-relative targets remain upcoming. Bono needs no plugin.
+snapshot; an empty schedule remains valid. The next candidate adds explicit
+attachment to a workout and the same retained schedule in Live/Original Replay.
+The `s` page keeps source order, cancellations and uncertain revisions visible.
+Attachment selects no prescription and changes no active stage. Exact-prescription
+acquisition, real Blackbox/provider qualification and athlete-relative targets
+remain upcoming. Bono needs no plugin.
 Wide terminal recordings scroll within labeled,
 keyboard-accessible regions; they are not an interactive web terminal.
 

@@ -1,0 +1,35 @@
+
+ PITWALL / REPLAY · General (auto) · Bars
+ SIMULATOR — synthetic measurements · Timer: unknown
+ src 2026-09-23T16:00:00Z
+ Paused · historical · original output
+ ATTACHED SCHEDULE · no automatic selection
+ Fields 4–5/5 · operator-associated · not matched or ranked
+ CANCELLED · Synthetic cancelled ride · cycling
+ 2026-10-19 in query calendar · start time unspecified
+ Occurrence synthetic-cancelled · provider:occurrence-2
+ Prescription synthetic-plan · provider:plan-1 · not acquired by attachment
+ SCHEDULED · synthetic-unresolved · running
+ 2026-10-19 in query calendar · start time unspecified
+ Occurrence synthetic-unresolved · provider:occurrence-1
+ Prescription synthetic-unresolved-plan · unknown · not acquired by attachment
+
+
+
+
+
+
+
+
+
+
+
+ Device: simulator-device
+ Session: demo-session
+ Producer epoch: demo-epoch
+ Source sequence: 1
+ Paused · historical · Recorded input 2 / 2
+ [━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+ Space play/pause · [/] step · b start · r reopen
+ j/k schedule entries · a dashboard · m menu
+ g dials · d diagnostics · m menu · q quit · Ctrl-C quit
