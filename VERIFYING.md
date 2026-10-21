@@ -18,7 +18,7 @@ the public pages remain static and do not load them.
 
 Before PR readiness or publishing, run `pnpm verify`. It runs `pnpm check:docs`
 first, then the public site checks below. The documentation check needs a separate,
-clean [EngineeringRules 0.1.8 release](https://github.com/echoz/EngineeringRules/releases/tag/v0.1.8)
+clean [EngineeringRules 0.1.9 release](https://github.com/echoz/EngineeringRules/releases/tag/v0.1.9)
 checkout and its isolated Python environment. That repository is private; use
 existing authorized access during explicit setup. Do not put credentials or the
 shared checker's source in this public repository or its Pages artifact.
@@ -26,12 +26,12 @@ shared checker's source in this public repository or its Pages artifact.
 The pin lives in [the repository wrapper](scripts/check_documentation.py), outside
 [the closed documentation schema](.documentation-rules.json):
 
-- Tag `v0.1.8`, peeled commit `c535a2745b8b436a5a9d4d0598192aa106912fee`.
-- Release tree `ea7d6f7919da7bec593796e69a53a2709d20e9cb`.
+- Tag `v0.1.9`, peeled commit `f80213f14acf839b6d5ba9f131d4c113182e2592`.
+- Release tree `3d2d34b5114436270bbcdbb64cdff156ec66b2bf`.
 - Checker SHA-256 `a581576ff1fb6bd56e80785ebed9d028ea7a3ace986b97a20b4587b2cd2515fb`.
 - Requirements SHA-256 `6fd7cf677f2a33fc6d78057d60cf9ea9df01d21e85a1de4ccde742b1d57b584b`.
 
-The default installation is `~/.local/share/engineering-rules/0.1.8`. Reuse that
+The default installation is `~/.local/share/engineering-rules/0.1.9`. Reuse that
 verified shared installation; never switch or modify it during a project check.
 For another host, follow the released README in a dedicated clean checkout:
 
@@ -42,7 +42,7 @@ python3 -m venv .build/docs-venv
   -r Configuration/documentation-requirements.txt
 
 # From SideProjects, if the existing installation is elsewhere:
-pnpm check:docs --tool-root /path/to/engineering-rules-0.1.8
+pnpm check:docs --tool-root /path/to/engineering-rules-0.1.9
 pnpm test
 ```
 
@@ -53,11 +53,13 @@ It fails if the tool or environment is missing or mismatched. The shared checker
 requires exactly `markdown-it-py` 3.0.0 and `mdurl` 0.1.2. Checking never downloads,
 upgrades or repairs dependencies. SideProjects has no Swift sources or SwiftRules pin.
 
-Version 0.1.8 adds naming-review inputs to the shared engineering-review workflow.
-The documentation checker and parser dependencies are unchanged from 0.1.7;
-schema 2 and source-root README review remain required.
-The global readiness workflow uses the separately installed skill; the required
-SideProjects checks remain the commands in this guide.
+Version 0.1.9 broadens the shared naming pass and adds identity-lifetime review.
+The documentation checker and parser dependencies are unchanged from 0.1.8;
+schema 2 and source-root README review remain required. The global readiness
+workflow uses the separately installed release skill and current organization
+guidance. Record the skill revision and file hashes in adoption review evidence;
+the documentation pin alone does not update either. The required SideProjects
+checks remain the commands in this guide.
 
 Schema 2 declares five deliverables: the index at `.` and the Pitwall, Marquee,
 Blackbox and Perch-redirect source directories, each with a stable ID. The four
@@ -101,12 +103,22 @@ claimed here.
 
 ## Manual naming review
 
-Review the names in this repository's owned Python and JavaScript, test fixtures,
-HTML/CSS vocabulary and current guides using the global organization companion
-and installed engineering-review skill. Include the collected names and file/line
-evidence in the candidate's review packet. The independent reviewer records each
-name's meaning and a justified rename, legitimate retention or explicit deferral
-outside the change scope. A text search is an inventory aid, not a semantic verdict.
+Review all introduced or changed declarations in this repository's owned Python,
+JavaScript and test fixtures, including parameters and local bindings. Reconsider
+unchanged names when the change alters their meaning. Inspect definitions,
+relevant usages and enclosing scope using the global organization companion and
+installed engineering-review skill. Include affected HTML/CSS vocabulary and
+current guides in that review.
+
+For identity and revision names, inspect creation, advancement, invalidation and
+comparison sites to establish their subject and lifetime under the owning guidance.
+Preserve clear scoped names, established technical terms and compatibility boundaries.
+Record the reviewed scope, gaps, actionable findings and non-obvious reasons to
+retain names, with file/line evidence. An entry for every ordinary identifier is
+unnecessary. Collected candidates supplement this pass; neither an empty inventory
+nor text search establishes semantic coverage. Record a justified rename, retention
+or explicit out-of-scope deferral for each collected candidate without expanding
+the task into unrelated naming cleanup.
 
 SwiftRules `review-candidates` collects Swift declarations only. This repository
 has no Swift sources or SwiftRules pin, so neither that command nor its successful
