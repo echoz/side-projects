@@ -18,7 +18,7 @@ the public pages remain static and do not load them.
 
 Before PR readiness or publishing, run `pnpm verify`. It runs `pnpm check:docs`
 first, then the public site checks below. The documentation check needs a separate,
-clean [EngineeringRules 0.1.9 release](https://github.com/echoz/EngineeringRules/releases/tag/v0.1.9)
+clean [EngineeringRules 0.1.10 release](https://github.com/echoz/EngineeringRules/releases/tag/v0.1.10)
 checkout and its isolated Python environment. That repository is private; use
 existing authorized access during explicit setup. Do not put credentials or the
 shared checker's source in this public repository or its Pages artifact.
@@ -26,12 +26,12 @@ shared checker's source in this public repository or its Pages artifact.
 The pin lives in [the repository wrapper](scripts/check_documentation.py), outside
 [the closed documentation schema](.documentation-rules.json):
 
-- Tag `v0.1.9`, peeled commit `f80213f14acf839b6d5ba9f131d4c113182e2592`.
-- Release tree `3d2d34b5114436270bbcdbb64cdff156ec66b2bf`.
+- Tag `v0.1.10`, peeled commit `756987b0d0e4bf8245abe05611f43aab8ffc700e`.
+- Release tree `9b71bf344fd0477d11111581887776d34a7bc2d5`.
 - Checker SHA-256 `a581576ff1fb6bd56e80785ebed9d028ea7a3ace986b97a20b4587b2cd2515fb`.
 - Requirements SHA-256 `6fd7cf677f2a33fc6d78057d60cf9ea9df01d21e85a1de4ccde742b1d57b584b`.
 
-The default installation is `~/.local/share/engineering-rules/0.1.9`. Reuse that
+The default installation is `~/.local/share/engineering-rules/0.1.10`. Reuse that
 verified shared installation; never switch or modify it during a project check.
 For another host, follow the released README in a dedicated clean checkout:
 
@@ -42,7 +42,7 @@ python3 -m venv .build/docs-venv
   -r Configuration/documentation-requirements.txt
 
 # From SideProjects, if the existing installation is elsewhere:
-pnpm check:docs --tool-root /path/to/engineering-rules-0.1.9
+pnpm check:docs --tool-root /path/to/engineering-rules-0.1.10
 pnpm test
 ```
 
@@ -53,9 +53,11 @@ It fails if the tool or environment is missing or mismatched. The shared checker
 requires exactly `markdown-it-py` 3.0.0 and `mdurl` 0.1.2. Checking never downloads,
 upgrades or repairs dependencies. SideProjects has no Swift sources or SwiftRules pin.
 
-Version 0.1.9 broadens the shared naming pass and adds identity-lifetime review.
-The documentation checker and parser dependencies are unchanged from 0.1.8;
-schema 2 and source-root README review remain required. The global readiness
+Version 0.1.10 changes Swift release compiler-context handling, which does not
+apply to this repository. The documentation checker, parser dependencies and
+review skill are unchanged from 0.1.9; schema 2 and source-root README review
+remain required. The site checks have no release/debug configuration; browser
+checks exercise the staged public output. The global readiness
 workflow uses the separately installed release skill and current organization
 guidance. Record the skill revision and file hashes in adoption review evidence;
 the documentation pin alone does not update either. The required SideProjects
