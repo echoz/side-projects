@@ -12,7 +12,7 @@ Metaphysical: software projects.
 | [Pitwall](https://echoz.github.io/side-projects/pitwall/) | Self-hosted telemetry for Garmin workouts and races. |
 | [Marquee](https://echoz.github.io/side-projects/marquee/) | Personal pixel displays for what matters now. |
 | [Blackbox](https://echoz.github.io/side-projects/blackbox/) | Recent daily synchronization, bounded history and a queryable local Garmin archive. |
-| [Chio](https://echoz.github.io/Chio/) | A Swift toolkit for expressive terminal interfaces. |
+| [Chio](https://void-deck.github.io/Chio/) | A Swift toolkit for expressive terminal interfaces. |
 
 ## Some assembly required.
 
