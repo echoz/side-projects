@@ -36,7 +36,7 @@ test('index status ribbons expose construction status and the released version',
   await page.goto('/');
   await expect(page.getByRole('img', { name: 'Under construction', exact: true })).toHaveCount(5);
   await expect(page.getByText('v0.1.0', { exact: true })).toBeVisible();
-  await expect(page.getByRole('link', { name: /Chio/ })).toHaveAttribute('href', 'https://echoz.github.io/Chio/');
+  await expect(page.getByRole('link', { name: /Chio/ })).toHaveAttribute('href', 'https://void-deck.github.io/Chio/');
   await expect(page.getByRole('link', { name: 'Explore Perch', exact: true })).toHaveAttribute('href', 'https://echoz.github.io/Perch/');
 });
 

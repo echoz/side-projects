@@ -11,7 +11,7 @@ credentials, device identifiers, or real workout data into this repository.
 Each project hosted here owns one shallow directory. `index.html` is the project index;
 `pitwall/`, `marquee/`, and `blackbox/` own their standalone pages. The root
 `styles.css` belongs to the project index; each project owns its own styling.
-Chio's index entry links to its existing public site at `https://echoz.github.io/Chio/`;
+Chio's index entry links to its existing public site at `https://void-deck.github.io/Chio/`;
 its source and site are maintained in its own repository. Perch’s full project
 page is hosted at `https://echoz.github.io/Perch/` in its public repository.
 `perch/index.html` preserves the former address with an accessible static redirect;
