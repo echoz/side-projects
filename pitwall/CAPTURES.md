@@ -3,6 +3,43 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Outdoor layouts — candidate recordings
+
+Captured October 26, 2026 local time from the actual native macOS daemon and
+Chio TUI with disposable synthetic telemetry. The Walking and Hiking Live
+SVG/text pairs show 110 × 48 terminal cells. These are candidate layouts,
+not a merged release or physical-watch qualification.
+
+The capture source packet is
+`5c2977eaf0c1cc791fd5fc8c8696259093c04eda646349be0c431b542b2b0eb2`.
+The capture-producing check passed against the frozen candidate. Both recordings
+include the map; the harness waits for the old instrument footer to disappear
+before accepting a dashboard transition. The SVGs retain true-colour terminal
+output and embedded glyph outlines; they were not redrawn. The selected-point
+map uses the bundled coarse Natural Earth basemap offline. Only these reviewed
+SVG/text pairs enter the public allowlist; logs, provisioning state, private
+source and internal documents remain private.
+
+Walking leads with pace/distance, then heart rate/active time and muted terrain
+facts. Hiking puts a broad elevation/ascent/descent panel above movement and
+effort readings. Short wide layouts retain seven numeric readings; narrow layouts
+retain four primary readings. Missing values, zero and negative altitude remain
+distinct. The same selected observation feeds Live and Original Replay.
+
+Checks cover automatic/manual selection, resizing, profile dropout, retained-view
+updates, historical cutoff isolation and terminal restoration. The refreshed
+native macOS daemon/PTY check passed; Linux evidence is recorded separately in
+the PR description. These recordings do not establish Garmin collection, phone
+delivery, release or deployment. Earlier Running/Cycling captures retain their
+separate provenance below.
+
+| Asset | SHA-256 |
+| --- | --- |
+| `pitwall/tui-walking-live.svg` | `3b56bb047ff27a6a465ea6864eed2b4bc66a4fa3916f1fd0824b15cf1e7322dd` |
+| `pitwall/tui-walking-live.txt` | `b4bdd810d595154a9dca298963526c073509b12b51b8d17b2e6353f83da3e0d4` |
+| `pitwall/tui-hiking-live.svg` | `176068ff9f6e4e8f1dcdda7e1d6ac921995e25ce7f30094bdfa0dccd01dbf02b` |
+| `pitwall/tui-hiking-live.txt` | `95e0fe1a6307f6be3d53902d92175d02d88f7654598d6141fc965dc072f23eab` |
+
 ## Unified Bono dashboard — current premerge recordings
 
 Captured October 20–21, 2026 local time with the actual native macOS daemon and
