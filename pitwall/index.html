@@ -47,7 +47,7 @@
       <div class="section-heading" id="progress"><div><p class="eyebrow">Features / Implemented prototype</p><h2 id="features-title">What you can do today.</h2></div><p>Verified with synthetic telemetry on local servers and Garmin’s simulator. Physical watch and phone delivery remain unverified.</p></div>
       <ul class="feature-list">
         <li><span class="feature-index" aria-hidden="true">01 / LIVE &amp; REPLAY</span><h3>Follow it. Play it back.</h3><p>Follow current readings or pause and step through original recorded interpretations. One TUI brings both together with pushed Live updates and recorded Original Replay.</p><a class="text-link" href="#map-plan">See the dashboard <span aria-hidden="true">↗</span></a></li>
-        <li><span class="feature-index" aria-hidden="true">02 / INSTRUMENTS</span><h3>A dashboard for your sport.</h3><p>Running, Cycling and General layouts pair a selected-point map with bars, dials and readable compact views.</p><a class="text-link" href="#running-preview">See the instruments <span aria-hidden="true">↗</span></a></li>
+        <li><span class="feature-index" aria-hidden="true">02 / INSTRUMENTS</span><h3>A dashboard for your sport.</h3><p>Running, Cycling, Walking, Hiking and General layouts pair a selected-point map with readings arranged for the activity. Compact views keep the essentials readable.</p><a class="text-link" href="#outdoor-preview">See the outdoor layouts <span aria-hidden="true">↗</span></a></li>
         <li><span class="feature-index" aria-hidden="true">03 / WORKOUT CONTEXT</span><h3>More than heart rate.</h3><p>Inspect navigation, terrain, gears, swimming and effort readings when Garmin supplies them.</p><a class="text-link" href="#telemetry">See supported uploads <span aria-hidden="true">↗</span></a></li>
         <li><span class="feature-index" aria-hidden="true">04 / REPORTING</span><h3>Choose when to report.</h3><p>Opt into Fixed, Significant or Auto reporting, with upload status and dropped-sample counts.</p></li>
         <li><span class="feature-index" aria-hidden="true">05 / CLI &amp; STREAMING</span><h3>Drive it from a terminal.</h3><p>Script JSON queries, poll or receive server-pushed readings, and run local clients over SSH. Terminal cleanup passes local macOS and Linux checks.</p></li>
@@ -218,7 +218,7 @@
     </section>
 
     <section class="terminal-section" id="outdoor-preview" aria-labelledby="outdoor-title">
-      <div class="section-heading"><div><p class="eyebrow">Outdoor layouts / In progress</p><h2 id="outdoor-title">Walking follows movement. Hiking follows terrain.</h2></div><p>The same map and controls, with measurements arranged for the activity. Both use the selected Live or Replay observation.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">Outdoor layouts / Implemented</p><h2 id="outdoor-title">Walking follows movement. Hiking follows terrain.</h2></div><p>The same map and controls, with measurements arranged for the activity. Both use the selected Live or Replay observation.</p></div>
       <figure class="terminal-capture">
         <div class="terminal-scroll" tabindex="0" role="region" aria-label="Recorded Pitwall Walking dashboard; scroll horizontally on narrow screens"><img src="./tui-walking-live.svg?v=3b56bb047ff2" alt="Actual Pitwall Walking Live dashboard: selected-point map, large pace and distance cards, heart rate and active time below, then quiet elevation, ascent and descent readings. Synthetic telemetry, true colour, 110 columns by 48 rows; candidate build, no watch or phone." loading="lazy" decoding="async" width="951" height="888"></div>
         <figcaption><span>Actual Pitwall TUI · Walking Live · candidate · synthetic · 110 × 48</span><a href="./tui-walking-live.txt?v=b4bdd810d595">Read the Walking transcript <span aria-hidden="true">↗</span></a></figcaption>
@@ -249,7 +249,6 @@
         <article class="roadmap-lane" aria-labelledby="workout-track-title">
           <p class="roadmap-track">WORKOUT EXPERIENCE</p><h3 id="workout-track-title">More context during a workout.</h3>
           <ul>
-            <li><h4>Outdoor sport layouts / in progress</h4><p>Walking prioritizes movement; Hiking prioritizes terrain. <a class="text-link" href="#outdoor-preview">See both candidate layouts <span aria-hidden="true">↗</span></a></p></li>
             <li><h4>Paddling / next</h4><p>Design a dedicated movement and effort view around the measurements the source can supply.</p></li>
             <li><h4>Swimming and strength / upcoming</h4><p>Add dedicated views after the outdoor layouts, using the readings available for each activity.</p></li>
             <li><h4>Trends and trails</h4><p>Add bounded metric history, elevation profiles and GPS trails, keeping gaps visible.</p></li>
@@ -261,12 +260,12 @@
         <article class="roadmap-lane" aria-labelledby="source-track-title">
           <p class="roadmap-track">PLATFORM &amp; SOURCES</p><h3 id="source-track-title">Connect and qualify the system.</h3>
           <ul>
-            <li><h4>Phone-reachable access</h4><p>Add authenticated HTTPS uploads, protected local control and device provisioning/recovery.</p></li>
+            <li><h4>First watch connection / in progress</h4><p>Prepare a separately configured watch build and authenticated uploads through Traefik HTTPS. Keep server controls private and add delivery diagnostics for the first device test.</p></li>
             <li><h4>Cadence-based uploads / upcoming</h4><p>Retain timestamped selected changes and periodic snapshots, then batch uploads on an initial 15-second cadence to reduce upload chatter. Watch memory, transport and battery validation remain ahead.</p></li>
             <li><h4>Workout sources / upcoming</h4><p>Qualify real workout-source plugins beyond the implemented synthetic schedule refresh, retention and explicit workout attachment.</p></li>
             <li><h4>Connect workout plans / upcoming</h4><p>Acquire exact prescriptions, explicitly select a scheduled workout, and qualify real provider adapters. Athlete-relative targets remain upcoming.</p></li>
             <li><h4>Operations and release checks</h4><p>Private prebuilt AMD64 Docker images and deployment by immutable image digest are in progress; ARM64 support will follow. Image publication and VPS deployment remain pending. Retention and scheduled/online backups are upcoming.</p></li>
-            <li><h4>Watch and phone testing — deferred</h4><p>Check physical delivery, locked-phone behavior, native recording and battery impact when device testing resumes.</p></li>
+            <li><h4>Watch and phone testing / next</h4><p>Start with a short Forerunner 970 workout through a paired iPhone to a Linux VPS. Then check locked-phone delivery, interruptions, native recording and battery impact. Physical delivery remains unverified.</p></li>
           </ul>
           <p class="roadmap-lane-note">Daily-context synthetic integration is already tested. Plugins remain optional. Blackbox remote sync is disabled; additional providers, including Runna, need verified access.</p>
         </article>
