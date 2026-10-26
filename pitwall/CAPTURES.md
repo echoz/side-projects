@@ -3,6 +3,37 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
+## Outdoor layouts — candidate recording
+
+Captured October 25, 2026 local time from the actual native macOS daemon and
+Chio TUI with disposable synthetic telemetry. `pitwall/tui-hiking-live.svg`
+and its `.txt` transcript show Hiking Live at 110 × 48 terminal cells.
+Walking uses the same priorities with its own explicit sport label. These are
+candidate layouts, not a merged release or physical-watch qualification.
+
+The capture source packet is
+`68f12171d23fe244975f1314c2e935acad9ae664a75ec9989e6ecda661bf1728`.
+The capture-producing check passed against the frozen candidate. The SVG retains
+true-colour terminal output and embedded glyph outlines; it was not redrawn.
+The selected-point map uses the bundled coarse Natural Earth basemap offline.
+Only this reviewed SVG/text pair is added to the public asset allowlist; raw logs,
+provisioning state, private source and internal documents remain private.
+
+The dashboard orders pace, heart rate and active time, then distance, elevation
+and accumulated ascent. Small layouts prioritize four primary readings; expanded
+instruments include descent. The checks cover both explicit sport labels,
+manual selection, multiple terminal sizes, missing versus zero terrain, negative
+altitude, profile dropout, retained-view updates and terminal restoration.
+Original Replay retains its selected observation and cutoff when new uploads
+arrive. These daemon/PTY checks passed locally on macOS and Linux ARM64. They do
+not establish Garmin collection, phone delivery, release or deployment status.
+The earlier Running and Cycling captures retain their separate provenance below.
+
+| Asset | SHA-256 |
+| --- | --- |
+| `pitwall/tui-hiking-live.svg` | `dffa44598b203847deab5342d7272f65a35781b268b170d92cf51d9deb10a8dd` |
+| `pitwall/tui-hiking-live.txt` | `a1e01bbb5ccac05c11698fd270fe247b7eb8c4aefda13b4a3aafd41a9bded226` |
+
 ## Unified Bono dashboard — current premerge recordings
 
 Captured October 20–21, 2026 local time with the actual native macOS daemon and

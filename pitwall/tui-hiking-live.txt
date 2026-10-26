@@ -1,0 +1,47 @@
+
+ PITWALL / LIVE · Hiking (auto) · SIMULATOR / synthetic · Following
+ 1.29000, 103.85000 · GPS quality code 4 · src 2026-10-26T06:15:33Z
+  ⠉⠢⣀                  ⠉⠢⣀                                    ⠈⢆
+     ⠑⢄⡀                  ⠑⠤⡀                                  ⠈⡆
+       ⠈⠢⣀                  ⠈⠢⢄                                 ⠘⡄
+          ⠑⢄⡀                  ⠑⠢⡀                               ⢸
+            ⠈⠢⣀                  ⠈⠑⢄                             ⢸
+               ⠑⠤⡀                  ⠉⠢⣀                          ⡸
+                 ⠈⢢                    ⠑⠤⡀                       ⡇
+                   ⠱⡀                    ⠈⠢⢄          ⡠⠤⡀       ⢀⡇
+                    ⠘⢄                      ⠑⠢⣀⣀⡠⠤⠤⠤⠤⠔⠣⠥⠃⠒Selected observation
+                     ⠈⢢
+                       ⠑⡄
+                        ⠈⢆
+                          ⠣⡀
+                           ⠑⡄
+                            ⠈⢢
+                              ⠱⢄
+ › Made with Natural Earth
+ Public domain · https://www.naturalearthdata.com/about/terms-of-use/
+ ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
+ │ PACE                             │ │ HEART RATE                      │ │ ACTIVE TIME                     │
+ │      _     _   _                 │ │ 125 bpm                         │ │  _   _                          │
+ │   |  _| .  _| | |                │ │ ▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ │ │  _|  _| .   | |_|               │
+ │   |  _| . |_  |_|                │ │ Zones 90–190 bpm                │ │  _| |_  .   |   |               │
+ │ 13:20 /km                        │ │ Src avg 139 · max 172 bpm       │ │ 32:14                           │
+ │ Derived from speed               │ │                                 │ │ Observed timer                  │
+ │                                  │ │                                 │ │                                 │
+ ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
+
+ ╭──────────────────────────────────╮ ╭─────────────────────────────────╮ ╭─────────────────────────────────╮
+ │ DISTANCE                         │ │ ELEVATION                       │ │ ASCENT                          │
+ │  _         _                     │ │          _     _                │ │  _       _     _                │
+ │  _|   |_| | |                    │ │  _    |  _|   |_                │ │  _| |_| | |   | |               │
+ │ |_  .   | |_|                    │ │       | |_  .  _|               │ │ |_    | |_| . |_|               │
+ │ 2.40 km                          │ │ -12.5 m                         │ │ 240.0 m                         │
+ │ Observed distance                │ │ Observed altitude               │ │ Accumulated ascent              │
+ │                                  │ │                                 │ │                                 │
+ ╰──────────────────────────────────╯ ╰─────────────────────────────────╯ ╰─────────────────────────────────╯
+ Free run
+ No plan selected
+ Interpretation connected · Source 61 s (clock unverified) · interpretation 0 s · lag 0 inputs
+ Offline coarse/no streets · Basemap ready
+ Timer: On (observed)
+ Last reported · ▰ 72% battery · ↑ 4 queued · 2 dropped / 0 rejected · d details
+ ↑↓←→ pan ± zoom · c follow e retry · i instruments s schedule · 1–6 context v layout d info m menu q quit
