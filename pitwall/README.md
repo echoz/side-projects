@@ -34,6 +34,9 @@ The `s` page keeps source order, cancellations and uncertain revisions visible.
 Attachment selects no prescription and changes no active stage. Exact-prescription
 acquisition, real Blackbox/provider qualification and athlete-relative targets
 remain upcoming. Bono needs no plugin.
+Walking and Hiking are in review with distinct movement-first and terrain-first
+compositions. Paddling is next; later activity layouts will follow their available
+measurements rather than reuse one fixed arrangement.
 Wide terminal recordings scroll within labeled,
 keyboard-accessible regions; they are not an interactive web terminal.
 

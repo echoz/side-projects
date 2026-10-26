@@ -3,36 +3,42 @@
 Detailed evidence and refresh guidance for the public Pitwall page.
 Paths below are relative to the repository root.
 
-## Outdoor layouts — candidate recording
+## Outdoor layouts — candidate recordings
 
-Captured October 25, 2026 local time from the actual native macOS daemon and
-Chio TUI with disposable synthetic telemetry. `pitwall/tui-hiking-live.svg`
-and its `.txt` transcript show Hiking Live at 110 × 48 terminal cells.
-Walking uses the same priorities with its own explicit sport label. These are
-candidate layouts, not a merged release or physical-watch qualification.
+Captured October 26, 2026 local time from the actual native macOS daemon and
+Chio TUI with disposable synthetic telemetry. The Walking and Hiking Live
+SVG/text pairs show 110 × 48 terminal cells. These are candidate layouts,
+not a merged release or physical-watch qualification.
 
 The capture source packet is
-`68f12171d23fe244975f1314c2e935acad9ae664a75ec9989e6ecda661bf1728`.
-The capture-producing check passed against the frozen candidate. The SVG retains
-true-colour terminal output and embedded glyph outlines; it was not redrawn.
-The selected-point map uses the bundled coarse Natural Earth basemap offline.
-Only this reviewed SVG/text pair is added to the public asset allowlist; raw logs,
-provisioning state, private source and internal documents remain private.
+`5c2977eaf0c1cc791fd5fc8c8696259093c04eda646349be0c431b542b2b0eb2`.
+The capture-producing check passed against the frozen candidate. Both recordings
+include the map; the harness waits for the old instrument footer to disappear
+before accepting a dashboard transition. The SVGs retain true-colour terminal
+output and embedded glyph outlines; they were not redrawn. The selected-point
+map uses the bundled coarse Natural Earth basemap offline. Only these reviewed
+SVG/text pairs enter the public allowlist; logs, provisioning state, private
+source and internal documents remain private.
 
-The dashboard orders pace, heart rate and active time, then distance, elevation
-and accumulated ascent. Small layouts prioritize four primary readings; expanded
-instruments include descent. The checks cover both explicit sport labels,
-manual selection, multiple terminal sizes, missing versus zero terrain, negative
-altitude, profile dropout, retained-view updates and terminal restoration.
-Original Replay retains its selected observation and cutoff when new uploads
-arrive. These daemon/PTY checks passed locally on macOS and Linux ARM64. They do
-not establish Garmin collection, phone delivery, release or deployment status.
-The earlier Running and Cycling captures retain their separate provenance below.
+Walking leads with pace/distance, then heart rate/active time and muted terrain
+facts. Hiking puts a broad elevation/ascent/descent panel above movement and
+effort readings. Short wide layouts retain seven numeric readings; narrow layouts
+retain four primary readings. Missing values, zero and negative altitude remain
+distinct. The same selected observation feeds Live and Original Replay.
+
+Checks cover automatic/manual selection, resizing, profile dropout, retained-view
+updates, historical cutoff isolation and terminal restoration. The refreshed
+native macOS daemon/PTY check passed; Linux evidence is recorded separately in
+the PR description. These recordings do not establish Garmin collection, phone
+delivery, release or deployment. Earlier Running/Cycling captures retain their
+separate provenance below.
 
 | Asset | SHA-256 |
 | --- | --- |
-| `pitwall/tui-hiking-live.svg` | `dffa44598b203847deab5342d7272f65a35781b268b170d92cf51d9deb10a8dd` |
-| `pitwall/tui-hiking-live.txt` | `a1e01bbb5ccac05c11698fd270fe247b7eb8c4aefda13b4a3aafd41a9bded226` |
+| `pitwall/tui-walking-live.svg` | `3b56bb047ff27a6a465ea6864eed2b4bc66a4fa3916f1fd0824b15cf1e7322dd` |
+| `pitwall/tui-walking-live.txt` | `b4bdd810d595154a9dca298963526c073509b12b51b8d17b2e6353f83da3e0d4` |
+| `pitwall/tui-hiking-live.svg` | `176068ff9f6e4e8f1dcdda7e1d6ac921995e25ce7f30094bdfa0dccd01dbf02b` |
+| `pitwall/tui-hiking-live.txt` | `95e0fe1a6307f6be3d53902d92175d02d88f7654598d6141fc965dc072f23eab` |
 
 ## Unified Bono dashboard — current premerge recordings
 
