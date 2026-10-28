@@ -38,6 +38,13 @@ allowance and restored hourly recent sync. This is one bounded live check, not
 source-beginning discovery or full-history completion. Activities and FIT
 acquisition remain pending. Keep the browser demonstration synthetic.
 
+The October 27 verification update records successful standard Dockerfile builds
+and synthetic Linux checks for runtime dependencies, archive reconstruction,
+protected downloads, restart recovery and credential-free localhost Compose
+publication. These are test results, not a supported live deployment or proof of
+host reboot and power-loss behavior. Private logs and source stay in the owning
+project; this public overview contains only the verification summary.
+
 Run `pnpm verify` from the repository root. [Blackbox browser checks](../tests/browser/blackbox.spec.js)
 cover query shape, missing versus zero, whole-record replacement, retained receipts
 and clear/rebuild focus. Follow the [verification guide](../VERIFYING.md) for shared
