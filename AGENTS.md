@@ -42,14 +42,14 @@ consumer-facing site roots: the index at `.` and four nested page directories.
 Each owns its source-root `README.md`. The Python scripts and test fixtures support
 this repository's contributor workflow; they are not separately offered tools.
 The page-bound demos expose no public framework component API. Private applications
-and the external Chio, Perch and Toa Payoh Dragon implementations are outside this repository's inventory.
+and the external Chio, Perch, Toa Payoh Dragon and Headstand implementations are outside this repository's inventory.
 
 Present the collection as AI-assisted, deliberately curated personal projects,
 mostly built to scratch an itch. Keep the README a brief introduction, project
 list and publishing guide; put detailed capabilities and limits on the project
 pages. Group the index into Metaphysical (software, "It worked on my machine.") for Pitwall,
 Marquee, Blackbox and Chio, and Physical things ("Some assembly required.") for
-Perch and Toa Payoh Dragon. Use section headings above project headings, and
+Perch, Toa Payoh Dragon and Headstand. Use section headings above project headings, and
 preserve each project’s
 card identity and status ribbon. Pitwall capture provenance and refresh
 instructions live in `pitwall/CAPTURES.md`; read it before updating those captures or their claims.
@@ -75,6 +75,12 @@ That assets-only directory belongs to the index; it is not a separate page or
 deliverable. Keep v03 fit-test candidate status explicit: 94 parts, 29 fit samples,
 six-colour PLA, X1 Carbon with a 0.4 mm nozzle and no AMS. Physical fit and print
 success remain untested; do not claim every part prints without supports.
+
+Headstand links to `https://echoz.github.io/Headstand/`. Its site, print files
+and CAD live in the public `echoz/Headstand` repository. The index card uses teal
+and the approved closed-case CAD render in `headstand/hero.webp`. The directory
+holds the index asset. Keep the print candidate status and physical verification
+limits explicit.
 
 Keep the diagonal index-card ribbons current with each project's release status;
 show only the version for a release, and repeating yellow-and-black construction
