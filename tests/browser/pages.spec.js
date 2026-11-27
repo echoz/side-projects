@@ -32,10 +32,23 @@ test('each local page offers a keyboard skip link', async ({ page }) => {
   }
 });
 
-test('index status ribbons expose construction status and the released version', async ({ page }) => {
+test('index cards show their own release version or construction ribbon', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('img', { name: 'Under construction', exact: true })).toHaveCount(6);
-  await expect(page.getByText('v0.1.0', { exact: true })).toBeVisible();
+  const cards = page.getByRole('article');
+  await expect(cards).toHaveCount(7);
+
+  for (const [name, version] of [['Pitwall', 'v0.1.2'], ['Chio', 'v0.2.2']]) {
+    const card = page.getByRole('article', { name, exact: true });
+    await expect(card.getByText(version, { exact: true })).toBeVisible();
+  }
+
+  const constructionLabel = { name: 'Under construction', exact: true };
+  await expect(page.getByRole('img', constructionLabel)).toHaveCount(5);
+  for (const name of ['Marquee', 'Blackbox', 'Perch', 'Toa Payoh Dragon', 'Headstand']) {
+    const card = page.getByRole('article', { name, exact: true });
+    await expect(card.getByRole('img', constructionLabel)).toBeVisible();
+  }
+
   await expect(page.getByRole('link', { name: /Chio/ })).toHaveAttribute('href', 'https://void-deck.github.io/Chio/');
   await expect(page.getByRole('link', { name: 'Explore Perch', exact: true })).toHaveAttribute('href', 'https://echoz.github.io/Perch/');
 });

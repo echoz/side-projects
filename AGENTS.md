@@ -65,8 +65,9 @@ to reflect its sculpted tabletop dock. Its CAD and candidate print packages are
 public in `echoz/Perch`; link to its own site, CAD and releases rather than
 duplicating the page or archives here. Maintain the warm, organic theme of the
 index entry and relocation page.
-Keep the W0.1 candidate status and physical-fit limits explicit. Accepted card fit
-does not establish revised player fit, headphone retention or loaded stability.
+Keep the Yoto Mini with Adventure Jacket fit target, W0.1 candidate status and
+physical-fit limits explicit. Accepted card fit does not establish revised player
+fit, headphone retention or loaded stability.
 
 Toa Payoh Dragon links to `https://echoz.github.io/ToaPayohDragon/` and its
 public `echoz/ToaPayohDragon` repository. The index card uses cream, orange and
@@ -79,8 +80,8 @@ success remain untested; do not claim every part prints without supports.
 Headstand links to `https://echoz.github.io/Headstand/`. Its site, print files
 and CAD live in the public `echoz/Headstand` repository. The index card uses teal
 and the approved closed-case CAD render in `headstand/hero.webp`. The directory
-holds the index asset. Keep the print candidate status and physical verification
-limits explicit.
+holds the index asset. Keep the classic Oral-B Pro CrossAction fit target,
+print candidate status and physical verification limits explicit.
 
 Keep the diagonal index-card ribbons current with each project's release status;
 show only the version for a release, and repeating yellow-and-black construction
@@ -127,9 +128,11 @@ simulator, hardware or terminal captures. Actual captures, if added later, must
 come from the running application with synthetic inputs and recorded provenance.
 
 Review the owning project's current README and verification records when updating
-its page. Marquee must distinguish exercised TC001 output from synthetic automatic
-sources and unfinished platform/device support. Blackbox must prominently state
-that production remote synchronization is unavailable while that restriction is
+its page. Marquee must distinguish synthetic browser examples, bounded live account
+and TC001 trials, and unfinished platform/device qualification. Its Linux host
+and provider polling implementation do not establish unattended reliability.
+Blackbox must prominently state that production remote synchronization is
+unavailable while that restriction is
 current; local recovery/query evidence and historical live evidence are distinct.
 Update the index and this repository's README when their summaries change, then
 verify the Pages deployment. Do not publish private documents or data as evidence.

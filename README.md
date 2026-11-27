@@ -20,9 +20,9 @@ Physical things.
 
 | Project | What it does |
 | --- | --- |
-| [Perch](https://echoz.github.io/Perch/) | A sculpted, 3D-printable home for a Yoto Mini, cards and kids’ headphones. |
+| [Perch](https://echoz.github.io/Perch/) | A sculpted home for a Yoto Mini in its Adventure Jacket, cards and kids’ headphones; W0.1 is a print candidate. |
 | [Toa Payoh Dragon](https://echoz.github.io/ToaPayohDragon/) | A six-colour PLA model of Singapore’s dragon playground; v03 is a fit-test candidate. |
-| [Headstand](https://echoz.github.io/Headstand/) | A print-in-place travel case for two Oral-B brush heads that opens into a draining stand. |
+| [Headstand](https://echoz.github.io/Headstand/) | A print-in-place travel case for two classic Oral-B Pro CrossAction heads that opens into a draining stand. |
 
 Browse the [project index](https://echoz.github.io/side-projects/).
 Chio is open source; Perch shares its print candidates and editable CAD in its
