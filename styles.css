@@ -85,6 +85,13 @@ h1 em { color: var(--red); }
 .dragon .dragon-model { height: 250px; padding: 0; border: 3px solid #91b6c4; border-radius: 65px 65px 28px 28px; background: #e5ded0; }
 .dragon-model img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .dragon .button { border-radius: 30px; color: #fff8e9; box-shadow: 0 5px 0 #17495e; }
+.headstand { --accent: #255b5b; background: #e6f0ef; color: #183a3b; border: 1px solid #aac2bf; border-radius: 22px; }
+.headstand .eyebrow { color: #3c5b59; }
+.headstand > p:not(.eyebrow), .headstand > p.status { color: #304c4b; }
+.headstand > p.status { border-color: #aac2bf; }
+.headstand .headstand-case { height: auto; padding: 0; border: 1px solid #aac2bf; border-radius: 15px; }
+.headstand-case img { display: block; width: 100%; height: auto; }
+.headstand .button { border-radius: 8px; color: #f3fcfb; }
 .site-footer { border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-block: 25px 32px; color: var(--muted); font-size: 12px; }
 .skip-link { position: fixed; left: 16px; top: 12px; z-index: 10; padding: 12px; background: var(--ink); color: var(--paper); transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
