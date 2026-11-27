@@ -31,9 +31,9 @@ source storage and structured CLI output. A failed refresh preserves the prior
 snapshot; an empty schedule remains valid. Explicit attachment to a workout
 retains the same schedule in Live/Original Replay.
 The `s` page keeps source order, cancellations and uncertain revisions visible.
-Attachment selects no prescription and changes no active stage. Exact-prescription
-acquisition, real Blackbox/provider qualification and athlete-relative targets
-remain upcoming. Bono needs no plugin.
+Attachment selects no prescription and changes no active stage. Live schedule
+and exact-prescription acquisition, Blackbox/provider qualification and
+athlete-relative targets remain upcoming. Bono needs no plugin.
 Walking and Hiking are implemented on main with distinct movement-first and
 terrain-first compositions. Their captures retain candidate provenance.
 Paddling is next; later activity layouts will follow their available
@@ -44,8 +44,9 @@ keyboard-accessible regions; they are not an interactive web terminal.
 [CAPTURES.md](CAPTURES.md) owns recording provenance and refresh instructions.
 Use synthetic inputs and retain each capture's revision and verification limits.
 The intended watch-to-phone-to-server path and physical-device validation are
-separate from browser rendering and simulator evidence. First-device preparation
-is in progress: a dedicated HTTPS upload path behind Traefik, private watch
+separate from browser rendering and simulator evidence. A private Linux AMD64
+v0.1.2 image is published; this does not establish VPS or physical-device deployment.
+First-device preparation is in progress: a dedicated HTTPS upload path behind Traefik, private watch
 provisioning and bounded delivery diagnostics. VPS and physical-watch qualification
 remain upcoming. Keep private source,
 credentials and real workout data out of this repository.

@@ -12,7 +12,9 @@ up to eight uppercase letters, digits or spaces, with optional progress.
 
 Scenes and values are invented and deterministic. The illustration neither calls
 providers nor controls a device, and reloading resets it. Preserve its synthetic
-labels and distinguish it from the owning project's recorded TC001 evidence.
+labels and distinguish it from the owning project's bounded live account and TC001
+trials. Provider polling and the Linux headless host are implemented; unattended
+reliability, Linux account setup and Linux physical output remain unqualified.
 The DOM renderer is private to this page; it is not an exported UI component API.
 
 Run `pnpm verify` from the repository root. [Marquee browser checks](../tests/browser/marquee.spec.js)

@@ -51,7 +51,7 @@
         <li><span class="feature-index" aria-hidden="true">03 / WORKOUT CONTEXT</span><h3>More than heart rate.</h3><p>Inspect navigation, terrain, gears, swimming and effort readings when Garmin supplies them.</p><a class="text-link" href="#telemetry">See supported uploads <span aria-hidden="true">↗</span></a></li>
         <li><span class="feature-index" aria-hidden="true">04 / REPORTING</span><h3>Choose when to report.</h3><p>Opt into Fixed, Significant or Auto reporting, with upload status and dropped-sample counts.</p></li>
         <li><span class="feature-index" aria-hidden="true">05 / CLI &amp; STREAMING</span><h3>Drive it from a terminal.</h3><p>Script JSON queries, poll or receive server-pushed readings, and run local clients over SSH. Terminal cleanup passes local macOS and Linux checks.</p></li>
-        <li><span class="feature-index" aria-hidden="true">06 / SELF-HOSTED</span><h3>Keep your own records.</h3><p>Run on Linux with Docker, retain readings in SQLite, and back up or restore while the daemon is stopped. No network ports are exposed by default.</p></li>
+        <li><span class="feature-index" aria-hidden="true">06 / SELF-HOSTED</span><h3>Keep your own records.</h3><p>A private Linux AMD64 v0.1.2 Docker image is published. Retain readings in SQLite, and back up or restore while the daemon is stopped. No network ports are exposed by default. VPS deployment and public HTTPS checks remain unverified.</p></li>
         <li><span class="feature-index" aria-hidden="true">07 / RECORDED CONTEXT</span><h3>Select a stage. Keep the original.</h3><p>Import a plan, select a starting stage and compare absolute targets. Opt into inferred stage following from forward completions; countdowns stay unavailable when the boundary is unknown. Original interpretations survive corrections, restart and Replay. Bono needs no source plugin. This is implemented on main.</p><a class="text-link" href="#workout-context-preview">See recorded context <span aria-hidden="true">↗</span></a></li>
         <li><span class="feature-index" aria-hidden="true">08 / RETAINED SCHEDULES</span><h3>Keep the schedule you saw.</h3><p>Attach an exact source schedule to a workout and inspect it in Live or Original Replay. Cancellations, duplicate names and missing details stay visible. Manual synthetic-source refresh and schedule retention are implemented. No plan is selected automatically.</p><a class="text-link" href="#workout-schedule-preview">See the attached schedule <span aria-hidden="true">↗</span></a></li>
       </ul>
@@ -241,7 +241,7 @@
         <div class="terminal-scroll" tabindex="0" role="region" aria-label="Recorded Pitwall replay attached schedule; scroll horizontally on narrow screens"><img src="./workout-schedule-replay.svg?v=334ed1ceb964" alt="Actual Pitwall Original Replay attached schedule, paused at input 2 of 2. Synthetic schedule entries retain cancelled and unresolved prescription facts. True colour, 110 columns by 36 rows; candidate build, no watch or phone." loading="lazy" decoding="async" width="951" height="672"></div>
         <figcaption><span>Original Replay / retained evidence · actual synthetic capture · candidate · 110 × 36</span><a href="./workout-schedule-replay.txt?v=b4ed799b6acc">Read the replay transcript <span aria-hidden="true">↗</span></a></figcaption>
       </figure>
-      <div class="terminal-notes"><p><strong>Association is not a match.</strong> Entries stay in source order. Attaching a schedule does not choose a prescription or change the active stage. Real providers and automatic matching remain upcoming.</p></div>
+      <div class="terminal-notes"><p><strong>Association is not a match.</strong> Entries stay in source order. Attaching a schedule does not choose a prescription or change the active stage. Live provider qualification and automatic matching remain upcoming.</p></div>
     </section>
     <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
       <div class="section-heading"><div><p class="eyebrow">Roadmap / In progress &amp; upcoming</p><h2 id="roadmap-title">What’s next.</h2></div><p>Unfinished work only. No release dates set.</p></div>
@@ -262,12 +262,12 @@
           <ul>
             <li><h4>First watch connection / in progress</h4><p>Prepare a separately configured watch build and authenticated uploads through Traefik HTTPS. Keep server controls private and add delivery diagnostics for the first device test.</p></li>
             <li><h4>Cadence-based uploads / upcoming</h4><p>Retain timestamped selected changes and periodic snapshots, then batch uploads on an initial 15-second cadence to reduce upload chatter. Watch memory, transport and battery validation remain ahead.</p></li>
-            <li><h4>Workout sources / upcoming</h4><p>Qualify real workout-source plugins beyond the implemented synthetic schedule refresh, retention and explicit workout attachment.</p></li>
-            <li><h4>Connect workout plans / upcoming</h4><p>Acquire exact prescriptions, explicitly select a scheduled workout, and qualify real provider adapters. Athlete-relative targets remain upcoming.</p></li>
-            <li><h4>Operations and release checks</h4><p>Private prebuilt AMD64 Docker images and deployment by immutable image digest are in progress; ARM64 support will follow. Image publication and VPS deployment remain pending. Retention and scheduled/online backups are upcoming.</p></li>
+            <li><h4>Workout sources / upcoming</h4><p>Qualify live workout-source acquisition beyond the implemented synthetic schedule refresh, retention and explicit workout attachment.</p></li>
+            <li><h4>Connect workout plans / upcoming</h4><p>Qualify live exact-prescription acquisition and explicit scheduled-workout selection. Athlete-relative targets remain upcoming.</p></li>
+            <li><h4>Operations and release checks</h4><p>Verify the first VPS deployment and public HTTPS upload route using the published private AMD64 image. ARM64 images, retention and scheduled/online backups remain upcoming.</p></li>
             <li><h4>Watch and phone testing / next</h4><p>Start with a short Forerunner 970 workout through a paired iPhone to a Linux VPS. Then check locked-phone delivery, interruptions, native recording and battery impact. Physical delivery remains unverified.</p></li>
           </ul>
-          <p class="roadmap-lane-note">Daily-context synthetic integration is already tested. Plugins remain optional. Blackbox remote sync is disabled; additional providers, including Runna, need verified access.</p>
+          <p class="roadmap-lane-note">Daily-context integration has synthetic coverage. Source plugins remain optional. Live workout-source integration, including Blackbox, still needs verification; additional providers, including Runna, need verified access.</p>
         </article>
       </div>
     </section>
