@@ -31,9 +31,10 @@ source storage and structured CLI output. A failed refresh preserves the prior
 snapshot; an empty schedule remains valid. Explicit attachment to a workout
 retains the same schedule in Live/Original Replay.
 The `s` page keeps source order, cancellations and uncertain revisions visible.
-Attachment selects no prescription and changes no active stage. Live schedule
-and exact-prescription acquisition, Blackbox/provider qualification and
-athlete-relative targets remain upcoming. Bono needs no plugin.
+Attachment selects no prescription and changes no active stage. Exact-prescription
+acquisition and source-backed workout selection remain application work. Live
+Blackbox/provider qualification and athlete-relative targets remain upcoming.
+Bono needs no plugin.
 Walking and Hiking are implemented on main with distinct movement-first and
 terrain-first compositions. Their captures retain candidate provenance.
 Paddling is next; later activity layouts will follow their available
